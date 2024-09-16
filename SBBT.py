@@ -12,14 +12,14 @@ def print_intro():
     Symmetry-Breaking Bifurcation Theorem
     ================================
     """ + Style.RESET_ALL)
-
+    
     print(Fore.CYAN + """
-    This Python program demonstrates the Symmetry-Breaking Bifurcation Theorem,
-    which describes how symmetry-breaking occurs in near-regular geometric objects
-    (polygons, polyhedra, polytopes). It predicts bifurcation behavior based on
+    This Python program demonstrates the Symmetry-Breaking Bifurcation Theorem, 
+    which describes how symmetry-breaking occurs in near-regular geometric objects 
+    (polygons, polyhedra, polytopes). It predicts bifurcation behavior based on 
     the complexity (number of sides/faces) and dimensionality (2D, 3D, 4D).
     """ + Style.RESET_ALL)
-
+    
     print(Fore.LIGHTGREEN_EX + """
     The general bifurcation equation is:
 
@@ -33,7 +33,7 @@ def print_intro():
     - A_d, k_d, B_d, C_d: Parameters that vary by dimension.
     - t: Deformation parameter (describes how close the shape is to bifurcation).
     """ + Style.RESET_ALL)
-
+    
     print(Fore.CYAN + "Developed by Charles C. Norton in collaboration with OpenAI models on September 16th, 2024." + Style.RESET_ALL)
 
 # Section 2: Theorem and Proof Display
@@ -43,16 +43,16 @@ def show_theorem_and_proof():
     Symmetry-Breaking Bifurcation Theorem
     ================================
     """ + Style.RESET_ALL)
-
+    
     print(Fore.CYAN + """
-    For a geometric object with complexity n and dimensionality d, the symmetry-breaking
+    For a geometric object with complexity n and dimensionality d, the symmetry-breaking 
     bifurcation metric ΔG(t, n, d) is defined as follows:
 
     ΔG(t, n, d) = 0, for t <= t_c
 
     ΔG(t, n, d) = (A_d / n^k_d) * (t - t_c + ε)^(B_d * log(n) + C_d), for t > t_c
     """ + Style.RESET_ALL)
-
+    
     print(Fore.LIGHTGREEN_EX + """
     Where:
     - n is the complexity (number of sides or faces),
@@ -62,7 +62,7 @@ def show_theorem_and_proof():
 
     The bifurcation threshold is set at t_c = 0.5.
     """ + Style.RESET_ALL)
-
+    
     print(Fore.LIGHTBLUE_EX + """
     Proof Outline:
     1. No symmetry-breaking occurs before the critical threshold t_c. Hence, ΔG(t, n, d) = 0 for t <= t_c.
@@ -76,8 +76,8 @@ def show_theorem_and_proof():
 def symmetry_breaking_bifurcation(t, n, d, A_d, k_d, B_d, C_d, epsilon=1e-6):
     """
     Symmetry-Breaking Bifurcation Theorem for geometric objects.
-
-    Describes how symmetry-breaking occurs after a critical bifurcation point (t_c = 0.5)
+    
+    Describes how symmetry-breaking occurs after a critical bifurcation point (t_c = 0.5) 
     based on complexity (n) and dimensionality (d).
 
     Parameters:
@@ -92,15 +92,15 @@ def symmetry_breaking_bifurcation(t, n, d, A_d, k_d, B_d, C_d, epsilon=1e-6):
     """
     n = np.maximum(n, 1.1)  # Avoid negative or zero complexity
     t = np.clip(t, 0.5, 1)  # Ensure valid deformation range
-
+    
     return (A_d / n**k_d) * (t - 0.5 + epsilon)**(B_d * np.log(n) + C_d)
 
 # Section 4: Visualization of Symmetry-Breaking Behavior
 def plot_bifurcation_behavior():
     """
     Plots the bifurcation behavior across various complexities and dimensions.
-
-    This function visualizes how symmetry-breaking behavior evolves based on
+    
+    This function visualizes how symmetry-breaking behavior evolves based on 
     deformation (t), complexity (n), and dimensionality (d).
     """
     # Parameters for 2D, 3D, and 4D (previously computed)
@@ -109,18 +109,18 @@ def plot_bifurcation_behavior():
         3: {"A_d": 0.022, "k_d": 0.85, "B_d": 0.1, "C_d": 1.77},  # 3D Polyhedra
         4: {"A_d": 0.0067, "k_d": 1.0, "B_d": 0.09, "C_d": 1.12}, # 4D Polytopes
     }
-
+    
     n_values = [6, 8, 10, 20, 50]  # Example complexities: hexagons, octagons, etc.
     d_values = [2, 3, 4]  # 2D, 3D, and 4D shapes
     t_values = np.linspace(0.4, 0.6, 50)  # Deformation parameter range
-
+    
     plt.figure(figsize=(12, 8))
     for d in d_values:
         A_d, k_d, B_d, C_d = params[d]["A_d"], params[d]["k_d"], params[d]["B_d"], params[d]["C_d"]
         for n in n_values:
             bifurcation_values = symmetry_breaking_bifurcation(t_values, n, d, A_d, k_d, B_d, C_d)
             plt.plot(t_values, bifurcation_values, label=f'n={n}, d={d}')
-
+    
     plt.title('Symmetry-Breaking Behavior in Near-Regular Geometric Objects')
     plt.xlabel('Deformation Parameter (t)')
     plt.ylabel('Symmetry-Breaking Metric (ΔG)')
@@ -131,10 +131,10 @@ def plot_bifurcation_behavior():
 # Section 5: Torture Test for Extreme and Invalid Cases
 def torture_test_bifurcation():
     """
-    Conducts a torture test on the Symmetry-Breaking Bifurcation Theorem
+    Conducts a torture test on the Symmetry-Breaking Bifurcation Theorem 
     by testing extreme values for complexity, deformation, and invalid inputs.
-
-    This ensures the theorem handles large complexity values, near-bifurcation points,
+    
+    This ensures the theorem handles large complexity values, near-bifurcation points, 
     and invalid complexity inputs without failure.
     """
     params = {
@@ -142,14 +142,14 @@ def torture_test_bifurcation():
         3: {"A_d": 0.022, "k_d": 0.85, "B_d": 0.1, "C_d": 1.77},  # 3D Polyhedra
         4: {"A_d": 0.0067, "k_d": 1.0, "B_d": 0.09, "C_d": 1.12}, # 4D Polytopes
     }
-
+    
     extreme_n_values = [1e2, 1e3, 1e6]  # Extremely high complexities
     invalid_n_values = [-10, 0]  # Invalid/negative complexities
     extreme_t_values = [0.5001, 0.9999, 1.0]  # Near-critical and extreme deformations
-
+    
     # Collect results for extreme cases
     extreme_results = []
-
+    
     # Test with extremely high complexity (valid)
     for d in [2, 3, 4]:
         A_d, k_d, B_d, C_d = params[d]["A_d"], params[d]["k_d"], params[d]["B_d"], params[d]["C_d"]
@@ -157,7 +157,7 @@ def torture_test_bifurcation():
             for t in extreme_t_values:
                 bifurcation_value = symmetry_breaking_bifurcation(t, n, d, A_d, k_d, B_d, C_d)
                 extreme_results.append({"Dimension": d, "Complexity": n, "Deformation (t)": t, "Bifurcation Value (ΔG)": bifurcation_value})
-
+    
     # Test with invalid/negative complexity
     for d in [2, 3, 4]:
         A_d, k_d, B_d, C_d = params[d]["A_d"], params[d]["k_d"], params[d]["B_d"], params[d]["C_d"]
@@ -183,7 +183,7 @@ def main_menu():
 3. Run torture test
 4. Exit
 """ + Style.RESET_ALL)
-
+        
         choice = input(Fore.GREEN + "Enter your choice (1-4): ")
 
         if choice == '1':
@@ -203,4 +203,4 @@ def main_menu():
 # Run the program
 if __name__ == "__main__":
     print_intro()  # Print the introduction
-    main_menu()    # Start the user-friendly terminal menu
+    main_menu()
