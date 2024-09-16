@@ -251,11 +251,11 @@ For reference:
 
 For t <= t_c:
 
-ΔG(t, n, d) = 0
+    ΔG(t, n, d) = 0
 
 For t > t_c:
 
-ΔG(t, n, d) = (A_d / n^k_d) * (t - t_c + ε)^(B_d * log(n) + C_d)
+    ΔG(t, n, d) = (A_d / n^k_d) * (t - t_c + ε)^(B_d * log(n) + C_d)
 
 Where:
 - t: Deformation parameter (0 ≤ t ≤ 1), representing how deformed the object is from its regular state.
@@ -263,6 +263,26 @@ Where:
 - d: Dimensionality of the object (2 for polygons, 3 for polyhedra, 4 for polytopes).
 - A_d, k_d, B_d, C_d: Dimension-specific constants that affect the rate and behavior of symmetry-breaking.
 - ε: A small positive constant ensuring smoothness near the bifurcation threshold t_c = 0.5.
+
+### Constants:
+
+#### 2D Polygons Constants:
+    A_2 = 4.08
+    k_2 = 0.76
+    B_2 = -0.13
+    C_2 = 2.23
+
+#### 3D Polyhedra Constants:
+    A_3 = 0.022
+    k_3 = 0.85
+    B_3 = 0.1
+    C_3 = 1.77
+
+#### 4D Polytopes Constants:
+    A_4 = 0.0067
+    k_4 = 1.0
+    B_4 = 0.09
+    C_4 = 1.12
 
 For dimensional and complexity scaling:
 
