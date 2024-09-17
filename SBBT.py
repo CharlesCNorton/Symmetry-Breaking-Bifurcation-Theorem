@@ -122,7 +122,7 @@ def plot_bifurcation_behavior():
     params = {
         2: {"A_d": 4.08, "k_d": 0.76, "B_d": -0.13, "C_d": 2.23},  # 2D Polygons
         3: {"A_d": 0.022, "k_d": 0.85, "B_d": 0.1, "C_d": 1.77},  # 3D Polyhedra
-        4: {"A_d": 0.0067, "k_d": 1.0, "B_d": 0.09, "C_d": 1.12}, # 4D Polytopes
+        4: {"A_d": 0.0067, "k_d": 1.0, "B_d": 0.12, "C_d": 1.18}, # 4D Polytopes
     }
     
     n_values = [6, 8, 10, 20, 50]  # Example complexities: hexagons, octagons, etc.
