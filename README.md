@@ -155,7 +155,7 @@ For instance, during a set of 1,000 deformation simulations of 3D polyhedra:
 
 - ( A_3 = 0.022 ), ( k_3 = 0.85 ), ( B_3 = 0.1 ), and ( C_3 = 1.77 ) accurately reflected the observed bifurcation points.
 - Deformations for 2D polygons showed faster bifurcations, with ( A_2 = 4.08 ), ( k_2 = 0.76 ), ( B_2 = -0.13 ), and ( C_2 = 2.23 ).
-- For higher-dimensional objects (4D polytopes), we ran extensive simulations and found that bifurcation occurred at much slower rates with ( A_4 = 0.0067 ), ( k_4 = 1.0 ), ( B_4 = 0.09 ), and ( C_4 = 1.12 ).
+- For higher-dimensional objects (4D polytopes), we ran extensive simulations and found that bifurcation occurred at much slower rates with ( A_4 = 0.0067 ), ( k_4 = 1.0 ), ( B_4 = 0.12 ), and ( C_4 = 1.18 ).
 
 These constants were then tested against theoretical predictions derived from the symmetry properties of these objects, showing a high degree of correlation (R² > 0.98 in all cases).
 
