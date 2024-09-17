@@ -13,6 +13,8 @@ The key innovation lies in the detailed mathematical treatment of each constant 
 
 This framework has applications across various fields, including computational geometry, architecture, material science, astrophysics, and topological data analysis. The derivations rely on group theory, combinatorial analysis, power-law behavior, and topological invariants (e.g., Euler characteristic) for their theoretical foundation.
 
+![ ](theorem.png)
+
 ---
 
 ## Table of Contents
