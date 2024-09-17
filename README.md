@@ -77,7 +77,55 @@ Where:
 - \( A_d \), \( k_d \), \( B_d \), and \( C_d \) are constants derived from first principles,
 - \( \varepsilon \) is a small positive constant (typically between 0.01 and 0.1) to ensure smoothness near the bifurcation threshold \( t_c \).
 
-The purpose of this document is to thoroughly derive each of these constants from first principles, following a rigorous mathematical framework without resorting to arbitrary fitting. We also provide empirical validations through numerical simulations, ensuring that the theorem is grounded both theoretically and practically.
+### Role of the Small Positive Constant \( \varepsilon \)
+
+The small positive constant \( \varepsilon \) serves a crucial role in ensuring the mathematical stability and smoothness of the bifurcation equation, particularly near the critical threshold \( t_c \). Without \( \varepsilon \), the bifurcation equation risks encountering singularities or undefined behavior due to the nature of the fractional exponents and logarithmic terms in the expression.
+
+To understand why, consider the bifurcation equation:
+
+\[
+\Delta G(t, n, d) = \frac{A_d}{n^{k_d}} \cdot (t - t_c + \varepsilon)^{B_d \cdot \ln(n) + C_d}
+\]
+
+As \( t \) approaches \( t_c \), the term \( (t - t_c) \) tends to zero. In the absence of \( \varepsilon \), this causes the base of the exponent to approach zero, leading to significant mathematical problems. When fractional powers are applied to zero, the result is undefined because raising zero to a non-integer power can lead to singularities. Additionally, logarithmic terms involving \( (t - t_c) \) become problematic, as logarithms require positive values and are undefined for zero or negative arguments. These mathematical issues are unavoidable when \( \varepsilon = 0 \), making it essential to introduce a small positive constant.
+
+The introduction of \( \varepsilon \) regularizes the equation, ensuring that the base of the exponent is always positive and non-zero, even when \( t = t_c \). This prevents undefined behavior and ensures that the bifurcation equation remains well-defined. Mathematically, \( \varepsilon \) acts as a regularization term, a common technique used in differential equations and bifurcation theory to avoid singularities. Its inclusion allows the system to behave smoothly at \( t_c \) by preventing the formation of sharp gradients or discontinuities.
+
+### Behavior Near \( t_c \) Without \( \varepsilon \)
+
+To explore the necessity of \( \varepsilon \), consider the bifurcation equation without it:
+
+\[
+\Delta G(t, n, d) = \frac{A_d}{n^{k_d}} \cdot (t - t_c)^{B_d \cdot \ln(n) + C_d}
+\]
+
+In this case, as \( t \to t_c \), the term \( (t - t_c) \) becomes zero, and the equation runs into two specific problems:
+1. **Fractional Powers of Zero**: If \( B_d \cdot \ln(n) + C_d \) is not an integer, raising zero to a fractional power leads to undefined behavior. This is because fractional exponents of zero can produce singularities or discontinuous results.
+2. **Logarithmic Terms**: If \( B_d \cdot \ln(n) + C_d \) contains terms requiring positive values, having \( (t - t_c) \to 0 \) results in undefined or singular behavior, as logarithmic expressions are not defined for zero or negative bases.
+
+Thus, without \( \varepsilon \), the equation encounters mathematical difficulties that would result in either discontinuous or non-physical behavior at \( t_c \), leading to instability in both theoretical models and practical simulations.
+
+### Impact of \( \varepsilon \) on the Smoothness of Bifurcation
+
+The bifurcation sensitivity analysis demonstrated that the value of \( \varepsilon \) has a significant impact on the behavior of the bifurcation curve, especially near the critical threshold \( t_c \). Larger values of \( \varepsilon \) introduce a smoother and more gradual transition at \( t_c \), ensuring that the system does not experience sharp or abrupt changes. This is particularly important when modeling real-world systems, as physical deformations typically do not undergo instantaneous changes in symmetry; instead, they occur smoothly over time.
+
+However, if \( \varepsilon \) is too large, the bifurcation curve becomes overly smooth, potentially underestimating the sharpness of the symmetry-breaking process. On the other hand, very small values of \( \varepsilon \) (approaching zero) result in sharper transitions, more closely resembling idealized mathematical bifurcation events. While these sharper transitions may more accurately model certain phenomena, they also risk introducing instability or non-physical behavior, especially in computational models where abrupt jumps can cause artifacts or errors.
+
+The choice of \( \varepsilon \) must therefore balance smoothness with precision. Larger \( \varepsilon \) values provide smoother curves, reducing the likelihood of numerical instability but potentially oversimplifying the bifurcation process. Smaller \( \varepsilon \) values more accurately reflect the sharpness of bifurcation but can lead to instability or non-physical results if they approach zero.
+
+### Optimal Range of \( \varepsilon \) for Different Geometries
+
+Empirical testing across various geometries showed that \( \varepsilon \) values between 0.01 and 0.1 worked well for the objects tested. These values ensured a smooth transition at \( t_c \), while preserving the physical realism of the bifurcation. However, more complex geometries, such as higher-dimensional polytopes or objects with larger symmetry groups, demonstrated increased sensitivity to the choice of \( \varepsilon \). In such cases, finer adjustments to \( \varepsilon \) may be necessary to capture the correct balance between smoothness and sharpness.
+
+For example, in highly symmetric 4D polytopes like the 600-cell, even small changes in \( \varepsilon \) produced noticeable differences in the bifurcation curve. This suggests that for more complex or higher-dimensional systems, \( \varepsilon \) should be carefully tuned to ensure the model accurately reflects the expected bifurcation behavior.
+
+### Theoretical Justification of \( \varepsilon \)
+
+From a theoretical standpoint, the introduction of \( \varepsilon \) can be understood as a boundary layer parameter in bifurcation theory. It serves to regularize the system by preventing abrupt or catastrophic bifurcations that could occur if symmetry is lost instantaneously. This aligns with the behavior predicted by the implicit function theorem, where small changes in control parameters, such as the deformation \( t \), result in smooth changes in the solution manifold. By introducing \( \varepsilon \), we ensure that bifurcation occurs in a controlled and smooth manner, avoiding discontinuities or singularities that would otherwise violate the physical assumptions of the model.
+
+### Conclusion on the Role of \( \varepsilon \)
+
+The small positive constant \( \varepsilon \) is not an arbitrary addition but a necessary component of the bifurcation equation. It ensures that the system behaves smoothly near the critical threshold \( t_c \), preventing singularities and maintaining the physical and mathematical integrity of the model. Without \( \varepsilon \), the system would encounter undefined behavior, particularly in the presence of fractional exponents or logarithmic terms. By carefully selecting \( \varepsilon \), we can balance the need for smoothness with the precision required to accurately model the bifurcation process in both theoretical and practical applications.
 
 ---
 
@@ -85,7 +133,11 @@ The purpose of this document is to thoroughly derive each of these constants fro
 
 ### 2.1 Symmetry Group Constant \( A_d \)
 
-The Symmetry Group Constant \( A_d \) reflects how the symmetry group of the geometric object constrains the deformation process. The larger the symmetry group, the greater the resistance to deformation.
+The Symmetry Group Constant \( A_d \) reflects how the symmetry group of the geometric object constrains the deformation process. The larger the symmetry group, the greater the resistance to deformation. Empirical analysis demonstrates that objects with larger symmetry groups exhibit significantly greater resistance to symmetry-breaking, as the number of invariant-preserving transformations increases with the group size.
+
+For instance, as observed in the case of the square (n = 4, 2D polygon), larger values of \( A_d \) resulted in a slower bifurcation process. This is in line with the idea that a larger symmetry group implies more constraints on how the object can deform without breaking symmetry. Similar results were observed for the cube (n = 6, 3D polyhedron), confirming the robustness of this relationship in higher dimensions.
+
+However, it's important to note that there are scenarios where the direct relationship between symmetry group size and deformation resistance might not hold strictly. For example, in cases of localized deformations that affect only a small region of the object without impacting its overall structure, the effect of the symmetry group may be less pronounced. These subtle, localized deformations can accumulate over time, potentially leading to symmetry-breaking at lower deformation thresholds than expected.
 
 #### Derivation of \( A_d \):
 
@@ -129,7 +181,11 @@ A_d = |G(P)|
 
 ### 2.2 Complexity Scaling Constant \( k_d \)
 
-The Complexity Scaling Constant \( k_d \) models how the complexity of an object affects the rate of bifurcation. This constant is derived from combinatorial geometry, particularly the way the number of independent deformation modes increases with complexity.
+The Complexity Scaling Constant \( k_d = \ln(n) \) models how the complexity of an object affects the rate of bifurcation. This assumption is based on the observation that as the complexity of an object (i.e., the number of sides, faces, or cells) increases, the number of independent deformation modes also increases, but at a logarithmic rate. Empirical validation has shown that this logarithmic scaling accurately captures the behavior of both 2D and 3D objects across a range of complexities.
+
+For example, in the case of the cube (n = 6, 3D polyhedron), increasing \( k_d \) led to a slower bifurcation process, as the object became more resistant to symmetry-breaking. The logarithmic relationship holds for a wide range of complexities, from simple shapes like squares to more complex shapes like polyhedra. This confirms that the logarithmic scaling is a reasonable assumption, at least for the cases tested so far.
+
+However, it is possible that this relationship may not hold for certain extreme geometries, particularly those with very few elements (e.g., triangles or tetrahedra). These objects may exhibit more abrupt or constrained deformation behavior, which could deviate from the logarithmic scaling observed in more complex objects. Further empirical validation across a broader range of geometries is recommended to refine the assumption.
 
 #### Derivation of \( k_d \):
 
@@ -499,6 +555,14 @@ The Symmetry-Breaking Bifurcation Theorem has applications across various fields
 - **Logarithms:**
 
   - All logarithms are natural logarithms \( \ln(n) \).
+ 
+- **Assumptions Regarding \( t_c \)**
+
+The critical deformation threshold \( t_c = 0.5 \) is central to the theorem, marking the point at which symmetry-breaking begins. In the analyses conducted, varying \( t_c \) demonstrated significant impact on the onset of       bifurcation. Specifically, higher values of \( t_c \) delayed the onset of bifurcation, resulting in smoother transitions, while lower values caused bifurcation to occur earlier and more sharply.
+
+These observations suggest that \( t_c \) is a reasonable general threshold for many objects, but it may not be constant across all geometries. More complex or higher-dimensional objects, such as the 600-cell (n = 600, 4D polytope), demonstrated a higher resistance to bifurcation, which may indicate that the critical threshold for such objects should be adjusted slightly upwards. Thus, while \( t_c = 0.5 \) serves as a useful default value, it may require fine-tuning for specific cases, particularly in irregular or higher-dimensional geometries.
+
+The theoretical basis for \( t_c = 0.5 \) can be tied to stability and bifurcation theory, where a system undergoes a qualitative change in stability as eigenvalues cross the imaginary axis. Further exploration of this theoretical grounding would strengthen the justification for \( t_c = 0.5 \), particularly in edge cases where the threshold may shift due to geometric complexity.
 
 ### 7.2 Limitations
 
