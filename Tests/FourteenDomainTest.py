@@ -952,7 +952,6 @@ def main():
         print("12. Accretion Disk Symmetry-Breaking")
         print("13. Ultimate Hybrid Simulation")
         print("14. Shatter Test")
-        print("0. Run all tests")
         print("q. Quit")
         choice = input("Enter the number of the test to run (or 0 to run all, q to quit): ")
         if choice == '1':
@@ -982,21 +981,6 @@ def main():
         elif choice == '13':
             ultimate_hybrid_simulation()
         elif choice == '14':
-            shatter_test()
-        elif choice == '0':
-            symmetry_breaking_2d_polygons()
-            stability_analysis_3d_polyhedra()
-            symmetry_breaking_600_cell()
-            fluid_dynamics_vortex_flow()
-            economic_market_equilibrium()
-            crystalline_lattice_symmetry_breaking()
-            robotic_arm_symmetry_breaking()
-            chemical_reaction_network_symmetry_breaking()
-            perturbed_electromagnetic_field()
-            neural_network_symmetry_breaking()
-            gene_regulatory_network_symmetry_breaking()
-            accretion_disk_symmetry_breaking()
-            ultimate_hybrid_simulation()
             shatter_test()
         elif choice.lower() == 'q':
             print("Exiting the program.")
