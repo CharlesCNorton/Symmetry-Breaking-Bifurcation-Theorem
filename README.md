@@ -58,9 +58,10 @@ The Symmetry-Breaking Bifurcation Theorem addresses this issue by offering a for
 
 The bifurcation equation is:
 
-![Bifurcation Equation for t <= t_c](https://latex.codecogs.com/svg.image?\bg{white}For\(t\leq&t_c\):\[\Delta&space;G(t,n,d)=0\])
+![Bifurcation Equation for t <= t_c](https://latex.codecogs.com/svg.image?\bg{white}\Delta%20G(t,%20n,%20d)%20=%200%20\quad%20\text{for}%20t%20\leq%20t_c)
 
-![Bifurcation Equation for t > t_c](https://latex.codecogs.com/svg.image?\bg{white}\Delta&space;G(t,n,d)=\frac{A_d}{n^{k_d}}\cdot&space;\left(t-t_c+\varepsilon\right)^{B_d\cdot\ln(n)+C_d})
+![Bifurcation Equation for t > t_c](https://latex.codecogs.com/svg.image?\bg{white}\Delta%20G(t,%20n,%20d)%20=%20\frac{A_d}{n^{k_d}}%20\cdot%20\left(t-t_c+\varepsilon\right)^{B_d%20\cdot%20\ln(n)%20+%20C_d}%20\quad%20\text{for}%20t%20>%20t_c)
+
 
 Where:
 
