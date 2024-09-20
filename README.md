@@ -78,9 +78,9 @@ Where:
 ![Epsilon constant](https://latex.codecogs.com/svg.image?\bg{white}\varepsilon\text{is%20a%20small%20positive%20constant%20(typically%20between%200.01%20and%200.1)%20to%20ensure%20smoothness%20near%20the%20bifurcation%20threshold%20(t_c).})
 
 
-### Role of the Small Positive Constant \( \varepsilon \)
+### Role of the Small Positive Constant ε
 
-The small positive constant \( \varepsilon \) serves a crucial role in ensuring the mathematical stability and smoothness of the bifurcation equation, particularly near the critical threshold \( t_c \). Without \( \varepsilon \), the bifurcation equation risks encountering singularities or undefined behavior due to the nature of the fractional exponents and logarithmic terms in the expression.
+The small positive constant ε serves a crucial role in ensuring the mathematical stability and smoothness of the bifurcation equation, particularly near the critical threshold \( t_c \). Without ε, the bifurcation equation risks encountering singularities or undefined behavior due to the nature of the fractional exponents and logarithmic terms in the expression.
 
 To understand why, consider the bifurcation equation:
 
@@ -88,13 +88,13 @@ To understand why, consider the bifurcation equation:
 \Delta G(t, n, d) = \frac{A_d}{n^{k_d}} \cdot (t - t_c + \varepsilon)^{B_d \cdot \ln(n) + C_d}
 \]
 
-As \( t \) approaches \( t_c \), the term \( (t - t_c) \) tends to zero. In the absence of \( \varepsilon \), this causes the base of the exponent to approach zero, leading to significant mathematical problems. When fractional powers are applied to zero, the result is undefined because raising zero to a non-integer power can lead to singularities. Additionally, logarithmic terms involving \( (t - t_c) \) become problematic, as logarithms require positive values and are undefined for zero or negative arguments. These mathematical issues are unavoidable when \( \varepsilon = 0 \), making it essential to introduce a small positive constant.
+As \( t \) approaches \( t_c \), the term \( (t - t_c) \) tends to zero. In the absence of ε, this causes the base of the exponent to approach zero, leading to significant mathematical problems. When fractional powers are applied to zero, the result is undefined because raising zero to a non-integer power can lead to singularities. Additionally, logarithmic terms involving \( (t - t_c) \) become problematic, as logarithms require positive values and are undefined for zero or negative arguments. These mathematical issues are unavoidable when \( \varepsilon = 0 \), making it essential to introduce a small positive constant.
 
-The introduction of \( \varepsilon \) regularizes the equation, ensuring that the base of the exponent is always positive and non-zero, even when \( t = t_c \). This prevents undefined behavior and ensures that the bifurcation equation remains well-defined. Mathematically, \( \varepsilon \) acts as a regularization term, a common technique used in differential equations and bifurcation theory to avoid singularities. Its inclusion allows the system to behave smoothly at \( t_c \) by preventing the formation of sharp gradients or discontinuities.
+The introduction of ε regularizes the equation, ensuring that the base of the exponent is always positive and non-zero, even when \( t = t_c \). This prevents undefined behavior and ensures that the bifurcation equation remains well-defined. Mathematically, ε acts as a regularization term, a common technique used in differential equations and bifurcation theory to avoid singularities. Its inclusion allows the system to behave smoothly at \( t_c \) by preventing the formation of sharp gradients or discontinuities.
 
-### Behavior Near \( t_c \) Without \( \varepsilon \)
+### Behavior Near \( t_c \) Without ε
 
-To explore the necessity of \( \varepsilon \), consider the bifurcation equation without it:
+To explore the necessity of ε, consider the bifurcation equation without it:
 
 \[
 \Delta G(t, n, d) = \frac{A_d}{n^{k_d}} \cdot (t - t_c)^{B_d \cdot \ln(n) + C_d}
@@ -104,29 +104,29 @@ In this case, as \( t \to t_c \), the term \( (t - t_c) \) becomes zero, and the
 1. **Fractional Powers of Zero**: If \( B_d \cdot \ln(n) + C_d \) is not an integer, raising zero to a fractional power leads to undefined behavior. This is because fractional exponents of zero can produce singularities or discontinuous results.
 2. **Logarithmic Terms**: If \( B_d \cdot \ln(n) + C_d \) contains terms requiring positive values, having \( (t - t_c) \to 0 \) results in undefined or singular behavior, as logarithmic expressions are not defined for zero or negative bases.
 
-Thus, without \( \varepsilon \), the equation encounters mathematical difficulties that would result in either discontinuous or non-physical behavior at \( t_c \), leading to instability in both theoretical models and practical simulations.
+Thus, without ε, the equation encounters mathematical difficulties that would result in either discontinuous or non-physical behavior at \( t_c \), leading to instability in both theoretical models and practical simulations.
 
-### Impact of \( \varepsilon \) on the Smoothness of Bifurcation
+### Impact of ε on the Smoothness of Bifurcation
 
-The bifurcation sensitivity analysis demonstrated that the value of \( \varepsilon \) has a significant impact on the behavior of the bifurcation curve, especially near the critical threshold \( t_c \). Larger values of \( \varepsilon \) introduce a smoother and more gradual transition at \( t_c \), ensuring that the system does not experience sharp or abrupt changes. This is particularly important when modeling real-world systems, as physical deformations typically do not undergo instantaneous changes in symmetry; instead, they occur smoothly over time.
+The bifurcation sensitivity analysis demonstrated that the value of ε has a significant impact on the behavior of the bifurcation curve, especially near the critical threshold \( t_c \). Larger values of ε introduce a smoother and more gradual transition at \( t_c \), ensuring that the system does not experience sharp or abrupt changes. This is particularly important when modeling real-world systems, as physical deformations typically do not undergo instantaneous changes in symmetry; instead, they occur smoothly over time.
 
-However, if \( \varepsilon \) is too large, the bifurcation curve becomes overly smooth, potentially underestimating the sharpness of the symmetry-breaking process. On the other hand, very small values of \( \varepsilon \) (approaching zero) result in sharper transitions, more closely resembling idealized mathematical bifurcation events. While these sharper transitions may more accurately model certain phenomena, they also risk introducing instability or non-physical behavior, especially in computational models where abrupt jumps can cause artifacts or errors.
+However, if ε is too large, the bifurcation curve becomes overly smooth, potentially underestimating the sharpness of the symmetry-breaking process. On the other hand, very small values of ε (approaching zero) result in sharper transitions, more closely resembling idealized mathematical bifurcation events. While these sharper transitions may more accurately model certain phenomena, they also risk introducing instability or non-physical behavior, especially in computational models where abrupt jumps can cause artifacts or errors.
 
-The choice of \( \varepsilon \) must therefore balance smoothness with precision. Larger \( \varepsilon \) values provide smoother curves, reducing the likelihood of numerical instability but potentially oversimplifying the bifurcation process. Smaller \( \varepsilon \) values more accurately reflect the sharpness of bifurcation but can lead to instability or non-physical results if they approach zero.
+The choice of ε must therefore balance smoothness with precision. Larger ε values provide smoother curves, reducing the likelihood of numerical instability but potentially oversimplifying the bifurcation process. Smaller ε values more accurately reflect the sharpness of bifurcation but can lead to instability or non-physical results if they approach zero.
 
-### Optimal Range of \( \varepsilon \) for Different Geometries
+### Optimal Range of ε for Different Geometries
 
-Empirical testing across various geometries showed that \( \varepsilon \) values between 0.01 and 0.1 worked well for the objects tested. These values ensured a smooth transition at \( t_c \), while preserving the physical realism of the bifurcation. However, more complex geometries, such as higher-dimensional polytopes or objects with larger symmetry groups, demonstrated increased sensitivity to the choice of \( \varepsilon \). In such cases, finer adjustments to \( \varepsilon \) may be necessary to capture the correct balance between smoothness and sharpness.
+Empirical testing across various geometries showed that ε values between 0.01 and 0.1 worked well for the objects tested. These values ensured a smooth transition at \( t_c \), while preserving the physical realism of the bifurcation. However, more complex geometries, such as higher-dimensional polytopes or objects with larger symmetry groups, demonstrated increased sensitivity to the choice of ε. In such cases, finer adjustments to ε may be necessary to capture the correct balance between smoothness and sharpness.
 
-For example, in highly symmetric 4D polytopes like the 600-cell, even small changes in \( \varepsilon \) produced noticeable differences in the bifurcation curve. This suggests that for more complex or higher-dimensional systems, \( \varepsilon \) should be carefully tuned to ensure the model accurately reflects the expected bifurcation behavior.
+For example, in highly symmetric 4D polytopes like the 600-cell, even small changes in ε produced noticeable differences in the bifurcation curve. This suggests that for more complex or higher-dimensional systems, ε should be carefully tuned to ensure the model accurately reflects the expected bifurcation behavior.
 
-### Theoretical Justification of \( \varepsilon \)
+### Theoretical Justification of ε
 
-From a theoretical standpoint, the introduction of \( \varepsilon \) can be understood as a boundary layer parameter in bifurcation theory. It serves to regularize the system by preventing abrupt or catastrophic bifurcations that could occur if symmetry is lost instantaneously. This aligns with the behavior predicted by the implicit function theorem, where small changes in control parameters, such as the deformation \( t \), result in smooth changes in the solution manifold. By introducing \( \varepsilon \), we ensure that bifurcation occurs in a controlled and smooth manner, avoiding discontinuities or singularities that would otherwise violate the physical assumptions of the model.
+From a theoretical standpoint, the introduction of ε can be understood as a boundary layer parameter in bifurcation theory. It serves to regularize the system by preventing abrupt or catastrophic bifurcations that could occur if symmetry is lost instantaneously. This aligns with the behavior predicted by the implicit function theorem, where small changes in control parameters, such as the deformation \( t \), result in smooth changes in the solution manifold. By introducing ε, we ensure that bifurcation occurs in a controlled and smooth manner, avoiding discontinuities or singularities that would otherwise violate the physical assumptions of the model.
 
-### Conclusion on the Role of \( \varepsilon \)
+### Conclusion on the Role of ε
 
-The small positive constant \( \varepsilon \) is not an arbitrary addition but a necessary component of the bifurcation equation. It ensures that the system behaves smoothly near the critical threshold \( t_c \), preventing singularities and maintaining the physical and mathematical integrity of the model. Without \( \varepsilon \), the system would encounter undefined behavior, particularly in the presence of fractional exponents or logarithmic terms. By carefully selecting \( \varepsilon \), we can balance the need for smoothness with the precision required to accurately model the bifurcation process in both theoretical and practical applications.
+The small positive constant ε is not an arbitrary addition but a necessary component of the bifurcation equation. It ensures that the system behaves smoothly near the critical threshold \( t_c \), preventing singularities and maintaining the physical and mathematical integrity of the model. Without ε, the system would encounter undefined behavior, particularly in the presence of fractional exponents or logarithmic terms. By carefully selecting ε, we can balance the need for smoothness with the precision required to accurately model the bifurcation process in both theoretical and practical applications.
 
 ---
 
