@@ -1,0 +1,505 @@
+Analyzing with noise level: 0%
+Triangle Cross-validation MSE: 0.01645
+Triangle Durbin-Watson (Polynomial): 1.75
+Triangle Breusch-Pagan Test Statistic (Polynomial): 3846.81
+Triangle Kolmogorov-Smirnov Test (Polynomial Residuals): KS Statistic = 0.50, p-value = 0.00000
+D:\GitHub\Symmetry-Breaking-Bifurcation-Theorem\StatisticalCrucible\StatCrucible.py:100: UserWarning: scipy.stats.shapiro: For N > 5000, computed p-value may not be accurate. Current N is 100000.
+  sw_stat_poly, sw_p_value_poly = shapiro(poly_residuals)
+Triangle Shapiro-Wilk Test: Statistic = 0.91, p-value = 0.00000
+Triangle Anderson-Darling Test: Statistic = 3089.33, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Triangle Lilliefors Test: Statistic = 0.10, p-value = 0.00100
+Triangle Jarque-Bera Test: Statistic = 8623.97, p-value = 0.00000
+Triangle Runs Test for Randomness: Statistic = 0.54, p-value = 0.58815
+Triangle Breusch-Godfrey Test: Statistic = 0.48, p-value = 0.48788
+Triangle Levene’s Test for Equality of Variances: Statistic = 171415.04, p-value = 0.00000
+Triangle Z-test for Residual Mean = 0: Z-statistic = -0.37
+Triangle Chi-Square Test Statistic (Polynomial): 113801.57
+Triangle AIC (Polynomial): -1268774.37, BIC: -1268764.86
+Square Cross-validation MSE: 0.00652
+Square Durbin-Watson (Polynomial): 1.77
+Square Breusch-Pagan Test Statistic (Polynomial): 1091.35
+Square Kolmogorov-Smirnov Test (Polynomial Residuals): KS Statistic = 0.50, p-value = 0.00000
+Square Shapiro-Wilk Test: Statistic = 0.92, p-value = 0.00000
+Square Anderson-Darling Test: Statistic = 2952.32, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Square Lilliefors Test: Statistic = 0.10, p-value = 0.00100
+Square Jarque-Bera Test: Statistic = 7925.37, p-value = 0.00000
+Square Runs Test for Randomness: Statistic = 0.12, p-value = 0.90070
+Square Breusch-Godfrey Test: Statistic = 0.53, p-value = 0.46680
+Square Levene’s Test for Equality of Variances: Statistic = 172765.72, p-value = 0.00000
+Square Z-test for Residual Mean = 0: Z-statistic = -0.36
+Square Chi-Square Test Statistic (Polynomial): 112702.76
+Square AIC (Polynomial): -1366188.38, BIC: -1366178.86
+Hexagon Cross-validation MSE: 0.00103
+Hexagon Durbin-Watson (Polynomial): 1.79
+Hexagon Breusch-Pagan Test Statistic (Polynomial): 5.64
+Hexagon Kolmogorov-Smirnov Test (Polynomial Residuals): KS Statistic = 0.50, p-value = 0.00000
+Hexagon Shapiro-Wilk Test: Statistic = 0.92, p-value = 0.00000
+Hexagon Anderson-Darling Test: Statistic = 2797.32, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Hexagon Lilliefors Test: Statistic = 0.10, p-value = 0.00100
+Hexagon Jarque-Bera Test: Statistic = 6984.89, p-value = 0.00000
+Hexagon Runs Test for Randomness: Statistic = 0.06, p-value = 0.95510
+Hexagon Breusch-Godfrey Test: Statistic = 0.58, p-value = 0.44592
+Hexagon Levene’s Test for Equality of Variances: Statistic = 173987.52, p-value = 0.00000
+Hexagon Z-test for Residual Mean = 0: Z-statistic = -0.34
+Hexagon Chi-Square Test Statistic (Polynomial): 111464.20
+Hexagon AIC (Polynomial): -1555643.81, BIC: -1555634.30
+Cube Cross-validation MSE: 0.00812
+Cube Durbin-Watson (Polynomial): 1.67
+Cube Breusch-Pagan Test Statistic (Polynomial): 48675.39
+Cube Kolmogorov-Smirnov Test (Polynomial Residuals): KS Statistic = 0.50, p-value = 0.00000
+Cube Shapiro-Wilk Test: Statistic = 0.89, p-value = 0.00000
+Cube Anderson-Darling Test: Statistic = 3367.56, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Cube Lilliefors Test: Statistic = 0.11, p-value = 0.00100
+Cube Jarque-Bera Test: Statistic = 9793.59, p-value = 0.00000
+Cube Runs Test for Randomness: Statistic = 0.29, p-value = 0.77510
+Cube Breusch-Godfrey Test: Statistic = 0.12, p-value = 0.72805
+Cube Levene’s Test for Equality of Variances: Statistic = 155408.82, p-value = 0.00000
+Cube Z-test for Residual Mean = 0: Z-statistic = -0.44
+Cube Chi-Square Test Statistic (Polynomial): 119536.11
+Cube AIC (Polynomial): -1290423.13, BIC: -1290413.61
+Dodecahedron Cross-validation MSE: 0.00012
+Dodecahedron Durbin-Watson (Polynomial): 1.68
+Dodecahedron Breusch-Pagan Test Statistic (Polynomial): 37293.66
+Dodecahedron Kolmogorov-Smirnov Test (Polynomial Residuals): KS Statistic = 0.50, p-value = 0.00000
+Dodecahedron Shapiro-Wilk Test: Statistic = 0.89, p-value = 0.00000
+Dodecahedron Anderson-Darling Test: Statistic = 3468.24, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Dodecahedron Lilliefors Test: Statistic = 0.10, p-value = 0.00100
+Dodecahedron Jarque-Bera Test: Statistic = 9921.12, p-value = 0.00000
+Dodecahedron Runs Test for Randomness: Statistic = 0.07, p-value = 0.94078
+Dodecahedron Breusch-Godfrey Test: Statistic = 0.21, p-value = 0.64561
+Dodecahedron Levene’s Test for Equality of Variances: Statistic = 161320.14, p-value = 0.00000
+Dodecahedron Z-test for Residual Mean = 0: Z-statistic = -0.43
+Dodecahedron Chi-Square Test Statistic (Polynomial): 118602.44
+Dodecahedron AIC (Polynomial): -1730170.47, BIC: -1730160.96
+Tesseract Cross-validation MSE: 0.02605
+Tesseract Durbin-Watson (Polynomial): 2.00
+Tesseract Breusch-Pagan Test Statistic (Polynomial): 26625.91
+Tesseract Kolmogorov-Smirnov Test (Polynomial Residuals): KS Statistic = 0.50, p-value = 0.00000
+Tesseract Shapiro-Wilk Test: Statistic = 0.90, p-value = 0.00000
+Tesseract Anderson-Darling Test: Statistic = 2553.79, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Tesseract Lilliefors Test: Statistic = 0.17, p-value = 0.00100
+Tesseract Jarque-Bera Test: Statistic = 26279.49, p-value = 0.00000
+Tesseract Runs Test for Randomness: Statistic = 0.25, p-value = 0.80033
+Tesseract Breusch-Godfrey Test: Statistic = 0.90, p-value = 0.34266
+Tesseract Levene’s Test for Equality of Variances: Statistic = 177890.10, p-value = 0.00000
+Tesseract Z-test for Residual Mean = 0: Z-statistic = -0.00
+Tesseract Chi-Square Test Statistic (Polynomial): 100001.17
+Tesseract AIC (Polynomial): -1253654.27, BIC: -1253644.75
+600-Cell Cross-validation MSE: 0.00000
+600-Cell Durbin-Watson (Polynomial): 1.97
+600-Cell Breusch-Pagan Test Statistic (Polynomial): 28403.59
+600-Cell Kolmogorov-Smirnov Test (Polynomial Residuals): KS Statistic = 0.50, p-value = 0.00000
+600-Cell Shapiro-Wilk Test: Statistic = 0.86, p-value = 0.00000
+600-Cell Anderson-Darling Test: Statistic = 3754.87, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+600-Cell Lilliefors Test: Statistic = 0.22, p-value = 0.00100
+600-Cell Jarque-Bera Test: Statistic = 70223.84, p-value = 0.00000
+600-Cell Runs Test for Randomness: Statistic = -0.52, p-value = 0.60094
+600-Cell Breusch-Godfrey Test: Statistic = -0.00, p-value = 1.00000
+600-Cell Levene’s Test for Equality of Variances: Statistic = 172528.91, p-value = 0.00000
+600-Cell Z-test for Residual Mean = 0: Z-statistic = 0.11
+600-Cell Chi-Square Test Statistic (Polynomial): 101197.22
+600-Cell AIC (Polynomial): -7915112.24, BIC: -7915102.73
+
+Analyzing with noise level: 10%
+Triangle Cross-validation MSE: 0.03818
+Triangle Durbin-Watson (Polynomial): 1.95
+Triangle Breusch-Pagan Test Statistic (Polynomial): 2732.65
+Triangle Kolmogorov-Smirnov Test (Polynomial Residuals): KS Statistic = 0.50, p-value = 0.00000
+Triangle Shapiro-Wilk Test: Statistic = 0.93, p-value = 0.00000
+Triangle Anderson-Darling Test: Statistic = 2368.71, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Triangle Lilliefors Test: Statistic = 0.10, p-value = 0.00100
+Triangle Jarque-Bera Test: Statistic = 6175.65, p-value = 0.00000
+Triangle Runs Test for Randomness: Statistic = 0.78, p-value = 0.43363
+Triangle Breusch-Godfrey Test: Statistic = 0.01, p-value = 0.93466
+Triangle Levene’s Test for Equality of Variances: Statistic = 154055.63, p-value = 0.00000
+Triangle Z-test for Residual Mean = 0: Z-statistic = 0.17
+Triangle Chi-Square Test Statistic (Polynomial): 102740.25
+Triangle AIC (Polynomial): -1148401.78, BIC: -1148392.26
+Square Cross-validation MSE: 0.01547
+Square Durbin-Watson (Polynomial): 1.96
+Square Breusch-Pagan Test Statistic (Polynomial): 4783.38
+Square Kolmogorov-Smirnov Test (Polynomial Residuals): KS Statistic = 0.50, p-value = 0.00000
+Square Shapiro-Wilk Test: Statistic = 0.93, p-value = 0.00000
+Square Anderson-Darling Test: Statistic = 2278.61, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Square Lilliefors Test: Statistic = 0.10, p-value = 0.00100
+Square Jarque-Bera Test: Statistic = 5651.49, p-value = 0.00000
+Square Runs Test for Randomness: Statistic = 0.82, p-value = 0.41394
+Square Breusch-Godfrey Test: Statistic = 0.02, p-value = 0.88514
+Square Levene’s Test for Equality of Variances: Statistic = 155626.11, p-value = 0.00000
+Square Z-test for Residual Mean = 0: Z-statistic = 0.15
+Square Chi-Square Test Statistic (Polynomial): 102358.76
+Square AIC (Polynomial): -1240429.47, BIC: -1240419.96
+Hexagon Cross-validation MSE: 0.00250
+Hexagon Durbin-Watson (Polynomial): 1.96
+Hexagon Breusch-Pagan Test Statistic (Polynomial): 7298.42
+Hexagon Kolmogorov-Smirnov Test (Polynomial Residuals): KS Statistic = 0.50, p-value = 0.00000
+Hexagon Shapiro-Wilk Test: Statistic = 0.93, p-value = 0.00000
+Hexagon Anderson-Darling Test: Statistic = 2189.80, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Hexagon Lilliefors Test: Statistic = 0.10, p-value = 0.00100
+Hexagon Jarque-Bera Test: Statistic = 5187.61, p-value = 0.00000
+Hexagon Runs Test for Randomness: Statistic = 0.54, p-value = 0.58602
+Hexagon Breusch-Godfrey Test: Statistic = 0.04, p-value = 0.83322
+Hexagon Levene’s Test for Equality of Variances: Statistic = 157044.59, p-value = 0.00000
+Hexagon Z-test for Residual Mean = 0: Z-statistic = 0.14
+Hexagon Chi-Square Test Statistic (Polynomial): 101956.66
+Hexagon AIC (Polynomial): -1424098.10, BIC: -1424088.59
+Cube Cross-validation MSE: 0.01583
+Cube Durbin-Watson (Polynomial): 1.90
+Cube Breusch-Pagan Test Statistic (Polynomial): 12102.01
+Cube Kolmogorov-Smirnov Test (Polynomial Residuals): KS Statistic = 0.50, p-value = 0.00000
+Cube Shapiro-Wilk Test: Statistic = 0.90, p-value = 0.00000
+Cube Anderson-Darling Test: Statistic = 2969.14, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Cube Lilliefors Test: Statistic = 0.11, p-value = 0.00100
+Cube Jarque-Bera Test: Statistic = 8965.52, p-value = 0.00000
+Cube Runs Test for Randomness: Statistic = 0.64, p-value = 0.52222
+Cube Breusch-Godfrey Test: Statistic = 0.22, p-value = 0.64231
+Cube Levene’s Test for Equality of Variances: Statistic = 136991.20, p-value = 0.00000
+Cube Z-test for Residual Mean = 0: Z-statistic = 0.23
+Cube Chi-Square Test Statistic (Polynomial): 105446.23
+Cube AIC (Polynomial): -1214501.90, BIC: -1214492.38
+Dodecahedron Cross-validation MSE: 0.00024
+Dodecahedron Durbin-Watson (Polynomial): 1.91
+Dodecahedron Breusch-Pagan Test Statistic (Polynomial): 4447.21
+Dodecahedron Kolmogorov-Smirnov Test (Polynomial Residuals): KS Statistic = 0.50, p-value = 0.00000
+Dodecahedron Shapiro-Wilk Test: Statistic = 0.91, p-value = 0.00000
+Dodecahedron Anderson-Darling Test: Statistic = 2871.93, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Dodecahedron Lilliefors Test: Statistic = 0.11, p-value = 0.00100
+Dodecahedron Jarque-Bera Test: Statistic = 8736.64, p-value = 0.00000
+Dodecahedron Runs Test for Randomness: Statistic = 0.72, p-value = 0.47184
+Dodecahedron Breusch-Godfrey Test: Statistic = 0.09, p-value = 0.76297
+Dodecahedron Levene’s Test for Equality of Variances: Statistic = 142914.42, p-value = 0.00000
+Dodecahedron Z-test for Residual Mean = 0: Z-statistic = 0.22
+Dodecahedron Chi-Square Test Statistic (Polynomial): 104822.54
+Dodecahedron AIC (Polynomial): -1641375.33, BIC: -1641365.81
+Tesseract Cross-validation MSE: 0.09672
+Tesseract Durbin-Watson (Polynomial): 1.99
+Tesseract Breusch-Pagan Test Statistic (Polynomial): 28798.89
+Tesseract Kolmogorov-Smirnov Test (Polynomial Residuals): KS Statistic = 0.50, p-value = 0.00000
+Tesseract Shapiro-Wilk Test: Statistic = 0.88, p-value = 0.00000
+Tesseract Anderson-Darling Test: Statistic = 2674.13, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Tesseract Lilliefors Test: Statistic = 0.18, p-value = 0.00100
+Tesseract Jarque-Bera Test: Statistic = 39091.53, p-value = 0.00000
+Tesseract Runs Test for Randomness: Statistic = 1.10, p-value = 0.27273
+Tesseract Breusch-Godfrey Test: Statistic = 0.89, p-value = 0.34676
+Tesseract Levene’s Test for Equality of Variances: Statistic = 168951.83, p-value = 0.00000
+Tesseract Z-test for Residual Mean = 0: Z-statistic = -0.09
+Tesseract Chi-Square Test Statistic (Polynomial): 100897.78
+Tesseract AIC (Polynomial): -1051804.18, BIC: -1051794.66
+600-Cell Cross-validation MSE: 0.00000
+600-Cell Durbin-Watson (Polynomial): 1.95
+600-Cell Breusch-Pagan Test Statistic (Polynomial): 30148.95
+600-Cell Kolmogorov-Smirnov Test (Polynomial Residuals): KS Statistic = 0.50, p-value = 0.00000
+600-Cell Shapiro-Wilk Test: Statistic = 0.86, p-value = 0.00000
+600-Cell Anderson-Darling Test: Statistic = 3416.07, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+600-Cell Lilliefors Test: Statistic = 0.21, p-value = 0.00100
+600-Cell Jarque-Bera Test: Statistic = 69450.92, p-value = 0.00000
+600-Cell Runs Test for Randomness: Statistic = 0.82, p-value = 0.40985
+600-Cell Breusch-Godfrey Test: Statistic = -0.00, p-value = 1.00000
+600-Cell Levene’s Test for Equality of Variances: Statistic = 167888.99, p-value = 0.00000
+600-Cell Z-test for Residual Mean = 0: Z-statistic = -0.18
+600-Cell Chi-Square Test Statistic (Polynomial): 103107.45
+600-Cell AIC (Polynomial): -7691490.06, BIC: -7691480.55
+
+Analyzing with noise level: 20%
+Triangle Cross-validation MSE: 0.06993
+Triangle Durbin-Watson (Polynomial): 2.00
+Triangle Breusch-Pagan Test Statistic (Polynomial): 20953.90
+Triangle Kolmogorov-Smirnov Test (Polynomial Residuals): KS Statistic = 0.49, p-value = 0.00000
+Triangle Shapiro-Wilk Test: Statistic = 0.90, p-value = 0.00000
+Triangle Anderson-Darling Test: Statistic = 2754.98, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Triangle Lilliefors Test: Statistic = 0.13, p-value = 0.00100
+Triangle Jarque-Bera Test: Statistic = 12441.80, p-value = 0.00000
+Triangle Runs Test for Randomness: Statistic = 1.59, p-value = 0.11129
+Triangle Breusch-Godfrey Test: Statistic = 0.15, p-value = 0.70224
+Triangle Levene’s Test for Equality of Variances: Statistic = 55217.54, p-value = 0.00000
+Triangle Z-test for Residual Mean = 0: Z-statistic = 0.03
+Triangle Chi-Square Test Statistic (Polynomial): 100064.65
+Triangle AIC (Polynomial): -824953.92, BIC: -824944.41
+Square Cross-validation MSE: 0.02888
+Square Durbin-Watson (Polynomial): 2.00
+Square Breusch-Pagan Test Statistic (Polynomial): 22080.75
+Square Kolmogorov-Smirnov Test (Polynomial Residuals): KS Statistic = 0.50, p-value = 0.00000
+Square Shapiro-Wilk Test: Statistic = 0.90, p-value = 0.00000
+Square Anderson-Darling Test: Statistic = 2755.26, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Square Lilliefors Test: Statistic = 0.13, p-value = 0.00100
+Square Jarque-Bera Test: Statistic = 13346.71, p-value = 0.00000
+Square Runs Test for Randomness: Statistic = 1.66, p-value = 0.09604
+Square Breusch-Godfrey Test: Statistic = 0.13, p-value = 0.71706
+Square Levene’s Test for Equality of Variances: Statistic = 58243.90, p-value = 0.00000
+Square Z-test for Residual Mean = 0: Z-statistic = 0.02
+Square Chi-Square Test Statistic (Polynomial): 100031.58
+Square AIC (Polynomial): -912649.90, BIC: -912640.39
+Hexagon Cross-validation MSE: 0.00477
+Hexagon Durbin-Watson (Polynomial): 2.00
+Hexagon Breusch-Pagan Test Statistic (Polynomial): 23190.83
+Hexagon Kolmogorov-Smirnov Test (Polynomial Residuals): KS Statistic = 0.50, p-value = 0.00000
+Hexagon Shapiro-Wilk Test: Statistic = 0.90, p-value = 0.00000
+Hexagon Anderson-Darling Test: Statistic = 2765.00, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Hexagon Lilliefors Test: Statistic = 0.14, p-value = 0.00100
+Hexagon Jarque-Bera Test: Statistic = 14486.53, p-value = 0.00000
+Hexagon Runs Test for Randomness: Statistic = 1.66, p-value = 0.09721
+Hexagon Breusch-Godfrey Test: Statistic = 0.12, p-value = 0.73378
+Hexagon Levene’s Test for Equality of Variances: Statistic = 61353.96, p-value = 0.00000
+Hexagon Z-test for Residual Mean = 0: Z-statistic = 0.01
+Hexagon Chi-Square Test Statistic (Polynomial): 100008.43
+Hexagon AIC (Polynomial): -1091760.40, BIC: -1091750.88
+Cube Cross-validation MSE: 0.02497
+Cube Durbin-Watson (Polynomial): 1.99
+Cube Breusch-Pagan Test Statistic (Polynomial): 8510.80
+Cube Kolmogorov-Smirnov Test (Polynomial Residuals): KS Statistic = 0.50, p-value = 0.00000
+Cube Shapiro-Wilk Test: Statistic = 0.91, p-value = 0.00000
+Cube Anderson-Darling Test: Statistic = 3007.66, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Cube Lilliefors Test: Statistic = 0.13, p-value = 0.00100
+Cube Jarque-Bera Test: Statistic = 9384.90, p-value = 0.00000
+Cube Runs Test for Randomness: Statistic = 1.56, p-value = 0.11878
+Cube Breusch-Godfrey Test: Statistic = 0.27, p-value = 0.60153
+Cube Levene’s Test for Equality of Variances: Statistic = 28289.87, p-value = 0.00000
+Cube Z-test for Residual Mean = 0: Z-statistic = 0.08
+Cube Chi-Square Test Statistic (Polynomial): 100586.20
+Cube AIC (Polynomial): -930399.59, BIC: -930390.08
+Dodecahedron Cross-validation MSE: 0.00039
+Dodecahedron Durbin-Watson (Polynomial): 1.99
+Dodecahedron Breusch-Pagan Test Statistic (Polynomial): 12544.49
+Dodecahedron Kolmogorov-Smirnov Test (Polynomial Residuals): KS Statistic = 0.50, p-value = 0.00000
+Dodecahedron Shapiro-Wilk Test: Statistic = 0.91, p-value = 0.00000
+Dodecahedron Anderson-Darling Test: Statistic = 2897.35, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Dodecahedron Lilliefors Test: Statistic = 0.13, p-value = 0.00100
+Dodecahedron Jarque-Bera Test: Statistic = 9631.47, p-value = 0.00000
+Dodecahedron Runs Test for Randomness: Statistic = 1.64, p-value = 0.10045
+Dodecahedron Breusch-Godfrey Test: Statistic = 0.24, p-value = 0.62718
+Dodecahedron Levene’s Test for Equality of Variances: Statistic = 36534.45, p-value = 0.00000
+Dodecahedron Z-test for Residual Mean = 0: Z-statistic = 0.06
+Dodecahedron Chi-Square Test Statistic (Polynomial): 100409.71
+Dodecahedron AIC (Polynomial): -1345221.87, BIC: -1345212.36
+Tesseract Cross-validation MSE: 0.26620
+Tesseract Durbin-Watson (Polynomial): 1.96
+Tesseract Breusch-Pagan Test Statistic (Polynomial): 29908.25
+Tesseract Kolmogorov-Smirnov Test (Polynomial Residuals): KS Statistic = 0.48, p-value = 0.00000
+Tesseract Shapiro-Wilk Test: Statistic = 0.85, p-value = 0.00000
+Tesseract Anderson-Darling Test: Statistic = 3767.32, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Tesseract Lilliefors Test: Statistic = 0.15, p-value = 0.00100
+Tesseract Jarque-Bera Test: Statistic = 48284.37, p-value = 0.00000
+Tesseract Runs Test for Randomness: Statistic = 1.24, p-value = 0.21600
+Tesseract Breusch-Godfrey Test: Statistic = 0.00, p-value = 0.95250
+Tesseract Levene’s Test for Equality of Variances: Statistic = 96297.85, p-value = 0.00000
+Tesseract Z-test for Residual Mean = 0: Z-statistic = -0.14
+Tesseract Chi-Square Test Statistic (Polynomial): 101836.39
+Tesseract AIC (Polynomial): -667417.37, BIC: -667407.86
+600-Cell Cross-validation MSE: 0.00000
+600-Cell Durbin-Watson (Polynomial): 1.93
+600-Cell Breusch-Pagan Test Statistic (Polynomial): 30144.07
+600-Cell Kolmogorov-Smirnov Test (Polynomial Residuals): KS Statistic = 0.50, p-value = 0.00000
+600-Cell Shapiro-Wilk Test: Statistic = 0.84, p-value = 0.00000
+600-Cell Anderson-Darling Test: Statistic = 4237.00, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+600-Cell Lilliefors Test: Statistic = 0.19, p-value = 0.00100
+600-Cell Jarque-Bera Test: Statistic = 67765.84, p-value = 0.00000
+600-Cell Runs Test for Randomness: Statistic = 1.36, p-value = 0.17409
+600-Cell Breusch-Godfrey Test: Statistic = 0.00, p-value = 0.99999
+600-Cell Levene’s Test for Equality of Variances: Statistic = 104681.99, p-value = 0.00000
+600-Cell Z-test for Residual Mean = 0: Z-statistic = -0.19
+600-Cell Chi-Square Test Statistic (Polynomial): 103700.33
+600-Cell AIC (Polynomial): -7289508.52, BIC: -7289499.00
+
+Analyzing with noise level: 30%
+Triangle Cross-validation MSE: 0.10920
+Triangle Durbin-Watson (Polynomial): 1.99
+Triangle Breusch-Pagan Test Statistic (Polynomial): 32146.04
+Triangle Kolmogorov-Smirnov Test (Polynomial Residuals): KS Statistic = 0.48, p-value = 0.00000
+Triangle Shapiro-Wilk Test: Statistic = 0.85, p-value = 0.00000
+Triangle Anderson-Darling Test: Statistic = 4591.74, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Triangle Lilliefors Test: Statistic = 0.16, p-value = 0.00100
+Triangle Jarque-Bera Test: Statistic = 24057.09, p-value = 0.00000
+Triangle Runs Test for Randomness: Statistic = -0.56, p-value = 0.57689
+Triangle Breusch-Godfrey Test: Statistic = 0.21, p-value = 0.64998
+Triangle Levene’s Test for Equality of Variances: Statistic = 59.17, p-value = 0.00000
+Triangle Z-test for Residual Mean = 0: Z-statistic = -0.00
+Triangle Chi-Square Test Statistic (Polynomial): 100001.24
+Triangle AIC (Polynomial): -625773.62, BIC: -625764.11
+Square Cross-validation MSE: 0.04588
+Square Durbin-Watson (Polynomial): 1.99
+Square Breusch-Pagan Test Statistic (Polynomial): 32165.78
+Square Kolmogorov-Smirnov Test (Polynomial Residuals): KS Statistic = 0.49, p-value = 0.00000
+Square Shapiro-Wilk Test: Statistic = 0.85, p-value = 0.00000
+Square Anderson-Darling Test: Statistic = 4667.48, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Square Lilliefors Test: Statistic = 0.16, p-value = 0.00100
+Square Jarque-Bera Test: Statistic = 24991.65, p-value = 0.00000
+Square Runs Test for Randomness: Statistic = -0.42, p-value = 0.67124
+Square Breusch-Godfrey Test: Statistic = 0.20, p-value = 0.65436
+Square Levene’s Test for Equality of Variances: Statistic = 248.92, p-value = 0.00000
+Square Z-test for Residual Mean = 0: Z-statistic = -0.01
+Square Chi-Square Test Statistic (Polynomial): 100008.04
+Square AIC (Polynomial): -711122.52, BIC: -711113.00
+Hexagon Cross-validation MSE: 0.00773
+Hexagon Durbin-Watson (Polynomial): 1.99
+Hexagon Breusch-Pagan Test Statistic (Polynomial): 32167.55
+Hexagon Kolmogorov-Smirnov Test (Polynomial Residuals): KS Statistic = 0.50, p-value = 0.00000
+Hexagon Shapiro-Wilk Test: Statistic = 0.85, p-value = 0.00000
+Hexagon Anderson-Darling Test: Statistic = 4751.34, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Hexagon Lilliefors Test: Statistic = 0.17, p-value = 0.00100
+Hexagon Jarque-Bera Test: Statistic = 26045.92, p-value = 0.00000
+Hexagon Runs Test for Randomness: Statistic = -0.19, p-value = 0.84985
+Hexagon Breusch-Godfrey Test: Statistic = 0.19, p-value = 0.65917
+Hexagon Levene’s Test for Equality of Variances: Statistic = 592.76, p-value = 0.00000
+Hexagon Z-test for Residual Mean = 0: Z-statistic = -0.02
+Hexagon Chi-Square Test Statistic (Polynomial): 100022.56
+Hexagon AIC (Polynomial): -887728.61, BIC: -887719.10
+Cube Cross-validation MSE: 0.03422
+Cube Durbin-Watson (Polynomial): 1.98
+Cube Breusch-Pagan Test Statistic (Polynomial): 31180.73
+Cube Kolmogorov-Smirnov Test (Polynomial Residuals): KS Statistic = 0.49, p-value = 0.00000
+Cube Shapiro-Wilk Test: Statistic = 0.87, p-value = 0.00000
+Cube Anderson-Darling Test: Statistic = 4048.36, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Cube Lilliefors Test: Statistic = 0.15, p-value = 0.00100
+Cube Jarque-Bera Test: Statistic = 17660.86, p-value = 0.00000
+Cube Runs Test for Randomness: Statistic = -1.06, p-value = 0.28706
+Cube Breusch-Godfrey Test: Statistic = 0.25, p-value = 0.61619
+Cube Levene’s Test for Equality of Variances: Statistic = 4364.09, p-value = 0.00000
+Cube Z-test for Residual Mean = 0: Z-statistic = 0.04
+Cube Chi-Square Test Statistic (Polynomial): 100132.01
+Cube AIC (Polynomial): -752182.84, BIC: -752173.33
+Dodecahedron Cross-validation MSE: 0.00056
+Dodecahedron Durbin-Watson (Polynomial): 1.99
+Dodecahedron Breusch-Pagan Test Statistic (Polynomial): 31629.93
+Dodecahedron Kolmogorov-Smirnov Test (Polynomial Residuals): KS Statistic = 0.50, p-value = 0.00000
+Dodecahedron Shapiro-Wilk Test: Statistic = 0.87, p-value = 0.00000
+Dodecahedron Anderson-Darling Test: Statistic = 4190.49, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Dodecahedron Lilliefors Test: Statistic = 0.16, p-value = 0.00100
+Dodecahedron Jarque-Bera Test: Statistic = 19302.11, p-value = 0.00000
+Dodecahedron Runs Test for Randomness: Statistic = -0.86, p-value = 0.38952
+Dodecahedron Breusch-Godfrey Test: Statistic = 0.24, p-value = 0.62566
+Dodecahedron Levene’s Test for Equality of Variances: Statistic = 1853.18, p-value = 0.00000
+Dodecahedron Z-test for Residual Mean = 0: Z-statistic = 0.03
+Dodecahedron Chi-Square Test Statistic (Polynomial): 100065.67
+Dodecahedron AIC (Polynomial): -1160537.50, BIC: -1160527.99
+Tesseract Cross-validation MSE: 0.59795
+Tesseract Durbin-Watson (Polynomial): 1.96
+Tesseract Breusch-Pagan Test Statistic (Polynomial): 30705.23
+Tesseract Kolmogorov-Smirnov Test (Polynomial Residuals): KS Statistic = 0.45, p-value = 0.00000
+Tesseract Shapiro-Wilk Test: Statistic = 0.81, p-value = 0.00000
+Tesseract Anderson-Darling Test: Statistic = 5985.46, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Tesseract Lilliefors Test: Statistic = 0.18, p-value = 0.00100
+Tesseract Jarque-Bera Test: Statistic = 47354.74, p-value = 0.00000
+Tesseract Runs Test for Randomness: Statistic = -0.00, p-value = 0.99604
+Tesseract Breusch-Godfrey Test: Statistic = 0.11, p-value = 0.73501
+Tesseract Levene’s Test for Equality of Variances: Statistic = 16725.30, p-value = 0.00000
+Tesseract Z-test for Residual Mean = 0: Z-statistic = -0.12
+Tesseract Chi-Square Test Statistic (Polynomial): 101350.79
+Tesseract AIC (Polynomial): -428665.38, BIC: -428655.87
+600-Cell Cross-validation MSE: 0.00000
+600-Cell Durbin-Watson (Polynomial): 1.94
+600-Cell Breusch-Pagan Test Statistic (Polynomial): 29887.03
+600-Cell Kolmogorov-Smirnov Test (Polynomial Residuals): KS Statistic = 0.50, p-value = 0.00000
+600-Cell Shapiro-Wilk Test: Statistic = 0.80, p-value = 0.00000
+600-Cell Anderson-Darling Test: Statistic = 6321.18, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+600-Cell Lilliefors Test: Statistic = 0.18, p-value = 0.00100
+600-Cell Jarque-Bera Test: Statistic = 59852.50, p-value = 0.00000
+600-Cell Runs Test for Randomness: Statistic = -0.54, p-value = 0.58719
+600-Cell Breusch-Godfrey Test: Statistic = 0.00, p-value = 0.99999
+600-Cell Levene’s Test for Equality of Variances: Statistic = 26042.14, p-value = 0.00000
+600-Cell Z-test for Residual Mean = 0: Z-statistic = -0.16
+600-Cell Chi-Square Test Statistic (Polynomial): 102535.45
+600-Cell AIC (Polynomial): -7035745.89, BIC: -7035736.38
+
+Analyzing with noise level: 100%
+Triangle Cross-validation MSE: 1.26092
+Triangle Durbin-Watson (Polynomial): 1.52
+Triangle Breusch-Pagan Test Statistic (Polynomial): 56194.70
+Triangle Kolmogorov-Smirnov Test (Polynomial Residuals): KS Statistic = 0.25, p-value = 0.00000
+Triangle Shapiro-Wilk Test: Statistic = 0.97, p-value = 0.00000
+Triangle Anderson-Darling Test: Statistic = 776.39, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Triangle Lilliefors Test: Statistic = 0.05, p-value = 0.00100
+Triangle Jarque-Bera Test: Statistic = 4912.48, p-value = 0.00000
+Triangle Runs Test for Randomness: Statistic = 0.23, p-value = 0.81947
+Triangle Breusch-Godfrey Test: Statistic = 1.85, p-value = 0.17355
+Triangle Levene’s Test for Equality of Variances: Statistic = 241838.67, p-value = 0.00000
+Triangle Z-test for Residual Mean = 0: Z-statistic = 0.56
+Triangle Chi-Square Test Statistic (Polynomial): 131102.09
+Triangle AIC (Polynomial): 53080.17, BIC: 53089.68
+Square Cross-validation MSE: 0.57160
+Square Durbin-Watson (Polynomial): 1.52
+Square Breusch-Pagan Test Statistic (Polynomial): 56473.05
+Square Kolmogorov-Smirnov Test (Polynomial Residuals): KS Statistic = 0.18, p-value = 0.00000
+Square Shapiro-Wilk Test: Statistic = 0.97, p-value = 0.00000
+Square Anderson-Darling Test: Statistic = 770.16, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Square Lilliefors Test: Statistic = 0.05, p-value = 0.00100
+Square Jarque-Bera Test: Statistic = 4896.29, p-value = 0.00000
+Square Runs Test for Randomness: Statistic = 0.19, p-value = 0.84962
+Square Breusch-Godfrey Test: Statistic = 1.90, p-value = 0.16802
+Square Levene’s Test for Equality of Variances: Statistic = 241031.01, p-value = 0.00000
+Square Z-test for Residual Mean = 0: Z-statistic = 0.56
+Square Chi-Square Test Statistic (Polynomial): 131359.68
+Square AIC (Polynomial): -26205.68, BIC: -26196.16
+Hexagon Cross-validation MSE: 0.10474
+Hexagon Durbin-Watson (Polynomial): 1.52
+Hexagon Breusch-Pagan Test Statistic (Polynomial): 56775.12
+Hexagon Kolmogorov-Smirnov Test (Polynomial Residuals): KS Statistic = 0.32, p-value = 0.00000
+Hexagon Shapiro-Wilk Test: Statistic = 0.97, p-value = 0.00000
+Hexagon Anderson-Darling Test: Statistic = 763.45, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Hexagon Lilliefors Test: Statistic = 0.05, p-value = 0.00100
+Hexagon Jarque-Bera Test: Statistic = 4878.73, p-value = 0.00000
+Hexagon Runs Test for Randomness: Statistic = 0.33, p-value = 0.73917
+Hexagon Breusch-Godfrey Test: Statistic = 1.95, p-value = 0.16262
+Hexagon Levene’s Test for Equality of Variances: Statistic = 240112.14, p-value = 0.00000
+Hexagon Z-test for Residual Mean = 0: Z-statistic = 0.56
+Hexagon Chi-Square Test Statistic (Polynomial): 131645.26
+Hexagon AIC (Polynomial): -196090.88, BIC: -196081.37
+Cube Cross-validation MSE: 0.22256
+Cube Durbin-Watson (Polynomial): 1.55
+Cube Breusch-Pagan Test Statistic (Polynomial): 53905.51
+Cube Kolmogorov-Smirnov Test (Polynomial Residuals): KS Statistic = 0.24, p-value = 0.00000
+Cube Shapiro-Wilk Test: Statistic = 0.96, p-value = 0.00000
+Cube Anderson-Darling Test: Statistic = 828.16, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Cube Lilliefors Test: Statistic = 0.05, p-value = 0.00100
+Cube Jarque-Bera Test: Statistic = 5043.87, p-value = 0.00000
+Cube Runs Test for Randomness: Statistic = 0.31, p-value = 0.75788
+Cube Breusch-Godfrey Test: Statistic = 1.45, p-value = 0.22912
+Cube Levene’s Test for Equality of Variances: Statistic = 247281.68, p-value = 0.00000
+Cube Z-test for Residual Mean = 0: Z-statistic = 0.54
+Cube Chi-Square Test Statistic (Polynomial): 129154.09
+Cube AIC (Polynomial): -119088.04, BIC: -119078.53
+Dodecahedron Cross-validation MSE: 0.00427
+Dodecahedron Durbin-Watson (Polynomial): 1.54
+Dodecahedron Breusch-Pagan Test Statistic (Polynomial): 54573.24
+Dodecahedron Kolmogorov-Smirnov Test (Polynomial Residuals): KS Statistic = 0.46, p-value = 0.00000
+Dodecahedron Shapiro-Wilk Test: Statistic = 0.96, p-value = 0.00000
+Dodecahedron Anderson-Darling Test: Statistic = 812.99, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Dodecahedron Lilliefors Test: Statistic = 0.05, p-value = 0.00100
+Dodecahedron Jarque-Bera Test: Statistic = 5005.87, p-value = 0.00000
+Dodecahedron Runs Test for Randomness: Statistic = 0.33, p-value = 0.73792
+Dodecahedron Breusch-Godfrey Test: Statistic = 1.56, p-value = 0.21193
+Dodecahedron Levene’s Test for Equality of Variances: Statistic = 245882.52, p-value = 0.00000
+Dodecahedron Z-test for Residual Mean = 0: Z-statistic = 0.54
+Dodecahedron Chi-Square Test Statistic (Polynomial): 129693.93
+Dodecahedron AIC (Polynomial): -514718.06, BIC: -514708.55
+D:\GitHub\Symmetry-Breaking-Bifurcation-Theorem\StatisticalCrucible\StatCrucible.py:67: OptimizeWarning: Covariance of the parameters could not be estimated
+  params_poly, _ = curve_fit(lambda x, alpha: symmetry_bifurcation(x, obj['n'], obj['d'], obj['A_d'], obj['k_d'], obj['B_d'], obj['C_d'], alpha), train_set, actual_result[:len(train_set)])
+Tesseract Cross-validation MSE: 82.85074
+D:\GitHub\Symmetry-Breaking-Bifurcation-Theorem\StatisticalCrucible\StatCrucible.py:73: OptimizeWarning: Covariance of the parameters could not be estimated
+  params_poly, _ = curve_fit(lambda x, alpha: symmetry_bifurcation(x, obj['n'], obj['d'], obj['A_d'], obj['k_d'], obj['B_d'], obj['C_d'], alpha), t_values, actual_result)
+Tesseract Durbin-Watson (Polynomial): 0.23
+Tesseract Breusch-Pagan Test Statistic (Polynomial): 93441.36
+Tesseract Kolmogorov-Smirnov Test (Polynomial Residuals): KS Statistic = 1.00, p-value = 0.00000
+Tesseract Shapiro-Wilk Test: Statistic = 0.94, p-value = 0.00000
+Tesseract Anderson-Darling Test: Statistic = 1482.84, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Tesseract Lilliefors Test: Statistic = 0.08, p-value = 0.00100
+Tesseract Jarque-Bera Test: Statistic = 6636.75, p-value = 0.00000
+Tesseract Runs Test for Randomness: Statistic = -0.12, p-value = 0.90582
+Tesseract Breusch-Godfrey Test: Statistic = 0.01, p-value = 0.92067
+Tesseract Levene’s Test for Equality of Variances: Statistic = 202028.80, p-value = 0.00000
+Tesseract Z-test for Residual Mean = 0: Z-statistic = 2.76
+Tesseract Chi-Square Test Statistic (Polynomial): 859132.57
+Tesseract AIC (Polynomial): 499762.27, BIC: 499771.78
+600-Cell Cross-validation MSE: 0.00000
+600-Cell Durbin-Watson (Polynomial): 0.30
+600-Cell Breusch-Pagan Test Statistic (Polynomial): 90831.03
+600-Cell Kolmogorov-Smirnov Test (Polynomial Residuals): KS Statistic = 0.50, p-value = 0.00000
+600-Cell Shapiro-Wilk Test: Statistic = 0.94, p-value = 0.00000
+600-Cell Anderson-Darling Test: Statistic = 1690.32, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+600-Cell Lilliefors Test: Statistic = 0.08, p-value = 0.00100
+600-Cell Jarque-Bera Test: Statistic = 7008.67, p-value = 0.00000
+600-Cell Runs Test for Randomness: Statistic = -0.09, p-value = 0.93019
+600-Cell Breusch-Godfrey Test: Statistic = 0.02, p-value = 0.88314
+600-Cell Levene’s Test for Equality of Variances: Statistic = 177621.61, p-value = 0.00000
+600-Cell Z-test for Residual Mean = 0: Z-statistic = 2.38
+600-Cell Chi-Square Test Statistic (Polynomial): 667758.91
+600-Cell AIC (Polynomial): -6062436.45, BIC: -6062426.94
