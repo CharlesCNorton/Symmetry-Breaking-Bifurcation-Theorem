@@ -78,6 +78,7 @@ Where:
 ![Epsilon constant](https://latex.codecogs.com/svg.image?\bg{white}(\varepsilon)\text{is%20a%20small%20positive%20constant%20(typically%20between%200.01%20and%200.1)%20to%20ensure%20smoothness%20near%20the%20bifurcation%20threshold%20(t_c).})
 
 
+
 ### Role of the Small Positive Constant \( \varepsilon \)
 
 The small positive constant \( \varepsilon \) serves a crucial role in ensuring the mathematical stability and smoothness of the bifurcation equation, particularly near the critical threshold \( t_c \). Without \( \varepsilon \), the bifurcation equation risks encountering singularities or undefined behavior due to the nature of the fractional exponents and logarithmic terms in the expression.
