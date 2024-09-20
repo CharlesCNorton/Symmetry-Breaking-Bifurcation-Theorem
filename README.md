@@ -75,7 +75,8 @@ Where:
 
 ![Constants](https://latex.codecogs.com/svg.image?\bg{white}(A_d,%20k_d,%20B_d,%20C_d)\text{are%20constants%20derived%20from%20first%20principles,})
 
-![Epsilon constant](https://latex.codecogs.com/svg.image?\bg{white}\varepsilon\text{is%20a%20small%20positive%20constant%20(typically%20between%200.01%20and%200.1)%20to%20ensure%20smoothness%20near%20the%20bifurcation%20threshold%20(t_c).})
+![Epsilon constant](https://latex.codecogs.com/svg.image?\bg{white}(\varepsilon)\text{is%20a%20small%20positive%20constant%20(typically%20between%200.01%20and%200.1)%20to%20ensure%20smoothness%20near%20the%20bifurcation%20threshold%20(t_c).})
+
 
 ### Role of the Small Positive Constant \( \varepsilon \)
 
