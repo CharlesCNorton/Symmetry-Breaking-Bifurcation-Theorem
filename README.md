@@ -84,9 +84,8 @@ The small positive constant ε serves a crucial role in ensuring the mathematica
 
 To understand why, consider the bifurcation equation:
 
-\[
-\Delta G(t, n, d) = \frac{A_d}{n^{k_d}} \cdot (t - t_c + \varepsilon)^{B_d \cdot \ln(n) + C_d}
-\]
+![Bifurcation Equation](https://latex.codecogs.com/svg.image?\bg{white}\Delta%20G(t,%20n,%20d)%20=%20\frac{A_d}{n^{k_d}}%20\cdot%20(t%20-%20t_c%20+%20\varepsilon)^{B_d%20\cdot%20\ln(n)%20+%20C_d})
+
 
 As \( t \) approaches \( t_c \), the term \( (t - t_c) \) tends to zero. In the absence of ε, this causes the base of the exponent to approach zero, leading to significant mathematical problems. When fractional powers are applied to zero, the result is undefined because raising zero to a non-integer power can lead to singularities. Additionally, logarithmic terms involving \( (t - t_c) \) become problematic, as logarithms require positive values and are undefined for zero or negative arguments. These mathematical issues are unavoidable when \( \varepsilon = 0 \), making it essential to introduce a small positive constant.
 
