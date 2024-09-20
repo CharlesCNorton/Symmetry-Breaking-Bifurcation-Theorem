@@ -58,17 +58,9 @@ The Symmetry-Breaking Bifurcation Theorem addresses this issue by offering a for
 
 The bifurcation equation is:
 
-For \( t \leq t_c \):
+![Bifurcation Equation for t <= t_c](https://latex.codecogs.com/svg.image?\bg{white}For\(t\leq&t_c\):\[\Delta&space;G(t,n,d)=0\])
 
-\[
-\Delta G(t, n, d) = 0
-\]
-
-For \( t > t_c \):
-
-\[
-\Delta G(t, n, d) = \frac{A_d}{n^{k_d}} \cdot (t - t_c + \varepsilon)^{B_d \cdot \ln(n) + C_d}
-\]
+![Bifurcation Equation for t > t_c](https://latex.codecogs.com/svg.image?\bg{white}\Delta&space;G(t,n,d)=\frac{A_d}{n^{k_d}}\cdot&space;\left(t-t_c+\varepsilon\right)^{B_d\cdot\ln(n)+C_d})
 
 Where:
 
