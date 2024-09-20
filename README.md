@@ -58,26 +58,25 @@ The Symmetry-Breaking Bifurcation Theorem addresses this issue by offering a for
 
 The bifurcation equation is:
 
-For \( t \leq t_c \):
+![Bifurcation Equation for t <= t_c](https://latex.codecogs.com/svg.image?\bg{white}\text{For%20}t%20\leq%20t_c%20:\quad\Delta%20G(t,%20n,%20d)%20=%200)
 
-\[
-\Delta G(t, n, d) = 0
-\]
+![Bifurcation Equation for t > t_c](https://latex.codecogs.com/svg.image?\bg{white}\text{For%20}t%20>%20t_c%20:\quad\Delta%20G(t,%20n,%20d)%20=%20\frac{A_d}{n^{k_d}}%20\cdot%20\left(t-t_c+\varepsilon\right)^{B_d%20\cdot%20\ln(n)%20+%20C_d})
 
-For \( t > t_c \):
-
-\[
-\Delta G(t, n, d) = \frac{A_d}{n^{k_d}} \cdot (t - t_c + \varepsilon)^{B_d \cdot \ln(n) + C_d}
-\]
 
 Where:
 
-- \( t \) is the deformation parameter (ranging from 0 to 1),
-- \( t_c = 0.5 \) is the critical deformation threshold,
-- \( n \) is the complexity of the object (number of sides, faces, or cells),
-- \( d \) is the dimensionality of the object (2D for polygons, 3D for polyhedra, and 4D for polytopes),
-- \( A_d \), \( k_d \), \( B_d \), and \( C_d \) are constants derived from first principles,
-- \( \varepsilon \) is a small positive constant (typically between 0.01 and 0.1) to ensure smoothness near the bifurcation threshold \( t_c \).
+![Deformation parameter](https://latex.codecogs.com/svg.image?\bg{white}(t)\text{is%20the%20deformation%20parameter%20(ranging%20from%200%20to%201),})
+
+![Critical deformation threshold](https://latex.codecogs.com/svg.image?\bg{white}(t_c=0.5)\text{is%20the%20critical%20deformation%20threshold,})
+
+![Complexity of the object](https://latex.codecogs.com/svg.image?\bg{white}(n)\text{is%20the%20complexity%20of%20the%20object%20(number%20of%20sides,%20faces,%20or%20cells),})
+
+![Dimensionality of the object](https://latex.codecogs.com/svg.image?\bg{white}(d)\text{is%20the%20dimensionality%20of%20the%20object%20(2D%20for%20polygons,%203D%20for%20polyhedra,%20and%204D%20for%20polytopes),})
+
+![Constants](https://latex.codecogs.com/svg.image?\bg{white}(A_d,%20k_d,%20B_d,%20C_d)\text{are%20constants%20derived%20from%20first%20principles,})
+
+![Epsilon constant](https://latex.codecogs.com/svg.image?\bg{white}(\varepsilon)\text{is%20a%20small%20positive%20constant%20(typically%20between%200.01%20and%200.1)%20to%20ensure%20smoothness%20near%20the%20bifurcation%20threshold%20(t_c).})
+
 
 ### Role of the Small Positive Constant \( \varepsilon \)
 
