@@ -93,18 +93,27 @@ Where:
 - ε: A small positive constant ensuring smoothness near the bifurcation threshold t_c = 0.5.
 
 ![Symmetry Group Constant](https://latex.codecogs.com/svg.image?\bg{white}A_2=2n)
+
 ![Complexity Scaling Constant](https://latex.codecogs.com/svg.image?\bg{white}k_2=\ln(n))
+
 ![Logarithmic Deformation Factor](https://latex.codecogs.com/svg.image?\bg{white}B_2=\frac{1}{\text{Perimeter}}\times\ln(n)^2+\left(0.1+0.01\ln(n)\right))
+
 ![Dimensional Adjustment Constant](https://latex.codecogs.com/svg.image?\bg{white}C_2=2.23)
 
 ![Symmetry Group Constant 3D](https://latex.codecogs.com/svg.image?\bg{white}A_3=|G(P)|)
+
 ![Complexity Scaling Constant 3D](https://latex.codecogs.com/svg.image?\bg{white}k_3=\ln(n))
+
 ![Logarithmic Deformation Factor 3D](https://latex.codecogs.com/svg.image?\bg{white}B_3=\frac{1}{\text{Surface%20Area}}\times\ln(n)^2+\left(0.1+0.01\ln(n)\right))
+
 ![Dimensional Adjustment Constant 3D](https://latex.codecogs.com/svg.image?\bg{white}C_3=1.77)
 
 ![Symmetry Group Constant 4D](https://latex.codecogs.com/svg.image?\bg{white}A_4=|G(P)|)
+
 ![Complexity Scaling Constant 4D](https://latex.codecogs.com/svg.image?\bg{white}k_4=\ln(n))
+
 ![Logarithmic Deformation Factor 4D](https://latex.codecogs.com/svg.image?\bg{white}B_4=\frac{1}{\text{Hypervolume}}\times\ln(n)^2+\left(0.1+0.01\ln(n)\right))
+
 ![Dimensional Adjustment Constant 4D](https://latex.codecogs.com/svg.image?\bg{white}C_4=1.0+0.1\left(\frac{\chi}{\ln(n)}\right))
 
 
