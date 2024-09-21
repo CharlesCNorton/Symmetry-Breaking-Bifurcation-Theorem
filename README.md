@@ -15,6 +15,8 @@ This framework has applications across various fields, including computational g
 
 ![ ](theorem.png)
 
+
+
 ---
 
 ## Table of Contents
@@ -76,6 +78,19 @@ Where:
 ![Constants](https://latex.codecogs.com/svg.image?\bg{white}(A_d,%20k_d,%20B_d,%20C_d)\text{are%20constants%20derived%20from%20first%20principles,})
 
 ε is a small positive constant (typically between 0.01 and 0.1) to ensure smoothness near the bifurcation threshold \( t_c \).
+
+For t <= t_c:
+
+    ΔG(t, n, d) = 0
+
+For t > t_c:
+
+    ΔG(t, n, d) = (A_d / n^k_d) * (t - t_c + ε)^(B_d * log(n) + C_d)
+
+Where:
+- t: Deformation parameter (0 ≤ t ≤ 1), representing how deformed the object is from its regular state.
+- A_d, k_d, B_d, C_d: Dimension-specific constants that affect the rate and behavior of symmetry-breaking.
+- ε: A small positive constant ensuring smoothness near the bifurcation threshold t_c = 0.5.
 
 
 ### Role of the Small Positive Constant ε
