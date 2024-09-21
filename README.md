@@ -93,22 +93,35 @@ Where:
 - ε: A small positive constant ensuring smoothness near the bifurcation threshold t_c = 0.5.
 
 Constants for 2D Polygons (d = 2)
+
 Symmetry Group Constant ( A_2 = 2n )
+
 Complexity Scaling Constant ( k_2 = \ln(n) )
+
 Logarithmic Deformation Factor ( B_2 = \frac{1}{\text{Perimeter}} \times \ln(n)^2 + (0.1 + 0.01 \ln(n)) )
+
 Dimensional Adjustment Constant ( C_2 = 2.23 )
 
 Constants for 3D Polyhedra (d = 3)
+
 Symmetry Group Constant ( A_3 = |G(P)| )
+
 Complexity Scaling Constant ( k_3 = \ln(n) )
+
 Logarithmic Deformation Factor ( B_3 = \frac{1}{\text{Surface Area}} \times \ln(n)^2 + (0.1 + 0.01 \ln(n)) )
+
 Dimensional Adjustment Constant ( C_3 = 1.77 )
 
 Constants for 4D Polytopes (d = 4)
+
 Symmetry Group Constant ( A_4 = |G(P)| )
+
 Complexity Scaling Constant ( k_4 = \ln(n) )
+
 Logarithmic Deformation Factor ( B_4 = \frac{1}{\text{Hypervolume}} \times \ln(n)^2 + (0.1 + 0.01 \ln(n)) )
+
 Dimensional Adjustment Constant ( C_4 = 1.0 + 0.1 \left( \frac{\chi}{\ln(n)} \right) )
+
 
 ### Role of the Small Positive Constant ε
 
