@@ -92,8 +92,20 @@ Where:
 - A_d, k_d, B_d, C_d: Dimension-specific constants that affect the rate and behavior of symmetry-breaking.
 - ε: A small positive constant ensuring smoothness near the bifurcation threshold t_c = 0.5.
 
-  https://latex.codecogs.com/svg.image?\text{Constants%20for%202D%20Polygons%20(d%20=%202):}\\A_2=2n,\quad%20k_2=\ln(n),\quad%20B_2=\frac{1}{\text{Perimeter}}\times\ln(n)^2+\left(0.1+0.01\ln(n)\right),\quad%20C_2=2.23\\\text{Constants%20for%203D%20Polyhedra%20(d%20=%203):}\\A_3=|G(P)|,\quad%20k_3=\ln(n),\quad%20B_3=\frac{1}{\text{Surface%20Area}}\times\ln(n)^2+\left(0.1+0.01\ln(n)\right),\quad%20C_3=1.77\\\text{Constants%20for%204D%20Polytopes%20(d%20=%204):}\\A_4=|G(P)|,\quad%20k_4=\ln(n),\quad%20B_4=\frac{1}{\text{Hypervolume}}\times\ln(n)^2+\left(0.1+0.01\ln(n)\right),\quad%20C_4=1.0+0.1\left(\frac{\chi}{\ln(n)}\right)
+https://latex.codecogs.com/svg.image?A_2=2n
+https://latex.codecogs.com/svg.image?k_2=\ln(n)
+https://latex.codecogs.com/svg.image?B_2=\frac{1}{\text{Perimeter}}\times\ln(n)^2+\left(0.1+0.01\ln(n)\right)
+https://latex.codecogs.com/svg.image?C_2=2.23
 
+https://latex.codecogs.com/svg.image?A_3=|G(P)|
+https://latex.codecogs.com/svg.image?k_3=\ln(n)
+https://latex.codecogs.com/svg.image?B_3=\frac{1}{\text{SurfaceArea}}\times\ln(n)^2+\left(0.1+0.01\ln(n)\right)
+https://latex.codecogs.com/svg.image?C_3=1.77
+
+https://latex.codecogs.com/svg.image?A_4=|G(P)|
+https://latex.codecogs.com/svg.image?k_4=\ln(n)
+https://latex.codecogs.com/svg.image?B_4=\frac{1}{\text{Hypervolume}}\times\ln(n)^2+\left(0.1+0.01\ln(n)\right)
+https://latex.codecogs.com/svg.image?C_4=1.0+0.1\left(\frac{\chi}{\ln(n)}\right)
 
 
 ### Role of the Small Positive Constant ε
