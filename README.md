@@ -146,8 +146,10 @@ To explore the necessity of ε, consider the bifurcation equation without it:
 
 In this case, as ![t \to t_c](https://latex.codecogs.com/svg.image?\bg{white}t%20\to%20t_c), the term ![(t - t_c)](https://latex.codecogs.com/svg.image?\bg{white}(t%20-%20t_c)) becomes zero, and the equation runs into two specific problems:
 
-1. **Fractional Powers of Zero**: If \( B_d \cdot \ln(n) + C_d \) is not an integer, raising zero to a fractional power leads to undefined behavior. This is because fractional exponents of zero can produce singularities or discontinuous results.
-2. **Logarithmic Terms**: If \( B_d \cdot \ln(n) + C_d \) contains terms requiring positive values, having \( (t - t_c) \to 0 \) results in undefined or singular behavior, as logarithmic expressions are not defined for zero or negative bases.
+1. **Fractional Powers of Zero**: If ![B_d \cdot \ln(n) + C_d](https://latex.codecogs.com/svg.image?\bg{white}B_d%20\cdot%20\ln(n)%20+%20C_d) is not an integer, raising zero to a fractional power leads to undefined behavior. This is because fractional exponents of zero can produce singularities or discontinuous results.
+
+2. **Logarithmic Terms**: If ![B_d \cdot \ln(n) + C_d](https://latex.codecogs.com/svg.image?\bg{white}B_d%20\cdot%20\ln(n)%20+%20C_d) contains terms requiring positive values, having ![(t - t_c) \to 0](https://latex.codecogs.com/svg.image?\bg{white}(t-t_c)%20\to%200) results in undefined or singular behavior, as logarithmic expressions are not defined for zero or negative bases.
+
 
 Thus, without ε, the equation encounters mathematical difficulties that would result in either discontinuous or non-physical behavior at \( t_c \), leading to instability in both theoretical models and practical simulations.
 
