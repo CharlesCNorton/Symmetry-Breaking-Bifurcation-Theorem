@@ -802,21 +802,21 @@ The theorem provides valuable insights into the interplay between symmetry, comp
 
 ### 9.1 Constants for 2D Polygons (d = 2)
 
-- **Symmetry Group Constant \( A_2 = 2n \)**
-- **Complexity Scaling Constant \( k_2 = \ln(n) \)**
-- **Logarithmic Deformation Factor \( B_2 = \frac{1}{\text{Perimeter}} \times \ln(n)^2 + (0.1 + 0.01 \ln(n)) \)**
-- **Dimensional Adjustment Constant \( C_2 = 2.23 \)**
+- **Symmetry Group Constant** ![A_2 = 2n](https://latex.codecogs.com/svg.image?\bg{white}A_2%20=%202n)
+- **Complexity Scaling Constant** ![k_2 = \ln(n)](https://latex.codecogs.com/svg.image?\bg{white}k_2%20=%20\ln(n))
+- **Logarithmic Deformation Factor** ![B_2 = \frac{1}{\text{Perimeter}} \times \ln(n)^2 + (0.1 + 0.01 \ln(n))](https://latex.codecogs.com/svg.image?\bg{white}B_2%20=%20\frac{1}{\text{Perimeter}}%20\times%20\ln(n)^2%20+%20(0.1%20+%200.01%20\ln(n)))
+- **Dimensional Adjustment Constant** ![C_2 = 2.23](https://latex.codecogs.com/svg.image?\bg{white}C_2%20=%202.23)
 
 ### 9.2 Constants for 3D Polyhedra (d = 3)
 
-- **Symmetry Group Constant \( A_3 = |G(P)| \)**
-- **Complexity Scaling Constant \( k_3 = \ln(n) \)**
-- **Logarithmic Deformation Factor \( B_3 = \frac{1}{\text{Surface Area}} \times \ln(n)^2 + (0.1 + 0.01 \ln(n)) \)**
-- **Dimensional Adjustment Constant \( C_3 = 1.77 \)**
+- **Symmetry Group Constant** ![A_3 = |G(P)|](https://latex.codecogs.com/svg.image?\bg{white}A_3%20=%20|G(P)|)
+- **Complexity Scaling Constant** ![k_3 = \ln(n)](https://latex.codecogs.com/svg.image?\bg{white}k_3%20=%20\ln(n))
+- **Logarithmic Deformation Factor** ![B_3 = \frac{1}{\text{Surface Area}} \times \ln(n)^2 + (0.1 + 0.01 \ln(n))](https://latex.codecogs.com/svg.image?\bg{white}B_3%20=%20\frac{1}{\text{Surface%20Area}}%20\times%20\ln(n)^2%20+%20(0.1%20+%200.01%20\ln(n)))
+- **Dimensional Adjustment Constant** ![C_3 = 1.77](https://latex.codecogs.com/svg.image?\bg{white}C_3%20=%201.77)
 
 ### 9.3 Constants for 4D Polytopes (d = 4)
 
-- **Symmetry Group Constant \( A_4 = |G(P)| \)**
-- **Complexity Scaling Constant \( k_4 = \ln(n) \)**
-- **Logarithmic Deformation Factor \( B_4 = \frac{1}{\text{Hypervolume}} \times \ln(n)^2 + (0.1 + 0.01 \ln(n)) \)**
-- **Dimensional Adjustment Constant \( C_4 = 1.0 + 0.1 \left( \frac{\chi}{\ln(n)} \right) \)**
+- **Symmetry Group Constant** ![A_4 = |G(P)|](https://latex.codecogs.com/svg.image?\bg{white}A_4%20=%20|G(P)|)
+- **Complexity Scaling Constant** ![k_4 = \ln(n)](https://latex.codecogs.com/svg.image?\bg{white}k_4%20=%20\ln(n))
+- **Logarithmic Deformation Factor** ![B_4 = \frac{1}{\text{Hypervolume}} \times \ln(n)^2 + (0.1 + 0.01 \ln(n))](https://latex.codecogs.com/svg.image?\bg{white}B_4%20=%20\frac{1}{\text{Hypervolume}}%20\times%20\ln(n)^2%20+%20(0.1%20+%200.01%20\ln(n)))
+- **Dimensional Adjustment Constant** ![C_4 = 1.0 + 0.1 \left( \frac{\chi}{\ln(n)} \right)](https://latex.codecogs.com/svg.image?\bg{white}C_4%20=%201.0%20+%200.1%20\left(%20\frac{\chi}{\ln(n)}%20\right))
