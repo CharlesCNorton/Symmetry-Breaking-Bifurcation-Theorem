@@ -536,26 +536,21 @@ This completes the full proof of the Symmetry-Breaking Bifurcation Theorem.
 
 ### 5.2 Hexagon (n = 6, 2D Polygon)
 
-- **Symmetry Group Constant \( A_2 = 12 \)**
-- **Complexity Scaling Constant \( k_2 = \ln(6) \approx 1.7918 \)**
+- **Symmetry Group Constant** ![A_2 = 12](https://latex.codecogs.com/svg.image?\bg{white}A_2%20=%2012)
+- **Complexity Scaling Constant** ![k_2 = \ln(6) \approx 1.7918](https://latex.codecogs.com/svg.image?\bg{white}k_2%20=%20\ln(6)%20\approx%201.7918)
 - **Derived Coefficients:**
 
-  \[
-  a_2 = \frac{1}{6s} \times \ln(6)
-  \]
+  ![a_2 = \frac{1}{6s} \times \ln(6)](https://latex.codecogs.com/svg.image?\bg{white}a_2%20=%20\frac{1}{6s}%20\times%20\ln(6))
 
-  \[
-  b_2 = 0.1 + 0.01 \times \ln(6) \approx 0.1179
-  \]
+  ![b_2 = 0.1 + 0.01 \times \ln(6) \approx 0.1179](https://latex.codecogs.com/svg.image?\bg{white}b_2%20=%200.1%20+%200.01%20\times%20\ln(6)%20\approx%200.1179)
 
-- **Logarithmic Deformation Factor \( B_2 = a_2 \ln(6) + b_2 \)**
-- **Dimensional Adjustment Constant \( C_2 = 2.23 \)**
+- **Logarithmic Deformation Factor** ![B_2 = a_2 \ln(6) + b_2](https://latex.codecogs.com/svg.image?\bg{white}B_2%20=%20a_2%20\ln(6)%20+%20b_2)
+- **Dimensional Adjustment Constant** ![C_2 = 2.23](https://latex.codecogs.com/svg.image?\bg{white}C_2%20=%202.23)
 
 - **Bifurcation Equation:**
 
-  \[
-  \Delta G(t, 6, 2) = \frac{12}{6^{1.7918}} \cdot (t - 0.5 + \varepsilon)^{B_2 \cdot \ln(6) + 2.23}
-  \]
+  ![\Delta G(t, 6, 2) = \frac{12}{6^{1.7918}} \cdot (t - 0.5 + \epsilon)^{B_2 \cdot \ln(6) + 2.23}](https://latex.codecogs.com/svg.image?\bg{white}\Delta%20G(t,%206,%202)%20=%20\frac{12}{6^{1.7918}}%20\cdot%20(t%20-%200.5%20+%20\epsilon)^{B_2%20\cdot%20\ln(6)%20+%202.23})
+
 
 ### 5.3 Cube (n = 6, 3D Polyhedron)
 
