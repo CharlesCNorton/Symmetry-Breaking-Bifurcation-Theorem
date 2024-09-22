@@ -1,0 +1,639 @@
+Analyzing with noise level: 0%
+Triangle Cross-validation MSE: 0.00000
+Triangle Negative Binomial Regression AIC: 61832.74, BIC: -1150853.05
+Triangle Durbin-Watson (OLS): 1.99
+Triangle Breusch-Pagan Test Statistic (OLS): 898.07, p-value: 0.00000
+Triangle White's Test Statistic (OLS): 34744.38, p-value: 0.00000
+Triangle Kolmogorov-Smirnov Test (OLS Residuals): KS Statistic = 0.13, p-value = 0.00000
+Triangle Shapiro-Wilk Test: Statistic = 0.90, p-value = 0.00000
+Triangle Anderson-Darling Test: Statistic = 3208.23, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Triangle Lilliefors Test: Statistic = 0.13, p-value = 0.00100
+Triangle Jarque-Bera Test: Statistic = 9490.98, p-value = 0.00000
+Triangle Runs Test for Randomness: Z = -2.51, p-value = 0.01195
+Triangle Breusch-Godfrey Test: Statistic = 3.50, p-value = 0.06131
+Triangle Levene’s Test for Equality of Variances: Statistic = 26662.41, p-value = 0.00000
+Triangle Z-test for Residual Mean = 0: Z-statistic = 0.00
+Triangle Chi-Square Test Statistic (OLS): 47405302669945248.00, p-value: 0.00000
+Triangle OLS AIC: -409972.20, BIC: -409953.18
+Triangle Poisson AIC: 50589.01, BIC: -1150821.00
+Triangle Negative Binomial AIC: 61832.74, BIC: -1150853.05
+Square Cross-validation MSE: 0.00000
+Square Negative Binomial Regression AIC: 44278.15, BIC: -1151005.21
+Square Durbin-Watson (OLS): 1.99
+Square Breusch-Pagan Test Statistic (OLS): 1156.03, p-value: 0.00000
+Square White's Test Statistic (OLS): 34774.78, p-value: 0.00000
+Square Kolmogorov-Smirnov Test (OLS Residuals): KS Statistic = 0.13, p-value = 0.00000
+Square Shapiro-Wilk Test: Statistic = 0.90, p-value = 0.00000
+Square Anderson-Darling Test: Statistic = 3188.20, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Square Lilliefors Test: Statistic = 0.13, p-value = 0.00100
+Square Jarque-Bera Test: Statistic = 9452.57, p-value = 0.00000
+Square Runs Test for Randomness: Z = -2.31, p-value = 0.02094
+Square Breusch-Godfrey Test: Statistic = 3.46, p-value = 0.06299
+Square Levene’s Test for Equality of Variances: Statistic = 29958.40, p-value = 0.00000
+Square Z-test for Residual Mean = 0: Z-statistic = 0.00
+Square Chi-Square Test Statistic (OLS): 38145876387213008.00, p-value: 0.00000
+Square OLS AIC: -497505.60, BIC: -497486.57
+Square Poisson AIC: 37018.77, BIC: -1150992.11
+Square Negative Binomial AIC: 44278.15, BIC: -1151005.21
+Hexagon Cross-validation MSE: 0.00000
+Hexagon Negative Binomial Regression AIC: 22073.92, BIC: -1151163.58
+Hexagon Durbin-Watson (OLS): 1.99
+Hexagon Breusch-Pagan Test Statistic (OLS): 1471.16, p-value: 0.00000
+Hexagon White's Test Statistic (OLS): 34824.14, p-value: 0.00000
+Hexagon Kolmogorov-Smirnov Test (OLS Residuals): KS Statistic = 0.13, p-value = 0.00000
+Hexagon Shapiro-Wilk Test: Statistic = 0.90, p-value = 0.00000
+Hexagon Anderson-Darling Test: Statistic = 3165.29, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Hexagon Lilliefors Test: Statistic = 0.13, p-value = 0.00100
+Hexagon Jarque-Bera Test: Statistic = 9409.58, p-value = 0.00000
+Hexagon Runs Test for Randomness: Z = -2.52, p-value = 0.01186
+Hexagon Breusch-Godfrey Test: Statistic = 3.63, p-value = 0.05662
+Hexagon Levene’s Test for Equality of Variances: Statistic = 33607.97, p-value = 0.00000
+Hexagon Z-test for Residual Mean = 0: Z-statistic = 0.00
+Hexagon Chi-Square Test Statistic (OLS): 27235037167514120.00, p-value: 0.00000
+Hexagon OLS AIC: -676736.79, BIC: -676717.76
+Hexagon Poisson AIC: 19106.54, BIC: -1151161.44
+Hexagon Negative Binomial AIC: 22073.92, BIC: -1151163.58
+Cube Cross-validation MSE: 0.00000
+Cube Negative Binomial Regression AIC: 53053.84, BIC: -1150932.38
+Cube Durbin-Watson (OLS): 1.99
+Cube Breusch-Pagan Test Statistic (OLS): 8.77, p-value: 0.00306
+Cube White's Test Statistic (OLS): 34993.33, p-value: 0.00000
+Cube Kolmogorov-Smirnov Test (OLS Residuals): KS Statistic = 0.13, p-value = 0.00000
+Cube Shapiro-Wilk Test: Statistic = 0.90, p-value = 0.00000
+Cube Anderson-Darling Test: Statistic = 3324.99, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Cube Lilliefors Test: Statistic = 0.13, p-value = 0.00100
+Cube Jarque-Bera Test: Statistic = 9747.83, p-value = 0.00000
+Cube Runs Test for Randomness: Z = -2.13, p-value = 0.03294
+Cube Breusch-Godfrey Test: Statistic = 3.81, p-value = 0.05101
+Cube Levene’s Test for Equality of Variances: Statistic = 4766.10, p-value = 0.00000
+Cube Z-test for Residual Mean = 0: Z-statistic = 0.00
+Cube Chi-Square Test Statistic (OLS): 64940642864033544.00, p-value: 0.00000
+Cube OLS AIC: -527521.52, BIC: -527502.49
+Cube Poisson AIC: 44087.92, BIC: -1150913.10
+Cube Negative Binomial AIC: 53053.84, BIC: -1150932.38
+Dodecahedron Cross-validation MSE: 0.00000
+Dodecahedron Negative Binomial Regression AIC: 10237.24, BIC: -1151228.40
+Dodecahedron Durbin-Watson (OLS): 1.99
+Dodecahedron Breusch-Pagan Test Statistic (OLS): 42.69, p-value: 0.00000
+Dodecahedron White's Test Statistic (OLS): 34837.64, p-value: 0.00000
+Dodecahedron Kolmogorov-Smirnov Test (OLS Residuals): KS Statistic = 0.13, p-value = 0.00000
+Dodecahedron Shapiro-Wilk Test: Statistic = 0.90, p-value = 0.00000
+Dodecahedron Anderson-Darling Test: Statistic = 3300.69, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Dodecahedron Lilliefors Test: Statistic = 0.13, p-value = 0.00100
+Dodecahedron Jarque-Bera Test: Statistic = 9683.51, p-value = 0.00000
+Dodecahedron Runs Test for Randomness: Z = -2.17, p-value = 0.02967
+Dodecahedron Breusch-Godfrey Test: Statistic = 3.82, p-value = 0.05079
+Dodecahedron Levene’s Test for Equality of Variances: Statistic = 9854.53, p-value = 0.00000
+Dodecahedron Z-test for Residual Mean = 0: Z-statistic = 0.00
+Dodecahedron Chi-Square Test Statistic (OLS): 2752977768153585.50, p-value: 0.00000
+Dodecahedron OLS AIC: -936699.33, BIC: -936680.30
+Dodecahedron Poisson AIC: 9118.07, BIC: -1151228.11
+Dodecahedron Negative Binomial AIC: 10237.24, BIC: -1151228.40
+Tesseract Cross-validation MSE: 0.00000
+Tesseract Negative Binomial Regression AIC: 58630.07, BIC: -1150926.81
+Tesseract Durbin-Watson (OLS): 1.99
+Tesseract Breusch-Pagan Test Statistic (OLS): 9014.80, p-value: 0.00000
+Tesseract White's Test Statistic (OLS): 37209.40, p-value: 0.00000
+Tesseract Kolmogorov-Smirnov Test (OLS Residuals): KS Statistic = 0.13, p-value = 0.00000
+Tesseract Shapiro-Wilk Test: Statistic = 0.91, p-value = 0.00000
+Tesseract Anderson-Darling Test: Statistic = 2745.94, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Tesseract Lilliefors Test: Statistic = 0.13, p-value = 0.00100
+Tesseract Jarque-Bera Test: Statistic = 9101.91, p-value = 0.00000
+Tesseract Runs Test for Randomness: Z = -3.20, p-value = 0.00136
+Tesseract Breusch-Godfrey Test: Statistic = 2.17, p-value = 0.14037
+Tesseract Levene’s Test for Equality of Variances: Statistic = 86518.03, p-value = 0.00000
+Tesseract Z-test for Residual Mean = 0: Z-statistic = 0.00
+Tesseract Chi-Square Test Statistic (OLS): 88015446475991424.00, p-value: 0.00000
+Tesseract OLS AIC: -286277.78, BIC: -286258.75
+Tesseract Poisson AIC: 47441.42, BIC: -1150894.72
+Tesseract Negative Binomial AIC: 58630.07, BIC: -1150926.81
+600-Cell Cross-validation MSE: 0.00000
+600-Cell Negative Binomial Regression AIC: 4.00, BIC: -1151269.52
+600-Cell Durbin-Watson (OLS): 1.99
+600-Cell Breusch-Pagan Test Statistic (OLS): 12351.68, p-value: 0.00000
+600-Cell White's Test Statistic (OLS): 38525.59, p-value: 0.00000
+600-Cell Kolmogorov-Smirnov Test (OLS Residuals): KS Statistic = 0.13, p-value = 0.00000
+600-Cell Shapiro-Wilk Test: Statistic = 0.91, p-value = 0.00000
+600-Cell Anderson-Darling Test: Statistic = 2584.57, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+600-Cell Lilliefors Test: Statistic = 0.13, p-value = 0.00100
+600-Cell Jarque-Bera Test: Statistic = 9860.32, p-value = 0.00000
+600-Cell Runs Test for Randomness: Z = -2.55, p-value = 0.01077
+600-Cell Breusch-Godfrey Test: Statistic = -0.89, p-value = 1.00000
+600-Cell Levene’s Test for Equality of Variances: Statistic = 60818.76, p-value = 0.00000
+600-Cell Z-test for Residual Mean = 0: Z-statistic = -0.00
+600-Cell Chi-Square Test Statistic (OLS): -2302.19, p-value: 1.00000
+600-Cell OLS AIC: -6936913.33, BIC: -6936894.30
+600-Cell Poisson AIC: 4.00, BIC: -1151269.52
+600-Cell Negative Binomial AIC: 4.00, BIC: -1151269.52
+
+Analyzing with noise level: 10%
+Triangle Cross-validation MSE: 0.00842
+Triangle Negative Binomial Regression AIC: 102493.11, BIC: -1145973.02
+Triangle Durbin-Watson (OLS): 2.00
+Triangle Breusch-Pagan Test Statistic (OLS): 2377.85, p-value: 0.00000
+Triangle White's Test Statistic (OLS): 2397.81, p-value: 0.00000
+Triangle Kolmogorov-Smirnov Test (OLS Residuals): KS Statistic = 0.02, p-value = 0.00000
+Triangle Shapiro-Wilk Test: Statistic = 1.00, p-value = 0.01988
+Triangle Anderson-Darling Test: Statistic = 33.86, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Triangle Lilliefors Test: Statistic = 0.03, p-value = 0.12277
+Triangle Jarque-Bera Test: Statistic = 416.83, p-value = 0.00000
+Triangle Runs Test for Randomness: Z = 0.04, p-value = 0.96797
+Triangle Breusch-Godfrey Test: Statistic = -0.16, p-value = 1.00000
+Triangle Levene’s Test for Equality of Variances: Statistic = 501.43, p-value = 0.00000
+Triangle Z-test for Residual Mean = 0: Z-statistic = -0.00
+Triangle Chi-Square Test Statistic (OLS): -782789401220438272.00, p-value: 1.00000
+Triangle OLS AIC: -180571.34, BIC: -180552.31
+Triangle Poisson AIC: 82810.52, BIC: -1145314.08
+Triangle Negative Binomial AIC: 102493.11, BIC: -1145973.02
+Square Cross-validation MSE: 0.00771
+Square Negative Binomial Regression AIC: 79379.76, BIC: -1144917.22
+Square Durbin-Watson (OLS): 2.01
+Square Breusch-Pagan Test Statistic (OLS): 4018.34, p-value: 0.00000
+Square White's Test Statistic (OLS): 4044.88, p-value: 0.00000
+Square Kolmogorov-Smirnov Test (OLS Residuals): KS Statistic = 0.04, p-value = 0.00000
+Square Shapiro-Wilk Test: Statistic = 0.99, p-value = 0.00000
+Square Anderson-Darling Test: Statistic = 212.57, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Square Lilliefors Test: Statistic = 0.04, p-value = 0.00564
+Square Jarque-Bera Test: Statistic = 2354.81, p-value = 0.00000
+Square Runs Test for Randomness: Z = 1.45, p-value = 0.14814
+Square Breusch-Godfrey Test: Statistic = 0.85, p-value = 0.35616
+Square Levene’s Test for Equality of Variances: Statistic = 93.41, p-value = 0.00000
+Square Z-test for Residual Mean = 0: Z-statistic = -0.00
+Square Chi-Square Test Statistic (OLS): -716643887306094720.00, p-value: 1.00000
+Square OLS AIC: -199896.52, BIC: -199877.50
+Square Poisson AIC: 65907.89, BIC: -1144293.63
+Square Negative Binomial AIC: 79379.76, BIC: -1144917.22
+Hexagon Cross-validation MSE: 0.00595
+Hexagon Negative Binomial Regression AIC: 51987.25, BIC: -1143538.93
+Hexagon Durbin-Watson (OLS): 2.00
+Hexagon Breusch-Pagan Test Statistic (OLS): 3169.07, p-value: 0.00000
+Hexagon White's Test Statistic (OLS): 3347.28, p-value: 0.00000
+Hexagon Kolmogorov-Smirnov Test (OLS Residuals): KS Statistic = 0.12, p-value = 0.00000
+Hexagon Shapiro-Wilk Test: Statistic = 0.94, p-value = 0.00000
+Hexagon Anderson-Darling Test: Statistic = 1948.19, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Hexagon Lilliefors Test: Statistic = 0.12, p-value = 0.00100
+Hexagon Jarque-Bera Test: Statistic = 16265.01, p-value = 0.00000
+Hexagon Runs Test for Randomness: Z = -0.02, p-value = 0.98250
+Hexagon Breusch-Godfrey Test: Statistic = -0.05, p-value = 1.00000
+Hexagon Levene’s Test for Equality of Variances: Statistic = 1.28, p-value = 0.25714
+Hexagon Z-test for Residual Mean = 0: Z-statistic = -0.00
+Hexagon Chi-Square Test Statistic (OLS): -4967334279922996224.00, p-value: 1.00000
+Hexagon OLS AIC: -235553.75, BIC: -235534.73
+Hexagon Poisson AIC: 44789.38, BIC: -1143040.17
+Hexagon Negative Binomial AIC: 51987.25, BIC: -1143538.93
+Cube Cross-validation MSE: 0.00810
+Cube Negative Binomial Regression AIC: 86096.90, BIC: -1145238.93
+Cube Durbin-Watson (OLS): 2.01
+Cube Breusch-Pagan Test Statistic (OLS): 3160.81, p-value: 0.00000
+Cube White's Test Statistic (OLS): 3184.44, p-value: 0.00000
+Cube Kolmogorov-Smirnov Test (OLS Residuals): KS Statistic = 0.04, p-value = 0.00000
+Cube Shapiro-Wilk Test: Statistic = 0.99, p-value = 0.00000
+Cube Anderson-Darling Test: Statistic = 169.11, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Cube Lilliefors Test: Statistic = 0.05, p-value = 0.00100
+Cube Jarque-Bera Test: Statistic = 1653.10, p-value = 0.00000
+Cube Runs Test for Randomness: Z = 0.10, p-value = 0.91962
+Cube Breusch-Godfrey Test: Statistic = -0.04, p-value = 1.00000
+Cube Levene’s Test for Equality of Variances: Statistic = 17.18, p-value = 0.00003
+Cube Z-test for Residual Mean = 0: Z-statistic = -0.00
+Cube Chi-Square Test Statistic (OLS): -730958078199199360.00, p-value: 1.00000
+Cube OLS AIC: -197207.15, BIC: -197188.12
+Cube Poisson AIC: 71102.81, BIC: -1144581.87
+Cube Negative Binomial AIC: 86096.90, BIC: -1145238.93
+Dodecahedron Cross-validation MSE: 0.00426
+Dodecahedron Negative Binomial Regression AIC: 39564.48, BIC: -1143519.14
+Dodecahedron Durbin-Watson (OLS): 2.01
+Dodecahedron Breusch-Pagan Test Statistic (OLS): 392.79, p-value: 0.00000
+Dodecahedron White's Test Statistic (OLS): 404.42, p-value: 0.00000
+Dodecahedron Kolmogorov-Smirnov Test (OLS Residuals): KS Statistic = 0.20, p-value = 0.00000
+Dodecahedron Shapiro-Wilk Test: Statistic = 0.82, p-value = 0.00000
+Dodecahedron Anderson-Darling Test: Statistic = 6092.40, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Dodecahedron Lilliefors Test: Statistic = 0.20, p-value = 0.00100
+Dodecahedron Jarque-Bera Test: Statistic = 41457.82, p-value = 0.00000
+Dodecahedron Runs Test for Randomness: Z = 0.28, p-value = 0.77692
+Dodecahedron Breusch-Godfrey Test: Statistic = 2.67, p-value = 0.10246
+Dodecahedron Levene’s Test for Equality of Variances: Statistic = 0.00, p-value = 0.98244
+Dodecahedron Z-test for Residual Mean = 0: Z-statistic = -0.00
+Dodecahedron Chi-Square Test Statistic (OLS): -3071393145706247168.00, p-value: 1.00000
+Dodecahedron OLS AIC: -266483.25, BIC: -266464.22
+Dodecahedron Poisson AIC: 34652.59, BIC: -1143140.92
+Dodecahedron Negative Binomial AIC: 39564.48, BIC: -1143519.14
+Tesseract Cross-validation MSE: 0.00822
+Tesseract Negative Binomial Regression AIC: 111711.16, BIC: -1146155.41
+Tesseract Durbin-Watson (OLS): 2.01
+Tesseract Breusch-Pagan Test Statistic (OLS): 4425.96, p-value: 0.00000
+Tesseract White's Test Statistic (OLS): 8853.42, p-value: 0.00000
+Tesseract Kolmogorov-Smirnov Test (OLS Residuals): KS Statistic = 0.02, p-value = 0.00000
+Tesseract Shapiro-Wilk Test: Statistic = 0.99, p-value = 0.00000
+Tesseract Anderson-Darling Test: Statistic = 79.14, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Tesseract Lilliefors Test: Statistic = 0.03, p-value = 0.02101
+Tesseract Jarque-Bera Test: Statistic = 1086.62, p-value = 0.00000
+Tesseract Runs Test for Randomness: Z = 0.91, p-value = 0.36500
+Tesseract Breusch-Godfrey Test: Statistic = -4.00, p-value = 1.00000
+Tesseract Levene’s Test for Equality of Variances: Statistic = 12910.65, p-value = 0.00000
+Tesseract Z-test for Residual Mean = 0: Z-statistic = 0.00
+Tesseract Chi-Square Test Statistic (OLS): 343276301806371200.00, p-value: 0.00000
+Tesseract OLS AIC: -124987.74, BIC: -124968.71
+Tesseract Poisson AIC: 88415.14, BIC: -1145545.34
+Tesseract Negative Binomial AIC: 111711.16, BIC: -1146155.41
+600-Cell Cross-validation MSE: 0.00505
+600-Cell Negative Binomial Regression AIC: 34002.30, BIC: -1143754.71
+600-Cell Durbin-Watson (OLS): 1.99
+600-Cell Breusch-Pagan Test Statistic (OLS): 1.76, p-value: 0.18519
+600-Cell White's Test Statistic (OLS): 3.00, p-value: 0.22317
+600-Cell Kolmogorov-Smirnov Test (OLS Residuals): KS Statistic = 0.25, p-value = 0.00000
+600-Cell Shapiro-Wilk Test: Statistic = 0.74, p-value = 0.00000
+600-Cell Anderson-Darling Test: Statistic = 10102.10, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+600-Cell Lilliefors Test: Statistic = 0.26, p-value = 0.00100
+600-Cell Jarque-Bera Test: Statistic = 67796.95, p-value = 0.00000
+600-Cell Runs Test for Randomness: Z = -0.23, p-value = 0.82076
+600-Cell Breusch-Godfrey Test: Statistic = -3.14, p-value = 1.00000
+600-Cell Levene’s Test for Equality of Variances: Statistic = 0.00, p-value = 0.99997
+600-Cell Z-test for Residual Mean = 0: Z-statistic = 0.00
+600-Cell Chi-Square Test Statistic (OLS): 3783481884770313216.00, p-value: 0.00000
+600-Cell OLS AIC: -283327.87, BIC: -283308.84
+600-Cell Poisson AIC: 29983.45, BIC: -1143432.95
+600-Cell Negative Binomial AIC: 34002.30, BIC: -1143754.71
+
+Analyzing with noise level: 20%
+Triangle Cross-validation MSE: 0.03390
+Triangle Negative Binomial Regression AIC: 144707.84, BIC: -1140774.34
+Triangle Durbin-Watson (OLS): 2.00
+Triangle Breusch-Pagan Test Statistic (OLS): 2179.20, p-value: 0.00000
+Triangle White's Test Statistic (OLS): 2202.70, p-value: 0.00000
+Triangle Kolmogorov-Smirnov Test (OLS Residuals): KS Statistic = 0.03, p-value = 0.00000
+Triangle Shapiro-Wilk Test: Statistic = 1.00, p-value = 0.00000
+Triangle Anderson-Darling Test: Statistic = 115.23, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Triangle Lilliefors Test: Statistic = 0.04, p-value = 0.00213
+Triangle Jarque-Bera Test: Statistic = 1070.41, p-value = 0.00000
+Triangle Runs Test for Randomness: Z = -0.44, p-value = 0.65936
+Triangle Breusch-Godfrey Test: Statistic = -0.89, p-value = 1.00000
+Triangle Levene’s Test for Equality of Variances: Statistic = 32.09, p-value = 0.00000
+Triangle Z-test for Residual Mean = 0: Z-statistic = 0.00
+Triangle Chi-Square Test Statistic (OLS): 3757722139787919872.00, p-value: 0.00000
+Triangle OLS AIC: -53100.87, BIC: -53081.85
+Triangle Poisson AIC: 115818.28, BIC: -1138413.33
+Triangle Negative Binomial AIC: 144707.84, BIC: -1140774.34
+Square Cross-validation MSE: 0.02991
+Square Negative Binomial Regression AIC: 115061.35, BIC: -1138487.80
+Square Durbin-Watson (OLS): 2.00
+Square Breusch-Pagan Test Statistic (OLS): 3541.43, p-value: 0.00000
+Square White's Test Statistic (OLS): 3552.68, p-value: 0.00000
+Square Kolmogorov-Smirnov Test (OLS Residuals): KS Statistic = 0.06, p-value = 0.00000
+Square Shapiro-Wilk Test: Statistic = 0.99, p-value = 0.00000
+Square Anderson-Darling Test: Statistic = 461.66, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Square Lilliefors Test: Statistic = 0.06, p-value = 0.00100
+Square Jarque-Bera Test: Statistic = 4081.29, p-value = 0.00000
+Square Runs Test for Randomness: Z = -1.17, p-value = 0.24089
+Square Breusch-Godfrey Test: Statistic = -0.56, p-value = 1.00000
+Square Levene’s Test for Equality of Variances: Statistic = 8.46, p-value = 0.00363
+Square Z-test for Residual Mean = 0: Z-statistic = 0.00
+Square Chi-Square Test Statistic (OLS): 793626639637462144.00, p-value: 0.00000
+Square OLS AIC: -68882.93, BIC: -68863.90
+Square Poisson AIC: 95020.68, BIC: -1136253.04
+Square Negative Binomial AIC: 115061.35, BIC: -1138487.80
+Hexagon Cross-validation MSE: 0.02161
+Hexagon Negative Binomial Regression AIC: 79822.62, BIC: -1136354.33
+Hexagon Durbin-Watson (OLS): 1.98
+Hexagon Breusch-Pagan Test Statistic (OLS): 1847.11, p-value: 0.00000
+Hexagon White's Test Statistic (OLS): 1914.46, p-value: 0.00000
+Hexagon Kolmogorov-Smirnov Test (OLS Residuals): KS Statistic = 0.14, p-value = 0.00000
+Hexagon Shapiro-Wilk Test: Statistic = 0.91, p-value = 0.00000
+Hexagon Anderson-Darling Test: Statistic = 2884.13, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Hexagon Lilliefors Test: Statistic = 0.12, p-value = 0.00100
+Hexagon Jarque-Bera Test: Statistic = 20527.09, p-value = 0.00000
+Hexagon Runs Test for Randomness: Z = -1.13, p-value = 0.25937
+Hexagon Breusch-Godfrey Test: Statistic = 6.45, p-value = 0.01111
+Hexagon Levene’s Test for Equality of Variances: Statistic = 0.11, p-value = 0.73627
+Hexagon Z-test for Residual Mean = 0: Z-statistic = 0.00
+Hexagon Chi-Square Test Statistic (OLS): 4330844924101919744.00, p-value: 0.00000
+Hexagon OLS AIC: -104690.83, BIC: -104671.81
+Hexagon Poisson AIC: 68530.39, BIC: -1134618.72
+Hexagon Negative Binomial AIC: 79822.62, BIC: -1136354.33
+Cube Cross-validation MSE: 0.03089
+Cube Negative Binomial Regression AIC: 119277.35, BIC: -1138649.71
+Cube Durbin-Watson (OLS): 2.02
+Cube Breusch-Pagan Test Statistic (OLS): 2797.79, p-value: 0.00000
+Cube White's Test Statistic (OLS): 2802.92, p-value: 0.00000
+Cube Kolmogorov-Smirnov Test (OLS Residuals): KS Statistic = 0.06, p-value = 0.00000
+Cube Shapiro-Wilk Test: Statistic = 0.99, p-value = 0.00000
+Cube Anderson-Darling Test: Statistic = 446.71, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Cube Lilliefors Test: Statistic = 0.06, p-value = 0.00100
+Cube Jarque-Bera Test: Statistic = 3734.56, p-value = 0.00000
+Cube Runs Test for Randomness: Z = 1.92, p-value = 0.05450
+Cube Breusch-Godfrey Test: Statistic = 4.86, p-value = 0.02744
+Cube Levene’s Test for Equality of Variances: Statistic = 0.89, p-value = 0.34646
+Cube Z-test for Residual Mean = 0: Z-statistic = -0.00
+Cube Chi-Square Test Statistic (OLS): -15095109196537026560.00, p-value: 1.00000
+Cube OLS AIC: -66278.66, BIC: -66259.63
+Cube Poisson AIC: 98312.47, BIC: -1136326.44
+Cube Negative Binomial AIC: 119277.35, BIC: -1138649.71
+Dodecahedron Cross-validation MSE: 0.01592
+Dodecahedron Negative Binomial Regression AIC: 64248.45, BIC: -1136418.56
+Dodecahedron Durbin-Watson (OLS): 2.01
+Dodecahedron Breusch-Pagan Test Statistic (OLS): 183.58, p-value: 0.00000
+Dodecahedron White's Test Statistic (OLS): 191.18, p-value: 0.00000
+Dodecahedron Kolmogorov-Smirnov Test (OLS Residuals): KS Statistic = 0.21, p-value = 0.00000
+Dodecahedron Shapiro-Wilk Test: Statistic = 0.81, p-value = 0.00000
+Dodecahedron Anderson-Darling Test: Statistic = 6976.10, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Dodecahedron Lilliefors Test: Statistic = 0.21, p-value = 0.00100
+Dodecahedron Jarque-Bera Test: Statistic = 45663.05, p-value = 0.00000
+Dodecahedron Runs Test for Randomness: Z = 0.51, p-value = 0.61255
+Dodecahedron Breusch-Godfrey Test: Statistic = 0.69, p-value = 0.40530
+Dodecahedron Levene’s Test for Equality of Variances: Statistic = 0.00, p-value = 0.98890
+Dodecahedron Z-test for Residual Mean = 0: Z-statistic = 0.00
+Dodecahedron Chi-Square Test Statistic (OLS): 10052338803346302976.00, p-value: 0.00000
+Dodecahedron OLS AIC: -130501.39, BIC: -130482.36
+Dodecahedron Poisson AIC: 56034.57, BIC: -1135036.32
+Dodecahedron Negative Binomial AIC: 64248.45, BIC: -1136418.56
+Tesseract Cross-validation MSE: 0.03489
+Tesseract Negative Binomial Regression AIC: 170818.35, BIC: -1142320.52
+Tesseract Durbin-Watson (OLS): 2.00
+Tesseract Breusch-Pagan Test Statistic (OLS): 2784.32, p-value: 0.00000
+Tesseract White's Test Statistic (OLS): 4197.01, p-value: 0.00000
+Tesseract Kolmogorov-Smirnov Test (OLS Residuals): KS Statistic = 0.01, p-value = 0.00000
+Tesseract Shapiro-Wilk Test: Statistic = 1.00, p-value = 0.00000
+Tesseract Anderson-Darling Test: Statistic = 30.94, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Tesseract Lilliefors Test: Statistic = 0.02, p-value = 0.37390
+Tesseract Jarque-Bera Test: Statistic = 486.26, p-value = 0.00000
+Tesseract Runs Test for Randomness: Z = 0.76, p-value = 0.44836
+Tesseract Breusch-Godfrey Test: Statistic = -3.33, p-value = 1.00000
+Tesseract Levene’s Test for Equality of Variances: Statistic = 3861.93, p-value = 0.00000
+Tesseract Z-test for Residual Mean = 0: Z-statistic = 0.00
+Tesseract Chi-Square Test Statistic (OLS): 960525375995673856.00, p-value: 0.00000
+Tesseract OLS AIC: -15485.66, BIC: -15466.64
+Tesseract Poisson AIC: 131885.80, BIC: -1140165.30
+Tesseract Negative Binomial AIC: 170818.35, BIC: -1142320.52
+600-Cell Cross-validation MSE: 0.01991
+600-Cell Negative Binomial Regression AIC: 56722.86, BIC: -1136887.27
+600-Cell Durbin-Watson (OLS): 2.00
+600-Cell Breusch-Pagan Test Statistic (OLS): 0.31, p-value: 0.57972
+600-Cell White's Test Statistic (OLS): 0.62, p-value: 0.73282
+600-Cell Kolmogorov-Smirnov Test (OLS Residuals): KS Statistic = 0.25, p-value = 0.00000
+600-Cell Shapiro-Wilk Test: Statistic = 0.73, p-value = 0.00000
+600-Cell Anderson-Darling Test: Statistic = 10227.67, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+600-Cell Lilliefors Test: Statistic = 0.25, p-value = 0.00100
+600-Cell Jarque-Bera Test: Statistic = 72708.06, p-value = 0.00000
+600-Cell Runs Test for Randomness: Z = 0.00, p-value = 0.99811
+600-Cell Breusch-Godfrey Test: Statistic = -0.38, p-value = 1.00000
+600-Cell Levene’s Test for Equality of Variances: Statistic = 0.00, p-value = 1.00000
+600-Cell Z-test for Residual Mean = 0: Z-statistic = -0.00
+600-Cell Chi-Square Test Statistic (OLS): -11859131500613566464.00, p-value: 1.00000
+600-Cell OLS AIC: -145951.84, BIC: -145932.81
+600-Cell Poisson AIC: 49806.24, BIC: -1135691.07
+600-Cell Negative Binomial AIC: 56722.86, BIC: -1136887.27
+
+Analyzing with noise level: 30%
+Triangle Cross-validation MSE: 0.07847
+Triangle Negative Binomial Regression AIC: 186261.78, BIC: -1136930.22
+Triangle Durbin-Watson (OLS): 2.00
+Triangle Breusch-Pagan Test Statistic (OLS): 1681.83, p-value: 0.00000
+Triangle White's Test Statistic (OLS): 1755.08, p-value: 0.00000
+Triangle Kolmogorov-Smirnov Test (OLS Residuals): KS Statistic = 0.03, p-value = 0.00000
+Triangle Shapiro-Wilk Test: Statistic = 1.00, p-value = 0.00000
+Triangle Anderson-Darling Test: Statistic = 137.44, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Triangle Lilliefors Test: Statistic = 0.04, p-value = 0.00100
+Triangle Jarque-Bera Test: Statistic = 1187.62, p-value = 0.00000
+Triangle Runs Test for Randomness: Z = 0.20, p-value = 0.84246
+Triangle Breusch-Godfrey Test: Statistic = -4.49, p-value = 1.00000
+Triangle Levene’s Test for Equality of Variances: Statistic = 5.78, p-value = 0.01624
+Triangle Z-test for Residual Mean = 0: Z-statistic = 0.00
+Triangle Chi-Square Test Statistic (OLS): 1878149536303411712.00, p-value: 0.00000
+Triangle OLS AIC: 28096.14, BIC: 28115.17
+Triangle Poisson AIC: 147788.85, BIC: -1132033.11
+Triangle Negative Binomial AIC: 186261.78, BIC: -1136930.22
+Square Cross-validation MSE: 0.06826
+Square Negative Binomial Regression AIC: 150049.78, BIC: -1133113.16
+Square Durbin-Watson (OLS): 2.00
+Square Breusch-Pagan Test Statistic (OLS): 2702.02, p-value: 0.00000
+Square White's Test Statistic (OLS): 2702.17, p-value: 0.00000
+Square Kolmogorov-Smirnov Test (OLS Residuals): KS Statistic = 0.06, p-value = 0.00000
+Square Shapiro-Wilk Test: Statistic = 0.98, p-value = 0.00000
+Square Anderson-Darling Test: Statistic = 504.03, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Square Lilliefors Test: Statistic = 0.06, p-value = 0.00100
+Square Jarque-Bera Test: Statistic = 4167.82, p-value = 0.00000
+Square Runs Test for Randomness: Z = 0.77, p-value = 0.44186
+Square Breusch-Godfrey Test: Statistic = -2.41, p-value = 1.00000
+Square Levene’s Test for Equality of Variances: Statistic = 1.69, p-value = 0.19410
+Square Z-test for Residual Mean = 0: Z-statistic = -0.00
+Square Chi-Square Test Statistic (OLS): -3648019873626965504.00, p-value: 1.00000
+Square OLS AIC: 13698.37, BIC: 13717.40
+Square Poisson AIC: 123487.45, BIC: -1128386.44
+Square Negative Binomial AIC: 150049.78, BIC: -1133113.16
+Hexagon Cross-validation MSE: 0.04788
+Hexagon Negative Binomial Regression AIC: 106079.59, BIC: -1129823.16
+Hexagon Durbin-Watson (OLS): 2.00
+Hexagon Breusch-Pagan Test Statistic (OLS): 1326.39, p-value: 0.00000
+Hexagon White's Test Statistic (OLS): 1360.79, p-value: 0.00000
+Hexagon Kolmogorov-Smirnov Test (OLS Residuals): KS Statistic = 0.14, p-value = 0.00000
+Hexagon Shapiro-Wilk Test: Statistic = 0.91, p-value = 0.00000
+Hexagon Anderson-Darling Test: Statistic = 3051.27, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Hexagon Lilliefors Test: Statistic = 0.14, p-value = 0.00100
+Hexagon Jarque-Bera Test: Statistic = 20646.23, p-value = 0.00000
+Hexagon Runs Test for Randomness: Z = -0.89, p-value = 0.37097
+Hexagon Breusch-Godfrey Test: Statistic = -0.83, p-value = 1.00000
+Hexagon Levene’s Test for Equality of Variances: Statistic = 0.03, p-value = 0.85637
+Hexagon Z-test for Residual Mean = 0: Z-statistic = 0.00
+Hexagon Chi-Square Test Statistic (OLS): 9796536534562957312.00, p-value: 0.00000
+Hexagon OLS AIC: -22462.41, BIC: -22443.38
+Hexagon Poisson AIC: 91164.45, BIC: -1126132.82
+Hexagon Negative Binomial AIC: 106079.59, BIC: -1129823.16
+Cube Cross-validation MSE: 0.06817
+Cube Negative Binomial Regression AIC: 151009.64, BIC: -1133115.92
+Cube Durbin-Watson (OLS): 1.99
+Cube Breusch-Pagan Test Statistic (OLS): 2042.25, p-value: 0.00000
+Cube White's Test Statistic (OLS): 2050.34, p-value: 0.00000
+Cube Kolmogorov-Smirnov Test (OLS Residuals): KS Statistic = 0.06, p-value = 0.00000
+Cube Shapiro-Wilk Test: Statistic = 0.98, p-value = 0.00000
+Cube Anderson-Darling Test: Statistic = 533.14, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Cube Lilliefors Test: Statistic = 0.07, p-value = 0.00100
+Cube Jarque-Bera Test: Statistic = 4173.02, p-value = 0.00000
+Cube Runs Test for Randomness: Z = -0.41, p-value = 0.68205
+Cube Breusch-Godfrey Test: Statistic = 0.25, p-value = 0.62020
+Cube Levene’s Test for Equality of Variances: Statistic = 0.21, p-value = 0.64537
+Cube Z-test for Residual Mean = 0: Z-statistic = 0.00
+Cube Chi-Square Test Statistic (OLS): 3106022123821644288.00, p-value: 0.00000
+Cube OLS AIC: 13361.90, BIC: 13380.93
+Cube Poisson AIC: 124407.69, BIC: -1128337.53
+Cube Negative Binomial AIC: 151009.64, BIC: -1133115.92
+Dodecahedron Cross-validation MSE: 0.03596
+Dodecahedron Negative Binomial Regression AIC: 85278.93, BIC: -1129809.51
+Dodecahedron Durbin-Watson (OLS): 2.01
+Dodecahedron Breusch-Pagan Test Statistic (OLS): 104.39, p-value: 0.00000
+Dodecahedron White's Test Statistic (OLS): 105.93, p-value: 0.00000
+Dodecahedron Kolmogorov-Smirnov Test (OLS Residuals): KS Statistic = 0.21, p-value = 0.00000
+Dodecahedron Shapiro-Wilk Test: Statistic = 0.79, p-value = 0.00000
+Dodecahedron Anderson-Darling Test: Statistic = 7359.25, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Dodecahedron Lilliefors Test: Statistic = 0.22, p-value = 0.00100
+Dodecahedron Jarque-Bera Test: Statistic = 47002.24, p-value = 0.00000
+Dodecahedron Runs Test for Randomness: Z = 2.50, p-value = 0.01240
+Dodecahedron Breusch-Godfrey Test: Statistic = 3.25, p-value = 0.07138
+Dodecahedron Levene’s Test for Equality of Variances: Statistic = 0.00, p-value = 0.99749
+Dodecahedron Z-test for Residual Mean = 0: Z-statistic = -0.00
+Dodecahedron Chi-Square Test Statistic (OLS): -9007796247484304384.00, p-value: 1.00000
+Dodecahedron OLS AIC: -49459.88, BIC: -49440.86
+Dodecahedron Poisson AIC: 74621.89, BIC: -1126879.39
+Dodecahedron Negative Binomial AIC: 85278.93, BIC: -1129809.51
+Tesseract Cross-validation MSE: 0.09353
+Tesseract Negative Binomial Regression AIC: 235159.70, BIC: -1140367.50
+Tesseract Durbin-Watson (OLS): 2.00
+Tesseract Breusch-Pagan Test Statistic (OLS): 1485.10, p-value: 0.00000
+Tesseract White's Test Statistic (OLS): 2239.10, p-value: 0.00000
+Tesseract Kolmogorov-Smirnov Test (OLS Residuals): KS Statistic = 0.01, p-value = 0.00000
+Tesseract Shapiro-Wilk Test: Statistic = 1.00, p-value = 0.00069
+Tesseract Anderson-Darling Test: Statistic = 16.14, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Tesseract Lilliefors Test: Statistic = 0.03, p-value = 0.17520
+Tesseract Jarque-Bera Test: Statistic = 246.03, p-value = 0.00000
+Tesseract Runs Test for Randomness: Z = -0.89, p-value = 0.37306
+Tesseract Breusch-Godfrey Test: Statistic = -7.02, p-value = 1.00000
+Tesseract Levene’s Test for Equality of Variances: Statistic = 1894.55, p-value = 0.00000
+Tesseract Z-test for Residual Mean = 0: Z-statistic = 0.00
+Tesseract Chi-Square Test Statistic (OLS): 7842111796865243136.00, p-value: 0.00000
+Tesseract OLS AIC: 62525.75, BIC: 62544.77
+Tesseract Poisson AIC: 177041.81, BIC: -1135956.90
+Tesseract Negative Binomial AIC: 235159.70, BIC: -1140367.50
+600-Cell Cross-validation MSE: 0.04524
+600-Cell Negative Binomial Regression AIC: 76203.62, BIC: -1130393.05
+600-Cell Durbin-Watson (OLS): 2.00
+600-Cell Breusch-Pagan Test Statistic (OLS): 2.12, p-value: 0.14573
+600-Cell White's Test Statistic (OLS): 5.99, p-value: 0.05002
+600-Cell Kolmogorov-Smirnov Test (OLS Residuals): KS Statistic = 0.25, p-value = 0.00000
+600-Cell Shapiro-Wilk Test: Statistic = 0.75, p-value = 0.00000
+600-Cell Anderson-Darling Test: Statistic = 10084.70, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+600-Cell Lilliefors Test: Statistic = 0.24, p-value = 0.00100
+600-Cell Jarque-Bera Test: Statistic = 70963.22, p-value = 0.00000
+600-Cell Runs Test for Randomness: Z = 0.50, p-value = 0.61493
+600-Cell Breusch-Godfrey Test: Statistic = -0.20, p-value = 1.00000
+600-Cell Levene’s Test for Equality of Variances: Statistic = 0.00, p-value = 0.99996
+600-Cell Z-test for Residual Mean = 0: Z-statistic = -0.00
+600-Cell Chi-Square Test Statistic (OLS): -19343951956699734016.00, p-value: 1.00000
+600-Cell OLS AIC: -63972.77, BIC: -63953.74
+600-Cell Poisson AIC: 67139.79, BIC: -1127825.98
+600-Cell Negative Binomial AIC: 76203.62, BIC: -1130393.05
+
+Analyzing with noise level: 100%
+Triangle Cross-validation MSE: 2.82139
+Triangle Negative Binomial Regression AIC: 451156.94, BIC: -1139930.21
+Triangle Durbin-Watson (OLS): 2.00
+Triangle Breusch-Pagan Test Statistic (OLS): 5.37, p-value: 0.02044
+Triangle White's Test Statistic (OLS): 10.70, p-value: 0.00475
+Triangle Kolmogorov-Smirnov Test (OLS Residuals): KS Statistic = 0.00, p-value = 0.10944
+Triangle Shapiro-Wilk Test: Statistic = 1.00, p-value = 0.53735
+Triangle Anderson-Darling Test: Statistic = 2.67, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Triangle Lilliefors Test: Statistic = 0.02, p-value = 0.64182
+Triangle Jarque-Bera Test: Statistic = 48.67, p-value = 0.00000
+Triangle Runs Test for Randomness: Z = -0.50, p-value = 0.62054
+Triangle Breusch-Godfrey Test: Statistic = -0.05, p-value = 1.00000
+Triangle Levene’s Test for Equality of Variances: Statistic = 0.07, p-value = 0.78844
+Triangle Z-test for Residual Mean = 0: Z-statistic = -0.00
+Triangle Chi-Square Test Statistic (OLS): -4180152774841235968.00, p-value: 1.00000
+Triangle OLS AIC: 282937.33, BIC: 282956.36
+Triangle Poisson AIC: 329479.91, BIC: -1114137.99
+Triangle Negative Binomial AIC: 451156.94, BIC: -1139930.21
+Square Cross-validation MSE: 1.76460
+Square Negative Binomial Regression AIC: 383246.90, BIC: -1128401.19
+Square Durbin-Watson (OLS): 2.00
+Square Breusch-Pagan Test Statistic (OLS): 192.29, p-value: 0.00000
+Square White's Test Statistic (OLS): 205.35, p-value: 0.00000
+Square Kolmogorov-Smirnov Test (OLS Residuals): KS Statistic = 0.01, p-value = 0.00000
+Square Shapiro-Wilk Test: Statistic = 1.00, p-value = 0.00001
+Square Anderson-Darling Test: Statistic = 33.00, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Square Lilliefors Test: Statistic = 0.03, p-value = 0.06874
+Square Jarque-Bera Test: Statistic = 487.63, p-value = 0.00000
+Square Runs Test for Randomness: Z = -0.53, p-value = 0.59800
+Square Breusch-Godfrey Test: Statistic = -0.05, p-value = 1.00000
+Square Levene’s Test for Equality of Variances: Statistic = 0.04, p-value = 0.83529
+Square Z-test for Residual Mean = 0: Z-statistic = -0.00
+Square Chi-Square Test Statistic (OLS): -17609477458279432192.00, p-value: 1.00000
+Square OLS AIC: 278599.96, BIC: 278618.99
+Square Poisson AIC: 301113.79, BIC: -1095967.96
+Square Negative Binomial AIC: 383246.90, BIC: -1128401.19
+Hexagon Cross-validation MSE: 0.87177
+Hexagon Negative Binomial Regression AIC: 272174.07, BIC: -1102951.66
+Hexagon Durbin-Watson (OLS): 2.00
+Hexagon Breusch-Pagan Test Statistic (OLS): 777.64, p-value: 0.00000
+Hexagon White's Test Statistic (OLS): 780.72, p-value: 0.00000
+Hexagon Kolmogorov-Smirnov Test (OLS Residuals): KS Statistic = 0.08, p-value = 0.00000
+Hexagon Shapiro-Wilk Test: Statistic = 0.95, p-value = 0.00000
+Hexagon Anderson-Darling Test: Statistic = 1227.25, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Hexagon Lilliefors Test: Statistic = 0.07, p-value = 0.00100
+Hexagon Jarque-Bera Test: Statistic = 7734.42, p-value = 0.00000
+Hexagon Runs Test for Randomness: Z = 1.09, p-value = 0.27784
+Hexagon Breusch-Godfrey Test: Statistic = -1.66, p-value = 1.00000
+Hexagon Levene’s Test for Equality of Variances: Statistic = 0.01, p-value = 0.94207
+Hexagon Z-test for Residual Mean = 0: Z-statistic = -0.00
+Hexagon Chi-Square Test Statistic (OLS): -18445720602233487360.00, p-value: 1.00000
+Hexagon OLS AIC: 247802.16, BIC: 247821.19
+Hexagon Poisson AIC: 241095.61, BIC: -1068946.34
+Hexagon Negative Binomial AIC: 272174.07, BIC: -1102951.66
+Cube Cross-validation MSE: 1.20890
+Cube Negative Binomial Regression AIC: 341487.82, BIC: -1119002.60
+Cube Durbin-Watson (OLS): 2.00
+Cube Breusch-Pagan Test Statistic (OLS): 305.44, p-value: 0.00000
+Cube White's Test Statistic (OLS): 307.53, p-value: 0.00000
+Cube Kolmogorov-Smirnov Test (OLS Residuals): KS Statistic = 0.03, p-value = 0.00000
+Cube Shapiro-Wilk Test: Statistic = 0.99, p-value = 0.00000
+Cube Anderson-Darling Test: Statistic = 166.92, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Cube Lilliefors Test: Statistic = 0.03, p-value = 0.11743
+Cube Jarque-Bera Test: Statistic = 1724.80, p-value = 0.00000
+Cube Runs Test for Randomness: Z = 0.56, p-value = 0.57888
+Cube Breusch-Godfrey Test: Statistic = -0.87, p-value = 1.00000
+Cube Levene’s Test for Equality of Variances: Statistic = 0.01, p-value = 0.91584
+Cube Z-test for Residual Mean = 0: Z-statistic = 0.00
+Cube Chi-Square Test Statistic (OLS): 283102044106801414144.00, p-value: 0.00000
+Cube OLS AIC: 271351.53, BIC: 271370.56
+Cube Poisson AIC: 281782.33, BIC: -1083864.91
+Cube Negative Binomial AIC: 341487.82, BIC: -1119002.60
+Dodecahedron Cross-validation MSE: 0.49691
+Dodecahedron Negative Binomial Regression AIC: 192451.35, BIC: -1093692.27
+Dodecahedron Durbin-Watson (OLS): 2.01
+Dodecahedron Breusch-Pagan Test Statistic (OLS): 45.79, p-value: 0.00000
+Dodecahedron White's Test Statistic (OLS): 46.03, p-value: 0.00000
+Dodecahedron Kolmogorov-Smirnov Test (OLS Residuals): KS Statistic = 0.20, p-value = 0.00000
+Dodecahedron Shapiro-Wilk Test: Statistic = 0.80, p-value = 0.00000
+Dodecahedron Anderson-Darling Test: Statistic = 6821.76, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Dodecahedron Lilliefors Test: Statistic = 0.21, p-value = 0.00100
+Dodecahedron Jarque-Bera Test: Statistic = 38550.30, p-value = 0.00000
+Dodecahedron Runs Test for Randomness: Z = 1.26, p-value = 0.20671
+Dodecahedron Breusch-Godfrey Test: Statistic = 3.60, p-value = 0.05778
+Dodecahedron Levene’s Test for Equality of Variances: Statistic = 0.00, p-value = 0.99893
+Dodecahedron Z-test for Residual Mean = 0: Z-statistic = -0.00
+Dodecahedron Chi-Square Test Statistic (OLS): -187244059768637784064.00, p-value: 1.00000
+Dodecahedron OLS AIC: 197710.06, BIC: 197729.08
+Dodecahedron Poisson AIC: 180329.43, BIC: -1068787.64
+Dodecahedron Negative Binomial AIC: 192451.35, BIC: -1093692.27
+Tesseract Cross-validation MSE: 90.75727
+Tesseract Negative Binomial Regression AIC: 685560.07, BIC: -1150181.97
+Tesseract Durbin-Watson (OLS): 2.02
+Tesseract Breusch-Pagan Test Statistic (OLS): 15.29, p-value: 0.00009
+Tesseract White's Test Statistic (OLS): 901.68, p-value: 0.00000
+Tesseract Kolmogorov-Smirnov Test (OLS Residuals): KS Statistic = 0.01, p-value = 0.00566
+Tesseract Shapiro-Wilk Test: Statistic = 1.00, p-value = 0.00784
+Tesseract Anderson-Darling Test: Statistic = 5.44, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+Tesseract Lilliefors Test: Statistic = 0.02, p-value = 0.54434
+Tesseract Jarque-Bera Test: Statistic = 81.08, p-value = 0.00000
+Tesseract Runs Test for Randomness: Z = 1.34, p-value = 0.18187
+Tesseract Breusch-Godfrey Test: Statistic = 6.61, p-value = 0.01016
+Tesseract Levene’s Test for Equality of Variances: Statistic = 823.35, p-value = 0.00000
+Tesseract Z-test for Residual Mean = 0: Z-statistic = -0.00
+Tesseract Chi-Square Test Statistic (OLS): -1452427374612548352.00, p-value: 1.00000
+Tesseract OLS AIC: 307727.67, BIC: 307746.69
+Tesseract Poisson AIC: 433354.11, BIC: -1140748.71
+Tesseract Negative Binomial AIC: 685560.07, BIC: -1150181.97
+600-Cell Cross-validation MSE: 0.50536
+600-Cell Negative Binomial Regression AIC: 167942.01, BIC: -1094176.61
+600-Cell Durbin-Watson (OLS): 2.00
+600-Cell Breusch-Pagan Test Statistic (OLS): 0.15, p-value: 0.69427
+600-Cell White's Test Statistic (OLS): 0.38, p-value: 0.82509
+600-Cell Kolmogorov-Smirnov Test (OLS Residuals): KS Statistic = 0.25, p-value = 0.00000
+600-Cell Shapiro-Wilk Test: Statistic = 0.73, p-value = 0.00000
+600-Cell Anderson-Darling Test: Statistic = 10128.87, Critical Values = [0.576 0.656 0.787 0.918 1.092]
+600-Cell Lilliefors Test: Statistic = 0.26, p-value = 0.00100
+600-Cell Jarque-Bera Test: Statistic = 67116.57, p-value = 0.00000
+600-Cell Runs Test for Randomness: Z = -2.21, p-value = 0.02699
+600-Cell Breusch-Godfrey Test: Statistic = 0.26, p-value = 0.60672
+600-Cell Levene’s Test for Equality of Variances: Statistic = 0.00, p-value = 1.00000
+600-Cell Z-test for Residual Mean = 0: Z-statistic = 0.00
+600-Cell Chi-Square Test Statistic (OLS): 41927787981398671360.00, p-value: 0.00000
+600-Cell OLS AIC: 177081.01, BIC: 177100.03
+600-Cell Poisson AIC: 159186.90, BIC: -1072970.32
+600-Cell Negative Binomial AIC: 167942.01, BIC: -1094176.61
