@@ -532,7 +532,8 @@ This completes the full proof of the Symmetry-Breaking Bifurcation Theorem.
 
 - **Bifurcation Equation:**
 
-  ![\Delta G(t, 4, 2) = \frac{8}{4^{1.3863}} \cdot (t - 0.5 + \varepsilon)^{B_2 \cdot \ln(4) + 2.23}](https://latex
+  ![\Delta G(t, 4, 2) = \frac{8}{4^{1.3863}} \cdot (t - 0.5 + ε)^{B_2 \cdot \ln(4) + 2.23}](https://latex.codecogs.com/svg.image?\bg{white}\Delta%20G(t,%204,%202)%20=%20\frac{8}{4^{1.3863}}%20\cdot%20(t%20-%200.5%20+%20ε)^{B_2%20\cdot%20\ln(4)%20+%202.23})
+
 
 ### 5.2 Hexagon (n = 6, 2D Polygon)
 
