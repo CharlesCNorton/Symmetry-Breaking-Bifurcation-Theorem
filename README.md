@@ -577,25 +577,19 @@ This completes the full proof of the Symmetry-Breaking Bifurcation Theorem.
 
 - **Eigenvalue Analysis:**
 
-  The eigenvalue analysis for the cube (\( n = 6 \)) shows the following eigenvalues:
+  The eigenvalue analysis for the cube (n = 6) shows the following eigenvalues:
 
-  \[
-  \lambda_{3D} = [1.5, -1.5, 1.5, 1.5, 1.5, 1.5]
-  \]
+  ![\lambda_{3D} = [1.5, -1.5, 1.5, 1.5, 1.5, 1.5]](https://latex.codecogs.com/svg.image?\bg{white}\lambda_{3D}%20=%20[1.5,%20-1.5,%201.5,%201.5,%201.5,%201.5])
 
-  After adjusting for constants \( A_d = 24 \), \( k_d = \ln(6) \), \( B_d = 0.1 \cdot \ln(6) \), and \( C_d = 1.77 \), the eigenvalues become:
+  After adjusting for constants ![A_d = 24](https://latex.codecogs.com/svg.image?\bg{white}A_d%20=%2024), ![k_d = \ln(6)](https://latex.codecogs.com/svg.image?\bg{white}k_d%20=%20\ln(6)), ![B_d = 0.1 \cdot \ln(6)](https://latex.codecogs.com/svg.image?\bg{white}B_d%20=%200.1%20\cdot%20\ln(6)), and ![C_d = 1.77](https://latex.codecogs.com/svg.image?\bg{white}C_d%20=%201.77), the eigenvalues become:
 
-  \[
-  \lambda'_{3D} = [113.91, -110.37, 113.91, 113.91, 113.91, 113.91]
-  \]
+  ![\lambda'_{3D} = [113.91, -110.37, 113.91, 113.91, 113.91, 113.91]](https://latex.codecogs.com/svg.image?\bg{white}\lambda'_{3D}%20=%20[113.91,%20-110.37,%20113.91,%20113.91,%20113.91,%20113.91])
 
   This indicates partial symmetry-breaking, with one negative eigenvalue reflecting the instability.
 
 - **Bifurcation Equation:**
 
-  \[
-  \Delta G(t, 6, 3) = \frac{24}{6^{1.7918}} \cdot (t - 0.5 + \varepsilon)^{B_3 \cdot \ln(6) + 1.77}
-  \]
+  ![\Delta G(t, 6, 3) = \frac{24}{6^{1.7918}} \cdot (t - 0.5 + \epsilon)^{B_3 \cdot \ln(6) + 1.77}](https://latex.codecogs.com/svg.image?\bg{white}\Delta%20G(t,%206,%203)%20=%20\frac{24}{6^{1.7918}}%20\cdot%20(t%20-%200.5%20+%20\epsilon)^{B_3%20\cdot%20\ln(6)%20+%201.77})
 
 ### 5.4 Dodecahedron (n = 12, 3D Polyhedron)
 
