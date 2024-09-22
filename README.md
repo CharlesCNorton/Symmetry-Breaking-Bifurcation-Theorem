@@ -187,19 +187,15 @@ For instance, as observed in the case of the square (n = 4, 2D polygon), larger 
 
 However, it's important to note that there are scenarios where the direct relationship between symmetry group size and deformation resistance might not hold strictly. For example, in cases of localized deformations that affect only a small region of the object without impacting its overall structure, the effect of the symmetry group may be less pronounced. These subtle, localized deformations can accumulate over time, potentially leading to symmetry-breaking at lower deformation thresholds than expected.
 
-#### Derivation of \( A_d \):
+#### Derivation of ![A_d](https://latex.codecogs.com/svg.image?\bg{white}A_d):
 
-The symmetry group \( G(P) \) of an object \( P \) consists of all transformations \( T \) that leave the object invariant:
+The symmetry group ![G(P)](https://latex.codecogs.com/svg.image?\bg{white}G(P)) of an object ![P](https://latex.codecogs.com/svg.image?\bg{white}P) consists of all transformations ![T](https://latex.codecogs.com/svg.image?\bg{white}T) that leave the object invariant:
 
-\[
-G(P) = \{ T \mid T(P) = P \}
-\]
+![G(P) = \{ T \mid T(P) = P \}](https://latex.codecogs.com/svg.image?\bg{white}G(P)%20=%20\{%20T%20\mid%20T(P)%20=%20P%20\})
 
-The size of the symmetry group \( |G(P)| \) is directly proportional to the object's resistance to deformation. Therefore, we define:
+The size of the symmetry group ![|G(P)|](https://latex.codecogs.com/svg.image?\bg{white}|G(P)|) is directly proportional to the object's resistance to deformation. Therefore, we define:
 
-\[
-A_d = |G(P)|
-\]
+![A_d = |G(P)|](https://latex.codecogs.com/svg.image?\bg{white}A_d%20=%20|G(P)|)
 
 **Justification:**
 
