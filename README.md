@@ -361,30 +361,30 @@ The dimensionality ![d](https://latex.codecogs.com/svg.image?\bg{white}d) influe
 
 ## 3.3 Lemma 3: Complexity Dependence of Bifurcation
 
-Lemma Statement: 
-The complexity n of the object affects the bifurcation rate, with more complex objects bifurcating more slowly.
+**Lemma Statement:**  
+The complexity ![n](https://latex.codecogs.com/svg.image?\bg{white}n) of the object affects the bifurcation rate, with more complex objects bifurcating more slowly.
 
-Proof:
+**Proof:**
 
-The complexity of a geometric object is directly related to the number of its elements (e.g., sides for polygons, faces for polyhedra). As the number of elements n increases, the number of independent deformation modes increases, but this growth is constrained by symmetry. This relationship is captured by the Complexity Scaling Constant k_d, which scales logarithmically with n.
+The complexity of a geometric object is directly related to the number of its elements (e.g., sides for polygons, faces for polyhedra). As the number of elements ![n](https://latex.codecogs.com/svg.image?\bg{white}n) increases, the number of independent deformation modes increases, but this growth is constrained by symmetry. This relationship is captured by the Complexity Scaling Constant ![k_d](https://latex.codecogs.com/svg.image?\bg{white}k_d), which scales logarithmically with ![n](https://latex.codecogs.com/svg.image?\bg{white}n).
 
-Detailed Explanation:
+**Detailed Explanation:**
 
-1. Complexity Scaling Constant k_d: 
+1. **Complexity Scaling Constant ![k_d](https://latex.codecogs.com/svg.image?\bg{white}k_d):**  
    We have:
 
-   k_d = ln(n)
+   ![k_d = \ln(n)](https://latex.codecogs.com/svg.image?\bg{white}k_d%20=%20\ln(n))
 
-   This constant models how the complexity of the object affects the rate of bifurcation. As n increases, the bifurcation process slows down because there are more independent deformation modes to distribute the effects of symmetry-breaking.
+   This constant models how the complexity of the object affects the rate of bifurcation. As ![n](https://latex.codecogs.com/svg.image?\bg{white}n) increases, the bifurcation process slows down because there are more independent deformation modes to distribute the effects of symmetry-breaking.
 
-2. Logarithmic Dependence on n: 
-   The logarithmic dependence of k_d on n reflects that as the number of elements n increases, the number of independent deformation modes grows slower than linearly. This reduced growth rate means that more complex objects bifurcate more slowly, as they are more resistant to deformations that cause symmetry-breaking.
+2. **Logarithmic Dependence on ![n](https://latex.codecogs.com/svg.image?\bg{white}n):**  
+   The logarithmic dependence of ![k_d](https://latex.codecogs.com/svg.image?\bg{white}k_d) on ![n](https://latex.codecogs.com/svg.image?\bg{white}n) reflects that as the number of elements ![n](https://latex.codecogs.com/svg.image?\bg{white}n) increases, the number of independent deformation modes grows slower than linearly. This reduced growth rate means that more complex objects bifurcate more slowly, as they are more resistant to deformations that cause symmetry-breaking.
 
-3. Eigenvalue Scaling with Complexity: 
-   The eigenvalues of the Jacobian matrix J(t) are also affected by the complexity n of the object. As n increases, the rate of change of the eigenvalues decreases, leading to slower symmetry-breaking. This is consistent with empirical observations that more complex objects take longer to undergo bifurcation.
+3. **Eigenvalue Scaling with Complexity:**  
+   The eigenvalues of the Jacobian matrix ![J(t)](https://latex.codecogs.com/svg.image?\bg{white}J(t)) are also affected by the complexity ![n](https://latex.codecogs.com/svg.image?\bg{white}n) of the object. As ![n](https://latex.codecogs.com/svg.image?\bg{white}n) increases, the rate of change of the eigenvalues decreases, leading to slower symmetry-breaking. This is consistent with empirical observations that more complex objects take longer to undergo bifurcation.
 
-Conclusion: 
-The logarithmic dependence of k_d on n ensures that more complex objects bifurcate more slowly. This completes the proof for Lemma 3.
+**Conclusion:**  
+The logarithmic dependence of ![k_d](https://latex.codecogs.com/svg.image?\bg{white}k_d) on ![n](https://latex.codecogs.com/svg.image?\bg{white}n) ensures that more complex objects bifurcate more slowly. This completes the proof for Lemma 3.
 
 ## 3.4 Full Proof of the Theorem
 
