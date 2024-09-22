@@ -432,23 +432,21 @@ This completes the full proof of the Symmetry-Breaking Bifurcation Theorem.
 
 #### Simulation Details:
 
-- **Objects Simulated:** Square (\( n = 4 \)) and Hexagon (\( n = 6 \))
-- **Methodology:** Applied incremental deformations, increasing \( t \) from 0 to 1.
+- **Objects Simulated:** Square ![n = 4](https://latex.codecogs.com/svg.image?\bg{white}n%20=%204) and Hexagon ![n = 6](https://latex.codecogs.com/svg.image?\bg{white}n%20=%206)
+- **Methodology:** Applied incremental deformations, increasing ![t](https://latex.codecogs.com/svg.image?\bg{white}t) from 0 to 1.
 - **Tools Used:** Computational geometry software capable of modeling polygon deformations.
 
 - **Governing Equation for Deformation:**  
-  The governing equation for deformation of a 2D polygon (e.g., hexagon with \( n = 6 \)) is:
+  The governing equation for deformation of a 2D polygon (e.g., hexagon with ![n = 6](https://latex.codecogs.com/svg.image?\bg{white}n%20=%206)) is:
 
-  \[
-  F_{2D}(t, n) = \sum_{i=1}^{n} (t \cdot (r_i(t) - r_{i-1}(t)))^2 = 1.5
-  \]
+  ![F_{2D}(t, n) = \sum_{i=1}^{n} (t \cdot (r_i(t) - r_{i-1}(t)))^2 = 1.5](https://latex.codecogs.com/svg.image?\bg{white}F_{2D}(t,%20n)%20=%20\sum_{i=1}^{n}%20(t%20\cdot%20(r_i(t)%20-%20r_{i-1}(t)))^2%20=%201.5)
 
-  This equation governs the deformation of the vertices over time, where \( t \) is the deformation parameter, and \( n \) is the number of sides.
+  This equation governs the deformation of the vertices over time, where ![t](https://latex.codecogs.com/svg.image?\bg{white}t) is the deformation parameter, and ![n](https://latex.codecogs.com/svg.image?\bg{white}n) is the number of sides.
 
 #### Results:
 
-- **Critical Threshold Confirmation:** Symmetry remained intact until \( t_c = 0.5 \).
-- **Computed \( \Delta G \):** Values increased beyond \( t_c \), matching theoretical predictions.
+- **Critical Threshold Confirmation:** Symmetry remained intact until ![t_c = 0.5](https://latex.codecogs.com/svg.image?\bg{white}t_c%20=%200.5).
+- **Computed ![\Delta G](https://latex.codecogs.com/svg.image?\bg{white}\Delta%20G):** Values increased beyond ![t_c](https://latex.codecogs.com/svg.image?\bg{white}t_c), matching theoretical predictions.
 - **Comparison Between Shapes:** The hexagon exhibited slower symmetry-breaking compared to the square, consistent with the theorem. The governing equation confirmed the deformation dynamics observed during simulation.
 
 ### 4.2 3D Polyhedra
