@@ -137,13 +137,11 @@ As ![t](https://latex.codecogs.com/svg.image?\bg{white}t) approaches ![t_c](http
 
 The introduction of ε regularizes the equation, ensuring that the base of the exponent is always positive and non-zero, even when ![t = t_c](https://latex.codecogs.com/svg.image?\bg{white}t=t_c). This prevents undefined behavior and ensures that the bifurcation equation remains well-defined. Mathematically, ε acts as a regularization term, a common technique used in differential equations and bifurcation theory to avoid singularities. Its inclusion allows the system to behave smoothly at ![t_c](https://latex.codecogs.com/svg.image?\bg{white}t_c) by preventing the formation of sharp gradients or discontinuities.
 
-### Behavior Near \( t_c \) Without ε
+### Behavior Near ![t_c](https://latex.codecogs.com/svg.image?\bg{white}t_c) Without ε
 
 To explore the necessity of ε, consider the bifurcation equation without it:
 
-\[
-\Delta G(t, n, d) = \frac{A_d}{n^{k_d}} \cdot (t - t_c)^{B_d \cdot \ln(n) + C_d}
-\]
+![\Delta G(t, n, d) = \frac{A_d}{n^{k_d}} \cdot (t - t_c)^{B_d \cdot \ln(n) + C_d}](https://latex.codecogs.com/svg.image?\bg{white}\Delta%20G(t,%20n,%20d)%20=%20\frac{A_d}{n^{k_d}}%20\cdot%20(t%20-%20t_c)^{B_d%20\cdot%20\ln(n)%20+%20C_d})
 
 In this case, as \( t \to t_c \), the term \( (t - t_c) \) becomes zero, and the equation runs into two specific problems:
 1. **Fractional Powers of Zero**: If \( B_d \cdot \ln(n) + C_d \) is not an integer, raising zero to a fractional power leads to undefined behavior. This is because fractional exponents of zero can produce singularities or discontinuous results.
