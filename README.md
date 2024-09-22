@@ -1,7 +1,11 @@
 # Symmetry-Breaking Bifurcation Theorem: A Comprehensive Mathematical Framework for Near-Regular Geometries
 
-**Author:** Charles C. Norton  
-**Date:** September 17, 2024 (Updated from earlier versions on September 16, 2024)
+**Author:** Charles C. Norton   
+**Date:** September 22, 2024 (Original: September 16, 2024)
+
+## Acknowledgments
+
+This work was produced with the assistance of GPT-4 and o1, language models developed by OpenAI. They both provided support in formulating and structuring the mathematical framework of the Symmetry-Breaking Bifurcation Theorem. Just as the Four Color Theorem was a landmark in computer-assisted proofs, the use of AI language models represents a new frontier in mathematics, where AI aids in the development of theoretical concepts and the communication of complex ideas.
 
 ---
 
@@ -691,22 +695,22 @@ The Symmetry-Breaking Bifurcation Theorem has applications across various fields
   - Applies to regular geometric objects with well-defined symmetry groups.
   - Objects are assumed to be convex and exhibit regularity in their structure.
 
-- **Parameters \( n \) and \( d \):**
+- **Parameters** ![n](https://latex.codecogs.com/svg.image?\bg{white}n) **and** ![d](https://latex.codecogs.com/svg.image?\bg{white}d):
 
-  - \( n \geq 3 \) for polygons, \( n \geq 4 \) for polyhedra, and so on.
-  - Dimensionality \( d \) is considered for \( d = 2, 3, 4 \).
+  - ![n \geq 3](https://latex.codecogs.com/svg.image?\bg{white}n%20\geq%203) for polygons, ![n \geq 4](https://latex.codecogs.com/svg.image?\bg{white}n%20\geq%204) for polyhedra, and so on.
+  - Dimensionality ![d](https://latex.codecogs.com/svg.image?\bg{white}d) is considered for ![d = 2, 3, 4](https://latex.codecogs.com/svg.image?\bg{white}d%20=%202,%203,%204).
 
 - **Logarithms:**
 
-  - All logarithms are natural logarithms \( \ln(n) \).
+  - All logarithms are natural logarithms ![\ln(n)](https://latex.codecogs.com/svg.image?\bg{white}\ln(n)).
  
-- **Assumptions Regarding \( t_c \):**
+- **Assumptions Regarding** ![t_c](https://latex.codecogs.com/svg.image?\bg{white}t_c):
 
-  The critical deformation threshold \( t_c = 0.5 \) is central to the theorem, marking the point at which symmetry-breaking begins. In the analyses conducted, varying \( t_c \) demonstrated significant impact on the onset of bifurcation. Specifically, higher values of \( t_c \) delayed the onset of bifurcation, resulting in smoother transitions, while lower values caused bifurcation to occur earlier and more sharply.
+  The critical deformation threshold ![t_c = 0.5](https://latex.codecogs.com/svg.image?\bg{white}t_c%20=%200.5) is central to the theorem, marking the point at which symmetry-breaking begins. In the analyses conducted, varying ![t_c](https://latex.codecogs.com/svg.image?\bg{white}t_c) demonstrated significant impact on the onset of bifurcation. Specifically, higher values of ![t_c](https://latex.codecogs.com/svg.image?\bg{white}t_c) delayed the onset of bifurcation, resulting in smoother transitions, while lower values caused bifurcation to occur earlier and more sharply.
 
-  These observations suggest that \( t_c \) is a reasonable general threshold for many objects, but it may not be constant across all geometries. More complex or higher-dimensional objects, such as the 600-cell (n = 600, 4D polytope), demonstrated a higher resistance to bifurcation, which may indicate that the critical threshold for such objects should be adjusted slightly upwards. Thus, while \( t_c = 0.5 \) serves as a useful default value, it may require fine-tuning for specific cases, particularly in irregular or higher-dimensional geometries.
+  These observations suggest that ![t_c](https://latex.codecogs.com/svg.image?\bg{white}t_c) is a reasonable general threshold for many objects, but it may not be constant across all geometries. More complex or higher-dimensional objects, such as the 600-cell ![(n = 600, 4D polytope)](https://latex.codecogs.com/svg.image?\bg{white}n%20=%20600,%204D%20polytope), demonstrated a higher resistance to bifurcation, which may indicate that the critical threshold for such objects should be adjusted slightly upwards. Thus, while ![t_c = 0.5](https://latex.codecogs.com/svg.image?\bg{white}t_c%20=%200.5) serves as a useful default value, it may require fine-tuning for specific cases, particularly in irregular or higher-dimensional geometries.
 
-  The theoretical basis for \( t_c = 0.5 \) can be tied to stability and bifurcation theory, where a system undergoes a qualitative change in stability as eigenvalues cross the imaginary axis. Further exploration of this theoretical grounding would strengthen the justification for \( t_c = 0.5 \), particularly in edge cases where the threshold may shift due to geometric complexity.
+  The theoretical basis for ![t_c = 0.5](https://latex.codecogs.com/svg.image?\bg{white}t_c%20=%200.5) can be tied to stability and bifurcation theory, where a system undergoes a qualitative change in stability as eigenvalues cross the imaginary axis. Further exploration of this theoretical grounding would strengthen the justification for ![t_c = 0.5](https://latex.codecogs.com/svg.image?\bg{white}t_c%20=%200.5), particularly in edge cases where the threshold may shift due to geometric complexity.
 
 ### 7.2 Limitations
 
