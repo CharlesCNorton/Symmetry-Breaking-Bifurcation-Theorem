@@ -279,27 +279,25 @@ Where:
 
 ---
 
-### 2.4 Dimensional Adjustment Constant \( C_d \)
+### 2.4 Dimensional Adjustment Constant ![C_d](https://latex.codecogs.com/svg.image?\bg{white}C_d)
 
-The Dimensional Adjustment Constant \( C_d \) accounts for topological constraints, especially in higher dimensions where geometric interactions become more complex. Derived from the Euler characteristic \( \chi \), \( C_d \) adjusts the bifurcation rate to reflect topological rigidity.
+The Dimensional Adjustment Constant ![C_d](https://latex.codecogs.com/svg.image?\bg{white}C_d) accounts for topological constraints, especially in higher dimensions where geometric interactions become more complex. Derived from the Euler characteristic ![\chi](https://latex.codecogs.com/svg.image?\bg{white}\chi), ![C_d](https://latex.codecogs.com/svg.image?\bg{white}C_d) adjusts the bifurcation rate to reflect topological rigidity.
 
-#### Derivation of \( C_d \):
+#### Derivation of ![C_d](https://latex.codecogs.com/svg.image?\bg{white}C_d):
 
-We define \( C_d \) as:
+We define ![C_d](https://latex.codecogs.com/svg.image?\bg{white}C_d) as:
 
-\[
-C_d = c_d + d_d \left( \frac{\chi}{\ln(n)} \right)
-\]
+![C_d = c_d + d_d \left( \frac{\chi}{\ln(n)} \right)](https://latex.codecogs.com/svg.image?\bg{white}C_d%20=%20c_d%20+%20d_d%20\left(%20\frac{\chi}{\ln(n)}%20\right))
 
 Where:
 
-- \( c_d \) and \( d_d \) are constants specific to the dimensionality \( d \),
-- \( \chi \) is the Euler characteristic of the object.
+- ![c_d](https://latex.codecogs.com/svg.image?\bg{white}c_d) and ![d_d](https://latex.codecogs.com/svg.image?\bg{white}d_d) are constants specific to the dimensionality ![d](https://latex.codecogs.com/svg.image?\bg{white}d),
+- ![\chi](https://latex.codecogs.com/svg.image?\bg{white}\chi) is the Euler characteristic of the object.
 
 **Justification:**
 
 - **Topological Complexity:** Higher-dimensional objects have more complex topologies, increasing resistance to deformation.
-- **Empirical Validation:** Testing confirmed that as \( \chi \) increases, resistance to symmetry-breaking grows, consistent with the model.
+- **Empirical Validation:** Testing confirmed that as ![\chi](https://latex.codecogs.com/svg.image?\bg{white}\chi) increases, resistance to symmetry-breaking grows, consistent with the model.
 
 ---
 
