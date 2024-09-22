@@ -453,35 +453,29 @@ This completes the full proof of the Symmetry-Breaking Bifurcation Theorem.
 
 #### Simulation Details:
 
-- **Objects Simulated:** Cube (\( n = 6 \)) and Dodecahedron (\( n = 12 \))
+- **Objects Simulated:** Cube ![n = 6](https://latex.codecogs.com/svg.image?\bg{white}n%20=%206) and Dodecahedron ![n = 12](https://latex.codecogs.com/svg.image?\bg{white}n%20=%2012)
 - **Methodology:** Modeled deformations using finite element methods (FEM).
 - **Tools Used:** 3D modeling software with FEM capabilities.
 
 - **Governing Equation for Deformation:**  
-  The governing equation for deformation of a 3D polyhedron (e.g., cube with \( n = 6 \)) is:
+  The governing equation for deformation of a 3D polyhedron (e.g., cube with ![n = 6](https://latex.codecogs.com/svg.image?\bg{white}n%20=%206)) is:
 
-  \[
-  F_{3D}(t, n) = \sum_{i=1}^{n} (t \cdot (r_i(t) - r_{i-1}(t)))^2 = 1.5
-  \]
+  ![F_{3D}(t, n) = \sum_{i=1}^{n} (t \cdot (r_i(t) - r_{i-1}(t)))^2 = 1.5](https://latex.codecogs.com/svg.image?\bg{white}F_{3D}(t,%20n)%20=%20\sum_{i=1}^{n}%20(t%20\cdot%20(r_i(t)%20-%20r_{i-1}(t)))^2%20=%201.5)
 
-  This equation governs the deformation of the faces over time, where \( t \) is the deformation parameter, and \( n \) is the number of faces.
+  This equation governs the deformation of the faces over time, where ![t](https://latex.codecogs.com/svg.image?\bg{white}t) is the deformation parameter, and ![n](https://latex.codecogs.com/svg.image?\bg{white}n) is the number of faces.
 
 #### Results:
 
-- **Symmetry Preservation until \( t_c \):** Both polyhedra maintained symmetry up to \( t = 0.5 \).
-- **Computed \( \Delta G \):** The dodecahedron showed slower symmetry-breaking due to its higher symmetry group size.
+- **Symmetry Preservation until ![t_c](https://latex.codecogs.com/svg.image?\bg{white}t_c):** Both polyhedra maintained symmetry up to ![t = 0.5](https://latex.codecogs.com/svg.image?\bg{white}t%20=%200.5).
+- **Computed ![\Delta G](https://latex.codecogs.com/svg.image?\bg{white}\Delta%20G):** The dodecahedron showed slower symmetry-breaking due to its higher symmetry group size.
 - **Eigenvalue Analysis (Cube):**  
-  The eigenvalue analysis for the cube (\( n = 6 \)) shows the following eigenvalues:
+  The eigenvalue analysis for the cube ![n = 6](https://latex.codecogs.com/svg.image?\bg{white}n%20=%206) shows the following eigenvalues:
 
-  \[
-  \lambda_{3D} = [1.5, -1.5, 1.5, 1.5, 1.5, 1.5]
-  \]
+  ![\lambda_{3D} = [1.5, -1.5, 1.5, 1.5, 1.5, 1.5]](https://latex.codecogs.com/svg.image?\bg{white}\lambda_{3D}%20=%20[1.5,%20-1.5,%201.5,%201.5,%201.5,%201.5])
 
-  After adjusting for constants \( A_d = 24 \), \( k_d = \ln(6) \), \( B_d = 0.1 \cdot \ln(6) \), and \( C_d = 1.77 \), the eigenvalues become:
+  After adjusting for constants ![A_d = 24](https://latex.codecogs.com/svg.image?\bg{white}A_d%20=%2024), ![k_d = \ln(6)](https://latex.codecogs.com/svg.image?\bg{white}k_d%20=%20\ln(6)), ![B_d = 0.1 \cdot \ln(6)](https://latex.codecogs.com/svg.image?\bg{white}B_d%20=%200.1%20\cdot%20\ln(6)), and ![C_d = 1.77](https://latex.codecogs.com/svg.image?\bg{white}C_d%20=%201.77), the eigenvalues become:
 
-  \[
-  \lambda'_{3D} = [113.91, -110.37, 113.91, 113.91, 113.91, 113.91]
-  \]
+  ![\lambda'_{3D} = [113.91, -110.37, 113.91, 113.91, 113.91, 113.91]](https://latex.codecogs.com/svg.image?\bg{white}\lambda'_{3D}%20=%20[113.91,%20-110.37,%20113.91,%20113.91,%20113.91,%20113.91])
 
   This indicates partial symmetry-breaking, with one negative eigenvalue reflecting the instability.
 
