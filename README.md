@@ -519,26 +519,20 @@ This completes the full proof of the Symmetry-Breaking Bifurcation Theorem.
 
 ### 5.1 Square (n = 4, 2D Polygon)
 
-- **Symmetry Group Constant \( A_2 = 8 \)**
-- **Complexity Scaling Constant \( k_2 = \ln(4) \approx 1.3863 \)**
+- **Symmetry Group Constant** ![A_2 = 8](https://latex.codecogs.com/svg.image?\bg{white}A_2%20=%208)
+- **Complexity Scaling Constant** ![k_2 = \ln(4) \approx 1.3863](https://latex.codecogs.com/svg.image?\bg{white}k_2%20=%20\ln(4)%20\approx%201.3863)
 - **Derived Coefficients:**
 
-  \[
-  a_2 = \frac{1}{\text{Perimeter}} \times \ln(4) = \frac{1}{4s} \times 1.3863
-  \]
+  ![a_2 = \frac{1}{\text{Perimeter}} \times \ln(4) = \frac{1}{4s} \times 1.3863](https://latex.codecogs.com/svg.image?\bg{white}a_2%20=%20\frac{1}{\text{Perimeter}}%20\times%20\ln(4)%20=%20\frac{1}{4s}%20\times%201.3863)
 
-  \[
-  b_2 = 0.1 + 0.01 \times \ln(4) \approx 0.1139
-  \]
+  ![b_2 = 0.1 + 0.01 \times \ln(4) \approx 0.1139](https://latex.codecogs.com/svg.image?\bg{white}b_2%20=%200.1%20+%200.01%20\times%20\ln(4)%20\approx%200.1139)
 
-- **Logarithmic Deformation Factor \( B_2 = a_2 \ln(4) + b_2 \)**
-- **Dimensional Adjustment Constant \( C_2 = 2.23 \)**
+- **Logarithmic Deformation Factor** ![B_2 = a_2 \ln(4) + b_2](https://latex.codecogs.com/svg.image?\bg{white}B_2%20=%20a_2%20\ln(4)%20+%20b_2)
+- **Dimensional Adjustment Constant** ![C_2 = 2.23](https://latex.codecogs.com/svg.image?\bg{white}C_2%20=%202.23)
 
 - **Bifurcation Equation:**
 
-  \[
-  \Delta G(t, 4, 2) = \frac{8}{4^{1.3863}} \cdot (t - 0.5 + \varepsilon)^{B_2 \cdot \ln(4) + 2.23}
-  \]
+  ![\Delta G(t, 4, 2) = \frac{8}{4^{1.3863}} \cdot (t - 0.5 + \varepsilon)^{B_2 \cdot \ln(4) + 2.23}](https://latex
 
 ### 5.2 Hexagon (n = 6, 2D Polygon)
 
