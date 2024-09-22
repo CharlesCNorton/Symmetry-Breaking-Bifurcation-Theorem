@@ -244,21 +244,19 @@ We define:
 
 ---
 
-### 2.3 Logarithmic Deformation Factor \( B_d \)
+### 2.3 Logarithmic Deformation Factor ![B_d](https://latex.codecogs.com/svg.image?\bg{white}B_d)
 
-The Logarithmic Deformation Factor \( B_d \) governs how rapidly bifurcation accelerates after the object reaches the critical deformation threshold \( t_c \). This factor is derived from a power-law model that describes how symmetry-breaking propagates as deformation increases.
+The Logarithmic Deformation Factor ![B_d](https://latex.codecogs.com/svg.image?\bg{white}B_d) governs how rapidly bifurcation accelerates after the object reaches the critical deformation threshold ![t_c](https://latex.codecogs.com/svg.image?\bg{white}t_c). This factor is derived from a power-law model that describes how symmetry-breaking propagates as deformation increases.
 
-#### Derivation of \( B_d \):
+#### Derivation of ![B_d](https://latex.codecogs.com/svg.image?\bg{white}B_d):
 
-We define \( B_d \) as:
+We define ![B_d](https://latex.codecogs.com/svg.image?\bg{white}B_d) as:
 
-\[
-B_d = a_d \ln(n) + b_d
-\]
+![B_d = a_d \ln(n) + b_d](https://latex.codecogs.com/svg.image?\bg{white}B_d%20=%20a_d%20\ln(n)%20+%20b_d)
 
 Where:
 
-- \( a_d \) and \( b_d \) are coefficients derived from geometric properties.
+- ![a_d](https://latex.codecogs.com/svg.image?\bg{white}a_d) and ![b_d](https://latex.codecogs.com/svg.image?\bg{white}b_d) are coefficients derived from geometric properties.
 
 **Derivation of Coefficients \( a_d \) and \( b_d \):**
 
