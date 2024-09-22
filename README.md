@@ -485,35 +485,29 @@ This completes the full proof of the Symmetry-Breaking Bifurcation Theorem.
 
 #### Simulation Details:
 
-- **Object Simulated:** 600-Cell (\( n = 600 \))
+- **Object Simulated:** 600-Cell ![n = 600](https://latex.codecogs.com/svg.image?\bg{white}n%20=%20600)
 - **Methodology:** Applied the bifurcation equation analytically due to computational limitations in visualizing 4D objects.
 - **Tools Used:** Mathematical software capable of handling high-dimensional computations.
 
 - **Governing Equation for Deformation:**  
-  The governing equation for deformation of a 4D polytope (e.g., the 600-cell with \( n = 600 \)) is:
+  The governing equation for deformation of a 4D polytope (e.g., the 600-cell with ![n = 600](https://latex.codecogs.com/svg.image?\bg{white}n%20=%20600)) is:
 
-  \[
-  F_{4D}(t, n) = \sum_{i=1}^{n} (t \cdot (r_i(t) - r_{i-1}(t)))^2 = 150
-  \]
+  ![F_{4D}(t, n) = \sum_{i=1}^{n} (t \cdot (r_i(t) - r_{i-1}(t)))^2 = 150](https://latex.codecogs.com/svg.image?\bg{white}F_{4D}(t,%20n)%20=%20\sum_{i=1}^{n}%20(t%20\cdot%20(r_i(t)%20-%20r_{i-1}(t)))^2%20=%20150)
 
-  This equation governs how the relative positions of cells change over time due to deformation, where \( t \) is the deformation parameter, and \( n \) is the number of cells.
+  This equation governs how the relative positions of cells change over time due to deformation, where ![t](https://latex.codecogs.com/svg.image?\bg{white}t) is the deformation parameter, and ![n](https://latex.codecogs.com/svg.image?\bg{white}n) is the number of cells.
 
 #### Results:
 
 - **Resistance to Bifurcation:** The 600-cell exhibited significant resistance to symmetry-breaking.
-- **Computed \( \Delta G \):** Values showed a slow progression, confirming the theorem's applicability to 4D polytopes.
+- **Computed ![\Delta G](https://latex.codecogs.com/svg.image?\bg{white}\Delta%20G):** Values showed a slow progression, confirming the theorem's applicability to 4D polytopes.
 - **Eigenvalue Analysis (600-Cell):**  
-  The eigenvalue analysis for the 600-cell (\( n = 600 \)) shows the following eigenvalues:
+  The eigenvalue analysis for the 600-cell ![n = 600](https://latex.codecogs.com/svg.image?\bg{white}n%20=%20600) shows the following eigenvalues:
 
-  \[
-  \lambda_{4D} = [2.5, -597.5, 2.5, 2.5 + 3 \times 10^{-14}j, \dots]
-  \]
+  ![\lambda_{4D} = [2.5, -597.5, 2.5, 2.5 + 3 \times 10^{-14}j, \dots]](https://latex.codecogs.com/svg.image?\bg{white}\lambda_{4D}%20=%20[2.5,%20-597.5,%202.5,%202.5%20+%203%20\times%2010^{-14}j,%20\dots])
 
-  After adjusting for constants \( A_d = 14400 \), \( k_d = \ln(600) \), \( B_d = 0.1 \cdot \ln(600) \), and \( C_d = 1.0 \), the eigenvalues become:
+  After adjusting for constants ![A_d = 14400](https://latex.codecogs.com/svg.image?\bg{white}A_d%20=%2014400), ![k_d = \ln(600)](https://latex.codecogs.com/svg.image?\bg{white}k_d%20=%20\ln(600)), ![B_d = 0.1 \cdot \ln(600)](https://latex.codecogs.com/svg.image?\bg{white}B_d%20=%200.1%20\cdot%20\ln(600)), and ![C_d = 1.0](https://latex.codecogs.com/svg.image?\bg{white}C_d%20=%201.0), the eigenvalues become:
 
-  \[
-  \lambda'_{4D} = [8798.50, -2102601.86, 8798.50, 8798.50 + 1.086 \times 10^{-10}j, \dots]
-  \]
+  ![\lambda'_{4D} = [8798.50, -2102601.86, 8798.50, 8798.50 + 1.086 \times 10^{-10}j, \dots]](https://latex.codecogs.com/svg.image?\bg{white}\lambda'_{4D}%20=%20[8798.50,%20-2102601.86,%208798.50,%208798.50%20+%201.086%20\times%2010^{-10}j,%20\dots])
 
   This indicates strong symmetry-breaking, as seen from the large negative eigenvalue.
 
