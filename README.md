@@ -388,39 +388,39 @@ The logarithmic dependence of ![k_d](https://latex.codecogs.com/svg.image?\bg{wh
 
 ## 3.4 Full Proof of the Theorem
 
-Theorem Statement: 
-For any regular geometric object P_n with complexity n and dimensionality d, there exists a bifurcation point at t_c = 0.5, beyond which the object transitions from regularity to near-regularity, governed by the bifurcation equation.
+**Theorem Statement:**  
+For any regular geometric object ![P_n](https://latex.codecogs.com/svg.image?\bg{white}P_n) with complexity ![n](https://latex.codecogs.com/svg.image?\bg{white}n) and dimensionality ![d](https://latex.codecogs.com/svg.image?\bg{white}d), there exists a bifurcation point at ![t_c = 0.5](https://latex.codecogs.com/svg.image?\bg{white}t_c%20=%200.5), beyond which the object transitions from regularity to near-regularity, governed by the bifurcation equation.
 
-Proof:
+**Proof:**
 
-### 1. Pre-Bifurcation Phase (t <= t_c): 
-   In this phase, the system remains stable, as all the eigenvalues of the Jacobian matrix J(t) have negative real parts. No symmetry-breaking occurs, and the bifurcation equation yields ΔG(t, n, d) = 0.
+### 1. Pre-Bifurcation Phase ![t \leq t_c](https://latex.codecogs.com/svg.image?\bg{white}t%20\leq%20t_c):  
+   In this phase, the system remains stable, as all the eigenvalues of the Jacobian matrix ![J(t)](https://latex.codecogs.com/svg.image?\bg{white}J(t)) have negative real parts. No symmetry-breaking occurs, and the bifurcation equation yields ![\Delta G(t, n, d) = 0](https://latex.codecogs.com/svg.image?\bg{white}\Delta%20G(t,%20n,%20d)%20=%200).
 
-### 2. Critical Threshold (t_c = 0.5): 
-   At the bifurcation threshold t_c, a qualitative change in stability occurs. The eigenvalues of the Jacobian matrix J(t) cross the imaginary axis, meaning the system transitions from stability to instability. This indicates the onset of bifurcation, where the symmetry group G(P) begins to shrink.
+### 2. Critical Threshold ![t_c = 0.5](https://latex.codecogs.com/svg.image?\bg{white}t_c%20=%200.5):  
+   At the bifurcation threshold ![t_c](https://latex.codecogs.com/svg.image?\bg{white}t_c), a qualitative change in stability occurs. The eigenvalues of the Jacobian matrix ![J(t)](https://latex.codecogs.com/svg.image?\bg{white}J(t)) cross the imaginary axis, meaning the system transitions from stability to instability. This indicates the onset of bifurcation, where the symmetry group ![G(P)](https://latex.codecogs.com/svg.image?\bg{white}G(P)) begins to shrink.
 
-   Mathematically, this is described by the bifurcation condition, where the real part of at least one eigenvalue λ_i(t) crosses zero:
+   Mathematically, this is described by the bifurcation condition, where the real part of at least one eigenvalue ![\lambda_i(t)](https://latex.codecogs.com/svg.image?\bg{white}\lambda_i(t)) crosses zero:
 
-   Re(λ_i(t_c)) = 0
+   ![\text{Re}(\lambda_i(t_c)) = 0](https://latex.codecogs.com/svg.image?\bg{white}\text{Re}(\lambda_i(t_c))%20=%200)
 
-### 3. Post-Bifurcation Phase (t > t_c): 
-   For t > t_c, the object undergoes symmetry-breaking, governed by the bifurcation equation:
+### 3. Post-Bifurcation Phase ![t > t_c](https://latex.codecogs.com/svg.image?\bg{white}t%20>%20t_c):  
+   For ![t > t_c](https://latex.codecogs.com/svg.image?\bg{white}t%20>%20t_c), the object undergoes symmetry-breaking, governed by the bifurcation equation:
 
-   ΔG(t, n, d) = (A_d / (n^k_d)) * (t - t_c + ε)^(B_d * ln(n) + C_d)
+   ![\Delta G(t, n, d) = \frac{A_d}{n^{k_d}} \cdot (t - t_c + \epsilon)^{B_d \cdot \ln(n) + C_d}](https://latex.codecogs.com/svg.image?\bg{white}\Delta%20G(t,%20n,%20d)%20=%20\frac{A_d}{n^{k_d}}%20\cdot%20(t%20-%20t_c%20+%20\epsilon)^{B_d%20\cdot%20\ln(n)%20+%20C_d})
 
    Here:
-   - A_d encodes the effect of the symmetry group on the bifurcation rate.
-   - k_d models the logarithmic scaling of complexity.
-   - B_d governs the rate at which bifurcation accelerates.
-   - C_d adjusts for the dimensionality and topological complexity.
+   - ![A_d](https://latex.codecogs.com/svg.image?\bg{white}A_d) encodes the effect of the symmetry group on the bifurcation rate.
+   - ![k_d](https://latex.codecogs.com/svg.image?\bg{white}k_d) models the logarithmic scaling of complexity.
+   - ![B_d](https://latex.codecogs.com/svg.image?\bg{white}B_d) governs the rate at which bifurcation accelerates.
+   - ![C_d](https://latex.codecogs.com/svg.image?\bg{white}C_d) adjusts for the dimensionality and topological complexity.
 
-   As t increases beyond t_c, the eigenvalues of J(t) acquire positive real parts, leading to the rapid growth of ΔG(t, n, d), which quantifies the degree of symmetry-breaking.
+   As ![t](https://latex.codecogs.com/svg.image?\bg{white}t) increases beyond ![t_c](https://latex.codecogs.com/svg.image?\bg{white}t_c), the eigenvalues of ![J(t)](https://latex.codecogs.com/svg.image?\bg{white}J(t)) acquire positive real parts, leading to the rapid growth of ![\Delta G(t, n, d)](https://latex.codecogs.com/svg.image?\bg{white}\Delta%20G(t,%20n,%20d)), which quantifies the degree of symmetry-breaking.
 
-4. Dimensional and Complexity Dependence: 
-   The bifurcation rate depends on both the dimensionality d and complexity n of the object. Higher values of d and n increase resistance to bifurcation by modulating the constants A_d, k_d, B_d, and C_d, as shown in the preceding lemmas.
+### 4. Dimensional and Complexity Dependence:  
+   The bifurcation rate depends on both the dimensionality ![d](https://latex.codecogs.com/svg.image?\bg{white}d) and complexity ![n](https://latex.codecogs.com/svg.image?\bg{white}n) of the object. Higher values of ![d](https://latex.codecogs.com/svg.image?\bg{white}d) and ![n](https://latex.codecogs.com/svg.image?\bg{white}n) increase resistance to bifurcation by modulating the constants ![A_d](https://latex.codecogs.com/svg.image?\bg{white}A_d), ![k_d](https://latex.codecogs.com/svg.image?\bg{white}k_d), ![B_d](https://latex.codecogs.com/svg.image?\bg{white}B_d), and ![C_d](https://latex.codecogs.com/svg.image?\bg{white}C_d), as shown in the preceding lemmas.
 
-Conclusion: 
-For any regular geometric object P_n, symmetry-breaking occurs beyond the critical deformation threshold t_c = 0.5, governed by the bifurcation equation. The bifurcation rate is modulated by the complexity n and dimensionality d of the object.
+**Conclusion:**  
+For any regular geometric object ![P_n](https://latex.codecogs.com/svg.image?\bg{white}P_n), symmetry-breaking occurs beyond the critical deformation threshold ![t_c = 0.5](https://latex.codecogs.com/svg.image?\bg{white}t_c%20=%200.5), governed by the bifurcation equation. The bifurcation rate is modulated by the complexity ![n](https://latex.codecogs.com/svg.image?\bg{white}n) and dimensionality ![d](https://latex.codecogs.com/svg.image?\bg{white}d) of the object.
 
 This completes the full proof of the Symmetry-Breaking Bifurcation Theorem.
 
