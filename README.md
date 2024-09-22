@@ -334,30 +334,30 @@ Since the eigenvalues ![\lambda_i(t)](https://latex.codecogs.com/svg.image?\bg{w
 
 ## 3.2 Lemma 2: Dimensional Dependence of Bifurcation
 
-Lemma Statement: 
-The dimensionality d of the object affects the rate of symmetry-breaking, with higher-dimensional objects experiencing slower bifurcation.
+**Lemma Statement:**  
+The dimensionality ![d](https://latex.codecogs.com/svg.image?\bg{white}d) of the object affects the rate of symmetry-breaking, with higher-dimensional objects experiencing slower bifurcation.
 
-Proof:
+**Proof:**
 
-The bifurcation equation is dependent on several constants, one of which is the Dimensional Adjustment Constant C_d, which is directly tied to the dimensionality d of the geometric object. The term C_d modulates the bifurcation rate as a function of dimensionality, accounting for the additional geometric constraints that higher-dimensional objects impose.
+The bifurcation equation is dependent on several constants, one of which is the Dimensional Adjustment Constant ![C_d](https://latex.codecogs.com/svg.image?\bg{white}C_d), which is directly tied to the dimensionality ![d](https://latex.codecogs.com/svg.image?\bg{white}d) of the geometric object. The term ![C_d](https://latex.codecogs.com/svg.image?\bg{white}C_d) modulates the bifurcation rate as a function of dimensionality, accounting for the additional geometric constraints that higher-dimensional objects impose.
 
-Detailed Explanation:
+**Detailed Explanation:**
 
-1. Dimensional Adjustment Constant C_d: 
-   The constant C_d is derived based on the topological complexity of the object. Higher-dimensional objects have more intricate topologies, as reflected by invariants such as the Euler characteristic χ, which influences how deformation propagates through the object. For higher dimensions:
+1. **Dimensional Adjustment Constant ![C_d](https://latex.codecogs.com/svg.image?\bg{white}C_d):**  
+   The constant ![C_d](https://latex.codecogs.com/svg.image?\bg{white}C_d) is derived based on the topological complexity of the object. Higher-dimensional objects have more intricate topologies, as reflected by invariants such as the Euler characteristic ![\chi](https://latex.codecogs.com/svg.image?\bg{white}\chi), which influences how deformation propagates through the object. For higher dimensions:
    
-   C_d = c_d + d_d * (χ / ln(n))
+   ![C_d = c_d + d_d \left( \frac{\chi}{\ln(n)} \right)](https://latex.codecogs.com/svg.image?\bg{white}C_d%20=%20c_d%20+%20d_d%20\left(%20\frac{\chi}{\ln(n)}%20\right))
 
-   where c_d and d_d are constants specific to the dimensionality d, and χ is the Euler characteristic.
+   where ![c_d](https://latex.codecogs.com/svg.image?\bg{white}c_d) and ![d_d](https://latex.codecogs.com/svg.image?\bg{white}d_d) are constants specific to the dimensionality ![d](https://latex.codecogs.com/svg.image?\bg{white}d), and ![\chi](https://latex.codecogs.com/svg.image?\bg{white}\chi) is the Euler characteristic.
 
-2. Role of Dimensionality in the Eigenvalue Distribution: 
-   In higher-dimensional objects, the symmetry group G(P) is larger, implying that there are more symmetry-preserving transformations. This results in more constraints on how deformation can lead to symmetry-breaking. This is mathematically encoded in the eigenvalues of the Jacobian matrix J(t). As dimensionality increases, the eigenvalues change more slowly as t increases, leading to a delayed onset of bifurcation in higher-dimensional systems.
+2. **Role of Dimensionality in the Eigenvalue Distribution:**  
+   In higher-dimensional objects, the symmetry group ![G(P)](https://latex.codecogs.com/svg.image?\bg{white}G(P)) is larger, implying that there are more symmetry-preserving transformations. This results in more constraints on how deformation can lead to symmetry-breaking. This is mathematically encoded in the eigenvalues of the Jacobian matrix ![J(t)](https://latex.codecogs.com/svg.image?\bg{white}J(t)). As dimensionality increases, the eigenvalues change more slowly as ![t](https://latex.codecogs.com/svg.image?\bg{white}t) increases, leading to a delayed onset of bifurcation in higher-dimensional systems.
 
-3. Eigenvalue Scaling with Dimensionality: 
+3. **Eigenvalue Scaling with Dimensionality:**  
    Higher-dimensional systems exhibit slower bifurcation because the rate at which the eigenvalues change is reduced in higher dimensions. This is a direct consequence of the fact that higher-dimensional objects have larger symmetry groups, making it more difficult for deformation to break all the symmetries simultaneously.
 
-Conclusion: 
-The dimensionality d influences both the symmetry group size and the topological complexity, which in turn slows the bifurcation process. This completes the proof for Lemma 2.
+**Conclusion:**  
+The dimensionality ![d](https://latex.codecogs.com/svg.image?\bg{white}d) influences both the symmetry group size and the topological complexity, which in turn slows the bifurcation process. This completes the proof for Lemma 2.
 
 ## 3.3 Lemma 3: Complexity Dependence of Bifurcation
 
