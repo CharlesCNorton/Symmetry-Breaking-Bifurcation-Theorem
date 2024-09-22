@@ -258,28 +258,24 @@ Where:
 
 - ![a_d](https://latex.codecogs.com/svg.image?\bg{white}a_d) and ![b_d](https://latex.codecogs.com/svg.image?\bg{white}b_d) are coefficients derived from geometric properties.
 
-**Derivation of Coefficients \( a_d \) and \( b_d \):**
+**Derivation of Coefficients ![a_d](https://latex.codecogs.com/svg.image?\bg{white}a_d) and ![b_d](https://latex.codecogs.com/svg.image?\bg{white}b_d):**
 
-- **\( a_d \):** Inversely proportional to the perimeter (or surface area in higher dimensions) of the object, reflecting how larger or more symmetric shapes resist bifurcation more.
+- **![a_d](https://latex.codecogs.com/svg.image?\bg{white}a_d):** Inversely proportional to the perimeter (or surface area in higher dimensions) of the object, reflecting how larger or more symmetric shapes resist bifurcation more.
 
-  \[
-  a_d = \frac{k}{\text{Perimeter}}
-  \]
+  ![a_d = \frac{k}{\text{Perimeter}}](https://latex.codecogs.com/svg.image?\bg{white}a_d%20=%20\frac{k}{\text{Perimeter}})
 
-  Where \( k \) is a constant of proportionality.
+  Where ![k](https://latex.codecogs.com/svg.image?\bg{white}k) is a constant of proportionality.
 
-- **\( b_d \):** Scaled based on the number of sides \( n \), adjusted logarithmically to account for the base rate of deformation.
+- **![b_d](https://latex.codecogs.com/svg.image?\bg{white}b_d):** Scaled based on the number of sides ![n](https://latex.codecogs.com/svg.image?\bg{white}n), adjusted logarithmically to account for the base rate of deformation.
 
-  \[
-  b_d = c + d \cdot \ln(n)
-  \]
+  ![b_d = c + d \cdot \ln(n)](https://latex.codecogs.com/svg.image?\bg{white}b_d%20=%20c%20+%20d%20\cdot%20\ln(n))
 
-  Where \( c \) and \( d \) are constants determined by the object's dimensionality.
+  Where ![c](https://latex.codecogs.com/svg.image?\bg{white}c) and ![d](https://latex.codecogs.com/svg.image?\bg{white}d) are constants determined by the object's dimensionality.
 
 **Justification:**
 
-- **Empirical Testing:** Adjusting \( a_d \) and \( b_d \) based on geometric properties produced realistic and accurate bifurcation dynamics.
-- **Mathematical Reasoning:** Larger objects with more sides have more ways to distribute deformation, hence the dependence on \( \ln(n) \).
+- **Empirical Testing:** Adjusting ![a_d](https://latex.codecogs.com/svg.image?\bg{white}a_d) and ![b_d](https://latex.codecogs.com/svg.image?\bg{white}b_d) based on geometric properties produced realistic and accurate bifurcation dynamics.
+- **Mathematical Reasoning:** Larger objects with more sides have more ways to distribute deformation, hence the dependence on ![\ln(n)](https://latex.codecogs.com/svg.image?\bg{white}\ln(n)).
 
 ---
 
