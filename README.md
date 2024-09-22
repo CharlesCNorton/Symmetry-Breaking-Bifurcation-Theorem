@@ -595,77 +595,58 @@ This completes the full proof of the Symmetry-Breaking Bifurcation Theorem.
 
 ### 5.4 Dodecahedron (n = 12, 3D Polyhedron)
 
-- **Symmetry Group Constant \( A_3 = 60 \)**
-- **Complexity Scaling Constant \( k_3 = \ln(12) \approx 2.4849 \)**
+- **Symmetry Group Constant** ![A_3 = 60](https://latex.codecogs.com/svg.image?\bg{white}A_3%20=%2060)
+- **Complexity Scaling Constant** ![k_3 = \ln(12) \approx 2.4849](https://latex.codecogs.com/svg.image?\bg{white}k_3%20=%20\ln(12)%20\approx%202.4849)
 - **Derived Coefficients:**
 
-  \[
-  a_3 = \frac{1}{\text{Surface Area}} \times \ln(12)
-  \]
+  ![a_3 = \frac{1}{\text{Surface Area}} \times \ln(12)](https://latex.codecogs.com/svg.image?\bg{white}a_3%20=%20\frac{1}{\text{Surface%20Area}}%20\times%20\ln(12))
 
-  \[
-  b_3 = 0.1 + 0.01 \times \ln(12) \approx 0.1248
-  \]
+  ![b_3 = 0.1 + 0.01 \times \ln(12) \approx 0.1248](https://latex.codecogs.com/svg.image?\bg{white}b_3%20=%200.1%20+%200.01%20\times%20\ln(12)%20\approx%200.1248)
 
-- **Logarithmic Deformation Factor \( B_3 = a_3 \ln(12) + b_3 \)**
-- **Dimensional Adjustment Constant \( C_3 = 1.77 \)**
+- **Logarithmic Deformation Factor** ![B_3 = a_3 \ln(12) + b_3](https://latex.codecogs.com/svg.image?\bg{white}B_3%20=%20a_3%20\ln(12)%20+%20b_3)
+- **Dimensional Adjustment Constant** ![C_3 = 1.77](https://latex.codecogs.com/svg.image?\bg{white}C_3%20=%201.77)
 
 - **Bifurcation Equation:**
 
-  \[
-  \Delta G(t, 12, 3) = \frac{60}{12^{2.4849}} \cdot (t - 0.5 + \varepsilon)^{B_3 \cdot \ln(12) + 1.77}
-  \]
+  ![\Delta G(t, 12, 3) = \frac{60}{12^{2.4849}} \cdot (t - 0.5 + \epsilon)^{B_3 \cdot \ln(12) + 1.77}](https://latex.codecogs.com/svg.image?\bg{white}\Delta%20G(t,%2012,%203)%20=%20\frac{60}{12^{2.4849}}%20\cdot%20(t%20-%200.5%20+%20\epsilon)^{B_3%20\cdot%20\ln(12)%20+%201.77})
 
 ### 5.5 600-Cell (n = 600, 4D Polytope)
 
-- **Symmetry Group Constant \( A_4 = 14,400 \)**
-- **Complexity Scaling Constant \( k_4 = \ln(600) \approx 6.3969 \)**
+- **Symmetry Group Constant** ![A_4 = 14,400](https://latex.codecogs.com/svg.image?\bg{white}A_4%20=%2014400)
+- **Complexity Scaling Constant** ![k_4 = \ln(600) \approx 6.3969](https://latex.codecogs.com/svg.image?\bg{white}k_4%20=%20\ln(600)%20\approx%206.3969)
 - **Derived Coefficients:**
 
-  \[
-  a_4 = \frac{1}{\text{Hypervolume}} \times \ln(600)
-  \]
+  ![a_4 = \frac{1}{\text{Hypervolume}} \times \ln(600)](https://latex.codecogs.com/svg.image?\bg{white}a_4%20=%20\frac{1}{\text{Hypervolume}}%20\times%20\ln(600))
 
-  \[
-  b_4 = 0.1 + 0.01 \times \ln(600) \approx 0.1639
-  \]
+  ![b_4 = 0.1 + 0.01 \times \ln(600) \approx 0.1639](https://latex.codecogs.com/svg.image?\bg{white}b_4%20=%200.1%20+%200.01%20\times%20\ln(600)%20\approx%200.1639)
 
-- **Logarithmic Deformation Factor \( B_4 = a_4 \ln(600) + b_4 \)**
-- **Dimensional Adjustment Constant \( C_4 = 1.0 + 0.1 \left( \frac{120}{\ln(600)} \right) \approx 2.876 \)**
+- **Logarithmic Deformation Factor** ![B_4 = a_4 \ln(600) + b_4](https://latex.codecogs.com/svg.image?\bg{white}B_4%20=%20a_4%20\ln(600)%20+%20b_4)
+- **Dimensional Adjustment Constant** ![C_4 = 1.0 + 0.1 \left( \frac{120}{\ln(600)} \right) \approx 2.876](https://latex.codecogs.com/svg.image?\bg{white}C_4%20=%201.0%20+%200.1%20\left(%20\frac{120}{\ln(600)}%20\right)%20\approx%202.876)
 
-  Euler characteristic \( \chi = 120 \) for the 600-cell.
+  Euler characteristic ![\chi = 120](https://latex.codecogs.com/svg.image?\bg{white}\chi%20=%20120) for the 600-cell.
 
 - **Governing Equation for Deformation:**
 
-  \[
-  F_{4D}(t, n) = \sum_{i=1}^{n} (t \cdot (r_i(t) - r_{i-1}(t)))^2 = 150
-  \]
+  ![F_{4D}(t, n) = \sum_{i=1}^{n} (t \cdot (r_i(t) - r_{i-1}(t)))^2 = 150](https://latex.codecogs.com/svg.image?\bg{white}F_{4D}(t,%20n)%20=%20\sum_{i=1}^{n}%20(t%20\cdot%20(r_i(t)%20-%20r_{i-1}(t)))^2%20=%20150)
 
-  This equation governs the deformation of the cells over time, where \( t \) is the deformation parameter, and \( n \) is the number of cells.
+  This equation governs the deformation of the cells over time, where ![t](https://latex.codecogs.com/svg.image?\bg{white}t) is the deformation parameter, and ![n](https://latex.codecogs.com/svg.image?\bg{white}n) is the number of cells.
 
 - **Eigenvalue Analysis:**
 
-  The eigenvalue analysis for the 600-cell (\( n = 600 \)) shows the following eigenvalues:
+  The eigenvalue analysis for the 600-cell ![n = 600](https://latex.codecogs.com/svg.image?\bg{white}n%20=%20600) shows the following eigenvalues:
 
-  \[
-  \lambda_{4D} = [2.5, -597.5, 2.5, 2.5 + 3 \times 10^{-14}j, \dots]
-  \]
+  ![\lambda_{4D} = [2.5, -597.5, 2.5, 2.5 + 3 \times 10^{-14}j, \dots]](https://latex.codecogs.com/svg.image?\bg{white}\lambda_{4D}%20=%20[2.5,%20-597.5,%202.5,%202.5%20+%203%20\times%2010^{-14}j,%20\dots])
 
-  After adjusting for constants \( A_d = 14,400 \), \( k_d = \ln(600) \), \( B_d = 0.1 \cdot \ln(600) \), and \( C_d = 1.0 \), the eigenvalues become:
+  After adjusting for constants ![A_d = 14,400](https://latex.codecogs.com/svg.image?\bg{white}A_d%20=%2014400), ![k_d = \ln(600)](https://latex.codecogs.com/svg.image?\bg{white}k_d%20=%20\ln(600)), ![B_d = 0.1 \cdot \ln(600)](https://latex.codecogs.com/svg.image?\bg{white}B_d%20=%200.1%20\cdot%20\ln(600)), and ![C_d = 1.0](https://latex.codecogs.com/svg.image?\bg{white}C_d%20=%201.0), the eigenvalues become:
 
-  \[
-  \lambda'_{4D} = [8798.50, -2102601.86, 8798.50, 8798.50 + 1.086 \times 10^{-10}j, \dots]
-  \]
+  ![\lambda'_{4D} = [8798.50, -2102601.86, 8798.50, 8798.50 + 1.086 \times 10^{-10}j, \dots]](https://latex.codecogs.com/svg.image?\bg{white}\lambda'_{4D}%20=%20[8798.50,%20-2102601.86,%208798.50,%208798.50%20+%201.086%20\times%2010^{-10}j,%20\dots])
 
   This indicates strong symmetry-breaking, as seen from the large negative eigenvalue.
 
 - **Bifurcation Equation:**
 
-  \[
-  \Delta G(t, 600, 4) = \frac{14,400}{600^{6.3969}} \cdot (t - 0.5 + \varepsilon)^{B_4 \cdot \ln(600) + 2.876}
-  \]
+  ![\Delta G(t, 600, 4) = \frac{14,400}{600^{6.3969}} \cdot (t - 0.5 + \epsilon)^{B_4 \cdot \ln(600) + 2.876}](https://latex.codecogs.com/svg.image?\bg{white}\Delta%20G(t,%20600,%204)%20=%20\frac{14400}{600^{6.3969}}%20\cdot%20(t%20-%200.5%20+%20\epsilon)^{B_4%20\cdot%20\ln(600)%20+%202.876})
 
----
 
 ## 6. Applications
 
