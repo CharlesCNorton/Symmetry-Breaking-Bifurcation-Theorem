@@ -305,32 +305,32 @@ Where:
 
 ## 3.1 Lemma 1: Symmetry-Breaking Threshold
 
-Lemma Statement: 
-For t <= t_c = 0.5, no bifurcation occurs.
+**Lemma Statement:**  
+For ![t \leq t_c = 0.5](https://latex.codecogs.com/svg.image?\bg{white}t%20\leq%20t_c%20=%200.5), no bifurcation occurs.
 
-Proof:
+**Proof:**
 
-The bifurcation equation suggests that when t <= t_c, the symmetry group G(P) remains intact, and no symmetry-breaking occurs. To demonstrate this rigorously, we must examine the stability of the system before the critical threshold t_c.
+The bifurcation equation suggests that when ![t \leq t_c](https://latex.codecogs.com/svg.image?\bg{white}t%20\leq%20t_c), the symmetry group ![G(P)](https://latex.codecogs.com/svg.image?\bg{white}G(P)) remains intact, and no symmetry-breaking occurs. To demonstrate this rigorously, we must examine the stability of the system before the critical threshold ![t_c](https://latex.codecogs.com/svg.image?\bg{white}t_c).
 
-Defining the Mathematical Entities:
+**Defining the Mathematical Entities:**
 
-1. Jacobian Matrix J(t): 
-   The Jacobian matrix is a key object in bifurcation theory. It encodes how a small perturbation in the system propagates over time. For a system of equations describing the deformation of the geometric object P, the Jacobian matrix J(t) is defined as the matrix of partial derivatives of the system's governing equations with respect to the deformation parameter t.
+1. **Jacobian Matrix ![J(t)](https://latex.codecogs.com/svg.image?\bg{white}J(t)):**  
+   The Jacobian matrix is a key object in bifurcation theory. It encodes how a small perturbation in the system propagates over time. For a system of equations describing the deformation of the geometric object ![P](https://latex.codecogs.com/svg.image?\bg{white}P), the Jacobian matrix ![J(t)](https://latex.codecogs.com/svg.image?\bg{white}J(t)) is defined as the matrix of partial derivatives of the system's governing equations with respect to the deformation parameter ![t](https://latex.codecogs.com/svg.image?\bg{white}t).
 
-   If we define the governing equations as F(t, n, d) that describe the geometric state of the object P, the Jacobian matrix is:
+   If we define the governing equations as ![F(t, n, d)](https://latex.codecogs.com/svg.image?\bg{white}F(t,%20n,%20d)) that describe the geometric state of the object ![P](https://latex.codecogs.com/svg.image?\bg{white}P), the Jacobian matrix is:
    
-   J(t) = dF/dt
+   ![J(t) = \frac{dF}{dt}](https://latex.codecogs.com/svg.image?\bg{white}J(t)%20=%20\frac{dF}{dt})
 
-   The eigenvalues of the Jacobian matrix J(t) at each point describe the stability of the system at that point. If all eigenvalues have negative real parts, the system is stable, meaning no bifurcation occurs.
+   The eigenvalues of the Jacobian matrix ![J(t)](https://latex.codecogs.com/svg.image?\bg{white}J(t)) at each point describe the stability of the system at that point. If all eigenvalues have negative real parts, the system is stable, meaning no bifurcation occurs.
 
-2. Stability Condition: 
-   The system's stability is determined by the sign of the eigenvalues λ_i(t) of J(t). For t <= t_c, we assume that all the eigenvalues of J(t) have negative real parts, ensuring the system is stable and no bifurcation occurs.
+2. **Stability Condition:**  
+   The system's stability is determined by the sign of the eigenvalues ![\lambda_i(t)](https://latex.codecogs.com/svg.image?\bg{white}\lambda_i(t)) of ![J(t)](https://latex.codecogs.com/svg.image?\bg{white}J(t)). For ![t \leq t_c](https://latex.codecogs.com/svg.image?\bg{white}t%20\leq%20t_c), we assume that all the eigenvalues of ![J(t)](https://latex.codecogs.com/svg.image?\bg{white}J(t)) have negative real parts, ensuring the system is stable and no bifurcation occurs.
 
    Mathematically:
 
-   If Re(λ_i(t)) < 0 for all i, then the system is stable and no bifurcation occurs.
+   If ![\text{Re}(\lambda_i(t)) < 0](https://latex.codecogs.com/svg.image?\bg{white}\text{Re}(\lambda_i(t))%20%3C%200) for all ![i](https://latex.codecogs.com/svg.image?\bg{white}i), then the system is stable and no bifurcation occurs.
 
-Since the eigenvalues λ_i(t) remain negative for t <= t_c, we conclude that the object P retains its symmetry and no bifurcation occurs. This completes the proof for Lemma 1.
+Since the eigenvalues ![\lambda_i(t)](https://latex.codecogs.com/svg.image?\bg{white}\lambda_i(t)) remain negative for ![t \leq t_c](https://latex.codecogs.com/svg.image?\bg{white}t%20\leq%20t_c), we conclude that the object ![P](https://latex.codecogs.com/svg.image?\bg{white}P) retains its symmetry and no bifurcation occurs. This completes the proof for Lemma 1.
 
 ## 3.2 Lemma 2: Dimensional Dependence of Bifurcation
 
