@@ -179,11 +179,11 @@ The small positive constant ε is not an arbitrary addition but a necessary comp
 
 ## 2. Derivations of Constants from First Principles
 
-### 2.1 Symmetry Group Constant \( A_d \)
+### 2.1 Symmetry Group Constant ![A_d](https://latex.codecogs.com/svg.image?\bg{white}A_d)
 
-The Symmetry Group Constant \( A_d \) reflects how the symmetry group of the geometric object constrains the deformation process. The larger the symmetry group, the greater the resistance to deformation. Empirical analysis demonstrates that objects with larger symmetry groups exhibit significantly greater resistance to symmetry-breaking, as the number of invariant-preserving transformations increases with the group size.
+The Symmetry Group Constant ![A_d](https://latex.codecogs.com/svg.image?\bg{white}A_d) reflects how the symmetry group of the geometric object constrains the deformation process. The larger the symmetry group, the greater the resistance to deformation. Empirical analysis demonstrates that objects with larger symmetry groups exhibit significantly greater resistance to symmetry-breaking, as the number of invariant-preserving transformations increases with the group size.
 
-For instance, as observed in the case of the square (n = 4, 2D polygon), larger values of \( A_d \) resulted in a slower bifurcation process. This is in line with the idea that a larger symmetry group implies more constraints on how the object can deform without breaking symmetry. Similar results were observed for the cube (n = 6, 3D polyhedron), confirming the robustness of this relationship in higher dimensions.
+For instance, as observed in the case of the square (n = 4, 2D polygon), larger values of ![A_d](https://latex.codecogs.com/svg.image?\bg{white}A_d) resulted in a slower bifurcation process. This is in line with the idea that a larger symmetry group implies more constraints on how the object can deform without breaking symmetry. Similar results were observed for the cube (n = 6, 3D polyhedron), confirming the robustness of this relationship in higher dimensions.
 
 However, it's important to note that there are scenarios where the direct relationship between symmetry group size and deformation resistance might not hold strictly. For example, in cases of localized deformations that affect only a small region of the object without impacting its overall structure, the effect of the symmetry group may be less pronounced. These subtle, localized deformations can accumulate over time, potentially leading to symmetry-breaking at lower deformation thresholds than expected.
 
