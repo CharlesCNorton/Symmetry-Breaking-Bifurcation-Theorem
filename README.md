@@ -554,28 +554,22 @@ This completes the full proof of the Symmetry-Breaking Bifurcation Theorem.
 
 ### 5.3 Cube (n = 6, 3D Polyhedron)
 
-- **Symmetry Group Constant \( A_3 = 24 \)**
-- **Complexity Scaling Constant \( k_3 = \ln(6) \approx 1.7918 \)**
+- **Symmetry Group Constant** ![A_3 = 24](https://latex.codecogs.com/svg.image?\bg{white}A_3%20=%2024)
+- **Complexity Scaling Constant** ![k_3 = \ln(6) \approx 1.7918](https://latex.codecogs.com/svg.image?\bg{white}k_3%20=%20\ln(6)%20\approx%201.7918)
 - **Derived Coefficients:**
 
-  \[
-  a_3 = \frac{1}{\text{Surface Area}} \times \ln(6)
-  \]
+  ![a_3 = \frac{1}{\text{Surface Area}} \times \ln(6)](https://latex.codecogs.com/svg.image?\bg{white}a_3%20=%20\frac{1}{\text{Surface%20Area}}%20\times%20\ln(6))
 
-  \[
-  b_3 = 0.1 + 0.01 \times \ln(6) \approx 0.1179
-  \]
+  ![b_3 = 0.1 + 0.01 \times \ln(6) \approx 0.1179](https://latex.codecogs.com/svg.image?\bg{white}b_3%20=%200.1%20+%200.01%20\times%20\ln(6)%20\approx%200.1179)
 
-- **Logarithmic Deformation Factor \( B_3 = a_3 \ln(6) + b_3 \)**
-- **Dimensional Adjustment Constant \( C_3 = 1.77 \)**
+- **Logarithmic Deformation Factor** ![B_3 = a_3 \ln(6) + b_3](https://latex.codecogs.com/svg.image?\bg{white}B_3%20=%20a_3%20\ln(6)%20+%20b_3)
+- **Dimensional Adjustment Constant** ![C_3 = 1.77](https://latex.codecogs.com/svg.image?\bg{white}C_3%20=%201.77)
 
 - **Governing Equation for Deformation:**
 
-  \[
-  F_{3D}(t, n) = \sum_{i=1}^{n} (t \cdot (r_i(t) - r_{i-1}(t)))^2 = 1.5
-  \]
+  ![F_{3D}(t, n) = \sum_{i=1}^{n} (t \cdot (r_i(t) - r_{i-1}(t)))^2 = 1.5](https://latex.codecogs.com/svg.image?\bg{white}F_{3D}(t,%20n)%20=%20\sum_{i=1}^{n}%20(t%20\cdot%20(r_i(t)%20-%20r_{i-1}(t)))^2%20=%201.5)
 
-  This equation governs the deformation of the faces over time, where \( t \) is the deformation parameter, and \( n \) is the number of faces.
+  This equation governs the deformation of the faces over time, where ![t](https://latex.codecogs.com/svg.image?\bg{white}t) is the deformation parameter, and ![n](https://latex.codecogs.com/svg.image?\bg{white}n) is the number of faces.
 
 - **Eigenvalue Analysis:**
 
