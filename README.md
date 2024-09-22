@@ -221,11 +221,11 @@ The size of the symmetry group ![|G(P)|](https://latex.codecogs.com/svg.image?\b
 
 ---
 
-### 2.2 Complexity Scaling Constant \( k_d \)
+### 2.2 Complexity Scaling Constant ![k_d](https://latex.codecogs.com/svg.image?\bg{white}k_d)
 
-The Complexity Scaling Constant \( k_d = \ln(n) \) models how the complexity of an object affects the rate of bifurcation. This assumption is based on the observation that as the complexity of an object (i.e., the number of sides, faces, or cells) increases, the number of independent deformation modes also increases, but at a logarithmic rate. Empirical validation has shown that this logarithmic scaling accurately captures the behavior of both 2D and 3D objects across a range of complexities.
+The Complexity Scaling Constant ![k_d = \ln(n)](https://latex.codecogs.com/svg.image?\bg{white}k_d%20=%20\ln(n)) models how the complexity of an object affects the rate of bifurcation. This assumption is based on the observation that as the complexity of an object (i.e., the number of sides, faces, or cells) increases, the number of independent deformation modes also increases, but at a logarithmic rate. Empirical validation has shown that this logarithmic scaling accurately captures the behavior of both 2D and 3D objects across a range of complexities.
 
-For example, in the case of the cube (n = 6, 3D polyhedron), increasing \( k_d \) led to a slower bifurcation process, as the object became more resistant to symmetry-breaking. The logarithmic relationship holds for a wide range of complexities, from simple shapes like squares to more complex shapes like polyhedra. This confirms that the logarithmic scaling is a reasonable assumption, at least for the cases tested so far.
+For example, in the case of the cube (n = 6, 3D polyhedron), increasing ![k_d](https://latex.codecogs.com/svg.image?\bg{white}k_d) led to a slower bifurcation process, as the object became more resistant to symmetry-breaking. The logarithmic relationship holds for a wide range of complexities, from simple shapes like squares to more complex shapes like polyhedra. This confirms that the logarithmic scaling is a reasonable assumption, at least for the cases tested so far.
 
 However, it is possible that this relationship may not hold for certain extreme geometries, particularly those with very few elements (e.g., triangles or tetrahedra). These objects may exhibit more abrupt or constrained deformation behavior, which could deviate from the logarithmic scaling observed in more complex objects. Further empirical validation across a broader range of geometries is recommended to refine the assumption.
 
