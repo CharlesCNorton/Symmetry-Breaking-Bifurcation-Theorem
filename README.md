@@ -229,20 +229,18 @@ For example, in the case of the cube (n = 6, 3D polyhedron), increasing ![k_d](h
 
 However, it is possible that this relationship may not hold for certain extreme geometries, particularly those with very few elements (e.g., triangles or tetrahedra). These objects may exhibit more abrupt or constrained deformation behavior, which could deviate from the logarithmic scaling observed in more complex objects. Further empirical validation across a broader range of geometries is recommended to refine the assumption.
 
-#### Derivation of \( k_d \):
+#### Derivation of ![k_d](https://latex.codecogs.com/svg.image?\bg{white}k_d):
 
-The complexity of an object is measured by the number of its geometric elements (sides, faces, or cells). As the number of elements \( n \) increases, the number of independent deformation modes grows logarithmically due to symmetry constraints.
+The complexity of an object is measured by the number of its geometric elements (sides, faces, or cells). As the number of elements ![n](https://latex.codecogs.com/svg.image?\bg{white}n) increases, the number of independent deformation modes grows logarithmically due to symmetry constraints.
 
 We define:
 
-\[
-k_d = \ln(n)
-\]
+![k_d = \ln(n)](https://latex.codecogs.com/svg.image?\bg{white}k_d%20=%20\ln(n))
 
 **Justification:**
 
-- **Combinatorial Analysis:** The number of independent deformation modes \( M(n) \) scales logarithmically with \( n \) because symmetry constraints reduce the number of ways an object can deform without breaking its inherent symmetries.
-- **Empirical Testing:** Analysis across a wide range of \( n \) values (from \( n = 3 \) to \( n = 1000 \)) confirmed the logarithmic scaling of \( k_d \).
+- **Combinatorial Analysis:** The number of independent deformation modes ![M(n)](https://latex.codecogs.com/svg.image?\bg{white}M(n)) scales logarithmically with ![n](https://latex.codecogs.com/svg.image?\bg{white}n) because symmetry constraints reduce the number of ways an object can deform without breaking its inherent symmetries.
+- **Empirical Testing:** Analysis across a wide range of ![n](https://latex.codecogs.com/svg.image?\bg{white}n) values (from ![n = 3](https://latex.codecogs.com/svg.image?\bg{white}n%20=%203) to ![n = 1000](https://latex.codecogs.com/svg.image?\bg{white}n%20=%201000)) confirmed the logarithmic scaling of ![k_d](https://latex.codecogs.com/svg.image?\bg{white}k_d).
 
 ---
 
