@@ -206,20 +206,18 @@ The size of the symmetry group ![|G(P)|](https://latex.codecogs.com/svg.image?\b
 
 - **2D Polygons:**
 
-  \[
-  A_2 = 2n
-  \]
+  ![A_2 = 2n](https://latex.codecogs.com/svg.image?\bg{white}A_2%20=%202n)
 
-  The dihedral group \( D_n \) has \( 2n \) elements (rotations and reflections).
+  The dihedral group ![D_n](https://latex.codecogs.com/svg.image?\bg{white}D_n) has ![2n](https://latex.codecogs.com/svg.image?\bg{white}2n) elements (rotations and reflections).
 
 - **3D Polyhedra:**
 
-  - Cube: \( A_3 = 24 \) (24 symmetries)
-  - Dodecahedron: \( A_3 = 60 \) (60 symmetries)
+  - Cube: ![A_3 = 24](https://latex.codecogs.com/svg.image?\bg{white}A_3%20=%2024) (24 symmetries)
+  - Dodecahedron: ![A_3 = 60](https://latex.codecogs.com/svg.image?\bg{white}A_3%20=%2060) (60 symmetries)
 
 - **4D Polytopes:**
 
-  - 600-cell: \( A_4 = 14,400 \) (14,400 symmetries)
+  - 600-cell: ![A_4 = 14,400](https://latex.codecogs.com/svg.image?\bg{white}A_4%20=%2014,400) (14,400 symmetries)
 
 ---
 
