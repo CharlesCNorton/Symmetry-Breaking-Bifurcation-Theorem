@@ -1,0 +1,113 @@
+ Empirical Analysis of Predicted vs Actual Deformation Modes in Symmetry-Breaking Bifurcation (New Constants)
+
+September 23rd, 2024
+
+1. Empirical Findings
+
+
+In this analysis, we tested the revised constants in the Symmetry-Breaking Bifurcation Theorem across 2D, 3D, and 4D shapes. The goal was to compare the model's predictions of deformation modes against the actual deformation modes for increasing levels of geometric complexity. The constants were refined based on observed scaling patterns, aiming to improve predictive performance.
+
+ 2. Key Empirical Observations
+
+
+ 2D Polygons: Improved Precision
+
+The model's performance for 2D polygons improved noticeably:
+
+- Accuracy: For most polygons, the predicted deformation modes were significantly closer to the actual values. The triangle (n=3) saw a reduction in percent deviation from 44.95% to 19.91%. For more complex shapes like n=10, the percent deviation dropped to less than 1%.
+  
+- Trend: The model captures the behavior of 2D polygons well. The deviations are minimal, with a general improvement across the board. For n=12, the absolute deviation was only 0.29 modes, which translates to a 1.39% deviation. This shows that the logarithmic scaling captures the trend of deformation modes more accurately with the new constants.
+
+Conclusion for 2D: The updated constants demonstrate a clear improvement over the previous set for 2D shapes. The model's predictive power is stronger, suggesting that the refined constants better align with how deformation modes scale in two-dimensional space.
+
+
+
+ 3D Polyhedra: Decreased Performance
+
+For 3D polyhedra, the results are more mixed, showing a decline in performance compared to the first set of constants:
+
+- Divergence: Simpler shapes like the tetrahedron (n=4) experienced a significant increase in percent deviation from 0.58% to 43.06%. The cube (n=6) saw a jump from 24.70% to 30.22%. Most notably, complex shapes like the dodecahedron (n=12) had a better deviation than the first set, dropping from 44.02% to 19.41%, but the overall trend indicates higher errors for certain key shapes.
+
+- Exaggerated Predictions: For shapes like the icosahedron (n=20), the model overpredicted deformation modes by a large margin (208.57% deviation). This suggests that while the updated constants improve precision in some 3D cases, they also lead to overpredictions for more symmetric shapes, where symmetry is highly dominant.
+
+Conclusion for 3D: The second set of constants introduces a serious decline in accuracy for simpler 3D shapes, which makes it less reliable for 3D systems overall. The previously strong performance in 3D has been compromised, especially for shapes where symmetry plays a dominant role.
+
+
+
+ 4D Polytopes: Significant Improvement
+
+In 4D polytopes, the second set of constants has improved predictive performance but with some caveats:
+
+- Positive Trends: While the first set of constants led to extreme deviations (e.g., -167.57 predicted for n=5 with a 1775.66% deviation), the new constants show much better results for complex polytopes like the 600-cell (n=600), where the percent deviation was reduced from 10.24% to 2.74%.
+
+- Continued Issues for Simpler Shapes: However, simpler 4D shapes still experience large deviations. The 5-cell (n=5) and 16-cell (n=16) exhibited deviations of 439.74% and 380.94%, respectively. This indicates that, while the model performs better in high-complexity 4D shapes, it struggles to handle the simpler cases in 4D space, much like the first set of constants.
+
+Conclusion for 4D: The updated constants have significantly reduced errors for complex 4D shapes, suggesting an improved understanding of higher-dimensional behavior. However, the model still struggles with simpler polytopes, requiring further refinement to predict accurately across all levels of complexity in 4D.
+
+
+
+ 3. Mathematical Derivation of the New Constants
+
+
+The key modification in the new constant set is an empirical adjustment derived from fitting the power law \( M(n) = a_d \cdot n^{b_d} \) to the deformation modes data. The exponents \( b_d \) and constants \( a_d \) were tuned based on observations in multiple dimensions.
+
+ Key Fitted Parameters and Exponents:
+- 2D: \( a_2 = 0.8791 \), \( b_2 = 1.2826 \)
+- 3D: \( a_3 = 1.1068 \), \( b_3 = 1.4776 \)
+- 4D: \( a_4 = 18.8541 \), \( b_4 = 0.6535 \)
+
+The observed non-linear behavior in 4D led to the re-derivation of the quadratic relationship between the exponent \( b_d \) and the dimension \( d \):
+
+\[
+b_d = -0.5095 \, d^2 + 2.7424 \, d - 2.1642
+\]
+
+This relationship shows that as dimension \( d \) increases, the scaling of deformation modes becomes more complex and less linear. The second set of constants reflects this, leading to better performance in higher-dimensional spaces but with trade-offs in lower dimensions like 3D.
+
+ Refinement of Complexity Scaling Constant \( k_d \):
+- The original theorem used \( k_d = \ln(n) \). The updated constants modify this scaling by incorporating the quadratic relationship between dimension and scaling behavior.
+- The new complexity scaling constant is defined as:
+\[
+k_d(d) = -0.5095 \, d^2 + 2.7424 \, d - 2.1642
+\]
+
+This change explains the improved performance in higher dimensions, where the model better accounts for the complex relationship between symmetry, dimensionality, and deformation.
+
+
+
+ 4. Dimensional Testing Breakdown
+
+
+ 2D Polygons:
+- The second set of constants demonstrates clear improvements for 2D polygons. The model now closely aligns with actual deformation modes, suggesting that it captures the complexity of low-dimensional systems well. 
+
+ 3D Polyhedra:
+- The major decline in 3D performance highlights that the revised constants overcompensate for higher dimensions at the cost of 3D accuracy. This is particularly harmful for real-world applications where 3D predictions are crucial.
+
+ 4D Polytopes:
+- In 4D, the model now handles complex shapes more effectively, with greatly reduced errors in more intricate polytopes. However, the large deviations for simpler shapes suggest that further refinement is needed to ensure consistency across the board.
+
+
+
+ 5. Conclusion: Evaluating the Trade-offs Between Constant Sets
+
+
+The results indicate that the second set of constants performs better overall in 2D and 4D, especially for complex shapes. However, the trade-off is a significant decline in 3D performance, which may undermine the model's utility for real-world systems, most of which exist in three dimensions.
+
+ Strengths of the Second Set:
+- Improved performance in higher-dimensional systems (4D), where previous versions of the model showed extreme deviations.
+- Better accuracy in 2D polygons, with much lower percent deviations.
+
+ Weaknesses of the Second Set:
+- Drastically reduced performance in 3D, which may be fatal for applications where accurate deformation predictions in 3D are crucial.
+- Continued issues with simpler 4D shapes, which limits the model's consistency across different levels of geometric complexity.
+
+
+
+ 6. Final Determination
+
+
+The second set of constants offers improved overall accuracy, particularly in higher dimensions (4D) and simpler geometries (2D). However, the degraded performance in 3D is concerning, as 3D systems represent a critical domain for practical applications.
+
+Future refinement of the model should focus on balancing improvements in higher dimensions while preserving the predictive power in 3D, possibly through more sophisticated adjustments to how complexity and dimensionality interact.
+
