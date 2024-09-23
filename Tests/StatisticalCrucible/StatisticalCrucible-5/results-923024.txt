@@ -1,0 +1,849 @@
+Analyzing with noise level: 0%
+Triangle Cross-validation MSE: 0.00000
+Triangle R-squared (average): 1.00000
+Triangle Negative Binomial Regression AIC: 61857.19, BIC: -1150852.99
+Triangle Logarithmic Model MSE: 0.00155, R-squared: 0.85582
+Triangle Exponential Model MSE: 0.00017, R-squared: 0.98437
+Triangle Durbin-Watson (OLS): 2.00
+Triangle Variance Inflation Factor (VIF):
+        VIF   Feature
+0  29.50244     const
+1   1.00000  t_values
+Triangle Breusch-Pagan Test Statistic: 1004.90, p-value: 0.00000
+Triangle White's Test Statistic: 35348.78, p-value: 0.00000
+Triangle Kolmogorov-Smirnov Test: KS Statistic = 0.13, p-value = 0.00000
+Triangle Shapiro-Wilk Test: Statistic = 0.90, p-value = 0.00000
+Triangle Anderson-Darling Test: Statistic = 3244.08
+Triangle Lilliefors Test: Statistic = 0.14, p-value = 0.00100
+Triangle Jarque-Bera Test: Statistic = 9574.07, p-value = 0.00000
+Triangle Skewness Test: Statistic = 74.27, p-value = 0.00000
+Triangle Kurtosis Test: Statistic = -106.47, p-value = 0.00000
+Triangle Z-test for Residual Mean = 0: Z-statistic = -0.00
+Triangle Chi-Square Test: Statistic = -32534096377131064.00, p-value = 1.00000
+Triangle OLS AIC: -410144.25, BIC: -410125.23
+Triangle Poisson AIC: 50613.87, BIC: -1150820.81
+Triangle Negative Binomial AIC: 61857.19, BIC: -1150852.99
+Square Cross-validation MSE: 0.00000
+Square R-squared (average): 1.00000
+Square Negative Binomial Regression AIC: 44291.96, BIC: -1151005.10
+Square Logarithmic Model MSE: 0.00064, R-squared: 0.85029
+Square Exponential Model MSE: 0.00006, R-squared: 0.98494
+Square Durbin-Watson (OLS): 2.00
+Square Variance Inflation Factor (VIF):
+        VIF   Feature
+0  29.50244     const
+1   1.00000  t_values
+Square Breusch-Pagan Test Statistic: 1275.09, p-value: 0.00000
+Square White's Test Statistic: 35390.49, p-value: 0.00000
+Square Kolmogorov-Smirnov Test: KS Statistic = 0.13, p-value = 0.00000
+Square Shapiro-Wilk Test: Statistic = 0.90, p-value = 0.00000
+Square Anderson-Darling Test: Statistic = 3224.31
+Square Lilliefors Test: Statistic = 0.14, p-value = 0.00100
+Square Jarque-Bera Test: Statistic = 9536.61, p-value = 0.00000
+Square Skewness Test: Statistic = 74.30, p-value = 0.00000
+Square Kurtosis Test: Statistic = -104.98, p-value = 0.00000
+Square Z-test for Residual Mean = 0: Z-statistic = 0.00
+Square Chi-Square Test: Statistic = 58968154445303120.00, p-value = 0.00000
+Square OLS AIC: -497662.39, BIC: -497643.37
+Square Poisson AIC: 37033.49, BIC: -1150991.95
+Square Negative Binomial AIC: 44291.96, BIC: -1151005.10
+Hexagon Cross-validation MSE: 0.00000
+Hexagon R-squared (average): 1.00000
+Hexagon Negative Binomial Regression AIC: 22077.93, BIC: -1151163.51
+Hexagon Logarithmic Model MSE: 0.00011, R-squared: 0.84418
+Hexagon Exponential Model MSE: 0.00001, R-squared: 0.98555
+Hexagon Durbin-Watson (OLS): 2.00
+Hexagon Variance Inflation Factor (VIF):
+        VIF   Feature
+0  29.50244     const
+1   1.00000  t_values
+Hexagon Breusch-Pagan Test Statistic: 1602.83, p-value: 0.00000
+Hexagon White's Test Statistic: 35451.13, p-value: 0.00000
+Hexagon Kolmogorov-Smirnov Test: KS Statistic = 0.13, p-value = 0.00000
+Hexagon Shapiro-Wilk Test: Statistic = 0.90, p-value = 0.00000
+Hexagon Anderson-Darling Test: Statistic = 3201.71
+Hexagon Lilliefors Test: Statistic = 0.14, p-value = 0.00100
+Hexagon Jarque-Bera Test: Statistic = 9494.87, p-value = 0.00000
+Hexagon Skewness Test: Statistic = 74.37, p-value = 0.00000
+Hexagon Kurtosis Test: Statistic = -103.00, p-value = 0.00000
+Hexagon Z-test for Residual Mean = 0: Z-statistic = -0.00
+Hexagon Chi-Square Test: Statistic = -12917104337617686.00, p-value = 1.00000
+Hexagon OLS AIC: -676877.06, BIC: -676858.04
+Hexagon Poisson AIC: 19111.22, BIC: -1151161.36
+Hexagon Negative Binomial AIC: 22077.93, BIC: -1151163.51
+Cube Cross-validation MSE: 0.00000
+Cube R-squared (average): 1.00000
+Cube Negative Binomial Regression AIC: 53080.63, BIC: -1150932.85
+Cube Logarithmic Model MSE: 0.00054, R-squared: 0.89750
+Cube Exponential Model MSE: 0.00011, R-squared: 0.97906
+Cube Durbin-Watson (OLS): 2.00
+Cube Variance Inflation Factor (VIF):
+        VIF   Feature
+0  29.50244     const
+1   1.00000  t_values
+Cube Breusch-Pagan Test Statistic: 1.23, p-value: 0.26674
+Cube White's Test Statistic: 35478.10, p-value: 0.00000
+Cube Kolmogorov-Smirnov Test: KS Statistic = 0.13, p-value = 0.00000
+Cube Shapiro-Wilk Test: Statistic = 0.89, p-value = 0.00000
+Cube Anderson-Darling Test: Statistic = 3359.18
+Cube Lilliefors Test: Statistic = 0.14, p-value = 0.00100
+Cube Jarque-Bera Test: Statistic = 9829.38, p-value = 0.00000
+Cube Skewness Test: Statistic = 75.61, p-value = 0.00000
+Cube Kurtosis Test: Statistic = -105.80, p-value = 0.00000
+Cube Z-test for Residual Mean = 0: Z-statistic = 0.00
+Cube Chi-Square Test: Statistic = 113881612027974448.00, p-value = 0.00000
+Cube OLS AIC: -527820.25, BIC: -527801.23
+Cube Poisson AIC: 44113.07, BIC: -1150913.50
+Cube Negative Binomial AIC: 53080.63, BIC: -1150932.85
+Dodecahedron Cross-validation MSE: 0.00000
+Dodecahedron R-squared (average): 1.00000
+Dodecahedron Negative Binomial Regression AIC: 10240.34, BIC: -1151228.43
+Dodecahedron Logarithmic Model MSE: 0.00001, R-squared: 0.88599
+Dodecahedron Exponential Model MSE: 0.00000, R-squared: 0.98073
+Dodecahedron Durbin-Watson (OLS): 2.00
+Dodecahedron Variance Inflation Factor (VIF):
+        VIF   Feature
+0  29.50244     const
+1   1.00000  t_values
+Dodecahedron Breusch-Pagan Test Statistic: 69.99, p-value: 0.00000
+Dodecahedron White's Test Statistic: 35361.45, p-value: 0.00000
+Dodecahedron Kolmogorov-Smirnov Test: KS Statistic = 0.13, p-value = 0.00000
+Dodecahedron Shapiro-Wilk Test: Statistic = 0.89, p-value = 0.00000
+Dodecahedron Anderson-Darling Test: Statistic = 3335.25
+Dodecahedron Lilliefors Test: Statistic = 0.14, p-value = 0.00100
+Dodecahedron Jarque-Bera Test: Statistic = 9764.59, p-value = 0.00000
+Dodecahedron Skewness Test: Statistic = 74.95, p-value = 0.00000
+Dodecahedron Kurtosis Test: Statistic = -108.37, p-value = 0.00000
+Dodecahedron Z-test for Residual Mean = 0: Z-statistic = 0.00
+Dodecahedron Chi-Square Test: Statistic = 4289331087844544.50, p-value = 0.00000
+Dodecahedron OLS AIC: -936960.68, BIC: -936941.65
+Dodecahedron Poisson AIC: 9121.14, BIC: -1151228.14
+Dodecahedron Negative Binomial AIC: 10240.34, BIC: -1151228.43
+Tesseract Cross-validation MSE: 0.00000
+Tesseract R-squared (average): 1.00000
+Tesseract Negative Binomial Regression AIC: 58622.92, BIC: -1150925.98
+Tesseract Logarithmic Model MSE: 0.00452, R-squared: 0.74074
+Tesseract Exponential Model MSE: 0.00013, R-squared: 0.99254
+Tesseract Durbin-Watson (OLS): 2.00
+Tesseract Variance Inflation Factor (VIF):
+        VIF   Feature
+0  29.50244     const
+1   1.00000  t_values
+Tesseract Breusch-Pagan Test Statistic: 9229.78, p-value: 0.00000
+Tesseract White's Test Statistic: 37874.51, p-value: 0.00000
+Tesseract Kolmogorov-Smirnov Test: KS Statistic = 0.13, p-value = 0.00000
+Tesseract Shapiro-Wilk Test: Statistic = 0.91, p-value = 0.00000
+Tesseract Anderson-Darling Test: Statistic = 2788.87
+Tesseract Lilliefors Test: Statistic = 0.14, p-value = 0.00100
+Tesseract Jarque-Bera Test: Statistic = 9248.48, p-value = 0.00000
+Tesseract Skewness Test: Statistic = 81.76, p-value = 0.00000
+Tesseract Kurtosis Test: Statistic = -45.82, p-value = 0.00000
+Tesseract Z-test for Residual Mean = 0: Z-statistic = 0.00
+Tesseract Chi-Square Test: Statistic = 78297238805015744.00, p-value = 0.00000
+Tesseract OLS AIC: -286177.73, BIC: -286158.71
+Tesseract Poisson AIC: 47443.36, BIC: -1150893.85
+Tesseract Negative Binomial AIC: 58622.92, BIC: -1150925.98
+600-Cell Cross-validation MSE: 0.00000
+600-Cell R-squared (average): 1.00000
+600-Cell Negative Binomial Regression AIC: 4.00, BIC: -1151269.52
+600-Cell Logarithmic Model MSE: 0.00000, R-squared: 0.69325
+600-Cell Exponential Model MSE: 0.00000, R-squared: 0.99444
+600-Cell Durbin-Watson (OLS): 2.00
+600-Cell Variance Inflation Factor (VIF):
+        VIF   Feature
+0  29.50244     const
+1   1.00000  t_values
+600-Cell Breusch-Pagan Test Statistic: 12555.10, p-value: 0.00000
+600-Cell White's Test Statistic: 39152.52, p-value: 0.00000
+600-Cell Kolmogorov-Smirnov Test: KS Statistic = 0.13, p-value = 0.00000
+600-Cell Shapiro-Wilk Test: Statistic = 0.91, p-value = 0.00000
+600-Cell Anderson-Darling Test: Statistic = 2630.10
+600-Cell Lilliefors Test: Statistic = 0.14, p-value = 0.00100
+600-Cell Jarque-Bera Test: Statistic = 10062.03, p-value = 0.00000
+600-Cell Skewness Test: Statistic = 88.29, p-value = 0.00000
+600-Cell Kurtosis Test: Statistic = -18.71, p-value = 0.00000
+600-Cell Z-test for Residual Mean = 0: Z-statistic = -0.00
+600-Cell Chi-Square Test: Statistic = -3995.63, p-value = 1.00000
+600-Cell OLS AIC: -6936719.94, BIC: -6936700.91
+600-Cell Poisson AIC: 4.00, BIC: -1151269.52
+600-Cell Negative Binomial AIC: 4.00, BIC: -1151269.52
+
+Analyzing with noise level: 10%
+Triangle Cross-validation MSE: 0.00843
+Triangle R-squared (average): 0.71141
+Triangle Negative Binomial Regression AIC: 102770.08, BIC: -1145997.44
+Triangle Logarithmic Model MSE: 0.01071, R-squared: 0.63418
+Triangle Exponential Model MSE: 0.00812, R-squared: 0.72268
+Triangle Durbin-Watson (OLS): 1.99
+Triangle Variance Inflation Factor (VIF):
+         VIF   Feature
+0  29.630418     const
+1   1.000000  t_values
+Triangle Breusch-Pagan Test Statistic: 2316.98, p-value: 0.00000
+Triangle White's Test Statistic: 2348.12, p-value: 0.00000
+Triangle Kolmogorov-Smirnov Test: KS Statistic = 0.02, p-value = 0.00000
+Triangle Shapiro-Wilk Test: Statistic = 1.00, p-value = 0.00000
+Triangle Anderson-Darling Test: Statistic = 46.75
+Triangle Lilliefors Test: Statistic = 0.02, p-value = 0.53986
+Triangle Jarque-Bera Test: Statistic = 514.19, p-value = 0.00000
+Triangle Skewness Test: Statistic = 22.22, p-value = 0.00000
+Triangle Kurtosis Test: Statistic = 3.52, p-value = 0.00042
+Triangle Z-test for Residual Mean = 0: Z-statistic = -0.00
+Triangle Chi-Square Test: Statistic = -513929924860308288.00, p-value = 1.00000
+Triangle OLS AIC: -180467.87, BIC: -180448.85
+Triangle Poisson AIC: 83020.42, BIC: -1145338.66
+Triangle Negative Binomial AIC: 102770.08, BIC: -1145997.44
+Square Cross-validation MSE: 0.00770
+Square R-squared (average): 0.48344
+Square Negative Binomial Regression AIC: 79448.86, BIC: -1144936.60
+Square Logarithmic Model MSE: 0.00834, R-squared: 0.44148
+Square Exponential Model MSE: 0.00732, R-squared: 0.51004
+Square Durbin-Watson (OLS): 2.00
+Square Variance Inflation Factor (VIF):
+         VIF   Feature
+0  29.630418     const
+1   1.000000  t_values
+Square Breusch-Pagan Test Statistic: 4099.64, p-value: 0.00000
+Square White's Test Statistic: 4128.66, p-value: 0.00000
+Square Kolmogorov-Smirnov Test: KS Statistic = 0.04, p-value = 0.00000
+Square Shapiro-Wilk Test: Statistic = 0.99, p-value = 0.00000
+Square Anderson-Darling Test: Statistic = 218.09
+Square Lilliefors Test: Statistic = 0.05, p-value = 0.00100
+Square Jarque-Bera Test: Statistic = 2431.75, p-value = 0.00000
+Square Skewness Test: Statistic = 46.73, p-value = 0.00000
+Square Kurtosis Test: Statistic = 9.37, p-value = 0.00000
+Square Z-test for Residual Mean = 0: Z-statistic = 0.00
+Square Chi-Square Test: Statistic = 1373549002264602368.00, p-value = 0.00000
+Square OLS AIC: -199629.43, BIC: -199610.40
+Square Poisson AIC: 65949.72, BIC: -1144312.58
+Square Negative Binomial AIC: 79448.86, BIC: -1144936.60
+Hexagon Cross-validation MSE: 0.00594
+Hexagon R-squared (average): 0.04455
+Hexagon Negative Binomial Regression AIC: 51979.47, BIC: -1143551.35
+Hexagon Logarithmic Model MSE: 0.00564, R-squared: 0.10468
+Hexagon Exponential Model MSE: 0.00554, R-squared: 0.12105
+Hexagon Durbin-Watson (OLS): 2.00
+Hexagon Variance Inflation Factor (VIF):
+         VIF   Feature
+0  29.630418     const
+1   1.000000  t_values
+Hexagon Breusch-Pagan Test Statistic: 3092.03, p-value: 0.00000
+Hexagon White's Test Statistic: 3307.17, p-value: 0.00000
+Hexagon Kolmogorov-Smirnov Test: KS Statistic = 0.12, p-value = 0.00000
+Hexagon Shapiro-Wilk Test: Statistic = 0.94, p-value = 0.00000
+Hexagon Anderson-Darling Test: Statistic = 1966.17
+Hexagon Lilliefors Test: Statistic = 0.12, p-value = 0.00100
+Hexagon Jarque-Bera Test: Statistic = 16493.46, p-value = 0.00000
+Hexagon Skewness Test: Statistic = 104.32, p-value = 0.00000
+Hexagon Kurtosis Test: Statistic = 30.58, p-value = 0.00000
+Hexagon Z-test for Residual Mean = 0: Z-statistic = -0.00
+Hexagon Chi-Square Test: Statistic = -2678828574144313344.00, p-value = 1.00000
+Hexagon OLS AIC: -235626.14, BIC: -235607.11
+Hexagon Poisson AIC: 44782.08, BIC: -1143052.96
+Hexagon Negative Binomial AIC: 51979.47, BIC: -1143551.35
+Cube Cross-validation MSE: 0.00808
+Cube R-squared (average): 0.48865
+Cube Negative Binomial Regression AIC: 86294.41, BIC: -1145238.61
+Cube Logarithmic Model MSE: 0.00855, R-squared: 0.46277
+Cube Exponential Model MSE: 0.00780, R-squared: 0.50966
+Cube Durbin-Watson (OLS): 2.00
+Cube Variance Inflation Factor (VIF):
+         VIF   Feature
+0  29.630418     const
+1   1.000000  t_values
+Cube Breusch-Pagan Test Statistic: 3147.20, p-value: 0.00000
+Cube White's Test Statistic: 3177.29, p-value: 0.00000
+Cube Kolmogorov-Smirnov Test: KS Statistic = 0.04, p-value = 0.00000
+Cube Shapiro-Wilk Test: Statistic = 0.99, p-value = 0.00000
+Cube Anderson-Darling Test: Statistic = 170.59
+Cube Lilliefors Test: Statistic = 0.05, p-value = 0.00100
+Cube Jarque-Bera Test: Statistic = 1629.53, p-value = 0.00000
+Cube Skewness Test: Statistic = 39.16, p-value = 0.00000
+Cube Kurtosis Test: Statistic = 4.79, p-value = 0.00000
+Cube Z-test for Residual Mean = 0: Z-statistic = -0.00
+Cube Chi-Square Test: Statistic = -247943584223045152.00, p-value = 1.00000
+Cube OLS AIC: -197258.68, BIC: -197239.66
+Cube Poisson AIC: 71243.07, BIC: -1144582.07
+Cube Negative Binomial AIC: 86294.41, BIC: -1145238.61
+Dodecahedron Cross-validation MSE: 0.00431
+Dodecahedron R-squared (average): -0.03343
+Dodecahedron Negative Binomial Regression AIC: 39689.84, BIC: -1143478.71
+Dodecahedron Logarithmic Model MSE: 0.00414, R-squared: 0.00962
+Dodecahedron Exponential Model MSE: 0.00413, R-squared: 0.01011
+Dodecahedron Durbin-Watson (OLS): 1.99
+Dodecahedron Variance Inflation Factor (VIF):
+         VIF   Feature
+0  29.630418     const
+1   1.000000  t_values
+Dodecahedron Breusch-Pagan Test Statistic: 347.71, p-value: 0.00000
+Dodecahedron White's Test Statistic: 358.21, p-value: 0.00000
+Dodecahedron Kolmogorov-Smirnov Test: KS Statistic = 0.20, p-value = 0.00000
+Dodecahedron Shapiro-Wilk Test: Statistic = 0.81, p-value = 0.00000
+Dodecahedron Anderson-Darling Test: Statistic = 6171.00
+Dodecahedron Lilliefors Test: Statistic = 0.23, p-value = 0.00100
+Dodecahedron Jarque-Bera Test: Statistic = 41378.37, p-value = 0.00000
+Dodecahedron Skewness Test: Statistic = 136.97, p-value = 0.00000
+Dodecahedron Kurtosis Test: Statistic = 57.41, p-value = 0.00000
+Dodecahedron Z-test for Residual Mean = 0: Z-statistic = -0.00
+Dodecahedron Chi-Square Test: Statistic = -5014661073696794624.00, p-value = 1.00000
+Dodecahedron OLS AIC: -265347.62, BIC: -265328.59
+Dodecahedron Poisson AIC: 34762.75, BIC: -1143096.28
+Dodecahedron Negative Binomial AIC: 39689.84, BIC: -1143478.71
+Tesseract Cross-validation MSE: 0.00817
+Tesseract R-squared (average): 0.87427
+Tesseract Negative Binomial Regression AIC: 111954.45, BIC: -1146189.75
+Tesseract Logarithmic Model MSE: 0.02027, R-squared: 0.68700
+Tesseract Exponential Model MSE: 0.00778, R-squared: 0.87981
+Tesseract Durbin-Watson (OLS): 2.00
+Tesseract Variance Inflation Factor (VIF):
+         VIF   Feature
+0  29.630418     const
+1   1.000000  t_values
+Tesseract Breusch-Pagan Test Statistic: 4295.33, p-value: 0.00000
+Tesseract White's Test Statistic: 8577.48, p-value: 0.00000
+Tesseract Kolmogorov-Smirnov Test: KS Statistic = 0.02, p-value = 0.00000
+Tesseract Shapiro-Wilk Test: Statistic = 1.00, p-value = 0.00000
+Tesseract Anderson-Darling Test: Statistic = 72.45
+Tesseract Lilliefors Test: Statistic = 0.03, p-value = 0.02194
+Tesseract Jarque-Bera Test: Statistic = 973.31, p-value = 0.00000
+Tesseract Skewness Test: Statistic = 30.45, p-value = 0.00000
+Tesseract Kurtosis Test: Statistic = -4.65, p-value = 0.00000
+Tesseract Z-test for Residual Mean = 0: Z-statistic = -0.00
+Tesseract Chi-Square Test: Statistic = -272511053525035808.00, p-value = 1.00000
+Tesseract OLS AIC: -126077.82, BIC: -126058.79
+Tesseract Poisson AIC: 88596.05, BIC: -1145581.07
+Tesseract Negative Binomial AIC: 111954.45, BIC: -1146189.75
+600-Cell Cross-validation MSE: 0.00498
+600-Cell R-squared (average): -0.46996
+600-Cell Negative Binomial Regression AIC: 33808.34, BIC: -1143809.94
+600-Cell Logarithmic Model MSE: 0.00340, R-squared: 0.00008
+600-Cell Exponential Model MSE: 0.00340, R-squared: 0.00007
+600-Cell Durbin-Watson (OLS): 2.00
+600-Cell Variance Inflation Factor (VIF):
+         VIF   Feature
+0  29.630418     const
+1   1.000000  t_values
+600-Cell Breusch-Pagan Test Statistic: 1.68, p-value: 0.19519
+600-Cell White's Test Statistic: 3.53, p-value: 0.17078
+600-Cell Kolmogorov-Smirnov Test: KS Statistic = 0.25, p-value = 0.00000
+600-Cell Shapiro-Wilk Test: Statistic = 0.73, p-value = 0.00000
+600-Cell Anderson-Darling Test: Statistic = 10066.48
+600-Cell Lilliefors Test: Statistic = 0.24, p-value = 0.00100
+600-Cell Jarque-Bera Test: Statistic = 66971.80, p-value = 0.00000
+600-Cell Skewness Test: Statistic = 152.09, p-value = 0.00000
+600-Cell Kurtosis Test: Statistic = 73.88, p-value = 0.00000
+600-Cell Z-test for Residual Mean = 0: Z-statistic = 0.00
+600-Cell Chi-Square Test: Statistic = 111358751061499248640.00, p-value = 0.00000
+600-Cell OLS AIC: -284827.38, BIC: -284808.35
+600-Cell Poisson AIC: 29815.07, BIC: -1143492.81
+600-Cell Negative Binomial AIC: 33808.34, BIC: -1143809.94
+
+Analyzing with noise level: 20%
+Triangle Cross-validation MSE: 0.03387
+Triangle R-squared (average): 0.52441
+Triangle Negative Binomial Regression AIC: 144720.14, BIC: -1140797.17
+Triangle Logarithmic Model MSE: 0.03627, R-squared: 0.49188
+Triangle Exponential Model MSE: 0.03238, R-squared: 0.54643
+Triangle Durbin-Watson (OLS): 2.00
+Triangle Variance Inflation Factor (VIF):
+         VIF   Feature
+0  29.531017     const
+1   1.000000  t_values
+Triangle Breusch-Pagan Test Statistic: 2375.33, p-value: 0.00000
+Triangle White's Test Statistic: 2403.77, p-value: 0.00000
+Triangle Kolmogorov-Smirnov Test: KS Statistic = 0.03, p-value = 0.00000
+Triangle Shapiro-Wilk Test: Statistic = 0.99, p-value = 0.00000
+Triangle Anderson-Darling Test: Statistic = 116.29
+Triangle Lilliefors Test: Statistic = 0.04, p-value = 0.00100
+Triangle Jarque-Bera Test: Statistic = 1032.22, p-value = 0.00000
+Triangle Skewness Test: Statistic = 31.65, p-value = 0.00000
+Triangle Kurtosis Test: Statistic = -0.12, p-value = 0.90528
+Triangle Z-test for Residual Mean = 0: Z-statistic = 0.00
+Triangle Chi-Square Test: Statistic = 2739893785427048448.00, p-value = 0.00000
+Triangle OLS AIC: -53150.11, BIC: -53131.08
+Triangle Poisson AIC: 115816.92, BIC: -1138436.63
+Triangle Negative Binomial AIC: 144720.14, BIC: -1140797.17
+Square Cross-validation MSE: 0.02997
+Square R-squared (average): 0.30000
+Square Negative Binomial Regression AIC: 115006.69, BIC: -1138462.26
+Square Logarithmic Model MSE: 0.03032, R-squared: 0.29352
+Square Exponential Model MSE: 0.02874, R-squared: 0.33038
+Square Durbin-Watson (OLS): 2.00
+Square Variance Inflation Factor (VIF):
+         VIF   Feature
+0  29.531017     const
+1   1.000000  t_values
+Square Breusch-Pagan Test Statistic: 3514.28, p-value: 0.00000
+Square White's Test Statistic: 3518.57, p-value: 0.00000
+Square Kolmogorov-Smirnov Test: KS Statistic = 0.06, p-value = 0.00000
+Square Shapiro-Wilk Test: Statistic = 0.98, p-value = 0.00000
+Square Anderson-Darling Test: Statistic = 452.84
+Square Lilliefors Test: Statistic = 0.06, p-value = 0.00100
+Square Jarque-Bera Test: Statistic = 4210.71, p-value = 0.00000
+Square Skewness Test: Statistic = 61.06, p-value = 0.00000
+Square Kurtosis Test: Statistic = 6.55, p-value = 0.00000
+Square Z-test for Residual Mean = 0: Z-statistic = 0.00
+Square Chi-Square Test: Statistic = 2748546612135921152.00, p-value = 0.00000
+Square OLS AIC: -68781.93, BIC: -68762.90
+Square Poisson AIC: 94989.62, BIC: -1136221.14
+Square Negative Binomial AIC: 115006.69, BIC: -1138462.26
+Hexagon Cross-validation MSE: 0.02178
+Hexagon R-squared (average): 0.02164
+Hexagon Negative Binomial Regression AIC: 80155.20, BIC: -1136367.19
+Hexagon Logarithmic Model MSE: 0.02083, R-squared: 0.06230
+Hexagon Exponential Model MSE: 0.02067, R-squared: 0.06961
+Hexagon Durbin-Watson (OLS): 1.99
+Hexagon Variance Inflation Factor (VIF):
+         VIF   Feature
+0  29.531017     const
+1   1.000000  t_values
+Hexagon Breusch-Pagan Test Statistic: 1832.14, p-value: 0.00000
+Hexagon White's Test Statistic: 1894.68, p-value: 0.00000
+Hexagon Kolmogorov-Smirnov Test: KS Statistic = 0.14, p-value = 0.00000
+Hexagon Shapiro-Wilk Test: Statistic = 0.91, p-value = 0.00000
+Hexagon Anderson-Darling Test: Statistic = 2858.63
+Hexagon Lilliefors Test: Statistic = 0.14, p-value = 0.00100
+Hexagon Jarque-Bera Test: Statistic = 21167.87, p-value = 0.00000
+Hexagon Skewness Test: Statistic = 113.78, p-value = 0.00000
+Hexagon Kurtosis Test: Statistic = 35.75, p-value = 0.00000
+Hexagon Z-test for Residual Mean = 0: Z-statistic = 0.00
+Hexagon Chi-Square Test: Statistic = 15592333784987981824.00, p-value = 0.00000
+Hexagon OLS AIC: -103938.15, BIC: -103919.12
+Hexagon Poisson AIC: 68804.24, BIC: -1134620.06
+Hexagon Negative Binomial AIC: 80155.20, BIC: -1136367.19
+Cube Cross-validation MSE: 0.03092
+Cube R-squared (average): 0.27578
+Cube Negative Binomial Regression AIC: 119373.28, BIC: -1138713.90
+Cube Logarithmic Model MSE: 0.03028, R-squared: 0.27684
+Cube Exponential Model MSE: 0.02931, R-squared: 0.30018
+Cube Durbin-Watson (OLS): 2.00
+Cube Variance Inflation Factor (VIF):
+         VIF   Feature
+0  29.531017     const
+1   1.000000  t_values
+Cube Breusch-Pagan Test Statistic: 2906.19, p-value: 0.00000
+Cube White's Test Statistic: 2906.25, p-value: 0.00000
+Cube Kolmogorov-Smirnov Test: KS Statistic = 0.06, p-value = 0.00000
+Cube Shapiro-Wilk Test: Statistic = 0.99, p-value = 0.00000
+Cube Anderson-Darling Test: Statistic = 439.61
+Cube Lilliefors Test: Statistic = 0.06, p-value = 0.00100
+Cube Jarque-Bera Test: Statistic = 3787.66, p-value = 0.00000
+Cube Skewness Test: Statistic = 58.48, p-value = 0.00000
+Cube Kurtosis Test: Statistic = 1.86, p-value = 0.06235
+Cube Z-test for Residual Mean = 0: Z-statistic = 0.00
+Cube Chi-Square Test: Statistic = 1954883009507527680.00, p-value = 0.00000
+Cube OLS AIC: -66177.55, BIC: -66158.52
+Cube Poisson AIC: 98376.13, BIC: -1136396.02
+Cube Negative Binomial AIC: 119373.28, BIC: -1138713.90
+Dodecahedron Cross-validation MSE: 0.01585
+Dodecahedron R-squared (average): 0.00090
+Dodecahedron Negative Binomial Regression AIC: 63893.38, BIC: -1136437.82
+Dodecahedron Logarithmic Model MSE: 0.01611, R-squared: 0.00371
+Dodecahedron Exponential Model MSE: 0.01611, R-squared: 0.00397
+Dodecahedron Durbin-Watson (OLS): 2.01
+Dodecahedron Variance Inflation Factor (VIF):
+         VIF   Feature
+0  29.531017     const
+1   1.000000  t_values
+Dodecahedron Breusch-Pagan Test Statistic: 179.62, p-value: 0.00000
+Dodecahedron White's Test Statistic: 181.31, p-value: 0.00000
+Dodecahedron Kolmogorov-Smirnov Test: KS Statistic = 0.21, p-value = 0.00000
+Dodecahedron Shapiro-Wilk Test: Statistic = 0.80, p-value = 0.00000
+Dodecahedron Anderson-Darling Test: Statistic = 7179.31
+Dodecahedron Lilliefors Test: Statistic = 0.21, p-value = 0.00100
+Dodecahedron Jarque-Bera Test: Statistic = 48240.53, p-value = 0.00000
+Dodecahedron Skewness Test: Statistic = 141.52, p-value = 0.00000
+Dodecahedron Kurtosis Test: Statistic = 63.17, p-value = 0.00000
+Dodecahedron Z-test for Residual Mean = 0: Z-statistic = -0.00
+Dodecahedron Chi-Square Test: Statistic = -14986797615477190656.00, p-value = 1.00000
+Dodecahedron OLS AIC: -130931.67, BIC: -130912.65
+Dodecahedron Poisson AIC: 55748.33, BIC: -1135061.32
+Dodecahedron Negative Binomial AIC: 63893.38, BIC: -1136437.82
+Tesseract Cross-validation MSE: 0.03522
+Tesseract R-squared (average): 0.82116
+Tesseract Negative Binomial Regression AIC: 170940.85, BIC: -1142238.81
+Tesseract Logarithmic Model MSE: 0.05968, R-squared: 0.69440
+Tesseract Exponential Model MSE: 0.03234, R-squared: 0.83437
+Tesseract Durbin-Watson (OLS): 2.01
+Tesseract Variance Inflation Factor (VIF):
+         VIF   Feature
+0  29.531017     const
+1   1.000000  t_values
+Tesseract Breusch-Pagan Test Statistic: 2733.96, p-value: 0.00000
+Tesseract White's Test Statistic: 4064.37, p-value: 0.00000
+Tesseract Kolmogorov-Smirnov Test: KS Statistic = 0.01, p-value = 0.00000
+Tesseract Shapiro-Wilk Test: Statistic = 1.00, p-value = 0.00000
+Tesseract Anderson-Darling Test: Statistic = 27.48
+Tesseract Lilliefors Test: Statistic = 0.04, p-value = 0.00100
+Tesseract Jarque-Bera Test: Statistic = 458.80, p-value = 0.00000
+Tesseract Skewness Test: Statistic = 21.27, p-value = 0.00000
+Tesseract Kurtosis Test: Statistic = 0.55, p-value = 0.57993
+Tesseract Z-test for Residual Mean = 0: Z-statistic = 0.00
+Tesseract Chi-Square Test: Statistic = 855509726020698240.00, p-value = 0.00000
+Tesseract OLS AIC: -14670.24, BIC: -14651.22
+Tesseract Poisson AIC: 132010.32, BIC: -1140068.08
+Tesseract Negative Binomial AIC: 170940.85, BIC: -1142238.81
+600-Cell Cross-validation MSE: 0.02041
+600-Cell R-squared (average): -0.46350
+600-Cell Negative Binomial Regression AIC: 57446.14, BIC: -1136785.41
+600-Cell Logarithmic Model MSE: 0.01362, R-squared: -0.00028
+600-Cell Exponential Model MSE: 0.01362, R-squared: -0.00028
+600-Cell Durbin-Watson (OLS): 1.99
+600-Cell Variance Inflation Factor (VIF):
+         VIF   Feature
+0  29.531017     const
+1   1.000000  t_values
+600-Cell Breusch-Pagan Test Statistic: 0.07, p-value: 0.78631
+600-Cell White's Test Statistic: 2.09, p-value: 0.35123
+600-Cell Kolmogorov-Smirnov Test: KS Statistic = 0.25, p-value = 0.00000
+600-Cell Shapiro-Wilk Test: Statistic = 0.74, p-value = 0.00000
+600-Cell Anderson-Darling Test: Statistic = 10048.78
+600-Cell Lilliefors Test: Statistic = 0.25, p-value = 0.00100
+600-Cell Jarque-Bera Test: Statistic = 69116.73, p-value = 0.00000
+600-Cell Skewness Test: Statistic = 152.56, p-value = 0.00000
+600-Cell Kurtosis Test: Statistic = 75.30, p-value = 0.00000
+600-Cell Z-test for Residual Mean = 0: Z-statistic = 0.00
+600-Cell Chi-Square Test: Statistic = 6180647670313816064.00, p-value = 0.00000
+600-Cell OLS AIC: -143923.31, BIC: -143904.29
+600-Cell Poisson AIC: 50417.55, BIC: -1135566.02
+600-Cell Negative Binomial AIC: 57446.14, BIC: -1136785.41
+
+Analyzing with noise level: 30%
+Triangle Cross-validation MSE: 0.07824
+Triangle R-squared (average): 0.44674
+Triangle Negative Binomial Regression AIC: 186470.71, BIC: -1136987.91
+Triangle Logarithmic Model MSE: 0.08044, R-squared: 0.43436
+Triangle Exponential Model MSE: 0.07533, R-squared: 0.47029
+Triangle Durbin-Watson (OLS): 2.00
+Triangle Variance Inflation Factor (VIF):
+         VIF   Feature
+0  29.607633     const
+1   1.000000  t_values
+Triangle Breusch-Pagan Test Statistic: 1609.40, p-value: 0.00000
+Triangle White's Test Statistic: 1675.26, p-value: 0.00000
+Triangle Kolmogorov-Smirnov Test: KS Statistic = 0.03, p-value = 0.00000
+Triangle Shapiro-Wilk Test: Statistic = 1.00, p-value = 0.00000
+Triangle Anderson-Darling Test: Statistic = 124.54
+Triangle Lilliefors Test: Statistic = 0.05, p-value = 0.00100
+Triangle Jarque-Bera Test: Statistic = 1152.30, p-value = 0.00000
+Triangle Skewness Test: Statistic = 33.35, p-value = 0.00000
+Triangle Kurtosis Test: Statistic = -1.66, p-value = 0.09731
+Triangle Z-test for Residual Mean = 0: Z-statistic = 0.00
+Triangle Chi-Square Test: Statistic = 2543085598971015680.00, p-value = 0.00000
+Triangle OLS AIC: 27763.31, BIC: 27782.34
+Triangle Poisson AIC: 147936.78, BIC: -1132101.59
+Triangle Negative Binomial AIC: 186470.71, BIC: -1136987.91
+Square Cross-validation MSE: 0.06748
+Square R-squared (average): 0.23808
+Square Negative Binomial Regression AIC: 150046.44, BIC: -1133261.08
+Square Logarithmic Model MSE: 0.06720, R-squared: 0.23912
+Square Exponential Model MSE: 0.06519, R-squared: 0.26185
+Square Durbin-Watson (OLS): 2.00
+Square Variance Inflation Factor (VIF):
+         VIF   Feature
+0  29.607633     const
+1   1.000000  t_values
+Square Breusch-Pagan Test Statistic: 2663.23, p-value: 0.00000
+Square White's Test Statistic: 2664.34, p-value: 0.00000
+Square Kolmogorov-Smirnov Test: KS Statistic = 0.06, p-value = 0.00000
+Square Shapiro-Wilk Test: Statistic = 0.98, p-value = 0.00000
+Square Anderson-Darling Test: Statistic = 478.97
+Square Lilliefors Test: Statistic = 0.06, p-value = 0.00100
+Square Jarque-Bera Test: Statistic = 3969.13, p-value = 0.00000
+Square Skewness Test: Statistic = 59.74, p-value = 0.00000
+Square Kurtosis Test: Statistic = -1.37, p-value = 0.17066
+Square Z-test for Residual Mean = 0: Z-statistic = 0.00
+Square Chi-Square Test: Statistic = 18921336828067774464.00, p-value = 0.00000
+Square OLS AIC: 12467.31, BIC: 12486.34
+Square Poisson AIC: 123411.58, BIC: -1128593.08
+Square Negative Binomial AIC: 150046.44, BIC: -1133261.08
+Hexagon Cross-validation MSE: 0.04780
+Hexagon R-squared (average): 0.02669
+Hexagon Negative Binomial Regression AIC: 105847.88, BIC: -1129800.85
+Hexagon Logarithmic Model MSE: 0.04715, R-squared: 0.04585
+Hexagon Exponential Model MSE: 0.04690, R-squared: 0.05099
+Hexagon Durbin-Watson (OLS): 2.00
+Hexagon Variance Inflation Factor (VIF):
+         VIF   Feature
+0  29.607633     const
+1   1.000000  t_values
+Hexagon Breusch-Pagan Test Statistic: 1394.47, p-value: 0.00000
+Hexagon White's Test Statistic: 1446.62, p-value: 0.00000
+Hexagon Kolmogorov-Smirnov Test: KS Statistic = 0.14, p-value = 0.00000
+Hexagon Shapiro-Wilk Test: Statistic = 0.91, p-value = 0.00000
+Hexagon Anderson-Darling Test: Statistic = 3012.30
+Hexagon Lilliefors Test: Statistic = 0.14, p-value = 0.00100
+Hexagon Jarque-Bera Test: Statistic = 21016.98, p-value = 0.00000
+Hexagon Skewness Test: Statistic = 113.81, p-value = 0.00000
+Hexagon Kurtosis Test: Statistic = 34.78, p-value = 0.00000
+Hexagon Z-test for Residual Mean = 0: Z-statistic = 0.00
+Hexagon Chi-Square Test: Statistic = 5315243804163266560.00, p-value = 0.00000
+Hexagon OLS AIC: -22506.48, BIC: -22487.46
+Hexagon Poisson AIC: 90978.64, BIC: -1126114.01
+Hexagon Negative Binomial AIC: 105847.88, BIC: -1129800.85
+Cube Cross-validation MSE: 0.06865
+Cube R-squared (average): 0.18443
+Cube Negative Binomial Regression AIC: 151422.16, BIC: -1133180.65
+Cube Logarithmic Model MSE: 0.06691, R-squared: 0.19241
+Cube Exponential Model MSE: 0.06575, R-squared: 0.20649
+Cube Durbin-Watson (OLS): 2.00
+Cube Variance Inflation Factor (VIF):
+         VIF   Feature
+0  29.607633     const
+1   1.000000  t_values
+Cube Breusch-Pagan Test Statistic: 2194.14, p-value: 0.00000
+Cube White's Test Statistic: 2198.73, p-value: 0.00000
+Cube Kolmogorov-Smirnov Test: KS Statistic = 0.06, p-value = 0.00000
+Cube Shapiro-Wilk Test: Statistic = 0.98, p-value = 0.00000
+Cube Anderson-Darling Test: Statistic = 528.78
+Cube Lilliefors Test: Statistic = 0.06, p-value = 0.00100
+Cube Jarque-Bera Test: Statistic = 4139.75, p-value = 0.00000
+Cube Skewness Test: Statistic = 60.74, p-value = 0.00000
+Cube Kurtosis Test: Statistic = -5.04, p-value = 0.00000
+Cube Z-test for Residual Mean = 0: Z-statistic = 0.00
+Cube Chi-Square Test: Statistic = 8693917238409560064.00, p-value = 0.00000
+Cube OLS AIC: 14062.44, BIC: 14081.47
+Cube Poisson AIC: 124716.65, BIC: -1128382.08
+Cube Negative Binomial AIC: 151422.16, BIC: -1133180.65
+Dodecahedron Cross-validation MSE: 0.03553
+Dodecahedron R-squared (average): -0.00415
+Dodecahedron Negative Binomial Regression AIC: 84985.22, BIC: -1129896.26
+Dodecahedron Logarithmic Model MSE: 0.03533, R-squared: 0.00313
+Dodecahedron Exponential Model MSE: 0.03532, R-squared: 0.00337
+Dodecahedron Durbin-Watson (OLS): 1.99
+Dodecahedron Variance Inflation Factor (VIF):
+         VIF   Feature
+0  29.607633     const
+1   1.000000  t_values
+Dodecahedron Breusch-Pagan Test Statistic: 118.29, p-value: 0.00000
+Dodecahedron White's Test Statistic: 124.61, p-value: 0.00000
+Dodecahedron Kolmogorov-Smirnov Test: KS Statistic = 0.21, p-value = 0.00000
+Dodecahedron Shapiro-Wilk Test: Statistic = 0.79, p-value = 0.00000
+Dodecahedron Anderson-Darling Test: Statistic = 7391.16
+Dodecahedron Lilliefors Test: Statistic = 0.21, p-value = 0.00100
+Dodecahedron Jarque-Bera Test: Statistic = 45477.98, p-value = 0.00000
+Dodecahedron Skewness Test: Statistic = 140.24, p-value = 0.00000
+Dodecahedron Kurtosis Test: Statistic = 60.42, p-value = 0.00000
+Dodecahedron Z-test for Residual Mean = 0: Z-statistic = -0.00
+Dodecahedron Chi-Square Test: Statistic = -252110929052624846848.00, p-value = 1.00000
+Dodecahedron OLS AIC: -50624.68, BIC: -50605.65
+Dodecahedron Poisson AIC: 74355.14, BIC: -1126996.16
+Dodecahedron Negative Binomial AIC: 84985.22, BIC: -1129896.26
+Tesseract Cross-validation MSE: 0.09362
+Tesseract R-squared (average): 0.80623
+Tesseract Negative Binomial Regression AIC: 235957.90, BIC: -1140392.28
+Tesseract Logarithmic Model MSE: 0.13079, R-squared: 0.72924
+Tesseract Exponential Model MSE: 0.07885, R-squared: 0.83676
+Tesseract Durbin-Watson (OLS): 2.01
+Tesseract Variance Inflation Factor (VIF):
+         VIF   Feature
+0  29.607633     const
+1   1.000000  t_values
+Tesseract Breusch-Pagan Test Statistic: 1298.48, p-value: 0.00000
+Tesseract White's Test Statistic: 1953.21, p-value: 0.00000
+Tesseract Kolmogorov-Smirnov Test: KS Statistic = 0.01, p-value = 0.00000
+Tesseract Shapiro-Wilk Test: Statistic = 1.00, p-value = 0.00002
+Tesseract Anderson-Darling Test: Statistic = 15.13
+Tesseract Lilliefors Test: Statistic = 0.02, p-value = 0.42638
+Tesseract Jarque-Bera Test: Statistic = 215.54, p-value = 0.00000
+Tesseract Skewness Test: Statistic = 14.63, p-value = 0.00000
+Tesseract Kurtosis Test: Statistic = -0.20, p-value = 0.84021
+Tesseract Z-test for Residual Mean = 0: Z-statistic = -0.00
+Tesseract Chi-Square Test: Statistic = -875844050605369472.00, p-value = 1.00000
+Tesseract OLS AIC: 62580.68, BIC: 62599.70
+Tesseract Poisson AIC: 177505.34, BIC: -1135994.64
+Tesseract Negative Binomial AIC: 235957.90, BIC: -1140392.28
+600-Cell Cross-validation MSE: 0.04500
+600-Cell R-squared (average): -0.47889
+600-Cell Negative Binomial Regression AIC: 76306.07, BIC: -1130481.55
+600-Cell Logarithmic Model MSE: 0.03013, R-squared: 0.00006
+600-Cell Exponential Model MSE: 0.03013, R-squared: 0.00006
+600-Cell Durbin-Watson (OLS): 2.00
+600-Cell Variance Inflation Factor (VIF):
+         VIF   Feature
+0  29.607633     const
+1   1.000000  t_values
+600-Cell Breusch-Pagan Test Statistic: 3.52, p-value: 0.06046
+600-Cell White's Test Statistic: 3.82, p-value: 0.14830
+600-Cell Kolmogorov-Smirnov Test: KS Statistic = 0.25, p-value = 0.00000
+600-Cell Shapiro-Wilk Test: Statistic = 0.75, p-value = 0.00000
+600-Cell Anderson-Darling Test: Statistic = 9971.58
+600-Cell Lilliefors Test: Statistic = 0.24, p-value = 0.00100
+600-Cell Jarque-Bera Test: Statistic = 66177.05, p-value = 0.00000
+600-Cell Skewness Test: Statistic = 151.57, p-value = 0.00000
+600-Cell Kurtosis Test: Statistic = 73.61, p-value = 0.00000
+600-Cell Z-test for Residual Mean = 0: Z-statistic = -0.00
+600-Cell Chi-Square Test: Statistic = -27525694073160667136.00, p-value = 1.00000
+600-Cell OLS AIC: -64931.77, BIC: -64912.75
+600-Cell Poisson AIC: 67188.49, BIC: -1127935.48
+600-Cell Negative Binomial AIC: 76306.07, BIC: -1130481.55
+
+Analyzing with noise level: 100%
+Triangle Cross-validation MSE: 2.83968
+Triangle R-squared (average): -0.71634
+Triangle Negative Binomial Regression AIC: 451439.57, BIC: -1139935.01
+Triangle Logarithmic Model MSE: 1.01685, R-squared: 0.39202
+Triangle Exponential Model MSE: 1.00165, R-squared: 0.40111
+Triangle Durbin-Watson (OLS): 1.99
+Triangle Variance Inflation Factor (VIF):
+         VIF   Feature
+0  29.447322     const
+1   1.000000  t_values
+Triangle Breusch-Pagan Test Statistic: 11.46, p-value: 0.00071
+Triangle White's Test Statistic: 18.05, p-value: 0.00012
+Triangle Kolmogorov-Smirnov Test: KS Statistic = 0.00, p-value = 0.45829
+Triangle Shapiro-Wilk Test: Statistic = 1.00, p-value = 0.72865
+Triangle Anderson-Darling Test: Statistic = 1.43
+Triangle Lilliefors Test: Statistic = 0.02, p-value = 0.25563
+Triangle Jarque-Bera Test: Statistic = 38.13, p-value = 0.00000
+Triangle Skewness Test: Statistic = 4.00, p-value = 0.00006
+Triangle Kurtosis Test: Statistic = -4.87, p-value = 0.00000
+Triangle Z-test for Residual Mean = 0: Z-statistic = 0.00
+Triangle Chi-Square Test: Statistic = 9923673927324968960.00, p-value = 0.00000
+Triangle OLS AIC: 283637.91, BIC: 283656.94
+Triangle Poisson AIC: 329750.62, BIC: -1114031.79
+Triangle Negative Binomial AIC: 451439.57, BIC: -1139935.01
+Square Cross-validation MSE: 1.76910
+Square R-squared (average): -0.44687
+Square Negative Binomial Regression AIC: 382813.65, BIC: -1128261.26
+Square Logarithmic Model MSE: 0.96682, R-squared: 0.21590
+Square Exponential Model MSE: 0.95874, R-squared: 0.22245
+Square Durbin-Watson (OLS): 2.01
+Square Variance Inflation Factor (VIF):
+         VIF   Feature
+0  29.447322     const
+1   1.000000  t_values
+Square Breusch-Pagan Test Statistic: 147.83, p-value: 0.00000
+Square White's Test Statistic: 170.58, p-value: 0.00000
+Square Kolmogorov-Smirnov Test: KS Statistic = 0.01, p-value = 0.00000
+Square Shapiro-Wilk Test: Statistic = 1.00, p-value = 0.00000
+Square Anderson-Darling Test: Statistic = 41.51
+Square Lilliefors Test: Statistic = 0.03, p-value = 0.06760
+Square Jarque-Bera Test: Statistic = 558.76, p-value = 0.00000
+Square Skewness Test: Statistic = 19.62, p-value = 0.00000
+Square Kurtosis Test: Statistic = -14.50, p-value = 0.00000
+Square Z-test for Residual Mean = 0: Z-statistic = 0.00
+Square Chi-Square Test: Statistic = 53097666207561089024.00, p-value = 0.00000
+Square OLS AIC: 278574.45, BIC: 278593.48
+Square Poisson AIC: 300941.02, BIC: -1095769.77
+Square Negative Binomial AIC: 382813.65, BIC: -1128261.26
+Hexagon Cross-validation MSE: 0.86814
+Hexagon R-squared (average): -0.19015
+Hexagon Negative Binomial Regression AIC: 272037.68, BIC: -1102940.64
+Hexagon Logarithmic Model MSE: 0.69914, R-squared: 0.04663
+Hexagon Exponential Model MSE: 0.69723, R-squared: 0.04924
+Hexagon Durbin-Watson (OLS): 2.00
+Hexagon Variance Inflation Factor (VIF):
+         VIF   Feature
+0  29.447322     const
+1   1.000000  t_values
+Hexagon Breusch-Pagan Test Statistic: 709.56, p-value: 0.00000
+Hexagon White's Test Statistic: 710.44, p-value: 0.00000
+Hexagon Kolmogorov-Smirnov Test: KS Statistic = 0.08, p-value = 0.00000
+Hexagon Shapiro-Wilk Test: Statistic = 0.95, p-value = 0.00000
+Hexagon Anderson-Darling Test: Statistic = 1224.17
+Hexagon Lilliefors Test: Statistic = 0.07, p-value = 0.00100
+Hexagon Jarque-Bera Test: Statistic = 7663.98, p-value = 0.00000
+Hexagon Skewness Test: Statistic = 79.67, p-value = 0.00000
+Hexagon Kurtosis Test: Statistic = -3.72, p-value = 0.00020
+Hexagon Z-test for Residual Mean = 0: Z-statistic = -0.00
+Hexagon Chi-Square Test: Statistic = -262891867872958840832.00, p-value = 1.00000
+Hexagon OLS AIC: 247457.39, BIC: 247476.41
+Hexagon Poisson AIC: 240931.26, BIC: -1069008.44
+Hexagon Negative Binomial AIC: 272037.68, BIC: -1102940.64
+Cube Cross-validation MSE: 1.20444
+Cube R-squared (average): -0.22959
+Cube Negative Binomial Regression AIC: 341186.67, BIC: -1118899.52
+Cube Logarithmic Model MSE: 0.88562, R-squared: 0.09734
+Cube Exponential Model MSE: 0.88228, R-squared: 0.10074
+Cube Durbin-Watson (OLS): 2.01
+Cube Variance Inflation Factor (VIF):
+         VIF   Feature
+0  29.447322     const
+1   1.000000  t_values
+Cube Breusch-Pagan Test Statistic: 292.64, p-value: 0.00000
+Cube White's Test Statistic: 293.81, p-value: 0.00000
+Cube Kolmogorov-Smirnov Test: KS Statistic = 0.03, p-value = 0.00000
+Cube Shapiro-Wilk Test: Statistic = 0.99, p-value = 0.00000
+Cube Anderson-Darling Test: Statistic = 172.91
+Cube Lilliefors Test: Statistic = 0.03, p-value = 0.01731
+Cube Jarque-Bera Test: Statistic = 1729.27, p-value = 0.00000
+Cube Skewness Test: Statistic = 36.01, p-value = 0.00000
+Cube Kurtosis Test: Statistic = -23.12, p-value = 0.00000
+Cube Z-test for Residual Mean = 0: Z-statistic = 0.00
+Cube Chi-Square Test: Statistic = 13952300568188319744.00, p-value = 0.00000
+Cube OLS AIC: 271305.34, BIC: 271324.37
+Cube Poisson AIC: 281668.72, BIC: -1083721.24
+Cube Negative Binomial AIC: 341186.67, BIC: -1118899.52
+Dodecahedron Cross-validation MSE: 0.50207
+Dodecahedron R-squared (average): -0.17032
+Dodecahedron Negative Binomial Regression AIC: 193257.09, BIC: -1093704.20
+Dodecahedron Logarithmic Model MSE: 0.41640, R-squared: 0.00066
+Dodecahedron Exponential Model MSE: 0.41638, R-squared: 0.00071
+Dodecahedron Durbin-Watson (OLS): 2.00
+Dodecahedron Variance Inflation Factor (VIF):
+         VIF   Feature
+0  29.447322     const
+1   1.000000  t_values
+Dodecahedron Breusch-Pagan Test Statistic: 63.71, p-value: 0.00000
+Dodecahedron White's Test Statistic: 69.26, p-value: 0.00000
+Dodecahedron Kolmogorov-Smirnov Test: KS Statistic = 0.20, p-value = 0.00000
+Dodecahedron Shapiro-Wilk Test: Statistic = 0.81, p-value = 0.00000
+Dodecahedron Anderson-Darling Test: Statistic = 6676.24
+Dodecahedron Lilliefors Test: Statistic = 0.21, p-value = 0.00100
+Dodecahedron Jarque-Bera Test: Statistic = 38596.64, p-value = 0.00000
+Dodecahedron Skewness Test: Statistic = 134.70, p-value = 0.00000
+Dodecahedron Kurtosis Test: Statistic = 54.96, p-value = 0.00000
+Dodecahedron Z-test for Residual Mean = 0: Z-statistic = -0.00
+Dodecahedron Chi-Square Test: Statistic = -29648827223237935104.00, p-value = 1.00000
+Dodecahedron OLS AIC: 198359.03, BIC: 198378.05
+Dodecahedron Poisson AIC: 180999.79, BIC: -1068686.58
+Dodecahedron Negative Binomial AIC: 193257.09, BIC: -1093704.20
+Tesseract Cross-validation MSE: 137.93216
+Tesseract R-squared (average): -6.63554
+Tesseract Negative Binomial Regression AIC: 685740.75, BIC: -1150193.21
+Tesseract Logarithmic Model MSE: 1.78760, R-squared: 0.91024
+Tesseract Exponential Model MSE: 1.02454, R-squared: 0.94856
+Tesseract Durbin-Watson (OLS): 1.99
+Tesseract Variance Inflation Factor (VIF):
+         VIF   Feature
+0  29.447322     const
+1   1.000000  t_values
+Tesseract Breusch-Pagan Test Statistic: 13.87, p-value: 0.00020
+Tesseract White's Test Statistic: 972.25, p-value: 0.00000
+Tesseract Kolmogorov-Smirnov Test: KS Statistic = 0.01, p-value = 0.00137
+Tesseract Shapiro-Wilk Test: Statistic = 1.00, p-value = 0.43041
+Tesseract Anderson-Darling Test: Statistic = 6.34
+Tesseract Lilliefors Test: Statistic = 0.02, p-value = 0.45346
+Tesseract Jarque-Bera Test: Statistic = 86.63, p-value = 0.00000
+Tesseract Skewness Test: Statistic = 8.93, p-value = 0.00000
+Tesseract Kurtosis Test: Statistic = -2.64, p-value = 0.00823
+Tesseract Z-test for Residual Mean = 0: Z-statistic = 0.00
+Tesseract Chi-Square Test: Statistic = 4850451238349204480.00, p-value = 0.00000
+Tesseract OLS AIC: 307330.51, BIC: 307349.53
+Tesseract Poisson AIC: 433362.72, BIC: -1140838.74
+Tesseract Negative Binomial AIC: 685740.75, BIC: -1150193.21
+600-Cell Cross-validation MSE: 0.49781
+600-Cell R-squared (average): -0.46327
+600-Cell Negative Binomial Regression AIC: 166775.07, BIC: -1094332.40
+600-Cell Logarithmic Model MSE: 0.34235, R-squared: -0.00000
+600-Cell Exponential Model MSE: 0.34235, R-squared: -0.00000
+600-Cell Durbin-Watson (OLS): 2.00
+600-Cell Variance Inflation Factor (VIF):
+         VIF   Feature
+0  29.447322     const
+1   1.000000  t_values
+600-Cell Breusch-Pagan Test Statistic: 2.16, p-value: 0.14180
+600-Cell White's Test Statistic: 2.32, p-value: 0.31420
+600-Cell Kolmogorov-Smirnov Test: KS Statistic = 0.25, p-value = 0.00000
+600-Cell Shapiro-Wilk Test: Statistic = 0.73, p-value = 0.00000
+600-Cell Anderson-Darling Test: Statistic = 10276.20
+600-Cell Lilliefors Test: Statistic = 0.26, p-value = 0.00100
+600-Cell Jarque-Bera Test: Statistic = 69140.48, p-value = 0.00000
+600-Cell Skewness Test: Statistic = 152.88, p-value = 0.00000
+600-Cell Kurtosis Test: Statistic = 75.07, p-value = 0.00000
+600-Cell Z-test for Residual Mean = 0: Z-statistic = -0.00
+600-Cell Chi-Square Test: Statistic = -126660031072219054080.00, p-value = 1.00000
+600-Cell OLS AIC: 175960.00, BIC: 175979.03
+600-Cell Poisson AIC: 158134.74, BIC: -1073322.01
+600-Cell Negative Binomial AIC: 166775.07, BIC: -1094332.40 

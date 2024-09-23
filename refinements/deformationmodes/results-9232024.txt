@@ -1,0 +1,25 @@
+2D Polygons Results:
+
+n: 3.0, ln(n): 1.0986, Actual: 3.0, Predicted: 1.65, Absolute Deviation: 1.35, Percent Deviation: 44.95%
+n: 4.0, ln(n): 1.3863, Actual: 5.0, Predicted: 5.32, Absolute Deviation: 0.32, Percent Deviation: 6.46%
+n: 6.0, ln(n): 1.7918, Actual: 9.0, Predicted: 10.50, Absolute Deviation: 1.50, Percent Deviation: 16.64%
+n: 8.0, ln(n): 2.0794, Actual: 13.0, Predicted: 14.17, Absolute Deviation: 1.17, Percent Deviation: 8.99%
+n: 10.0, ln(n): 2.3026, Actual: 17.0, Predicted: 17.02, Absolute Deviation: 0.02, Percent Deviation: 0.10%
+n: 12.0, ln(n): 2.4849, Actual: 21.0, Predicted: 19.34, Absolute Deviation: 1.66, Percent Deviation: 7.89%
+
+3D Polyhedra Results:
+
+n: 4.0, ln(n): 1.3863, Actual: 6.0, Predicted: 6.03, Absolute Deviation: 0.03, Percent Deviation: 0.58%
+n: 6.0, ln(n): 1.7918, Actual: 12.0, Predicted: 14.96, Absolute Deviation: 2.96, Percent Deviation: 24.70%
+n: 8.0, ln(n): 2.0794, Actual: 12.0, Predicted: 21.30, Absolute Deviation: 9.30, Percent Deviation: 77.49%
+n: 12.0, ln(n): 2.4849, Actual: 54.0, Predicted: 30.23, Absolute Deviation: 23.77, Percent Deviation: 44.02%
+n: 20.0, ln(n): 2.9957, Actual: 30.0, Predicted: 41.48, Absolute Deviation: 11.48, Percent Deviation: 38.25%
+
+4D Polytopes Results:
+
+n: 5.0, ln(n): 1.6094, Actual: 10.0, Predicted: -167.57, Absolute Deviation: 177.57, Percent Deviation: 1775.66%
+n: 8.0, ln(n): 2.0794, Actual: 16.0, Predicted: -45.37, Absolute Deviation: 61.37, Percent Deviation: 383.56%
+n: 16.0, ln(n): 2.7726, Actual: 24.0, Predicted: 134.84, Absolute Deviation: 110.84, Percent Deviation: 461.84%
+n: 24.0, ln(n): 3.1781, Actual: 48.0, Predicted: 240.26, Absolute Deviation: 192.26, Percent Deviation: 400.54%
+n: 120.0, ln(n): 4.7875, Actual: 600.0, Predicted: 658.70, Absolute Deviation: 58.70, Percent Deviation: 9.78%
+n: 600.0, ln(n): 6.3969, Actual: 1200.0, Predicted: 1077.14, Absolute Deviation: 122.86, Percent Deviation: 10.24%
