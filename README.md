@@ -15,6 +15,7 @@ The Symmetry-Breaking Bifurcation Theorem provides a rigorous mathematical frame
 
 The key innovation lies in the detailed mathematical treatment of each constant in the bifurcation equation, which governs the transition from symmetry to asymmetry in these objects. Constants such as ![A_d](https://latex.codecogs.com/svg.image?\bg{none}\fg{FFFFFF}A_d) (Symmetry Group Constant), ![k_d](https://latex.codecogs.com/svg.image?\bg{none}\fg{FFFFFF}k_d) (Complexity Scaling Constant), ![B_d](https://latex.codecogs.com/svg.image?\bg{none}\fg{FFFFFF}B_d) (Logarithmic Deformation Factor), and ![C_d](https://latex.codecogs.com/svg.image?\bg{none}\fg{FFFFFF}C_d) (Dimensional Adjustment Constant) are each tied directly to fundamental geometric, combinatorial, and topological properties of the objects.
 
+
 This framework has applications across various fields, including computational geometry, architecture, material science, astrophysics, and topological data analysis. The derivations rely on group theory, combinatorial analysis, power-law behavior, and topological invariants (e.g., Euler characteristic) for their theoretical foundation.
 
 
