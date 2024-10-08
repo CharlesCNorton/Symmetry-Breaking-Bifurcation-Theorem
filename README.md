@@ -1,7 +1,7 @@
 # Symmetry-Breaking Bifurcation Theorem: A Comprehensive Mathematical Framework for Near-Regular Geometries
 
 **Author:** Charles C. Norton   
-**Date:** September 22, 2024 (Original: September 16, 2024)
+**Date:** October 8, 2024 (Original: September 16, 2024)
 
 ## Acknowledgments
 
@@ -13,7 +13,7 @@ This work was produced with the assistance of GPT-4 and o1, language models deve
 
 The Symmetry-Breaking Bifurcation Theorem provides a rigorous mathematical framework for understanding how symmetry-breaking occurs in near-regular geometric objects such as polygons, polyhedra, and polytopes. This theorem accounts for the complexity of the object (quantified by the number of sides, faces, or cells) and its dimensionality (whether 2D, 3D, or 4D). By deriving constants from first principles and conducting empirical validations through numerical simulations, this theorem offers a comprehensive model without reliance on arbitrary fitting or ungrounded assumptions.
 
-The key innovation lies in the detailed mathematical treatment of each constant in the bifurcation equation, which governs the transition from symmetry to asymmetry in these objects. Constants such as ![A_d](https://latex.codecogs.com/svg.image?\bg{black}A_d) (Symmetry Group Constant), ![k_d](https://latex.codecogs.com/svg.image?\bg{black}k_d) (Complexity Scaling Constant), ![B_d](https://latex.codecogs.com/svg.image?\bg{black}B_d) (Logarithmic Deformation Factor), and ![C_d](https://latex.codecogs.com/svg.image?\bg{black}C_d) (Dimensional Adjustment Constant) are each tied directly to fundamental geometric, combinatorial, and topological properties of the objects. The theorem is further supported by extensive empirical validation across multiple dimensions and complexities, including 2D polygons, 3D polyhedra, and 4D polytopes.
+The key innovation lies in the detailed mathematical treatment of each constant in the bifurcation equation, which governs the transition from symmetry to asymmetry in these objects. Constants such as ![A_d](https://latex.codecogs.com/svg.image?\fg{white}A_d) (Symmetry Group Constant), ![k_d](https://latex.codecogs.com/svg.image?\fg{white}k_d) (Complexity Scaling Constant), ![B_d](https://latex.codecogs.com/svg.image?\fg{white}B_d) (Logarithmic Deformation Factor), and ![C_d](https://latex.codecogs.com/svg.image?\fg{white}C_d) (Dimensional Adjustment Constant) are each tied directly to fundamental geometric, combinatorial, and topological properties of the objects. The theorem is further supported by extensive empirical validation across multiple dimensions and complexities, including 2D polygons, 3D polyhedra, and 4D polytopes.
 
 This framework has applications across various fields, including computational geometry, architecture, material science, astrophysics, and topological data analysis. The derivations rely on group theory, combinatorial analysis, power-law behavior, and topological invariants (e.g., Euler characteristic) for their theoretical foundation.
 
