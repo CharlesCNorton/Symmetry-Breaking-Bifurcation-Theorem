@@ -1,7 +1,7 @@
 # Symmetry-Breaking Bifurcation Theorem: A Comprehensive Mathematical Framework for Near-Regular Geometries
 
-**Author:** Charles C. Norton   
-**Date:** October 8, 2024 (Original: September 16, 2024)
+Author: Charles C. Norton   
+Date: October 8, 2024 (Original: September 16, 2024)
 
 ## Acknowledgments
 
@@ -62,7 +62,7 @@ Symmetry-breaking is a critical phenomenon in many areas of geometry, physics, e
 
 The Symmetry-Breaking Bifurcation Theorem addresses this issue by offering a formal framework that describes the point at which symmetry breaks down in geometric objects as a function of their complexity and dimensionality. This theorem is expressed through a bifurcation equation, which models how the symmetry group of an object shrinks when it undergoes deformation.
 
-**Important Note on Logarithms:** Throughout this document, we use the natural logarithm, denoted as \( \ln(n) \), for all logarithmic expressions.
+Important Note on Logarithms: Throughout this document, we use the natural logarithm, denoted as \( \ln(n) \), for all logarithmic expressions.
 
 The bifurcation equation is:
 
@@ -151,9 +151,9 @@ To explore the necessity of ε, consider the bifurcation equation without it:
 
 In this case, as ![t \to t_c](https://latex.codecogs.com/svg.image?\bg{black}t%20\to%20t_c), the term ![(t - t_c)](https://latex.codecogs.com/svg.image?\bg{black}(t%20-%20t_c)) becomes zero, and the equation runs into two specific problems:
 
-1. **Fractional Powers of Zero**: If ![B_d \cdot \ln(n) + C_d](https://latex.codecogs.com/svg.image?\bg{black}B_d%20\cdot%20\ln(n)%20+%20C_d) is not an integer, raising zero to a fractional power leads to undefined behavior. This is because fractional exponents of zero can produce singularities or discontinuous results.
+1. Fractional Powers of Zero: If ![B_d \cdot \ln(n) + C_d](https://latex.codecogs.com/svg.image?\bg{black}B_d%20\cdot%20\ln(n)%20+%20C_d) is not an integer, raising zero to a fractional power leads to undefined behavior. This is because fractional exponents of zero can produce singularities or discontinuous results.
 
-2. **Logarithmic Terms**: If ![B_d \cdot \ln(n) + C_d](https://latex.codecogs.com/svg.image?\bg{black}B_d%20\cdot%20\ln(n)%20+%20C_d) contains terms requiring positive values, having ![(t - t_c) \to 0](https://latex.codecogs.com/svg.image?\bg{black}(t-t_c)%20\to%200) results in undefined or singular behavior, as logarithmic expressions are not defined for zero or negative bases.
+2. Logarithmic Terms: If ![B_d \cdot \ln(n) + C_d](https://latex.codecogs.com/svg.image?\bg{black}B_d%20\cdot%20\ln(n)%20+%20C_d) contains terms requiring positive values, having ![(t - t_c) \to 0](https://latex.codecogs.com/svg.image?\bg{black}(t-t_c)%20\to%200) results in undefined or singular behavior, as logarithmic expressions are not defined for zero or negative bases.
 
 
 Thus, without ε, the equation encounters mathematical difficulties that would result in either discontinuous or non-physical behavior at ![t_c](https://latex.codecogs.com/svg.image?\bg{black}t_c), leading to instability in both theoretical models and practical simulations.
@@ -202,25 +202,25 @@ The size of the symmetry group ![|G(P)|](https://latex.codecogs.com/svg.image?\b
 
 ![A_d = |G(P)|](https://latex.codecogs.com/svg.image?\bg{black}A_d%20=%20|G(P)|)
 
-**Justification:**
+Justification:
 
-- **Empirical Observations:** Testing has shown that as the symmetry group size increases, resistance to bifurcation increases significantly, especially in higher-dimensional objects like the 600-cell.
-- **Mathematical Reasoning:** A larger symmetry group means more symmetry-preserving transformations, making it harder for the object to undergo symmetry-breaking without affecting these transformations.
+- Empirical Observations: Testing has shown that as the symmetry group size increases, resistance to bifurcation increases significantly, especially in higher-dimensional objects like the 600-cell.
+- Mathematical Reasoning: A larger symmetry group means more symmetry-preserving transformations, making it harder for the object to undergo symmetry-breaking without affecting these transformations.
 
-**Examples:**
+Examples:
 
-- **2D Polygons:**
+- 2D Polygons:
 
   ![A_2 = 2n](https://latex.codecogs.com/svg.image?\bg{black}A_2%20=%202n)
 
   The dihedral group ![D_n](https://latex.codecogs.com/svg.image?\bg{black}D_n) has ![2n](https://latex.codecogs.com/svg.image?\bg{black}2n) elements (rotations and reflections).
 
-- **3D Polyhedra:**
+- 3D Polyhedra:
 
   - Cube: ![A_3 = 24](https://latex.codecogs.com/svg.image?\bg{black}A_3%20=%2024) (24 symmetries)
   - Dodecahedron: ![A_3 = 60](https://latex.codecogs.com/svg.image?\bg{black}A_3%20=%2060) (60 symmetries)
 
-- **4D Polytopes:**
+- 4D Polytopes:
 
   - 600-cell: ![A_4 = 14,400](https://latex.codecogs.com/svg.image?\bg{black}A_4%20=%2014,400) (14,400 symmetries)
 
@@ -242,10 +242,10 @@ We define:
 
 ![k_d = \ln(n)](https://latex.codecogs.com/svg.image?\bg{black}k_d%20=%20\ln(n))
 
-**Justification:**
+Justification:
 
-- **Combinatorial Analysis:** The number of independent deformation modes ![M(n)](https://latex.codecogs.com/svg.image?\bg{black}M(n)) scales logarithmically with ![n](https://latex.codecogs.com/svg.image?\bg{black}n) because symmetry constraints reduce the number of ways an object can deform without breaking its inherent symmetries.
-- **Empirical Testing:** Analysis across a wide range of ![n](https://latex.codecogs.com/svg.image?\bg{black}n) values (from ![n = 3](https://latex.codecogs.com/svg.image?\bg{black}n%20=%203) to ![n = 1000](https://latex.codecogs.com/svg.image?\bg{black}n%20=%201000)) confirmed the logarithmic scaling of ![k_d](https://latex.codecogs.com/svg.image?\bg{black}k_d).
+- Combinatorial Analysis: The number of independent deformation modes ![M(n)](https://latex.codecogs.com/svg.image?\bg{black}M(n)) scales logarithmically with ![n](https://latex.codecogs.com/svg.image?\bg{black}n) because symmetry constraints reduce the number of ways an object can deform without breaking its inherent symmetries.
+- Empirical Testing: Analysis across a wide range of ![n](https://latex.codecogs.com/svg.image?\bg{black}n) values (from ![n = 3](https://latex.codecogs.com/svg.image?\bg{black}n%20=%203) to ![n = 1000](https://latex.codecogs.com/svg.image?\bg{black}n%20=%201000)) confirmed the logarithmic scaling of ![k_d](https://latex.codecogs.com/svg.image?\bg{black}k_d).
 
 ---
 
@@ -263,24 +263,24 @@ Where:
 
 - ![a_d](https://latex.codecogs.com/svg.image?\bg{black}a_d) and ![b_d](https://latex.codecogs.com/svg.image?\bg{black}b_d) are coefficients derived from geometric properties.
 
-**Derivation of Coefficients ![a_d](https://latex.codecogs.com/svg.image?\bg{black}a_d) and ![b_d](https://latex.codecogs.com/svg.image?\bg{black}b_d):**
+Derivation of Coefficients ![a_d](https://latex.codecogs.com/svg.image?\bg{black}a_d) and ![b_d](https://latex.codecogs.com/svg.image?\bg{black}b_d):
 
-- **![a_d](https://latex.codecogs.com/svg.image?\bg{black}a_d):** Inversely proportional to the perimeter (or surface area in higher dimensions) of the object, reflecting how larger or more symmetric shapes resist bifurcation more.
+- ![a_d](https://latex.codecogs.com/svg.image?\bg{black}a_d): Inversely proportional to the perimeter (or surface area in higher dimensions) of the object, reflecting how larger or more symmetric shapes resist bifurcation more.
 
   ![a_d = \frac{k}{\text{Perimeter}}](https://latex.codecogs.com/svg.image?\bg{black}a_d%20=%20\frac{k}{\text{Perimeter}})
 
   Where ![k](https://latex.codecogs.com/svg.image?\bg{black}k) is a constant of proportionality.
 
-- **![b_d](https://latex.codecogs.com/svg.image?\bg{black}b_d):** Scaled based on the number of sides ![n](https://latex.codecogs.com/svg.image?\bg{black}n), adjusted logarithmically to account for the base rate of deformation.
+- ![b_d](https://latex.codecogs.com/svg.image?\bg{black}b_d): Scaled based on the number of sides ![n](https://latex.codecogs.com/svg.image?\bg{black}n), adjusted logarithmically to account for the base rate of deformation.
 
   ![b_d = c + d \cdot \ln(n)](https://latex.codecogs.com/svg.image?\bg{black}b_d%20=%20c%20+%20d%20\cdot%20\ln(n))
 
   Where ![c](https://latex.codecogs.com/svg.image?\bg{black}c) and ![d](https://latex.codecogs.com/svg.image?\bg{black}d) are constants determined by the object's dimensionality.
 
-**Justification:**
+Justification:
 
-- **Empirical Testing:** Adjusting ![a_d](https://latex.codecogs.com/svg.image?\bg{black}a_d) and ![b_d](https://latex.codecogs.com/svg.image?\bg{black}b_d) based on geometric properties produced realistic and accurate bifurcation dynamics.
-- **Mathematical Reasoning:** Larger objects with more sides have more ways to distribute deformation, hence the dependence on ![\ln(n)](https://latex.codecogs.com/svg.image?\bg{black}\ln(n)).
+- Empirical Testing: Adjusting ![a_d](https://latex.codecogs.com/svg.image?\bg{black}a_d) and ![b_d](https://latex.codecogs.com/svg.image?\bg{black}b_d) based on geometric properties produced realistic and accurate bifurcation dynamics.
+- Mathematical Reasoning: Larger objects with more sides have more ways to distribute deformation, hence the dependence on ![\ln(n)](https://latex.codecogs.com/svg.image?\bg{black}\ln(n)).
 
 ---
 
@@ -299,10 +299,10 @@ Where:
 - ![c_d](https://latex.codecogs.com/svg.image?\bg{black}c_d) and ![d_d](https://latex.codecogs.com/svg.image?\bg{black}d_d) are constants specific to the dimensionality ![d](https://latex.codecogs.com/svg.image?\bg{black}d),
 - ![\chi](https://latex.codecogs.com/svg.image?\bg{black}\chi) is the Euler characteristic of the object.
 
-**Justification:**
+Justification:
 
-- **Topological Complexity:** Higher-dimensional objects have more complex topologies, increasing resistance to deformation.
-- **Empirical Validation:** Testing confirmed that as ![\chi](https://latex.codecogs.com/svg.image?\bg{black}\chi) increases, resistance to symmetry-breaking grows, consistent with the model.
+- Topological Complexity: Higher-dimensional objects have more complex topologies, increasing resistance to deformation.
+- Empirical Validation: Testing confirmed that as ![\chi](https://latex.codecogs.com/svg.image?\bg{black}\chi) increases, resistance to symmetry-breaking grows, consistent with the model.
 
 ---
 
@@ -310,16 +310,16 @@ Where:
 
 ## 3.1 Lemma 1: Symmetry-Breaking Threshold
 
-**Lemma Statement:**  
+Lemma Statement:  
 For ![t \leq t_c = 0.5](https://latex.codecogs.com/svg.image?\bg{black}t%20\leq%20t_c%20=%200.5), no bifurcation occurs.
 
-**Proof:**
+Proof:
 
 The bifurcation equation suggests that when ![t \leq t_c](https://latex.codecogs.com/svg.image?\bg{black}t%20\leq%20t_c), the symmetry group ![G(P)](https://latex.codecogs.com/svg.image?\bg{black}G(P)) remains intact, and no symmetry-breaking occurs. To demonstrate this rigorously, we must examine the stability of the system before the critical threshold ![t_c](https://latex.codecogs.com/svg.image?\bg{black}t_c).
 
-**Defining the Mathematical Entities:**
+Defining the Mathematical Entities:
 
-1. **Jacobian Matrix ![J(t)](https://latex.codecogs.com/svg.image?\bg{black}J(t)):**  
+1. Jacobian Matrix ![J(t)](https://latex.codecogs.com/svg.image?\bg{black}J(t)):  
    The Jacobian matrix is a key object in bifurcation theory. It encodes how a small perturbation in the system propagates over time. For a system of equations describing the deformation of the geometric object ![P](https://latex.codecogs.com/svg.image?\bg{black}P), the Jacobian matrix ![J(t)](https://latex.codecogs.com/svg.image?\bg{black}J(t)) is defined as the matrix of partial derivatives of the system's governing equations with respect to the deformation parameter ![t](https://latex.codecogs.com/svg.image?\bg{black}t).
 
    If we define the governing equations as ![F(t, n, d)](https://latex.codecogs.com/svg.image?\bg{black}F(t,%20n,%20d)) that describe the geometric state of the object ![P](https://latex.codecogs.com/svg.image?\bg{black}P), the Jacobian matrix is:
@@ -328,7 +328,7 @@ The bifurcation equation suggests that when ![t \leq t_c](https://latex.codecogs
 
    The eigenvalues of the Jacobian matrix ![J(t)](https://latex.codecogs.com/svg.image?\bg{black}J(t)) at each point describe the stability of the system at that point. If all eigenvalues have negative real parts, the system is stable, meaning no bifurcation occurs.
 
-2. **Stability Condition:**  
+2. Stability Condition:  
    The system's stability is determined by the sign of the eigenvalues ![\lambda_i(t)](https://latex.codecogs.com/svg.image?\bg{black}\lambda_i(t)) of ![J(t)](https://latex.codecogs.com/svg.image?\bg{black}J(t)). For ![t \leq t_c](https://latex.codecogs.com/svg.image?\bg{black}t%20\leq%20t_c), we assume that all the eigenvalues of ![J(t)](https://latex.codecogs.com/svg.image?\bg{black}J(t)) have negative real parts, ensuring the system is stable and no bifurcation occurs.
 
    Mathematically:
@@ -339,64 +339,64 @@ Since the eigenvalues ![\lambda_i(t)](https://latex.codecogs.com/svg.image?\bg{b
 
 ## 3.2 Lemma 2: Dimensional Dependence of Bifurcation
 
-**Lemma Statement:**  
+Lemma Statement:  
 The dimensionality ![d](https://latex.codecogs.com/svg.image?\bg{black}d) of the object affects the rate of symmetry-breaking, with higher-dimensional objects experiencing slower bifurcation.
 
-**Proof:**
+Proof:
 
 The bifurcation equation is dependent on several constants, one of which is the Dimensional Adjustment Constant ![C_d](https://latex.codecogs.com/svg.image?\bg{black}C_d), which is directly tied to the dimensionality ![d](https://latex.codecogs.com/svg.image?\bg{black}d) of the geometric object. The term ![C_d](https://latex.codecogs.com/svg.image?\bg{black}C_d) modulates the bifurcation rate as a function of dimensionality, accounting for the additional geometric constraints that higher-dimensional objects impose.
 
-**Detailed Explanation:**
+Detailed Explanation:
 
-1. **Dimensional Adjustment Constant ![C_d](https://latex.codecogs.com/svg.image?\bg{black}C_d):**  
+1. Dimensional Adjustment Constant ![C_d](https://latex.codecogs.com/svg.image?\bg{black}C_d):  
    The constant ![C_d](https://latex.codecogs.com/svg.image?\bg{black}C_d) is derived based on the topological complexity of the object. Higher-dimensional objects have more intricate topologies, as reflected by invariants such as the Euler characteristic ![\chi](https://latex.codecogs.com/svg.image?\bg{black}\chi), which influences how deformation propagates through the object. For higher dimensions:
    
    ![C_d = c_d + d_d \left( \frac{\chi}{\ln(n)} \right)](https://latex.codecogs.com/svg.image?\bg{black}C_d%20=%20c_d%20+%20d_d%20\left(%20\frac{\chi}{\ln(n)}%20\right))
 
    where ![c_d](https://latex.codecogs.com/svg.image?\bg{black}c_d) and ![d_d](https://latex.codecogs.com/svg.image?\bg{black}d_d) are constants specific to the dimensionality ![d](https://latex.codecogs.com/svg.image?\bg{black}d), and ![\chi](https://latex.codecogs.com/svg.image?\bg{black}\chi) is the Euler characteristic.
 
-2. **Role of Dimensionality in the Eigenvalue Distribution:**  
+2. Role of Dimensionality in the Eigenvalue Distribution:  
    In higher-dimensional objects, the symmetry group ![G(P)](https://latex.codecogs.com/svg.image?\bg{black}G(P)) is larger, implying that there are more symmetry-preserving transformations. This results in more constraints on how deformation can lead to symmetry-breaking. This is mathematically encoded in the eigenvalues of the Jacobian matrix ![J(t)](https://latex.codecogs.com/svg.image?\bg{black}J(t)). As dimensionality increases, the eigenvalues change more slowly as ![t](https://latex.codecogs.com/svg.image?\bg{black}t) increases, leading to a delayed onset of bifurcation in higher-dimensional systems.
 
-3. **Eigenvalue Scaling with Dimensionality:**  
+3. Eigenvalue Scaling with Dimensionality:  
    Higher-dimensional systems exhibit slower bifurcation because the rate at which the eigenvalues change is reduced in higher dimensions. This is a direct consequence of the fact that higher-dimensional objects have larger symmetry groups, making it more difficult for deformation to break all the symmetries simultaneously.
 
-**Conclusion:**  
+Conclusion:  
 The dimensionality ![d](https://latex.codecogs.com/svg.image?\bg{black}d) influences both the symmetry group size and the topological complexity, which in turn slows the bifurcation process. This completes the proof for Lemma 2.
 
 ## 3.3 Lemma 3: Complexity Dependence of Bifurcation
 
-**Lemma Statement:**  
+Lemma Statement:  
 The complexity ![n](https://latex.codecogs.com/svg.image?\bg{black}n) of the object affects the bifurcation rate, with more complex objects bifurcating more slowly.
 
-**Proof:**
+Proof:
 
 The complexity of a geometric object is directly related to the number of its elements (e.g., sides for polygons, faces for polyhedra). As the number of elements ![n](https://latex.codecogs.com/svg.image?\bg{black}n) increases, the number of independent deformation modes increases, but this growth is constrained by symmetry. This relationship is captured by the Complexity Scaling Constant ![k_d](https://latex.codecogs.com/svg.image?\bg{black}k_d), which scales logarithmically with ![n](https://latex.codecogs.com/svg.image?\bg{black}n).
 
-**Detailed Explanation:**
+Detailed Explanation:
 
-1. **Complexity Scaling Constant ![k_d](https://latex.codecogs.com/svg.image?\bg{black}k_d):**  
+1. Complexity Scaling Constant ![k_d](https://latex.codecogs.com/svg.image?\bg{black}k_d):  
    We have:
 
    ![k_d = \ln(n)](https://latex.codecogs.com/svg.image?\bg{black}k_d%20=%20\ln(n))
 
    This constant models how the complexity of the object affects the rate of bifurcation. As ![n](https://latex.codecogs.com/svg.image?\bg{black}n) increases, the bifurcation process slows down because there are more independent deformation modes to distribute the effects of symmetry-breaking.
 
-2. **Logarithmic Dependence on ![n](https://latex.codecogs.com/svg.image?\bg{black}n):**  
+2. Logarithmic Dependence on ![n](https://latex.codecogs.com/svg.image?\bg{black}n):  
    The logarithmic dependence of ![k_d](https://latex.codecogs.com/svg.image?\bg{black}k_d) on ![n](https://latex.codecogs.com/svg.image?\bg{black}n) reflects that as the number of elements ![n](https://latex.codecogs.com/svg.image?\bg{black}n) increases, the number of independent deformation modes grows slower than linearly. This reduced growth rate means that more complex objects bifurcate more slowly, as they are more resistant to deformations that cause symmetry-breaking.
 
-3. **Eigenvalue Scaling with Complexity:**  
+3. Eigenvalue Scaling with Complexity:  
    The eigenvalues of the Jacobian matrix ![J(t)](https://latex.codecogs.com/svg.image?\bg{black}J(t)) are also affected by the complexity ![n](https://latex.codecogs.com/svg.image?\bg{black}n) of the object. As ![n](https://latex.codecogs.com/svg.image?\bg{black}n) increases, the rate of change of the eigenvalues decreases, leading to slower symmetry-breaking. This is consistent with empirical observations that more complex objects take longer to undergo bifurcation.
 
-**Conclusion:**  
+Conclusion:  
 The logarithmic dependence of ![k_d](https://latex.codecogs.com/svg.image?\bg{black}k_d) on ![n](https://latex.codecogs.com/svg.image?\bg{black}n) ensures that more complex objects bifurcate more slowly. This completes the proof for Lemma 3.
 
 ## 3.4 Full Proof of the Theorem
 
-**Theorem Statement:**  
+Theorem Statement:  
 For any regular geometric object ![P_n](https://latex.codecogs.com/svg.image?\bg{black}P_n) with complexity ![n](https://latex.codecogs.com/svg.image?\bg{black}n) and dimensionality ![d](https://latex.codecogs.com/svg.image?\bg{black}d), there exists a bifurcation point at ![t_c = 0.5](https://latex.codecogs.com/svg.image?\bg{black}t_c%20=%200.5), beyond which the object transitions from regularity to near-regularity, governed by the bifurcation equation.
 
-**Proof:**
+Proof:
 
 ### 1. Pre-Bifurcation Phase ![t \leq t_c](https://latex.codecogs.com/svg.image?\bg{black}t%20\leq%20t_c):  
    In this phase, the system remains stable, as all the eigenvalues of the Jacobian matrix ![J(t)](https://latex.codecogs.com/svg.image?\bg{black}J(t)) have negative real parts. No symmetry-breaking occurs, and the bifurcation equation yields ![\Delta G(t, n, d) = 0](https://latex.codecogs.com/svg.image?\bg{black}\Delta%20G(t,%20n,%20d)%20=%200).
@@ -424,7 +424,7 @@ For any regular geometric object ![P_n](https://latex.codecogs.com/svg.image?\bg
 ### 4. Dimensional and Complexity Dependence:  
    The bifurcation rate depends on both the dimensionality ![d](https://latex.codecogs.com/svg.image?\bg{black}d) and complexity ![n](https://latex.codecogs.com/svg.image?\bg{black}n) of the object. Higher values of ![d](https://latex.codecogs.com/svg.image?\bg{black}d) and ![n](https://latex.codecogs.com/svg.image?\bg{black}n) increase resistance to bifurcation by modulating the constants ![A_d](https://latex.codecogs.com/svg.image?\bg{black}A_d), ![k_d](https://latex.codecogs.com/svg.image?\bg{black}k_d), ![B_d](https://latex.codecogs.com/svg.image?\bg{black}B_d), and ![C_d](https://latex.codecogs.com/svg.image?\bg{black}C_d), as shown in the preceding lemmas.
 
-**Conclusion:**  
+Conclusion:  
 For any regular geometric object ![P_n](https://latex.codecogs.com/svg.image?\bg{black}P_n), symmetry-breaking occurs beyond the critical deformation threshold ![t_c = 0.5](https://latex.codecogs.com/svg.image?\bg{black}t_c%20=%200.5), governed by the bifurcation equation. The bifurcation rate is modulated by the complexity ![n](https://latex.codecogs.com/svg.image?\bg{black}n) and dimensionality ![d](https://latex.codecogs.com/svg.image?\bg{black}d) of the object.
 
 This completes the full proof of the Symmetry-Breaking Bifurcation Theorem.
@@ -437,11 +437,11 @@ This completes the full proof of the Symmetry-Breaking Bifurcation Theorem.
 
 #### Simulation Details:
 
-- **Objects Simulated:** Square ![n = 4](https://latex.codecogs.com/svg.image?\bg{black}n%20=%204) and Hexagon ![n = 6](https://latex.codecogs.com/svg.image?\bg{black}n%20=%206)
-- **Methodology:** Applied incremental deformations, increasing ![t](https://latex.codecogs.com/svg.image?\bg{black}t) from 0 to 1.
-- **Tools Used:** Computational geometry software capable of modeling polygon deformations.
+- Objects Simulated: Square ![n = 4](https://latex.codecogs.com/svg.image?\bg{black}n%20=%204) and Hexagon ![n = 6](https://latex.codecogs.com/svg.image?\bg{black}n%20=%206)
+- Methodology: Applied incremental deformations, increasing ![t](https://latex.codecogs.com/svg.image?\bg{black}t) from 0 to 1.
+- Tools Used: Computational geometry software capable of modeling polygon deformations.
 
-- **Governing Equation for Deformation:**  
+- Governing Equation for Deformation:  
   The governing equation for deformation of a 2D polygon (e.g., hexagon with ![n = 6](https://latex.codecogs.com/svg.image?\bg{black}n%20=%206)) is:
 
   ![F_{2D}(t, n) = \sum_{i=1}^{n} (t \cdot (r_i(t) - r_{i-1}(t)))^2 = 1.5](https://latex.codecogs.com/svg.image?\bg{black}F_{2D}(t,%20n)%20=%20\sum_{i=1}^{n}%20(t%20\cdot%20(r_i(t)%20-%20r_{i-1}(t)))^2%20=%201.5)
@@ -450,19 +450,19 @@ This completes the full proof of the Symmetry-Breaking Bifurcation Theorem.
 
 #### Results:
 
-- **Critical Threshold Confirmation:** Symmetry remained intact until ![t_c = 0.5](https://latex.codecogs.com/svg.image?\bg{black}t_c%20=%200.5).
-- **Computed ![\Delta G](https://latex.codecogs.com/svg.image?\bg{black}\Delta%20G):** Values increased beyond ![t_c](https://latex.codecogs.com/svg.image?\bg{black}t_c), matching theoretical predictions.
-- **Comparison Between Shapes:** The hexagon exhibited slower symmetry-breaking compared to the square, consistent with the theorem. The governing equation confirmed the deformation dynamics observed during simulation.
+- Critical Threshold Confirmation: Symmetry remained intact until ![t_c = 0.5](https://latex.codecogs.com/svg.image?\bg{black}t_c%20=%200.5).
+- Computed ![\Delta G](https://latex.codecogs.com/svg.image?\bg{black}\Delta%20G): Values increased beyond ![t_c](https://latex.codecogs.com/svg.image?\bg{black}t_c), matching theoretical predictions.
+- Comparison Between Shapes: The hexagon exhibited slower symmetry-breaking compared to the square, consistent with the theorem. The governing equation confirmed the deformation dynamics observed during simulation.
 
 ### 4.2 3D Polyhedra
 
 #### Simulation Details:
 
-- **Objects Simulated:** Cube ![n = 6](https://latex.codecogs.com/svg.image?\bg{black}n%20=%206) and Dodecahedron ![n = 12](https://latex.codecogs.com/svg.image?\bg{black}n%20=%2012)
-- **Methodology:** Modeled deformations using finite element methods (FEM).
-- **Tools Used:** 3D modeling software with FEM capabilities.
+- Objects Simulated: Cube ![n = 6](https://latex.codecogs.com/svg.image?\bg{black}n%20=%206) and Dodecahedron ![n = 12](https://latex.codecogs.com/svg.image?\bg{black}n%20=%2012)
+- Methodology: Modeled deformations using finite element methods (FEM).
+- Tools Used: 3D modeling software with FEM capabilities.
 
-- **Governing Equation for Deformation:**  
+- Governing Equation for Deformation:  
   The governing equation for deformation of a 3D polyhedron (e.g., cube with ![n = 6](https://latex.codecogs.com/svg.image?\bg{black}n%20=%206)) is:
 
   ![F_{3D}(t, n) = \sum_{i=1}^{n} (t \cdot (r_i(t) - r_{i-1}(t)))^2 = 1.5](https://latex.codecogs.com/svg.image?\bg{black}F_{3D}(t,%20n)%20=%20\sum_{i=1}^{n}%20(t%20\cdot%20(r_i(t)%20-%20r_{i-1}(t)))^2%20=%201.5)
@@ -471,9 +471,9 @@ This completes the full proof of the Symmetry-Breaking Bifurcation Theorem.
 
 #### Results:
 
-- **Symmetry Preservation until ![t_c](https://latex.codecogs.com/svg.image?\bg{black}t_c):** Both polyhedra maintained symmetry up to ![t = 0.5](https://latex.codecogs.com/svg.image?\bg{black}t%20=%200.5).
-- **Computed ![\Delta G](https://latex.codecogs.com/svg.image?\bg{black}\Delta%20G):** The dodecahedron showed slower symmetry-breaking due to its higher symmetry group size.
-- **Eigenvalue Analysis (Cube):**  
+- Symmetry Preservation until ![t_c](https://latex.codecogs.com/svg.image?\bg{black}t_c): Both polyhedra maintained symmetry up to ![t = 0.5](https://latex.codecogs.com/svg.image?\bg{black}t%20=%200.5).
+- Computed ![\Delta G](https://latex.codecogs.com/svg.image?\bg{black}\Delta%20G): The dodecahedron showed slower symmetry-breaking due to its higher symmetry group size.
+- Eigenvalue Analysis (Cube):  
   The eigenvalue analysis for the cube ![n = 6](https://latex.codecogs.com/svg.image?\bg{black}n%20=%206) shows the following eigenvalues:
 
   ![\lambda_{3D} = [1.5, -1.5, 1.5, 1.5, 1.5, 1.5]](https://latex.codecogs.com/svg.image?\bg{black}\lambda_{3D}%20=%20[1.5,%20-1.5,%201.5,%201.5,%201.5,%201.5])
@@ -484,17 +484,17 @@ This completes the full proof of the Symmetry-Breaking Bifurcation Theorem.
 
   This indicates partial symmetry-breaking, with one negative eigenvalue reflecting the instability.
 
-- **Visual Representations:** Deformation sequences visually confirmed the progression of symmetry-breaking.
+- Visual Representations: Deformation sequences visually confirmed the progression of symmetry-breaking.
 
 ### 4.3 4D Polytopes
 
 #### Simulation Details:
 
-- **Object Simulated:** 600-Cell ![n = 600](https://latex.codecogs.com/svg.image?\bg{black}n%20=%20600)
-- **Methodology:** Applied the bifurcation equation analytically due to computational limitations in visualizing 4D objects.
-- **Tools Used:** Mathematical software capable of handling high-dimensional computations.
+- Object Simulated: 600-Cell ![n = 600](https://latex.codecogs.com/svg.image?\bg{black}n%20=%20600)
+- Methodology: Applied the bifurcation equation analytically due to computational limitations in visualizing 4D objects.
+- Tools Used: Mathematical software capable of handling high-dimensional computations.
 
-- **Governing Equation for Deformation:**  
+- Governing Equation for Deformation:  
   The governing equation for deformation of a 4D polytope (e.g., the 600-cell with ![n = 600](https://latex.codecogs.com/svg.image?\bg{black}n%20=%20600)) is:
 
   ![F_{4D}(t, n) = \sum_{i=1}^{n} (t \cdot (r_i(t) - r_{i-1}(t)))^2 = 150](https://latex.codecogs.com/svg.image?\bg{black}F_{4D}(t,%20n)%20=%20\sum_{i=1}^{n}%20(t%20\cdot%20(r_i(t)%20-%20r_{i-1}(t)))^2%20=%20150)
@@ -503,9 +503,9 @@ This completes the full proof of the Symmetry-Breaking Bifurcation Theorem.
 
 #### Results:
 
-- **Resistance to Bifurcation:** The 600-cell exhibited significant resistance to symmetry-breaking.
-- **Computed ![\Delta G](https://latex.codecogs.com/svg.image?\bg{black}\Delta%20G):** Values showed a slow progression, confirming the theorem's applicability to 4D polytopes.
-- **Eigenvalue Analysis (600-Cell):**  
+- Resistance to Bifurcation: The 600-cell exhibited significant resistance to symmetry-breaking.
+- Computed ![\Delta G](https://latex.codecogs.com/svg.image?\bg{black}\Delta%20G): Values showed a slow progression, confirming the theorem's applicability to 4D polytopes.
+- Eigenvalue Analysis (600-Cell):  
   The eigenvalue analysis for the 600-cell ![n = 600](https://latex.codecogs.com/svg.image?\bg{black}n%20=%20600) shows the following eigenvalues:
 
   ![\lambda_{4D} = [2.5, -597.5, 2.5, 2.5 + 3 \times 10^{-14}j, \dots]](https://latex.codecogs.com/svg.image?\bg{black}\lambda_{4D}%20=%20[2.5,%20-597.5,%202.5,%202.5%20+%203%20\times%2010^{-14}j,%20\dots])
@@ -516,7 +516,7 @@ This completes the full proof of the Symmetry-Breaking Bifurcation Theorem.
 
   This indicates strong symmetry-breaking, as seen from the large negative eigenvalue.
 
-- **Theoretical Alignment:** The behavior matched predictions based on the large symmetry group and complexity.
+- Theoretical Alignment: The behavior matched predictions based on the large symmetry group and complexity.
 
 ---
 
@@ -524,59 +524,59 @@ This completes the full proof of the Symmetry-Breaking Bifurcation Theorem.
 
 ### 5.1 Square (n = 4, 2D Polygon)
 
-- **Symmetry Group Constant** ![A_2 = 8](https://latex.codecogs.com/svg.image?\bg{black}A_2%20=%208)
-- **Complexity Scaling Constant** ![k_2 = \ln(4) \approx 1.3863](https://latex.codecogs.com/svg.image?\bg{black}k_2%20=%20\ln(4)%20\approx%201.3863)
-- **Derived Coefficients:**
+- Symmetry Group Constant ![A_2 = 8](https://latex.codecogs.com/svg.image?\bg{black}A_2%20=%208)
+- Complexity Scaling Constant ![k_2 = \ln(4) \approx 1.3863](https://latex.codecogs.com/svg.image?\bg{black}k_2%20=%20\ln(4)%20\approx%201.3863)
+- Derived Coefficients:
 
   ![a_2 = \frac{1}{\text{Perimeter}} \times \ln(4) = \frac{1}{4s} \times 1.3863](https://latex.codecogs.com/svg.image?\bg{black}a_2%20=%20\frac{1}{\text{Perimeter}}%20\times%20\ln(4)%20=%20\frac{1}{4s}%20\times%201.3863)
 
   ![b_2 = 0.1 + 0.01 \times \ln(4) \approx 0.1139](https://latex.codecogs.com/svg.image?\bg{black}b_2%20=%200.1%20+%200.01%20\times%20\ln(4)%20\approx%200.1139)
 
-- **Logarithmic Deformation Factor** ![B_2 = a_2 \ln(4) + b_2](https://latex.codecogs.com/svg.image?\bg{black}B_2%20=%20a_2%20\ln(4)%20+%20b_2)
-- **Dimensional Adjustment Constant** ![C_2 = 2.23](https://latex.codecogs.com/svg.image?\bg{black}C_2%20=%202.23)
+- Logarithmic Deformation Factor ![B_2 = a_2 \ln(4) + b_2](https://latex.codecogs.com/svg.image?\bg{black}B_2%20=%20a_2%20\ln(4)%20+%20b_2)
+- Dimensional Adjustment Constant ![C_2 = 2.23](https://latex.codecogs.com/svg.image?\bg{black}C_2%20=%202.23)
 
-- **Bifurcation Equation:**
+- Bifurcation Equation:
 
 ![\Delta G(t, 4, 2) = \frac{8}{4^{1.3863}} \cdot (t - 0.5 + \epsilon)^{B_2 \cdot \ln(4) + 2.23}](https://latex.codecogs.com/svg.image?\bg{black}\Delta%20G(t,%204,%202)%20=%20\frac{8}{4^{1.3863}}%20\cdot%20(t%20-%200.5%20+%20\epsilon)^{B_2%20\cdot%20\ln(4)%20+%202.23})
 
 ### 5.2 Hexagon (n = 6, 2D Polygon)
 
-- **Symmetry Group Constant** ![A_2 = 12](https://latex.codecogs.com/svg.image?\bg{black}A_2%20=%2012)
-- **Complexity Scaling Constant** ![k_2 = \ln(6) \approx 1.7918](https://latex.codecogs.com/svg.image?\bg{black}k_2%20=%20\ln(6)%20\approx%201.7918)
-- **Derived Coefficients:**
+- Symmetry Group Constant ![A_2 = 12](https://latex.codecogs.com/svg.image?\bg{black}A_2%20=%2012)
+- Complexity Scaling Constant ![k_2 = \ln(6) \approx 1.7918](https://latex.codecogs.com/svg.image?\bg{black}k_2%20=%20\ln(6)%20\approx%201.7918)
+- Derived Coefficients:
 
   ![a_2 = \frac{1}{6s} \times \ln(6)](https://latex.codecogs.com/svg.image?\bg{black}a_2%20=%20\frac{1}{6s}%20\times%20\ln(6))
 
   ![b_2 = 0.1 + 0.01 \times \ln(6) \approx 0.1179](https://latex.codecogs.com/svg.image?\bg{black}b_2%20=%200.1%20+%200.01%20\times%20\ln(6)%20\approx%200.1179)
 
-- **Logarithmic Deformation Factor** ![B_2 = a_2 \ln(6) + b_2](https://latex.codecogs.com/svg.image?\bg{black}B_2%20=%20a_2%20\ln(6)%20+%20b_2)
-- **Dimensional Adjustment Constant** ![C_2 = 2.23](https://latex.codecogs.com/svg.image?\bg{black}C_2%20=%202.23)
+- Logarithmic Deformation Factor ![B_2 = a_2 \ln(6) + b_2](https://latex.codecogs.com/svg.image?\bg{black}B_2%20=%20a_2%20\ln(6)%20+%20b_2)
+- Dimensional Adjustment Constant ![C_2 = 2.23](https://latex.codecogs.com/svg.image?\bg{black}C_2%20=%202.23)
 
-- **Bifurcation Equation:**
+- Bifurcation Equation:
 
   ![\Delta G(t, 6, 2) = \frac{12}{6^{1.7918}} \cdot (t - 0.5 + \epsilon)^{B_2 \cdot \ln(6) + 2.23}](https://latex.codecogs.com/svg.image?\bg{black}\Delta%20G(t,%206,%202)%20=%20\frac{12}{6^{1.7918}}%20\cdot%20(t%20-%200.5%20+%20\epsilon)^{B_2%20\cdot%20\ln(6)%20+%202.23})
 
 
 ### 5.3 Cube (n = 6, 3D Polyhedron)
 
-- **Symmetry Group Constant** ![A_3 = 24](https://latex.codecogs.com/svg.image?\bg{black}A_3%20=%2024)
-- **Complexity Scaling Constant** ![k_3 = \ln(6) \approx 1.7918](https://latex.codecogs.com/svg.image?\bg{black}k_3%20=%20\ln(6)%20\approx%201.7918)
-- **Derived Coefficients:**
+- Symmetry Group Constant ![A_3 = 24](https://latex.codecogs.com/svg.image?\bg{black}A_3%20=%2024)
+- Complexity Scaling Constant ![k_3 = \ln(6) \approx 1.7918](https://latex.codecogs.com/svg.image?\bg{black}k_3%20=%20\ln(6)%20\approx%201.7918)
+- Derived Coefficients:
 
   ![a_3 = \frac{1}{\text{Surface Area}} \times \ln(6)](https://latex.codecogs.com/svg.image?\bg{black}a_3%20=%20\frac{1}{\text{Surface%20Area}}%20\times%20\ln(6))
 
   ![b_3 = 0.1 + 0.01 \times \ln(6) \approx 0.1179](https://latex.codecogs.com/svg.image?\bg{black}b_3%20=%200.1%20+%200.01%20\times%20\ln(6)%20\approx%200.1179)
 
-- **Logarithmic Deformation Factor** ![B_3 = a_3 \ln(6) + b_3](https://latex.codecogs.com/svg.image?\bg{black}B_3%20=%20a_3%20\ln(6)%20+%20b_3)
-- **Dimensional Adjustment Constant** ![C_3 = 1.77](https://latex.codecogs.com/svg.image?\bg{black}C_3%20=%201.77)
+- Logarithmic Deformation Factor ![B_3 = a_3 \ln(6) + b_3](https://latex.codecogs.com/svg.image?\bg{black}B_3%20=%20a_3%20\ln(6)%20+%20b_3)
+- Dimensional Adjustment Constant ![C_3 = 1.77](https://latex.codecogs.com/svg.image?\bg{black}C_3%20=%201.77)
 
-- **Governing Equation for Deformation:**
+- Governing Equation for Deformation:
 
   ![F_{3D}(t, n) = \sum_{i=1}^{n} (t \cdot (r_i(t) - r_{i-1}(t)))^2 = 1.5](https://latex.codecogs.com/svg.image?\bg{black}F_{3D}(t,%20n)%20=%20\sum_{i=1}^{n}%20(t%20\cdot%20(r_i(t)%20-%20r_{i-1}(t)))^2%20=%201.5)
 
   This equation governs the deformation of the faces over time, where ![t](https://latex.codecogs.com/svg.image?\bg{black}t) is the deformation parameter, and ![n](https://latex.codecogs.com/svg.image?\bg{black}n) is the number of faces.
 
-- **Eigenvalue Analysis:**
+- Eigenvalue Analysis:
 
   The eigenvalue analysis for the cube (n = 6) shows the following eigenvalues:
 
@@ -588,49 +588,49 @@ This completes the full proof of the Symmetry-Breaking Bifurcation Theorem.
 
   This indicates partial symmetry-breaking, with one negative eigenvalue reflecting the instability.
 
-- **Bifurcation Equation:**
+- Bifurcation Equation:
 
   ![\Delta G(t, 6, 3) = \frac{24}{6^{1.7918}} \cdot (t - 0.5 + \epsilon)^{B_3 \cdot \ln(6) + 1.77}](https://latex.codecogs.com/svg.image?\bg{black}\Delta%20G(t,%206,%203)%20=%20\frac{24}{6^{1.7918}}%20\cdot%20(t%20-%200.5%20+%20\epsilon)^{B_3%20\cdot%20\ln(6)%20+%201.77})
 
 ### 5.4 Dodecahedron (n = 12, 3D Polyhedron)
 
-- **Symmetry Group Constant** ![A_3 = 60](https://latex.codecogs.com/svg.image?\bg{black}A_3%20=%2060)
-- **Complexity Scaling Constant** ![k_3 = \ln(12) \approx 2.4849](https://latex.codecogs.com/svg.image?\bg{black}k_3%20=%20\ln(12)%20\approx%202.4849)
-- **Derived Coefficients:**
+- Symmetry Group Constant ![A_3 = 60](https://latex.codecogs.com/svg.image?\bg{black}A_3%20=%2060)
+- Complexity Scaling Constant ![k_3 = \ln(12) \approx 2.4849](https://latex.codecogs.com/svg.image?\bg{black}k_3%20=%20\ln(12)%20\approx%202.4849)
+- Derived Coefficients:
 
   ![a_3 = \frac{1}{\text{Surface Area}} \times \ln(12)](https://latex.codecogs.com/svg.image?\bg{black}a_3%20=%20\frac{1}{\text{Surface%20Area}}%20\times%20\ln(12))
 
   ![b_3 = 0.1 + 0.01 \times \ln(12) \approx 0.1248](https://latex.codecogs.com/svg.image?\bg{black}b_3%20=%200.1%20+%200.01%20\times%20\ln(12)%20\approx%200.1248)
 
-- **Logarithmic Deformation Factor** ![B_3 = a_3 \ln(12) + b_3](https://latex.codecogs.com/svg.image?\bg{black}B_3%20=%20a_3%20\ln(12)%20+%20b_3)
-- **Dimensional Adjustment Constant** ![C_3 = 1.77](https://latex.codecogs.com/svg.image?\bg{black}C_3%20=%201.77)
+- Logarithmic Deformation Factor ![B_3 = a_3 \ln(12) + b_3](https://latex.codecogs.com/svg.image?\bg{black}B_3%20=%20a_3%20\ln(12)%20+%20b_3)
+- Dimensional Adjustment Constant ![C_3 = 1.77](https://latex.codecogs.com/svg.image?\bg{black}C_3%20=%201.77)
 
-- **Bifurcation Equation:**
+- Bifurcation Equation:
 
   ![\Delta G(t, 12, 3) = \frac{60}{12^{2.4849}} \cdot (t - 0.5 + \epsilon)^{B_3 \cdot \ln(12) + 1.77}](https://latex.codecogs.com/svg.image?\bg{black}\Delta%20G(t,%2012,%203)%20=%20\frac{60}{12^{2.4849}}%20\cdot%20(t%20-%200.5%20+%20\epsilon)^{B_3%20\cdot%20\ln(12)%20+%201.77})
 
 ### 5.5 600-Cell (n = 600, 4D Polytope)
 
-- **Symmetry Group Constant** ![A_4 = 14,400](https://latex.codecogs.com/svg.image?\bg{black}A_4%20=%2014400)
-- **Complexity Scaling Constant** ![k_4 = \ln(600) \approx 6.3969](https://latex.codecogs.com/svg.image?\bg{black}k_4%20=%20\ln(600)%20\approx%206.3969)
-- **Derived Coefficients:**
+- Symmetry Group Constant ![A_4 = 14,400](https://latex.codecogs.com/svg.image?\bg{black}A_4%20=%2014400)
+- Complexity Scaling Constant ![k_4 = \ln(600) \approx 6.3969](https://latex.codecogs.com/svg.image?\bg{black}k_4%20=%20\ln(600)%20\approx%206.3969)
+- Derived Coefficients:
 
   ![a_4 = \frac{1}{\text{Hypervolume}} \times \ln(600)](https://latex.codecogs.com/svg.image?\bg{black}a_4%20=%20\frac{1}{\text{Hypervolume}}%20\times%20\ln(600))
 
   ![b_4 = 0.1 + 0.01 \times \ln(600) \approx 0.1639](https://latex.codecogs.com/svg.image?\bg{black}b_4%20=%200.1%20+%200.01%20\times%20\ln(600)%20\approx%200.1639)
 
-- **Logarithmic Deformation Factor** ![B_4 = a_4 \ln(600) + b_4](https://latex.codecogs.com/svg.image?\bg{black}B_4%20=%20a_4%20\ln(600)%20+%20b_4)
-- **Dimensional Adjustment Constant** ![C_4 = 1.0 + 0.1 \left( \frac{120}{\ln(600)} \right) \approx 2.876](https://latex.codecogs.com/svg.image?\bg{black}C_4%20=%201.0%20+%200.1%20\left(%20\frac{120}{\ln(600)}%20\right)%20\approx%202.876)
+- Logarithmic Deformation Factor ![B_4 = a_4 \ln(600) + b_4](https://latex.codecogs.com/svg.image?\bg{black}B_4%20=%20a_4%20\ln(600)%20+%20b_4)
+- Dimensional Adjustment Constant ![C_4 = 1.0 + 0.1 \left( \frac{120}{\ln(600)} \right) \approx 2.876](https://latex.codecogs.com/svg.image?\bg{black}C_4%20=%201.0%20+%200.1%20\left(%20\frac{120}{\ln(600)}%20\right)%20\approx%202.876)
 
   Euler characteristic ![\chi = 120](https://latex.codecogs.com/svg.image?\bg{black}\chi%20=%20120) for the 600-cell.
 
-- **Governing Equation for Deformation:**
+- Governing Equation for Deformation:
 
   ![F_{4D}(t, n) = \sum_{i=1}^{n} (t \cdot (r_i(t) - r_{i-1}(t)))^2 = 150](https://latex.codecogs.com/svg.image?\bg{black}F_{4D}(t,%20n)%20=%20\sum_{i=1}^{n}%20(t%20\cdot%20(r_i(t)%20-%20r_{i-1}(t)))^2%20=%20150)
 
   This equation governs the deformation of the cells over time, where ![t](https://latex.codecogs.com/svg.image?\bg{black}t) is the deformation parameter, and ![n](https://latex.codecogs.com/svg.image?\bg{black}n) is the number of cells.
 
-- **Eigenvalue Analysis:**
+- Eigenvalue Analysis:
 
   The eigenvalue analysis for the 600-cell ![n = 600](https://latex.codecogs.com/svg.image?\bg{black}n%20=%20600) shows the following eigenvalues:
 
@@ -642,7 +642,7 @@ This completes the full proof of the Symmetry-Breaking Bifurcation Theorem.
 
   This indicates strong symmetry-breaking, as seen from the large negative eigenvalue.
 
-- **Bifurcation Equation:**
+- Bifurcation Equation:
 
   ![\Delta G(t, 600, 4) = \frac{14,400}{600^{6.3969}} \cdot (t - 0.5 + \epsilon)^{B_4 \cdot \ln(600) + 2.876}](https://latex.codecogs.com/svg.image?\bg{black}\Delta%20G(t,%20600,%204)%20=%20\frac{14400}{600^{6.3969}}%20\cdot%20(t%20-%200.5%20+%20\epsilon)^{B_4%20\cdot%20\ln(600)%20+%202.876})
 
@@ -651,23 +651,23 @@ This completes the full proof of the Symmetry-Breaking Bifurcation Theorem.
 
 The Symmetry-Breaking Bifurcation Theorem has applications across various fields:
 
-- **Mesh Simplification in Architecture:**
+- Mesh Simplification in Architecture:
 
   Identifies regions where symmetry-breaking is minimal, allowing for efficient mesh simplification without compromising structural integrity.
 
-- **Material Science:**
+- Material Science:
 
   Predicts when crystal lattices will develop defects due to symmetry-breaking, aiding in the design of more resilient materials.
 
-- **Astrophysics:**
+- Astrophysics:
 
   Models the evolution of galaxies as they lose symmetry over time, providing insights into cosmic structure formation.
 
-- **Robotics and Mechanical Engineering:**
+- Robotics and Mechanical Engineering:
 
   Predicts wear and tear in symmetric mechanical components, informing maintenance schedules and design improvements.
 
-- **Topological Data Analysis:**
+- Topological Data Analysis:
 
   Quantifies how high-dimensional data structures lose symmetry as data points are added, aiding in the analysis of complex datasets.
 
@@ -677,29 +677,29 @@ The Symmetry-Breaking Bifurcation Theorem has applications across various fields
 
 ### 7.1 Assumptions
 
-- **Type of Deformations:**
+- Type of Deformations:
 
   - The theorem assumes smooth, continuous deformations of the geometric objects.
   - Deformations are small perturbations that can be mathematically modeled.
   - Two primary types of deformations are assumed:
-    1. **Affine Transformations:** These maintain linear relationships between vertices, edges, and faces, preserving some aspects of symmetry. This is typical for lower-dimensional objects (2D polygons, 3D polyhedra).
-    2. **Nonlinear Perturbations:** These allow for more abrupt, complex symmetry-breaking, especially in higher-dimensional objects like 4D polytopes. These deformations induce sharper bifurcations and more intricate interactions among the cells.
+    1. Affine Transformations: These maintain linear relationships between vertices, edges, and faces, preserving some aspects of symmetry. This is typical for lower-dimensional objects (2D polygons, 3D polyhedra).
+    2. Nonlinear Perturbations: These allow for more abrupt, complex symmetry-breaking, especially in higher-dimensional objects like 4D polytopes. These deformations induce sharper bifurcations and more intricate interactions among the cells.
 
-- **Nature of Geometric Objects:**
+- Nature of Geometric Objects:
 
   - Applies to regular geometric objects with well-defined symmetry groups.
   - Objects are assumed to be convex and exhibit regularity in their structure.
 
-- **Parameters** ![n](https://latex.codecogs.com/svg.image?\bg{black}n) **and** ![d](https://latex.codecogs.com/svg.image?\bg{black}d):
+- Parameters ![n](https://latex.codecogs.com/svg.image?\bg{black}n) and ![d](https://latex.codecogs.com/svg.image?\bg{black}d):
 
   - ![n \geq 3](https://latex.codecogs.com/svg.image?\bg{black}n%20\geq%203) for polygons, ![n \geq 4](https://latex.codecogs.com/svg.image?\bg{black}n%20\geq%204) for polyhedra, and so on.
   - Dimensionality ![d](https://latex.codecogs.com/svg.image?\bg{black}d) is considered for ![d = 2, 3, 4](https://latex.codecogs.com/svg.image?\bg{black}d%20=%202,%203,%204).
 
-- **Logarithms:**
+- Logarithms:
 
   - All logarithms are natural logarithms ![\ln(n)](https://latex.codecogs.com/svg.image?\bg{black}\ln(n)).
  
-- **Assumptions Regarding** ![t_c](https://latex.codecogs.com/svg.image?\bg{black}t_c):
+- Assumptions Regarding ![t_c](https://latex.codecogs.com/svg.image?\bg{black}t_c):
 
   The critical deformation threshold ![t_c = 0.5](https://latex.codecogs.com/svg.image?\bg{black}t_c%20=%200.5) is central to the theorem, marking the point at which symmetry-breaking begins. In the analyses conducted, varying ![t_c](https://latex.codecogs.com/svg.image?\bg{black}t_c) demonstrated significant impact on the onset of bifurcation. Specifically, higher values of ![t_c](https://latex.codecogs.com/svg.image?\bg{black}t_c) delayed the onset of bifurcation, resulting in smoother transitions, while lower values caused bifurcation to occur earlier and more sharply.
 
@@ -709,21 +709,21 @@ The Symmetry-Breaking Bifurcation Theorem has applications across various fields
 
 ### 7.2 Limitations
 
-- **Degenerate Symmetry Groups:**
+- Degenerate Symmetry Groups:
 
   - Objects with degenerate or very small symmetry groups may not conform to the logarithmic scaling of \( k_d \).
   - The theorem may require adjustment for such cases.
 
-- **Non-smooth Deformations:**
+- Non-smooth Deformations:
 
   - Abrupt or discontinuous deformations are not accounted for.
   - Additional terms may be necessary to model non-smooth symmetry-breaking.
 
-- **Extreme Values:**
+- Extreme Values:
 
   - For extremely large \( n \) or deformations approaching \( t = 1 \), the model's predictions may require validation.
 
-- **Higher Dimensions:**
+- Higher Dimensions:
 
   - The theorem is derived for \( d = 2, 3, 4 \). Extension to higher dimensions may need additional considerations.
 
@@ -739,23 +739,23 @@ The theorem provides valuable insights into the interplay between symmetry, comp
 
 ### 8.2 Future Work
 
-- **Empirical Validation Expansion:**
+- Empirical Validation Expansion:
 
   Extend simulations to include more complex and higher-dimensional objects, as well as irregular geometries.
 
-- **Applications in Material Science:**
+- Applications in Material Science:
 
   Apply the theorem to predict and analyze defects in crystalline structures and new materials.
 
-- **Extensions to Non-Regular Geometries:**
+- Extensions to Non-Regular Geometries:
 
   Adapt the theorem to accommodate irregular or complex geometric shapes.
 
-- **Interdisciplinary Research:**
+- Interdisciplinary Research:
 
   Explore applications in biology, such as modeling symmetry-breaking in developmental biology and morphogenesis.
 
-- **Theoretical Refinements:**
+- Theoretical Refinements:
 
   Further refine the derivations of coefficients and constants, potentially incorporating advanced mathematical techniques or additional empirical data.
 
@@ -765,21 +765,21 @@ The theorem provides valuable insights into the interplay between symmetry, comp
 
 ### 9.1 Constants for 2D Polygons (d = 2)
 
-- **Symmetry Group Constant** ![A_2 = 2n](https://latex.codecogs.com/svg.image?\bg{black}A_2%20=%202n)
-- **Complexity Scaling Constant** ![k_2 = \ln(n)](https://latex.codecogs.com/svg.image?\bg{black}k_2%20=%20\ln(n))
-- **Logarithmic Deformation Factor** ![B_2 = \frac{1}{\text{Perimeter}} \times \ln(n)^2 + (0.1 + 0.01 \ln(n))](https://latex.codecogs.com/svg.image?\bg{black}B_2%20=%20\frac{1}{\text{Perimeter}}%20\times%20\ln(n)^2%20+%20(0.1%20+%200.01%20\ln(n)))
-- **Dimensional Adjustment Constant** ![C_2 = 2.23](https://latex.codecogs.com/svg.image?\bg{black}C_2%20=%202.23)
+- Symmetry Group Constant ![A_2 = 2n](https://latex.codecogs.com/svg.image?\bg{black}A_2%20=%202n)
+- Complexity Scaling Constant ![k_2 = \ln(n)](https://latex.codecogs.com/svg.image?\bg{black}k_2%20=%20\ln(n))
+- Logarithmic Deformation Factor ![B_2 = \frac{1}{\text{Perimeter}} \times \ln(n)^2 + (0.1 + 0.01 \ln(n))](https://latex.codecogs.com/svg.image?\bg{black}B_2%20=%20\frac{1}{\text{Perimeter}}%20\times%20\ln(n)^2%20+%20(0.1%20+%200.01%20\ln(n)))
+- Dimensional Adjustment Constant ![C_2 = 2.23](https://latex.codecogs.com/svg.image?\bg{black}C_2%20=%202.23)
 
 ### 9.2 Constants for 3D Polyhedra (d = 3)
 
-- **Symmetry Group Constant**: ![A_3 = |G(P)|](https://latex.codecogs.com/svg.image?\bg{black}A_3%20=%20|G(P)|)
-- **Complexity Scaling Constant**: ![k_3 = \ln(n)](https://latex.codecogs.com/svg.image?\bg{black}k_3%20=%20\ln(n))
-- **Logarithmic Deformation Factor**: ![B_3 = \frac{1}{\text{Surface Area}} \times \ln(n)^2 + (0.1 + 0.01 \ln(n))](https://latex.codecogs.com/svg.image?\bg{black}B_3%20=%20\frac{1}{\text{Surface%20Area}}%20\times%20\ln(n)^2%20+%20(0.1%20+%200.01%20\ln(n)))
-- **Dimensional Adjustment Constant**: ![C_3 = 1.77](https://latex.codecogs.com/svg.image?\bg{black}C_3%20=%201.77)
+- Symmetry Group Constant: ![A_3 = |G(P)|](https://latex.codecogs.com/svg.image?\bg{black}A_3%20=%20|G(P)|)
+- Complexity Scaling Constant: ![k_3 = \ln(n)](https://latex.codecogs.com/svg.image?\bg{black}k_3%20=%20\ln(n))
+- Logarithmic Deformation Factor: ![B_3 = \frac{1}{\text{Surface Area}} \times \ln(n)^2 + (0.1 + 0.01 \ln(n))](https://latex.codecogs.com/svg.image?\bg{black}B_3%20=%20\frac{1}{\text{Surface%20Area}}%20\times%20\ln(n)^2%20+%20(0.1%20+%200.01%20\ln(n)))
+- Dimensional Adjustment Constant: ![C_3 = 1.77](https://latex.codecogs.com/svg.image?\bg{black}C_3%20=%201.77)
 
 ### 9.3 Constants for 4D Polytopes (d = 4)
 
-- **Symmetry Group Constant**: ![A_4 = |G(P)|](https://latex.codecogs.com/svg.image?\bg{black}A_4%20=%20|G(P)|)
-- **Complexity Scaling Constant**: ![k_4 = \ln(n)](https://latex.codecogs.com/svg.image?\bg{black}k_4%20=%20\ln(n))
-- **Logarithmic Deformation Factor**: ![B_4 = \frac{1}{\text{Hypervolume}} \times \ln(n)^2 + (0.1 + 0.01 \ln(n))](https://latex.codecogs.com/svg.image?\bg{black}B_4%20=%20\frac{1}{\text{Hypervolume}}%20\times%20\ln(n)^2%20+%20(0.1%20+%200.01%20\ln(n)))
-- **Dimensional Adjustment Constant**: ![C_4 = 1.0 + 0.1 \left( \frac{\chi}{\ln(n)} \right)](https://latex.codecogs.com/svg.image?\bg{black}C_4%20=%201.0%20+%200.1%20\left(%20\frac{\chi}{\ln(n)}%20\right))
+- Symmetry Group Constant: ![A_4 = |G(P)|](https://latex.codecogs.com/svg.image?\bg{black}A_4%20=%20|G(P)|)
+- Complexity Scaling Constant: ![k_4 = \ln(n)](https://latex.codecogs.com/svg.image?\bg{black}k_4%20=%20\ln(n))
+- Logarithmic Deformation Factor: ![B_4 = \frac{1}{\text{Hypervolume}} \times \ln(n)^2 + (0.1 + 0.01 \ln(n))](https://latex.codecogs.com/svg.image?\bg{black}B_4%20=%20\frac{1}{\text{Hypervolume}}%20\times%20\ln(n)^2%20+%20(0.1%20+%200.01%20\ln(n)))
+- Dimensional Adjustment Constant: ![C_4 = 1.0 + 0.1 \left( \frac{\chi}{\ln(n)} \right)](https://latex.codecogs.com/svg.image?\bg{black}C_4%20=%201.0%20+%200.1%20\left(%20\frac{\chi}{\ln(n)}%20\right))
