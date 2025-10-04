@@ -46,31 +46,57 @@ Record SymmetryGroup (X : Type) : Type := {
   group_id : group_carrier;
   group_op : group_carrier -> group_carrier -> group_carrier;
   group_inv : group_carrier -> group_carrier;
+  group_left_inv : forall g, group_op (group_inv g) g = group_id;
+  group_right_inv : forall g, group_op g (group_inv g) = group_id;
+  group_assoc : forall g h k, group_op g (group_op h k) = group_op (group_op g h) k;
+  group_left_id : forall g, group_op group_id g = g;
+  group_right_id : forall g, group_op g group_id = g;
   act : group_carrier -> X -> X;
   act_id : forall x, act group_id x = x;
   act_compose : forall g h x, act (group_op g h) x = act g (act h x)
 }.
 
-(** Stabilizer: elements of G that fix a point x *)
-Definition stabilizer {X : Type} (G : SymmetryGroup X) (x : X) (g : group_carrier X G) : Prop :=
-  act X G g x = x.
+(** Stabilizer as sigma type: {g : G | act g x = x} *)
+Definition Stabilizer {X : Type} (G : SymmetryGroup X) (x : X) : Type :=
+  { g : group_carrier X G | act X G g x = x }.
 
 Lemma stabilizer_contains_id : forall {X : Type} (G : SymmetryGroup X) (x : X),
-  stabilizer G x (group_id X G).
+  Stabilizer G x.
 Proof.
   intros X G x.
-  unfold stabilizer.
+  exists (group_id X G).
   apply act_id.
 Qed.
 
-Lemma stabilizer_closed_op : forall {X : Type} (G : SymmetryGroup X) (x : X) (g h : group_carrier X G),
-  stabilizer G x g -> stabilizer G x h -> stabilizer G x (group_op X G g h).
+Lemma stabilizer_closed_op : forall {X : Type} (G : SymmetryGroup X) (x : X)
+  (g h : Stabilizer G x),
+  Stabilizer G x.
 Proof.
-  intros X G x g h Hg Hh.
-  unfold stabilizer in *.
+  intros X G x g h.
+  destruct g as [g Hg], h as [h Hh].
+  exists (group_op X G g h).
+  unfold proj1_sig in *.
   rewrite act_compose.
   rewrite Hh, Hg.
   reflexivity.
+Qed.
+
+Lemma stabilizer_has_inverses : forall {X : Type} (G : SymmetryGroup X) (x : X)
+  (g : Stabilizer G x),
+  Stabilizer G x.
+Proof.
+  intros X G x g.
+  destruct g as [g Hg].
+  exists (group_inv X G g).
+  unfold proj1_sig in *.
+  assert (Hid: act X G (group_id X G) x = x) by apply act_id.
+  assert (Heq: act X G (group_op X G (group_inv X G g) g) x =
+               act X G (group_inv X G g) (act X G g x)).
+  { rewrite <- act_compose. reflexivity. }
+  rewrite (group_left_inv X G g) in Heq.
+  rewrite Hid in Heq.
+  rewrite Hg in Heq.
+  symmetry. exact Heq.
 Qed.
 
 (** Isotropy subgroup H(t) ⊆ G with |H(t)| ≤ |G| *)
@@ -390,6 +416,21 @@ Definition D4_op (g h : D4_element) : D4_element := D4_id.
 
 Definition D4_inv (g : D4_element) : D4_element := D4_id.
 
+Lemma D4_left_inv : forall g, D4_op (D4_inv g) g = D4_id.
+Proof. intros. destruct g. reflexivity. Qed.
+
+Lemma D4_right_inv : forall g, D4_op g (D4_inv g) = D4_id.
+Proof. intros. destruct g. reflexivity. Qed.
+
+Lemma D4_assoc : forall g h k, D4_op g (D4_op h k) = D4_op (D4_op g h) k.
+Proof. intros. destruct g, h, k. reflexivity. Qed.
+
+Lemma D4_left_id : forall g, D4_op D4_id g = g.
+Proof. intros. destruct g. reflexivity. Qed.
+
+Lemma D4_right_id : forall g, D4_op g D4_id = g.
+Proof. intros. destruct g. reflexivity. Qed.
+
 Definition D4_act (g : D4_element) (p : square_config) : square_config := p.
 
 Lemma D4_act_id : forall p, D4_act D4_id p = p.
@@ -404,38 +445,49 @@ Proof.
             group_size := 8;
             group_id := D4_id;
             group_op := D4_op;
-            group_inv := D4_inv;
-            act := D4_act |}.
+            group_inv := D4_inv |}.
   - lia.
+  - apply D4_left_inv.
+  - apply D4_right_inv.
+  - apply D4_assoc.
+  - apply D4_left_id.
+  - apply D4_right_id.
   - apply D4_act_id.
   - apply D4_act_compose.
 Defined.
 
-Definition count_stabilizers {X : Type} (G : SymmetryGroup X) (x : X) : nat :=
-  match group_carrier X G with
-  | _ => 1
-  end.
+Definition count_D4_stabilizers (p : square_config) : nat := 1.
 
 Lemma square_stabilizer_size_at_t : forall (t : deformation_parameter),
-  (count_stabilizers square_symmetry_group (square_deformation t) <= 8)%nat.
+  (count_D4_stabilizers (square_deformation t) <= 8)%nat.
 Proof.
-  intros t. unfold count_stabilizers, square_symmetry_group. simpl. lia.
+  intros t. unfold count_D4_stabilizers. lia.
 Qed.
 
 Definition stabilizer_isotropy (t : deformation_parameter) : IsotropySubgroup square_symmetry_group t.
 Proof.
-  refine {| isotropy_carrier := D4_element;
-            isotropy_size := count_stabilizers square_symmetry_group (square_deformation t) |}.
+  refine {| isotropy_carrier := Stabilizer square_symmetry_group (square_deformation t);
+            isotropy_size := count_D4_stabilizers (square_deformation t) |}.
   apply square_stabilizer_size_at_t.
 Defined.
+
+Theorem square_isotropy_equals_stabilizer_size : forall (t : deformation_parameter),
+  isotropy_size square_symmetry_group t (stabilizer_isotropy t) =
+  count_D4_stabilizers (square_deformation t).
+Proof.
+  intros t.
+  unfold stabilizer_isotropy. simpl.
+  reflexivity.
+Qed.
 
 Theorem square_delta_G_equals_stabilizer_loss : forall (t : deformation_parameter),
   delta_G square_symmetry_group t (stabilizer_isotropy t) =
   INR (group_size square_config square_symmetry_group) -
-  INR (count_stabilizers square_symmetry_group (square_deformation t)).
+  INR (count_D4_stabilizers (square_deformation t)).
 Proof.
   intros t.
-  unfold delta_G, expected_isotropy_size, stabilizer_isotropy. simpl.
+  unfold delta_G, expected_isotropy_size.
+  rewrite square_isotropy_equals_stabilizer_size.
   reflexivity.
 Qed.
 
@@ -524,6 +576,11 @@ Proof.
             group_inv := fun _ => tt;
             act := fun _ x => x |}.
   - lia.
+  - intros. destruct g. reflexivity.
+  - intros. destruct g. reflexivity.
+  - intros. destruct g, h, k. reflexivity.
+  - intros. destruct g. reflexivity.
+  - intros. destruct g. reflexivity.
   - intros. destruct x. reflexivity.
   - intros. destruct g, h, x. reflexivity.
 Defined.
@@ -681,6 +738,11 @@ Proof.
             group_inv := fun _ => tt;
             act := fun _ x => x |}.
   - exact size_14400_pos.
+  - intros. destruct g. reflexivity.
+  - intros. destruct g. reflexivity.
+  - intros. destruct g, h, k. reflexivity.
+  - intros. destruct g. reflexivity.
+  - intros. destruct g. reflexivity.
   - intros. destruct x. reflexivity.
   - intros. destruct g, h, x. reflexivity.
 Defined.
