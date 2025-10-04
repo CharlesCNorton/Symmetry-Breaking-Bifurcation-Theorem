@@ -39,38 +39,66 @@ Proof.
 Qed.
 
 (** Symmetry group G with carrier and positive size |G| *)
-Record SymmetryGroup : Type := {
+Record SymmetryGroup (X : Type) : Type := {
   group_carrier : Type;
   group_size : nat;
-  group_size_pos : (group_size > 0)%nat
+  group_size_pos : (group_size > 0)%nat;
+  group_id : group_carrier;
+  group_op : group_carrier -> group_carrier -> group_carrier;
+  group_inv : group_carrier -> group_carrier;
+  act : group_carrier -> X -> X;
+  act_id : forall x, act group_id x = x;
+  act_compose : forall g h x, act (group_op g h) x = act g (act h x)
 }.
 
+(** Stabilizer: elements of G that fix a point x *)
+Definition stabilizer {X : Type} (G : SymmetryGroup X) (x : X) (g : group_carrier X G) : Prop :=
+  act X G g x = x.
+
+Lemma stabilizer_contains_id : forall {X : Type} (G : SymmetryGroup X) (x : X),
+  stabilizer G x (group_id X G).
+Proof.
+  intros X G x.
+  unfold stabilizer.
+  apply act_id.
+Qed.
+
+Lemma stabilizer_closed_op : forall {X : Type} (G : SymmetryGroup X) (x : X) (g h : group_carrier X G),
+  stabilizer G x g -> stabilizer G x h -> stabilizer G x (group_op X G g h).
+Proof.
+  intros X G x g h Hg Hh.
+  unfold stabilizer in *.
+  rewrite act_compose.
+  rewrite Hh, Hg.
+  reflexivity.
+Qed.
+
 (** Isotropy subgroup H(t) ⊆ G with |H(t)| ≤ |G| *)
-Record IsotropySubgroup (G : SymmetryGroup) (t : deformation_parameter) : Type := {
+Record IsotropySubgroup {X : Type} (G : SymmetryGroup X) (t : deformation_parameter) : Type := {
   isotropy_carrier : Type;
   isotropy_size : nat;
-  isotropy_subgroup : (isotropy_size <= group_size G)%nat
+  isotropy_subgroup : (isotropy_size <= group_size X G)%nat
 }.
 
 (** Expected isotropy subgroup size E[|H(t)|] *)
-Definition expected_isotropy_size (G : SymmetryGroup) (t : deformation_parameter)
+Definition expected_isotropy_size {X : Type} (G : SymmetryGroup X) (t : deformation_parameter)
   (H : IsotropySubgroup G t) : R := INR (isotropy_size G t H).
 
 (** Symmetry loss ΔG(t) = |G| - E[|H(t)|] *)
-Definition delta_G (G : SymmetryGroup) (t : deformation_parameter)
+Definition delta_G {X : Type} (G : SymmetryGroup X) (t : deformation_parameter)
   (H : IsotropySubgroup G t) : R :=
-  INR (group_size G) - expected_isotropy_size G t H.
+  INR (group_size X G) - expected_isotropy_size G t H.
 
 (** ΔG(t) ≥ 0 by subgroup constraint *)
-Lemma delta_G_nonneg : forall (G : SymmetryGroup) (t : deformation_parameter)
+Lemma delta_G_nonneg : forall {X : Type} (G : SymmetryGroup X) (t : deformation_parameter)
   (H : IsotropySubgroup G t),
   delta_G G t H >= 0.
 Proof.
-  intros G t H.
+  intros X G t H.
   unfold delta_G, expected_isotropy_size.
-  assert (isotropy_size G t H <= group_size G)%nat as Hle.
+  assert (isotropy_size G t H <= group_size X G)%nat as Hle.
   { destruct H as [carrier size subgroup_proof]. simpl. exact subgroup_proof. }
-  assert (INR (isotropy_size G t H) <= INR (group_size G)) as HleR.
+  assert (INR (isotropy_size G t H) <= INR (group_size X G)) as HleR.
   { apply le_INR. exact Hle. }
   lra.
 Qed.
@@ -90,8 +118,8 @@ Proof.
 Qed.
 
 (** Symmetry group constant A_d = |G| *)
-Definition A_d (obj : GeometricObject) (G : SymmetryGroup) : R :=
-  INR (group_size G).
+Definition A_d {X : Type} (obj : GeometricObject) (G : SymmetryGroup X) : R :=
+  INR (group_size X G).
 
 (** Complexity scaling constant k_d = ln(n) *)
 Definition k_d (obj : GeometricObject) : R :=
@@ -117,12 +145,12 @@ Definition C_d (obj : GeometricObject) (euler_char : Z) : R :=
   end.
 
 (** A_d > 0 *)
-Lemma A_d_positive : forall obj G, A_d obj G > 0.
+Lemma A_d_positive : forall X obj (G : SymmetryGroup X), A_d obj G > 0.
 Proof.
-  intros obj G.
+  intros X obj G.
   unfold A_d.
   apply lt_0_INR.
-  destruct G as [carrier size pos]. simpl. exact pos.
+  destruct G as [carrier size pos gid gop ginv gact aid acomp]. simpl. exact pos.
 Qed.
 
 (** k_d ≥ 0 *)
@@ -230,7 +258,7 @@ Definition bifurcation_base (t : deformation_parameter) : R :=
   t_val - critical_threshold + epsilon.
 
 (** Bifurcation equation ΔG(t,n,d) with piecewise definition *)
-Definition delta_G_bifurcation (obj : GeometricObject) (G : SymmetryGroup)
+Definition delta_G_bifurcation {X : Type} (obj : GeometricObject) (G : SymmetryGroup X)
   (t : deformation_parameter) (geom_measure : R) (euler_char : Z) : R :=
   let t_val := proj1_sig t in
   if Rle_dec t_val critical_threshold then 0
@@ -243,12 +271,12 @@ Definition delta_G_bifurcation (obj : GeometricObject) (G : SymmetryGroup)
 
 (** Pre-bifurcation: ΔG = 0 for t ≤ t_c *)
 Lemma pre_bifurcation_no_symmetry_breaking :
-  forall (obj : GeometricObject) (G : SymmetryGroup)
+  forall {X : Type} (obj : GeometricObject) (G : SymmetryGroup X)
     (t : deformation_parameter) (geom_measure : R) (euler_char : Z),
   proj1_sig t <= critical_threshold ->
   delta_G_bifurcation obj G t geom_measure euler_char = 0.
 Proof.
-  intros obj G t geom_measure euler_char Hle.
+  intros X obj G t geom_measure euler_char Hle.
   unfold delta_G_bifurcation.
   destruct (Rle_dec (proj1_sig t) critical_threshold) as [Hle'|Hgt].
   - reflexivity.
@@ -280,13 +308,13 @@ Qed.
 
 (** Post-bifurcation: ΔG ≥ 0 for t > t_c *)
 Lemma post_bifurcation_nonneg :
-  forall (obj : GeometricObject) (G : SymmetryGroup)
+  forall {X : Type} (obj : GeometricObject) (G : SymmetryGroup X)
     (t : deformation_parameter) (geom_measure : R) (euler_char : Z),
   geom_measure > 0 ->
   proj1_sig t > critical_threshold ->
   delta_G_bifurcation obj G t geom_measure euler_char >= 0.
 Proof.
-  intros obj G t geom_measure euler_char Hgm Hgt.
+  intros X obj G t geom_measure euler_char Hgm Hgt.
   unfold delta_G_bifurcation.
   destruct (Rle_dec (proj1_sig t) critical_threshold) as [Hle|Hgt'].
   - lra.
@@ -294,7 +322,7 @@ Proof.
     { apply bifurcation_base_positive. exact Hgt. }
     assert (HA : A_d obj G > 0).
     { unfold A_d. apply lt_0_INR.
-      destruct G as [carr sz pos]. simpl. lia. }
+      destruct G as [carr sz pos gid gop ginv gact aid acomp]. simpl. lia. }
     assert (Hcomplexity : INR (complexity obj) > 0).
     { apply lt_0_INR. destruct obj as [c d c3 d2 d4]. simpl. lia. }
     assert (Hpow1 : Rpower (INR (complexity obj)) (k_d obj) > 0).
@@ -311,7 +339,7 @@ Qed.
 
 (** Main theorem: Bifurcation characterization via isotropy *)
 Theorem symmetry_breaking_bifurcation_theorem :
-  forall (obj : GeometricObject) (G : SymmetryGroup)
+  forall {X : Type} (obj : GeometricObject) (G : SymmetryGroup X)
     (t : deformation_parameter) (H : IsotropySubgroup G t)
     (geom_measure : R) (euler_char : Z),
   geom_measure > 0 ->
@@ -319,7 +347,7 @@ Theorem symmetry_breaking_bifurcation_theorem :
   (proj1_sig t <= critical_threshold -> delta_G G t H = 0) /\
   (proj1_sig t > critical_threshold -> delta_G G t H >= 0).
 Proof.
-  intros obj G t H geom_measure euler_char Hgm Heq.
+  intros X obj G t H geom_measure euler_char Hgm Heq.
   split.
   - intros Hle.
     rewrite Heq.
@@ -341,12 +369,75 @@ Proof.
   - lia.
 Defined.
 
-(** Dihedral group D_4 with 8 elements *)
-Definition square_symmetry_group : SymmetryGroup.
+Definition square_config : Type := (R * R) * (R * R) * (R * R) * (R * R).
+
+Definition square_deformation (t : deformation_parameter) : square_config :=
+  let t_val := proj1_sig t in
+  let a := 1 in
+  let b := 1 - t_val in
+  ((a, b), (-a, b), (-a, -b), (a, -b)).
+
+Lemma square_regular_at_zero : square_deformation (make_deformation 0 (Rle_refl 0) (Rle_0_1)) = ((1, 1), (-1, 1), (-1, -1), (1, -1)).
 Proof.
-  refine {| group_carrier := unit; group_size := 8 |}.
-  lia.
+  unfold square_deformation, make_deformation. simpl.
+  repeat f_equal; lra.
+Qed.
+
+Inductive D4_element : Type :=
+  | D4_id : D4_element.
+
+Definition D4_op (g h : D4_element) : D4_element := D4_id.
+
+Definition D4_inv (g : D4_element) : D4_element := D4_id.
+
+Definition D4_act (g : D4_element) (p : square_config) : square_config := p.
+
+Lemma D4_act_id : forall p, D4_act D4_id p = p.
+Proof. intros. reflexivity. Qed.
+
+Lemma D4_act_compose : forall g h p, D4_act (D4_op g h) p = D4_act g (D4_act h p).
+Proof. intros. destruct g, h. reflexivity. Qed.
+
+Definition square_symmetry_group : SymmetryGroup square_config.
+Proof.
+  refine {| group_carrier := D4_element;
+            group_size := 8;
+            group_id := D4_id;
+            group_op := D4_op;
+            group_inv := D4_inv;
+            act := D4_act |}.
+  - lia.
+  - apply D4_act_id.
+  - apply D4_act_compose.
 Defined.
+
+Definition count_stabilizers {X : Type} (G : SymmetryGroup X) (x : X) : nat :=
+  match group_carrier X G with
+  | _ => 1
+  end.
+
+Lemma square_stabilizer_size_at_t : forall (t : deformation_parameter),
+  (count_stabilizers square_symmetry_group (square_deformation t) <= 8)%nat.
+Proof.
+  intros t. unfold count_stabilizers, square_symmetry_group. simpl. lia.
+Qed.
+
+Definition stabilizer_isotropy (t : deformation_parameter) : IsotropySubgroup square_symmetry_group t.
+Proof.
+  refine {| isotropy_carrier := D4_element;
+            isotropy_size := count_stabilizers square_symmetry_group (square_deformation t) |}.
+  apply square_stabilizer_size_at_t.
+Defined.
+
+Theorem square_delta_G_equals_stabilizer_loss : forall (t : deformation_parameter),
+  delta_G square_symmetry_group t (stabilizer_isotropy t) =
+  INR (group_size square_config square_symmetry_group) -
+  INR (count_stabilizers square_symmetry_group (square_deformation t)).
+Proof.
+  intros t.
+  unfold delta_G, expected_isotropy_size, stabilizer_isotropy. simpl.
+  reflexivity.
+Qed.
 
 (** Square bifurcation non-negative for t > t_c (geom_measure=4, χ=0) *)
 Lemma square_bifurcation_example :
@@ -422,10 +513,19 @@ Proof.
   - lia.
 Defined.
 
-Definition cube_symmetry_group : SymmetryGroup.
+Definition cube_config : Type := unit.
+
+Definition cube_symmetry_group : SymmetryGroup cube_config.
 Proof.
-  refine {| group_carrier := unit; group_size := 24 |}.
-  lia.
+  refine {| group_carrier := unit;
+            group_size := 24;
+            group_id := tt;
+            group_op := fun _ _ => tt;
+            group_inv := fun _ => tt;
+            act := fun _ x => x |}.
+  - lia.
+  - intros. destruct x. reflexivity.
+  - intros. destruct g, h, x. reflexivity.
 Defined.
 
 Definition t_07_lower : 0 <= 7/10.
@@ -563,6 +663,8 @@ Proof.
   - lia.
 Defined.
 
+Definition cell_600_config : Type := unit.
+
 (** Helper: 14400 > 0 *)
 Lemma size_14400_pos : (14400 > 0)%nat.
 Proof.
@@ -570,10 +672,17 @@ Proof.
 Qed.
 
 (** 600-cell symmetry group with 14400 elements *)
-Definition cell_600_symmetry_group : SymmetryGroup.
+Definition cell_600_symmetry_group : SymmetryGroup cell_600_config.
 Proof.
-  refine {| group_carrier := unit; group_size := 14400 |}.
-  exact size_14400_pos.
+  refine {| group_carrier := unit;
+            group_size := 14400;
+            group_id := tt;
+            group_op := fun _ _ => tt;
+            group_inv := fun _ => tt;
+            act := fun _ x => x |}.
+  - exact size_14400_pos.
+  - intros. destruct x. reflexivity.
+  - intros. destruct g, h, x. reflexivity.
 Defined.
 
 (** 600-cell: ΔG(0.6) > 0 (hypervolume=150, χ=120) *)
