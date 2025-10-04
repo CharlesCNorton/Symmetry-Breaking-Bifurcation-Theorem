@@ -553,3 +553,63 @@ Proof.
         -- exact Hbase06.
         -- exact Hbase_order.
 Qed.
+
+(** 600-Cell: n=600, d=4 *)
+Definition cell_600_example : GeometricObject.
+Proof.
+  refine {| complexity := 600; dimension := 4 |}.
+  - lia.
+  - lia.
+  - lia.
+Defined.
+
+(** Helper: 14400 > 0 *)
+Lemma size_14400_pos : (14400 > 0)%nat.
+Proof.
+  unfold gt. unfold lt. apply Nat.ltb_lt. vm_compute. reflexivity.
+Qed.
+
+(** 600-cell symmetry group with 14400 elements *)
+Definition cell_600_symmetry_group : SymmetryGroup.
+Proof.
+  refine {| group_carrier := unit; group_size := 14400 |}.
+  exact size_14400_pos.
+Defined.
+
+(** 600-cell: ΔG(0.6) > 0 (hypervolume=150, χ=120) *)
+Lemma cell_600_breaking_at_t_06 :
+  forall (H : IsotropySubgroup cell_600_symmetry_group deformation_06),
+  delta_G_bifurcation cell_600_example cell_600_symmetry_group deformation_06 150 120%Z > 0.
+Proof.
+  intros H.
+  unfold delta_G_bifurcation.
+  destruct (Rle_dec (proj1_sig deformation_06) critical_threshold) as [Hle|Hgt].
+  - exfalso. apply Rgt_not_le with (r1 := proj1_sig deformation_06) (r2 := critical_threshold).
+    + apply t_06_past_threshold.
+    + exact Hle.
+  - apply Rmult_lt_0_compat.
+    + apply Rdiv_lt_0_compat.
+      * unfold A_d, cell_600_symmetry_group. simpl.
+        replace (INR 14400) with 14400 by (simpl; ring). lra.
+      * apply exp_pos.
+    + apply exp_pos.
+Qed.
+
+(** Lower bound for t = 3/4 *)
+Definition t_075_lower : 0 <= 3/4.
+Proof. nra. Qed.
+
+(** Upper bound for t = 3/4 *)
+Definition t_075_upper : 3/4 <= 1.
+Proof. nra. Qed.
+
+(** Deformation at t = 0.75 *)
+Definition deformation_075 : deformation_parameter :=
+  make_deformation (3/4) t_075_lower t_075_upper.
+
+(** t = 0.75 exceeds bifurcation threshold *)
+Lemma t_075_past_threshold : proj1_sig deformation_075 > critical_threshold.
+Proof.
+  unfold deformation_075, make_deformation, critical_threshold.
+  simpl. nra.
+Qed.
