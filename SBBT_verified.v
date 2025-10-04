@@ -406,12 +406,16 @@ Definition square_vertex_x (i : nat) (t : R) : R :=
   | _ => 0
   end.
 
+Definition deformation_factor (t : R) : R :=
+  if Rle_dec t 0.5 then 0 else 2 * (t - 0.5).
+
 Definition square_vertex_y (i : nat) (t : R) : R :=
+  let factor := deformation_factor t in
   match i with
-  | 0 => 1 - t
-  | 1 => 1 - t
-  | 2 => -(1 - t)
-  | 3 => -(1 - t)
+  | 0 => 1 - factor
+  | 1 => 1 - factor
+  | 2 => -(1 - factor)
+  | 3 => -(1 - factor)
   | _ => 0
   end.
 
@@ -441,6 +445,33 @@ Proof.
     + assert (0 - 0 = 0) by lra. rewrite H. rewrite Rabs_R0. lra.
 Qed.
 
+Lemma deformation_factor_lipschitz : forall t1 t2,
+  0 <= t1 <= 1 -> 0 <= t2 <= 1 ->
+  Rabs (deformation_factor t1 - deformation_factor t2) <= 2 * Rabs (t1 - t2).
+Proof.
+  intros t1 t2 H1 H2.
+  unfold deformation_factor.
+  destruct (Rle_dec t1 0.5) as [Hle1|Hgt1];
+  destruct (Rle_dec t2 0.5) as [Hle2|Hgt2].
+  - replace (0 - 0) with 0 by lra. rewrite Rabs_R0.
+    assert (H: 0 <= Rabs (t1 - t2)).
+    { apply Rabs_pos. }
+    nra.
+  - assert (Habs: Rabs (0 - 2 * (t2 - 0.5)) = 2 * (t2 - 0.5)).
+    { rewrite Rabs_minus_sym. rewrite Rabs_right; lra. }
+    rewrite Habs.
+    assert (Ht12: t1 - t2 <= 0) by lra.
+    rewrite (Rabs_left (t1 - t2)); lra.
+  - assert (Habs: Rabs (2 * (t1 - 0.5) - 0) = 2 * (t1 - 0.5)).
+    { rewrite Rabs_right; lra. }
+    rewrite Habs.
+    assert (Ht12: t1 - t2 >= 0) by lra.
+    rewrite (Rabs_right (t1 - t2)); lra.
+  - replace (2 * (t1 - 0.5) - 2 * (t2 - 0.5)) with (2 * (t1 - t2)) by lra.
+    rewrite Rabs_mult. rewrite (Rabs_right 2) by lra.
+    lra.
+Qed.
+
 Lemma square_deformation_continuous_y : forall i eps,
   eps > 0 ->
   exists delta, delta > 0 /\
@@ -449,28 +480,77 @@ Lemma square_deformation_continuous_y : forall i eps,
       Rabs (square_vertex_y i t1 - square_vertex_y i t2) < eps.
 Proof.
   intros i eps Heps.
-  exists eps. split.
-  - exact Heps.
+  exists (eps / 2). split.
+  - lra.
   - intros t1 t2 H1 H2 Hdelta.
     destruct i as [|[|[|[|]]]]; unfold square_vertex_y; simpl.
-    + replace ((1 - t1) - (1 - t2)) with (t2 - t1) by lra.
-      rewrite Rabs_minus_sym. exact Hdelta.
-    + replace ((1 - t1) - (1 - t2)) with (t2 - t1) by lra.
-      rewrite Rabs_minus_sym. exact Hdelta.
-    + replace (- (1 - t1) - - (1 - t2)) with (- t2 + t1) by (unfold Rminus; ring_simplify; reflexivity).
-      replace (- t2 + t1) with (t1 - t2) by (unfold Rminus; ring).
-      exact Hdelta.
-    + replace (- (1 - t1) - - (1 - t2)) with (- t2 + t1) by (unfold Rminus; ring_simplify; reflexivity).
-      replace (- t2 + t1) with (t1 - t2) by (unfold Rminus; ring).
-      exact Hdelta.
+    + assert (Hlip: Rabs (deformation_factor t1 - deformation_factor t2) <= 2 * Rabs (t1 - t2)).
+      { apply deformation_factor_lipschitz; assumption. }
+      assert (Hbound: 2 * Rabs (t1 - t2) < eps) by lra.
+      replace (1 - deformation_factor t1 - (1 - deformation_factor t2))
+        with (deformation_factor t2 - deformation_factor t1) by lra.
+      rewrite Rabs_minus_sym. lra.
+    + assert (Hlip: Rabs (deformation_factor t1 - deformation_factor t2) <= 2 * Rabs (t1 - t2)).
+      { apply deformation_factor_lipschitz; assumption. }
+      assert (Hbound: 2 * Rabs (t1 - t2) < eps) by lra.
+      replace (1 - deformation_factor t1 - (1 - deformation_factor t2))
+        with (deformation_factor t2 - deformation_factor t1) by lra.
+      rewrite Rabs_minus_sym. lra.
+    + assert (Hlip: Rabs (deformation_factor t1 - deformation_factor t2) <= 2 * Rabs (t1 - t2)).
+      { apply deformation_factor_lipschitz; assumption. }
+      assert (Hbound: 2 * Rabs (t1 - t2) < eps) by lra.
+      replace (- (1 - deformation_factor t1) - - (1 - deformation_factor t2))
+        with (deformation_factor t1 - deformation_factor t2) by lra.
+      lra.
+    + assert (Hlip: Rabs (deformation_factor t1 - deformation_factor t2) <= 2 * Rabs (t1 - t2)).
+      { apply deformation_factor_lipschitz; assumption. }
+      assert (Hbound: 2 * Rabs (t1 - t2) < eps) by lra.
+      replace (- (1 - deformation_factor t1) - - (1 - deformation_factor t2))
+        with (deformation_factor t1 - deformation_factor t2) by lra.
+      lra.
     + replace (0 - 0) with 0 by lra. rewrite Rabs_R0. lra.
+Qed.
+
+Lemma deformation_factor_zero_for_small_t : forall t,
+  t <= 0.5 -> deformation_factor t = 0.
+Proof.
+  intros t Hle.
+  unfold deformation_factor.
+  destruct (Rle_dec t 0.5) as [H|H].
+  - reflexivity.
+  - exfalso. lra.
+Qed.
+
+Lemma deformation_factor_positive_for_large_t : forall t,
+  t > 0.5 -> deformation_factor t = 2 * (t - 0.5).
+Proof.
+  intros t Hgt.
+  unfold deformation_factor.
+  destruct (Rle_dec t 0.5) as [H|H].
+  - exfalso. lra.
+  - reflexivity.
 Qed.
 
 Lemma square_regular_at_zero : square_deformation (make_deformation 0 (Rle_refl 0) (Rle_0_1)) = ((1, 1), (-1, 1), (-1, -1), (1, -1)).
 Proof.
   unfold square_deformation, make_deformation. simpl.
-  unfold square_vertex_x, square_vertex_y. simpl.
-  repeat f_equal; lra.
+  unfold square_vertex_x, square_vertex_y, deformation_factor. simpl.
+  destruct (Rle_dec 0 (1/2)); repeat f_equal; lra.
+Qed.
+
+Lemma square_remains_square_below_threshold : forall t,
+  proj1_sig t <= critical_threshold ->
+  square_deformation t = square_deformation (make_deformation 0 (Rle_refl 0) (Rle_0_1)).
+Proof.
+  intros t Hle.
+  unfold square_deformation, square_vertex_x, square_vertex_y.
+  destruct t as [t_val [Ht0 Ht1]]. simpl in *.
+  unfold critical_threshold in Hle. simpl in Hle.
+  assert (Hfactor: deformation_factor t_val = 0).
+  { apply deformation_factor_zero_for_small_t. exact Hle. }
+  rewrite Hfactor.
+  unfold deformation_factor at 2.
+  destruct (Rle_dec 0 (1/2)); repeat f_equal; lra.
 Qed.
 
 Theorem square_deformation_is_continuous :
@@ -687,6 +767,25 @@ Definition config_eqb (c1 c2 : square_config) : bool :=
 Definition is_stabilizer_D4 (g : D4_element) (c : square_config) : bool :=
   config_eqb (D4_act g c) c.
 
+Definition vertex_set_contains (c : square_config) (p : R * R) : bool :=
+  let p0 := fst (fst (fst c)) in
+  let p1 := snd (fst (fst c)) in
+  let p2 := snd (fst c) in
+  let p3 := snd c in
+  orb (orb (point_eqb p p0) (point_eqb p p1))
+      (orb (point_eqb p p2) (point_eqb p p3)).
+
+Definition config_set_eqb (c1 c2 : square_config) : bool :=
+  let p0_1 := fst (fst (fst c1)) in
+  let p1_1 := snd (fst (fst c1)) in
+  let p2_1 := snd (fst c1) in
+  let p3_1 := snd c1 in
+  andb (andb (vertex_set_contains c2 p0_1) (vertex_set_contains c2 p1_1))
+       (andb (vertex_set_contains c2 p2_1) (vertex_set_contains c2 p3_1)).
+
+Definition is_geometric_stabilizer_D4 (g : D4_element) (c : square_config) : bool :=
+  config_set_eqb (D4_act g c) c.
+
 Definition count_D4_stabilizers (p : square_config) : nat :=
   (if is_stabilizer_D4 D4_r0 p then 1 else 0) +
   (if is_stabilizer_D4 D4_r90 p then 1 else 0) +
@@ -696,6 +795,16 @@ Definition count_D4_stabilizers (p : square_config) : nat :=
   (if is_stabilizer_D4 D4_sy p then 1 else 0) +
   (if is_stabilizer_D4 D4_sd1 p then 1 else 0) +
   (if is_stabilizer_D4 D4_sd2 p then 1 else 0).
+
+Definition count_D4_geometric_stabilizers (p : square_config) : nat :=
+  (if is_geometric_stabilizer_D4 D4_r0 p then 1 else 0) +
+  (if is_geometric_stabilizer_D4 D4_r90 p then 1 else 0) +
+  (if is_geometric_stabilizer_D4 D4_r180 p then 1 else 0) +
+  (if is_geometric_stabilizer_D4 D4_r270 p then 1 else 0) +
+  (if is_geometric_stabilizer_D4 D4_sx p then 1 else 0) +
+  (if is_geometric_stabilizer_D4 D4_sy p then 1 else 0) +
+  (if is_geometric_stabilizer_D4 D4_sd1 p then 1 else 0) +
+  (if is_geometric_stabilizer_D4 D4_sd2 p then 1 else 0).
 
 Lemma square_stabilizer_size_at_t : forall (t : deformation_parameter),
   (count_D4_stabilizers (square_deformation t) <= 8)%nat.
@@ -763,6 +872,219 @@ Proof.
   { apply D4_r0_stabilizes. }
   rewrite Ht0.
   lia.
+Qed.
+
+Lemma D4_r90_geom_stabilizes_at_t0 :
+  is_geometric_stabilizer_D4 D4_r90 (square_deformation (make_deformation 0 (Rle_refl 0) (Rle_0_1))) = true.
+Proof.
+  unfold is_geometric_stabilizer_D4, config_set_eqb, vertex_set_contains, point_eqb.
+  unfold D4_act, square_deformation, make_deformation. simpl.
+  unfold square_vertex_x, square_vertex_y, rotate_90_point. simpl.
+  repeat (destruct (Req_EM_T _ _); simpl; try lra); reflexivity.
+Qed.
+
+Lemma D4_r180_geom_stabilizes_at_t0 :
+  is_geometric_stabilizer_D4 D4_r180 (square_deformation (make_deformation 0 (Rle_refl 0) (Rle_0_1))) = true.
+Proof.
+  unfold is_geometric_stabilizer_D4, config_set_eqb, vertex_set_contains, point_eqb.
+  unfold D4_act, square_deformation, make_deformation. simpl.
+  unfold square_vertex_x, square_vertex_y, rotate_180_point. simpl.
+  repeat (destruct (Req_EM_T _ _); simpl; try lra); reflexivity.
+Qed.
+
+Lemma D4_r270_geom_stabilizes_at_t0 :
+  is_geometric_stabilizer_D4 D4_r270 (square_deformation (make_deformation 0 (Rle_refl 0) (Rle_0_1))) = true.
+Proof.
+  unfold is_geometric_stabilizer_D4, config_set_eqb, vertex_set_contains, point_eqb.
+  unfold D4_act, square_deformation, make_deformation. simpl.
+  unfold square_vertex_x, square_vertex_y, rotate_270_point. simpl.
+  repeat (destruct (Req_EM_T _ _); simpl; try lra); reflexivity.
+Qed.
+
+Lemma D4_sx_geom_stabilizes_at_t0 :
+  is_geometric_stabilizer_D4 D4_sx (square_deformation (make_deformation 0 (Rle_refl 0) (Rle_0_1))) = true.
+Proof.
+  unfold is_geometric_stabilizer_D4, config_set_eqb, vertex_set_contains, point_eqb.
+  unfold D4_act, square_deformation, make_deformation. simpl.
+  unfold square_vertex_x, square_vertex_y, reflect_x_point. simpl.
+  repeat (destruct (Req_EM_T _ _); simpl; try lra); reflexivity.
+Qed.
+
+Lemma D4_sy_geom_stabilizes_at_t0 :
+  is_geometric_stabilizer_D4 D4_sy (square_deformation (make_deformation 0 (Rle_refl 0) (Rle_0_1))) = true.
+Proof.
+  unfold is_geometric_stabilizer_D4, config_set_eqb, vertex_set_contains, point_eqb.
+  unfold D4_act, square_deformation, make_deformation. simpl.
+  unfold square_vertex_x, square_vertex_y, reflect_y_point. simpl.
+  repeat (destruct (Req_EM_T _ _); simpl; try lra); reflexivity.
+Qed.
+
+Lemma D4_sd1_geom_stabilizes_at_t0 :
+  is_geometric_stabilizer_D4 D4_sd1 (square_deformation (make_deformation 0 (Rle_refl 0) (Rle_0_1))) = true.
+Proof.
+  unfold is_geometric_stabilizer_D4, config_set_eqb, vertex_set_contains, point_eqb.
+  unfold D4_act, square_deformation, make_deformation. simpl.
+  unfold square_vertex_x, square_vertex_y, reflect_d1_point. simpl.
+  repeat (destruct (Req_EM_T _ _); simpl; try lra); reflexivity.
+Qed.
+
+Lemma D4_sd2_geom_stabilizes_at_t0 :
+  is_geometric_stabilizer_D4 D4_sd2 (square_deformation (make_deformation 0 (Rle_refl 0) (Rle_0_1))) = true.
+Proof.
+  unfold is_geometric_stabilizer_D4, config_set_eqb, vertex_set_contains, point_eqb.
+  unfold D4_act, square_deformation, make_deformation. simpl.
+  unfold square_vertex_x, square_vertex_y, reflect_d2_point. simpl.
+  repeat (destruct (Req_EM_T _ _); simpl; try lra); reflexivity.
+Qed.
+
+Lemma D4_r0_geom_stabilizes : forall c, is_geometric_stabilizer_D4 D4_r0 c = true.
+Proof.
+  intros c.
+  unfold is_geometric_stabilizer_D4, config_set_eqb, vertex_set_contains, point_eqb, D4_act.
+  destruct c as [[[p0 p1] p2] p3].
+  destruct p0 as [p0x p0y], p1 as [p1x p1y], p2 as [p2x p2y], p3 as [p3x p3y].
+  simpl.
+  repeat (destruct (Req_EM_T _ _); simpl; try lra); reflexivity.
+Qed.
+
+Theorem square_t0_full_geometric_symmetry :
+  count_D4_geometric_stabilizers (square_deformation (make_deformation 0 (Rle_refl 0) (Rle_0_1))) = 8%nat.
+Proof.
+  unfold count_D4_geometric_stabilizers.
+  rewrite D4_r0_geom_stabilizes.
+  rewrite D4_r90_geom_stabilizes_at_t0.
+  rewrite D4_r180_geom_stabilizes_at_t0.
+  rewrite D4_r270_geom_stabilizes_at_t0.
+  rewrite D4_sx_geom_stabilizes_at_t0.
+  rewrite D4_sy_geom_stabilizes_at_t0.
+  rewrite D4_sd1_geom_stabilizes_at_t0.
+  rewrite D4_sd2_geom_stabilizes_at_t0.
+  reflexivity.
+Qed.
+
+Theorem square_full_symmetry_below_threshold : forall t,
+  proj1_sig t <= critical_threshold ->
+  count_D4_geometric_stabilizers (square_deformation t) = 8%nat.
+Proof.
+  intros t Hle.
+  rewrite (square_remains_square_below_threshold t Hle).
+  apply square_t0_full_geometric_symmetry.
+Qed.
+
+Lemma D4_r90_fails_for_rectangle : forall t,
+  proj1_sig t > critical_threshold ->
+  proj1_sig t < 1 ->
+  is_geometric_stabilizer_D4 D4_r90 (square_deformation t) = false.
+Proof.
+  intros t Hgt Hlt1.
+  unfold is_geometric_stabilizer_D4, config_set_eqb, vertex_set_contains, point_eqb.
+  unfold D4_act, square_deformation.
+  destruct t as [t_val [Ht0 Ht1]]. simpl in *.
+  unfold square_vertex_x, square_vertex_y, rotate_90_point, deformation_factor. simpl.
+  destruct (Rle_dec t_val (1 / 2)); simpl; try (exfalso; unfold critical_threshold in Hgt; simpl in Hgt; lra).
+  repeat (destruct (Req_EM_T _ _); simpl; try reflexivity; try lra).
+Qed.
+
+Lemma D4_r270_fails_for_rectangle : forall t,
+  proj1_sig t > critical_threshold ->
+  proj1_sig t < 1 ->
+  is_geometric_stabilizer_D4 D4_r270 (square_deformation t) = false.
+Proof.
+  intros t Hgt Hlt1.
+  unfold is_geometric_stabilizer_D4, config_set_eqb, vertex_set_contains, point_eqb.
+  unfold D4_act, square_deformation.
+  destruct t as [t_val [Ht0 Ht1]]. simpl in *.
+  unfold square_vertex_x, square_vertex_y, rotate_270_point, deformation_factor. simpl.
+  destruct (Rle_dec t_val (1 / 2)); simpl; try (exfalso; unfold critical_threshold in Hgt; simpl in Hgt; lra).
+  repeat (destruct (Req_EM_T _ _); simpl; try reflexivity; try lra).
+Qed.
+
+Lemma D4_sd1_fails_for_rectangle : forall t,
+  proj1_sig t > critical_threshold ->
+  proj1_sig t < 1 ->
+  is_geometric_stabilizer_D4 D4_sd1 (square_deformation t) = false.
+Proof.
+  intros t Hgt Hlt1.
+  unfold is_geometric_stabilizer_D4, config_set_eqb, vertex_set_contains, point_eqb.
+  unfold D4_act, square_deformation.
+  destruct t as [t_val [Ht0 Ht1]]. simpl in *.
+  unfold square_vertex_x, square_vertex_y, reflect_d1_point, deformation_factor. simpl.
+  destruct (Rle_dec t_val (1 / 2)); simpl; try (exfalso; unfold critical_threshold in Hgt; simpl in Hgt; lra).
+  repeat (destruct (Req_EM_T _ _); simpl; try reflexivity; try lra).
+Qed.
+
+Lemma D4_sd2_fails_for_rectangle : forall t,
+  proj1_sig t > critical_threshold ->
+  proj1_sig t < 1 ->
+  is_geometric_stabilizer_D4 D4_sd2 (square_deformation t) = false.
+Proof.
+  intros t Hgt Hlt1.
+  unfold is_geometric_stabilizer_D4, config_set_eqb, vertex_set_contains, point_eqb.
+  unfold D4_act, square_deformation.
+  destruct t as [t_val [Ht0 Ht1]]. simpl in *.
+  unfold square_vertex_x, square_vertex_y, reflect_d2_point, deformation_factor. simpl.
+  destruct (Rle_dec t_val (1 / 2)); simpl; try (exfalso; unfold critical_threshold in Hgt; simpl in Hgt; lra).
+  repeat (destruct (Req_EM_T _ _); simpl; try reflexivity; try lra).
+Qed.
+
+Lemma D4_r180_preserves_rectangle : forall t,
+  proj1_sig t > critical_threshold ->
+  proj1_sig t < 1 ->
+  is_geometric_stabilizer_D4 D4_r180 (square_deformation t) = true.
+Proof.
+  intros t Hgt Hlt1.
+  unfold is_geometric_stabilizer_D4, config_set_eqb, vertex_set_contains, point_eqb.
+  unfold D4_act, square_deformation.
+  destruct t as [t_val [Ht0 Ht1]]. simpl in *.
+  unfold square_vertex_x, square_vertex_y, rotate_180_point, deformation_factor. simpl.
+  destruct (Rle_dec t_val (1 / 2)); simpl; try (exfalso; unfold critical_threshold in Hgt; simpl in Hgt; lra).
+  repeat (destruct (Req_EM_T _ _); simpl; try lra); reflexivity.
+Qed.
+
+Lemma D4_sx_preserves_rectangle : forall t,
+  proj1_sig t > critical_threshold ->
+  proj1_sig t < 1 ->
+  is_geometric_stabilizer_D4 D4_sx (square_deformation t) = true.
+Proof.
+  intros t Hgt Hlt1.
+  unfold is_geometric_stabilizer_D4, config_set_eqb, vertex_set_contains, point_eqb.
+  unfold D4_act, square_deformation.
+  destruct t as [t_val [Ht0 Ht1]]. simpl in *.
+  unfold square_vertex_x, square_vertex_y, reflect_x_point, deformation_factor. simpl.
+  destruct (Rle_dec t_val (1 / 2)); simpl; try (exfalso; unfold critical_threshold in Hgt; simpl in Hgt; lra).
+  repeat (destruct (Req_EM_T _ _); simpl; try lra); reflexivity.
+Qed.
+
+Lemma D4_sy_preserves_rectangle : forall t,
+  proj1_sig t > critical_threshold ->
+  proj1_sig t < 1 ->
+  is_geometric_stabilizer_D4 D4_sy (square_deformation t) = true.
+Proof.
+  intros t Hgt Hlt1.
+  unfold is_geometric_stabilizer_D4, config_set_eqb, vertex_set_contains, point_eqb.
+  unfold D4_act, square_deformation.
+  destruct t as [t_val [Ht0 Ht1]]. simpl in *.
+  unfold square_vertex_x, square_vertex_y, reflect_y_point, deformation_factor. simpl.
+  destruct (Rle_dec t_val (1 / 2)); simpl; try (exfalso; unfold critical_threshold in Hgt; simpl in Hgt; lra).
+  repeat (destruct (Req_EM_T _ _); simpl; try lra); reflexivity.
+Qed.
+
+Theorem square_rectangle_has_4_symmetries : forall t,
+  proj1_sig t > critical_threshold ->
+  proj1_sig t < 1 ->
+  count_D4_geometric_stabilizers (square_deformation t) = 4%nat.
+Proof.
+  intros t Hgt Hlt1.
+  unfold count_D4_geometric_stabilizers.
+  rewrite D4_r0_geom_stabilizes.
+  rewrite (D4_r90_fails_for_rectangle t Hgt Hlt1).
+  rewrite (D4_r180_preserves_rectangle t Hgt Hlt1).
+  rewrite (D4_r270_fails_for_rectangle t Hgt Hlt1).
+  rewrite (D4_sx_preserves_rectangle t Hgt Hlt1).
+  rewrite (D4_sy_preserves_rectangle t Hgt Hlt1).
+  rewrite (D4_sd1_fails_for_rectangle t Hgt Hlt1).
+  rewrite (D4_sd2_fails_for_rectangle t Hgt Hlt1).
+  reflexivity.
 Qed.
 
 Theorem square_t_pos_loses_sy_symmetry : forall t,
@@ -833,6 +1155,99 @@ Proof.
   apply post_bifurcation_nonneg.
   - lra.
   - apply t_06_past_threshold.
+Qed.
+
+Theorem square_t_06_has_4_geometric_symmetries :
+  count_D4_geometric_stabilizers (square_deformation deformation_06) = 4%nat.
+Proof.
+  apply square_rectangle_has_4_symmetries.
+  - unfold deformation_06, make_deformation. simpl. lra.
+  - unfold deformation_06, make_deformation. simpl. lra.
+Qed.
+
+Theorem square_loses_4_symmetries_at_t_06 :
+  (count_D4_geometric_stabilizers (square_deformation (make_deformation 0 (Rle_refl 0) (Rle_0_1))) -
+   count_D4_geometric_stabilizers (square_deformation deformation_06))%nat = 4%nat.
+Proof.
+  rewrite square_t0_full_geometric_symmetry.
+  rewrite square_t_06_has_4_geometric_symmetries.
+  reflexivity.
+Qed.
+
+Definition concrete_delta_G (t : deformation_parameter) : R :=
+  INR (count_D4_geometric_stabilizers (square_deformation (make_deformation 0 (Rle_refl 0) (Rle_0_1)))) -
+  INR (count_D4_geometric_stabilizers (square_deformation t)).
+
+Theorem concrete_delta_G_at_t0_is_zero :
+  concrete_delta_G (make_deformation 0 (Rle_refl 0) (Rle_0_1)) = 0.
+Proof.
+  unfold concrete_delta_G.
+  assert (H: count_D4_geometric_stabilizers
+             (square_deformation (make_deformation 0 (Rle_refl 0) (Rle_0_1))) = 8%nat).
+  { apply square_t0_full_geometric_symmetry. }
+  rewrite H at 1.
+  rewrite H at 2.
+  simpl. lra.
+Qed.
+
+Theorem concrete_delta_G_at_t_06_is_4 :
+  concrete_delta_G deformation_06 = 4.
+Proof.
+  unfold concrete_delta_G.
+  rewrite square_t0_full_geometric_symmetry.
+  rewrite square_t_06_has_4_geometric_symmetries.
+  simpl. lra.
+Qed.
+
+Theorem concrete_delta_G_zero_below_threshold :
+  forall t, proj1_sig t <= critical_threshold ->
+            concrete_delta_G t = 0.
+Proof.
+  intros t Hle.
+  unfold concrete_delta_G.
+  rewrite square_t0_full_geometric_symmetry at 1.
+  rewrite (square_full_symmetry_below_threshold t Hle).
+  simpl. lra.
+Qed.
+
+Theorem concrete_delta_G_positive_after_threshold :
+  forall t, proj1_sig t > critical_threshold ->
+            proj1_sig t < 1 ->
+            concrete_delta_G t > 0.
+Proof.
+  intros t Hgt Hlt1.
+  unfold concrete_delta_G.
+  rewrite square_t0_full_geometric_symmetry.
+  assert (Hcount: count_D4_geometric_stabilizers (square_deformation t) = 4%nat).
+  { apply square_rectangle_has_4_symmetries; assumption. }
+  rewrite Hcount.
+  simpl. lra.
+Qed.
+
+Theorem bifurcation_formula_matches_concrete_behavior :
+  forall (t : deformation_parameter) (H : IsotropySubgroup square_symmetry_group t),
+  let geom_measure := 4 in
+  let euler_char := 0%Z in
+  (proj1_sig t <= critical_threshold ->
+   concrete_delta_G t = 0 /\
+   delta_G_bifurcation square_example square_symmetry_group t geom_measure euler_char = 0) /\
+  (proj1_sig t > critical_threshold ->
+   proj1_sig t < 1 ->
+   concrete_delta_G t > 0 /\
+   delta_G_bifurcation square_example square_symmetry_group t geom_measure euler_char > 0).
+Proof.
+  intros t H geom_measure euler_char.
+  split.
+  - intros Hle.
+    split.
+    + apply concrete_delta_G_zero_below_threshold. exact Hle.
+    + apply pre_bifurcation_no_symmetry_breaking. exact Hle.
+  - intros Hgt Hlt1.
+    split.
+    + apply concrete_delta_G_positive_after_threshold; assumption.
+    + apply post_bifurcation_nonneg.
+      * unfold geom_measure. lra.
+      * exact Hgt.
 Qed.
 
 (** Square: ΔG(0.6) > 0 (strict positivity) *)
