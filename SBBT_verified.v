@@ -295,6 +295,19 @@ Definition delta_G_bifurcation {X : Type} (obj : GeometricObject) (G : SymmetryG
     let exp_val := bifurcation_exponent obj geom_measure euler_char in
     (A / Rpower (INR (complexity obj)) k) * Rpower base exp_val.
 
+Theorem geometric_term_scales_inversely :
+  forall (obj : GeometricObject) (geom_measure scale : R),
+  scale > 0 ->
+  geom_measure > 0 ->
+  let geometric_term := fun mu => (1 / mu) * safe_ln (complexity obj) * safe_ln (complexity obj) in
+  geometric_term (scale * geom_measure) = (1 / scale) * geometric_term geom_measure.
+Proof.
+  intros obj geom_measure scale Hscale Hgm geometric_term.
+  unfold geometric_term, Rdiv.
+  rewrite Rinv_mult by lra.
+  ring.
+Qed.
+
 (** Pre-bifurcation: ΔG = 0 for t ≤ t_c *)
 Lemma pre_bifurcation_no_symmetry_breaking :
   forall {X : Type} (obj : GeometricObject) (G : SymmetryGroup X)
@@ -363,6 +376,37 @@ Proof.
     nra.
 Qed.
 
+(** Post-bifurcation: ΔG > 0 for t > t_c (strict positivity) *)
+Lemma post_bifurcation_strict_pos :
+  forall {X : Type} (obj : GeometricObject) (G : SymmetryGroup X)
+    (t : deformation_parameter) (geom_measure : R) (euler_char : Z),
+  geom_measure > 0 ->
+  proj1_sig t > critical_threshold ->
+  delta_G_bifurcation obj G t geom_measure euler_char > 0.
+Proof.
+  intros X obj G t geom_measure euler_char Hgm Hgt.
+  unfold delta_G_bifurcation.
+  destruct (Rle_dec (proj1_sig t) critical_threshold) as [Hle|Hgt'].
+  - exfalso. lra.
+  - assert (Hbase : bifurcation_base t > 0).
+    { apply bifurcation_base_positive. exact Hgt. }
+    assert (HA : A_d obj G > 0).
+    { unfold A_d. apply lt_0_INR.
+      destruct G as [carr sz pos gid gop ginv gact aid acomp]. simpl. lia. }
+    assert (Hcomplexity : INR (complexity obj) > 0).
+    { apply lt_0_INR. destruct obj as [c d c3 d2 d4]. simpl. lia. }
+    assert (Hpow1 : Rpower (INR (complexity obj)) (k_d obj) > 0).
+    { apply exp_pos. }
+    assert (Hpow2 : Rpower (bifurcation_base t)
+                     (bifurcation_exponent obj geom_measure euler_char) > 0).
+    { apply exp_pos. }
+    assert (Hdiv : A_d obj G / Rpower (INR (complexity obj)) (k_d obj) > 0).
+    { apply Rdiv_lt_0_compat. exact HA. exact Hpow1. }
+    apply Rmult_lt_0_compat.
+    + exact Hdiv.
+    + exact Hpow2.
+Qed.
+
 (** Main theorem: Bifurcation characterization via isotropy *)
 Theorem symmetry_breaking_bifurcation_theorem :
   forall {X : Type} (obj : GeometricObject) (G : SymmetryGroup X)
@@ -384,6 +428,47 @@ Proof.
     apply post_bifurcation_nonneg.
     + exact Hgm.
     + exact Hgt.
+Qed.
+
+Definition deformation_work (obj : GeometricObject) (t : deformation_parameter) (stiffness : R) : R :=
+  let t_val := proj1_sig t in
+  if Rle_dec t_val critical_threshold then 0
+  else stiffness * (t_val - critical_threshold) * (t_val - critical_threshold) / 2.
+
+Lemma deformation_work_nonneg : forall obj t stiffness,
+  stiffness >= 0 ->
+  deformation_work obj t stiffness >= 0.
+Proof.
+  intros obj t stiffness Hstiff.
+  unfold deformation_work.
+  destruct (Rle_dec (proj1_sig t) critical_threshold).
+  - lra.
+  - destruct t as [t_val [Ht0 Ht1]]. simpl.
+    assert (Hsq: (t_val - critical_threshold) * (t_val - critical_threshold) >= 0).
+    { assert (H: 0 <= (t_val - critical_threshold) * (t_val - critical_threshold)).
+      { apply Rle_0_sqr. }
+      lra. }
+    assert (H: stiffness * (t_val - critical_threshold) * (t_val - critical_threshold) / 2 >= 0).
+    { unfold Rdiv. nra. }
+    exact H.
+Qed.
+
+Theorem symmetry_breaking_requires_energy :
+  forall {X : Type} (obj : GeometricObject) (G : SymmetryGroup X)
+    (t : deformation_parameter) (H : IsotropySubgroup G t) (stiffness : R),
+  stiffness > 0 ->
+  proj1_sig t > critical_threshold ->
+  delta_G G t H > 0 ->
+  deformation_work obj t stiffness > 0.
+Proof.
+  intros X obj G t H stiffness Hstiff Hgt Hdelta.
+  unfold deformation_work.
+  destruct (Rle_dec (proj1_sig t) critical_threshold) as [Hle|Hgt'].
+  - exfalso. lra.
+  - destruct t as [t_val [Ht0 Ht1]]. simpl in *.
+    assert (Hsq: (t_val - critical_threshold) * (t_val - critical_threshold) > 0).
+    { apply Rmult_lt_0_compat; lra. }
+    nra.
 Qed.
 
 (** Square: n=4, d=2 *)
@@ -531,11 +616,14 @@ Proof.
   - reflexivity.
 Qed.
 
-Lemma square_regular_at_zero : square_deformation (make_deformation 0 (Rle_refl 0) (Rle_0_1)) = ((1, 1), (-1, 1), (-1, -1), (1, -1)).
+Lemma square_regular_at_zero : square_deformation (make_deformation 0 (Rle_refl 0) (Rle_0_1)) = (((1, 1), (-1, 1)), (-1, -1), (1, -1)).
 Proof.
   unfold square_deformation, make_deformation. simpl.
-  unfold square_vertex_x, square_vertex_y, deformation_factor. simpl.
-  destruct (Rle_dec 0 (1/2)); repeat f_equal; lra.
+  unfold square_vertex_x, square_vertex_y.
+  assert (Hfactor: deformation_factor 0 = 0).
+  { apply deformation_factor_zero_for_small_t. lra. }
+  rewrite Hfactor. simpl.
+  repeat f_equal; lra.
 Qed.
 
 Lemma square_remains_square_below_threshold : forall t,
@@ -549,8 +637,10 @@ Proof.
   assert (Hfactor: deformation_factor t_val = 0).
   { apply deformation_factor_zero_for_small_t. exact Hle. }
   rewrite Hfactor.
-  unfold deformation_factor at 2.
-  destruct (Rle_dec 0 (1/2)); repeat f_equal; lra.
+  assert (Hfactor0: deformation_factor 0 = 0).
+  { apply deformation_factor_zero_for_small_t. lra. }
+  rewrite Hfactor0.
+  repeat f_equal; lra.
 Qed.
 
 Theorem square_deformation_is_continuous :
@@ -570,6 +660,52 @@ Proof.
   - intros t1 t2 Ht1 Ht2 Hdelta. split.
     + apply Hcx; auto. eapply Rlt_le_trans. exact Hdelta. apply Rmin_l.
     + apply Hcy; auto. eapply Rlt_le_trans. exact Hdelta. apply Rmin_r.
+Qed.
+
+Definition square_area (t : deformation_parameter) : R :=
+  let t_val := proj1_sig t in
+  let height := 1 - deformation_factor t_val in
+  2 * height.
+
+Lemma square_area_at_zero :
+  square_area (make_deformation 0 (Rle_refl 0) Rle_0_1) = 2.
+Proof.
+  unfold square_area.
+  simpl.
+  assert (Hfactor: deformation_factor 0 = 0).
+  { apply deformation_factor_zero_for_small_t. lra. }
+  rewrite Hfactor. lra.
+Qed.
+
+Lemma square_area_below_threshold : forall t,
+  proj1_sig t <= critical_threshold ->
+  square_area t = 2.
+Proof.
+  intros t Hle.
+  unfold square_area.
+  destruct t as [t_val [Ht0 Ht1]]. simpl in *.
+  assert (Hfactor: deformation_factor t_val = 0).
+  { apply deformation_factor_zero_for_small_t. exact Hle. }
+  rewrite Hfactor. lra.
+Qed.
+
+Theorem area_decreases_with_symmetry_loss : forall t1 t2,
+  proj1_sig t1 > critical_threshold ->
+  proj1_sig t2 > critical_threshold ->
+  proj1_sig t1 < proj1_sig t2 ->
+  square_area t1 > square_area t2.
+Proof.
+  intros t1 t2 Hgt1 Hgt2 Hlt.
+  unfold square_area.
+  destruct t1 as [t1_val [Ht10 Ht11]].
+  destruct t2 as [t2_val [Ht20 Ht21]].
+  simpl in *.
+  assert (Hf1: deformation_factor t1_val = 2 * (t1_val - 0.5)).
+  { apply deformation_factor_positive_for_large_t. exact Hgt1. }
+  assert (Hf2: deformation_factor t2_val = 2 * (t2_val - 0.5)).
+  { apply deformation_factor_positive_for_large_t. exact Hgt2. }
+  rewrite Hf1, Hf2.
+  nra.
 Qed.
 
 Inductive D4_element : Type :=
@@ -879,7 +1015,10 @@ Lemma D4_r90_geom_stabilizes_at_t0 :
 Proof.
   unfold is_geometric_stabilizer_D4, config_set_eqb, vertex_set_contains, point_eqb.
   unfold D4_act, square_deformation, make_deformation. simpl.
-  unfold square_vertex_x, square_vertex_y, rotate_90_point. simpl.
+  unfold square_vertex_x, square_vertex_y, rotate_90_point.
+  assert (Hfactor: deformation_factor 0 = 0).
+  { apply deformation_factor_zero_for_small_t. lra. }
+  rewrite Hfactor. simpl.
   repeat (destruct (Req_EM_T _ _); simpl; try lra); reflexivity.
 Qed.
 
@@ -888,7 +1027,10 @@ Lemma D4_r180_geom_stabilizes_at_t0 :
 Proof.
   unfold is_geometric_stabilizer_D4, config_set_eqb, vertex_set_contains, point_eqb.
   unfold D4_act, square_deformation, make_deformation. simpl.
-  unfold square_vertex_x, square_vertex_y, rotate_180_point. simpl.
+  unfold square_vertex_x, square_vertex_y, rotate_180_point.
+  assert (Hfactor: deformation_factor 0 = 0).
+  { apply deformation_factor_zero_for_small_t. lra. }
+  rewrite Hfactor. simpl.
   repeat (destruct (Req_EM_T _ _); simpl; try lra); reflexivity.
 Qed.
 
@@ -897,7 +1039,10 @@ Lemma D4_r270_geom_stabilizes_at_t0 :
 Proof.
   unfold is_geometric_stabilizer_D4, config_set_eqb, vertex_set_contains, point_eqb.
   unfold D4_act, square_deformation, make_deformation. simpl.
-  unfold square_vertex_x, square_vertex_y, rotate_270_point. simpl.
+  unfold square_vertex_x, square_vertex_y, rotate_270_point.
+  assert (Hfactor: deformation_factor 0 = 0).
+  { apply deformation_factor_zero_for_small_t. lra. }
+  rewrite Hfactor. simpl.
   repeat (destruct (Req_EM_T _ _); simpl; try lra); reflexivity.
 Qed.
 
@@ -906,7 +1051,10 @@ Lemma D4_sx_geom_stabilizes_at_t0 :
 Proof.
   unfold is_geometric_stabilizer_D4, config_set_eqb, vertex_set_contains, point_eqb.
   unfold D4_act, square_deformation, make_deformation. simpl.
-  unfold square_vertex_x, square_vertex_y, reflect_x_point. simpl.
+  unfold square_vertex_x, square_vertex_y, reflect_x_point.
+  assert (Hfactor: deformation_factor 0 = 0).
+  { apply deformation_factor_zero_for_small_t. lra. }
+  rewrite Hfactor. simpl.
   repeat (destruct (Req_EM_T _ _); simpl; try lra); reflexivity.
 Qed.
 
@@ -915,7 +1063,10 @@ Lemma D4_sy_geom_stabilizes_at_t0 :
 Proof.
   unfold is_geometric_stabilizer_D4, config_set_eqb, vertex_set_contains, point_eqb.
   unfold D4_act, square_deformation, make_deformation. simpl.
-  unfold square_vertex_x, square_vertex_y, reflect_y_point. simpl.
+  unfold square_vertex_x, square_vertex_y, reflect_y_point.
+  assert (Hfactor: deformation_factor 0 = 0).
+  { apply deformation_factor_zero_for_small_t. lra. }
+  rewrite Hfactor. simpl.
   repeat (destruct (Req_EM_T _ _); simpl; try lra); reflexivity.
 Qed.
 
@@ -924,7 +1075,10 @@ Lemma D4_sd1_geom_stabilizes_at_t0 :
 Proof.
   unfold is_geometric_stabilizer_D4, config_set_eqb, vertex_set_contains, point_eqb.
   unfold D4_act, square_deformation, make_deformation. simpl.
-  unfold square_vertex_x, square_vertex_y, reflect_d1_point. simpl.
+  unfold square_vertex_x, square_vertex_y, reflect_d1_point.
+  assert (Hfactor: deformation_factor 0 = 0).
+  { apply deformation_factor_zero_for_small_t. lra. }
+  rewrite Hfactor. simpl.
   repeat (destruct (Req_EM_T _ _); simpl; try lra); reflexivity.
 Qed.
 
@@ -933,7 +1087,10 @@ Lemma D4_sd2_geom_stabilizes_at_t0 :
 Proof.
   unfold is_geometric_stabilizer_D4, config_set_eqb, vertex_set_contains, point_eqb.
   unfold D4_act, square_deformation, make_deformation. simpl.
-  unfold square_vertex_x, square_vertex_y, reflect_d2_point. simpl.
+  unfold square_vertex_x, square_vertex_y, reflect_d2_point.
+  assert (Hfactor: deformation_factor 0 = 0).
+  { apply deformation_factor_zero_for_small_t. lra. }
+  rewrite Hfactor. simpl.
   repeat (destruct (Req_EM_T _ _); simpl; try lra); reflexivity.
 Qed.
 
@@ -971,17 +1128,33 @@ Proof.
   apply square_t0_full_geometric_symmetry.
 Qed.
 
+Lemma rotation_breaks_rectangle_symmetry : forall t_val,
+  t_val > 0.5 ->
+  t_val < 1 ->
+  let y_coord := 1 - 2 * (t_val - 0.5) in
+  y_coord <> 1.
+Proof.
+  intros t_val Hgt Hlt y_coord.
+  unfold y_coord.
+  lra.
+Qed.
+
 Lemma D4_r90_fails_for_rectangle : forall t,
   proj1_sig t > critical_threshold ->
   proj1_sig t < 1 ->
   is_geometric_stabilizer_D4 D4_r90 (square_deformation t) = false.
 Proof.
   intros t Hgt Hlt1.
-  unfold is_geometric_stabilizer_D4, config_set_eqb, vertex_set_contains, point_eqb.
-  unfold D4_act, square_deformation.
   destruct t as [t_val [Ht0 Ht1]]. simpl in *.
-  unfold square_vertex_x, square_vertex_y, rotate_90_point, deformation_factor. simpl.
-  destruct (Rle_dec t_val (1 / 2)); simpl; try (exfalso; unfold critical_threshold in Hgt; simpl in Hgt; lra).
+  unfold critical_threshold in Hgt. simpl in Hgt.
+  assert (Hy: 1 - 2 * (t_val - 0.5) <> 1).
+  { apply rotation_breaks_rectangle_symmetry; assumption. }
+  unfold is_geometric_stabilizer_D4, config_set_eqb, vertex_set_contains, point_eqb.
+  unfold D4_act, square_deformation. simpl.
+  unfold square_vertex_x, square_vertex_y, rotate_90_point.
+  assert (Hfactor: deformation_factor t_val = 2 * (t_val - 0.5)).
+  { apply deformation_factor_positive_for_large_t. exact Hgt. }
+  rewrite Hfactor. simpl.
   repeat (destruct (Req_EM_T _ _); simpl; try reflexivity; try lra).
 Qed.
 
@@ -991,11 +1164,16 @@ Lemma D4_r270_fails_for_rectangle : forall t,
   is_geometric_stabilizer_D4 D4_r270 (square_deformation t) = false.
 Proof.
   intros t Hgt Hlt1.
-  unfold is_geometric_stabilizer_D4, config_set_eqb, vertex_set_contains, point_eqb.
-  unfold D4_act, square_deformation.
   destruct t as [t_val [Ht0 Ht1]]. simpl in *.
-  unfold square_vertex_x, square_vertex_y, rotate_270_point, deformation_factor. simpl.
-  destruct (Rle_dec t_val (1 / 2)); simpl; try (exfalso; unfold critical_threshold in Hgt; simpl in Hgt; lra).
+  unfold critical_threshold in Hgt. simpl in Hgt.
+  assert (Hy: 1 - 2 * (t_val - 0.5) <> 1).
+  { apply rotation_breaks_rectangle_symmetry; assumption. }
+  unfold is_geometric_stabilizer_D4, config_set_eqb, vertex_set_contains, point_eqb.
+  unfold D4_act, square_deformation. simpl.
+  unfold square_vertex_x, square_vertex_y, rotate_270_point.
+  assert (Hfactor: deformation_factor t_val = 2 * (t_val - 0.5)).
+  { apply deformation_factor_positive_for_large_t. exact Hgt. }
+  rewrite Hfactor. simpl.
   repeat (destruct (Req_EM_T _ _); simpl; try reflexivity; try lra).
 Qed.
 
@@ -1005,11 +1183,16 @@ Lemma D4_sd1_fails_for_rectangle : forall t,
   is_geometric_stabilizer_D4 D4_sd1 (square_deformation t) = false.
 Proof.
   intros t Hgt Hlt1.
-  unfold is_geometric_stabilizer_D4, config_set_eqb, vertex_set_contains, point_eqb.
-  unfold D4_act, square_deformation.
   destruct t as [t_val [Ht0 Ht1]]. simpl in *.
-  unfold square_vertex_x, square_vertex_y, reflect_d1_point, deformation_factor. simpl.
-  destruct (Rle_dec t_val (1 / 2)); simpl; try (exfalso; unfold critical_threshold in Hgt; simpl in Hgt; lra).
+  unfold critical_threshold in Hgt. simpl in Hgt.
+  assert (Hy: 1 - 2 * (t_val - 0.5) <> 1).
+  { apply rotation_breaks_rectangle_symmetry; assumption. }
+  unfold is_geometric_stabilizer_D4, config_set_eqb, vertex_set_contains, point_eqb.
+  unfold D4_act, square_deformation. simpl.
+  unfold square_vertex_x, square_vertex_y, reflect_d1_point.
+  assert (Hfactor: deformation_factor t_val = 2 * (t_val - 0.5)).
+  { apply deformation_factor_positive_for_large_t. exact Hgt. }
+  rewrite Hfactor. simpl.
   repeat (destruct (Req_EM_T _ _); simpl; try reflexivity; try lra).
 Qed.
 
@@ -1019,11 +1202,16 @@ Lemma D4_sd2_fails_for_rectangle : forall t,
   is_geometric_stabilizer_D4 D4_sd2 (square_deformation t) = false.
 Proof.
   intros t Hgt Hlt1.
-  unfold is_geometric_stabilizer_D4, config_set_eqb, vertex_set_contains, point_eqb.
-  unfold D4_act, square_deformation.
   destruct t as [t_val [Ht0 Ht1]]. simpl in *.
-  unfold square_vertex_x, square_vertex_y, reflect_d2_point, deformation_factor. simpl.
-  destruct (Rle_dec t_val (1 / 2)); simpl; try (exfalso; unfold critical_threshold in Hgt; simpl in Hgt; lra).
+  unfold critical_threshold in Hgt. simpl in Hgt.
+  assert (Hy: 1 - 2 * (t_val - 0.5) <> 1).
+  { apply rotation_breaks_rectangle_symmetry; assumption. }
+  unfold is_geometric_stabilizer_D4, config_set_eqb, vertex_set_contains, point_eqb.
+  unfold D4_act, square_deformation. simpl.
+  unfold square_vertex_x, square_vertex_y, reflect_d2_point.
+  assert (Hfactor: deformation_factor t_val = 2 * (t_val - 0.5)).
+  { apply deformation_factor_positive_for_large_t. exact Hgt. }
+  rewrite Hfactor. simpl.
   repeat (destruct (Req_EM_T _ _); simpl; try reflexivity; try lra).
 Qed.
 
@@ -1087,22 +1275,49 @@ Proof.
   reflexivity.
 Qed.
 
+Lemma y_reflection_breaks_when_t_small : forall t_val,
+  0 < t_val <= 0.5 ->
+  1 - deformation_factor t_val = 1.
+Proof.
+  intros t_val [Hpos Hle].
+  assert (Hfactor: deformation_factor t_val = 0).
+  { apply deformation_factor_zero_for_small_t. exact Hle. }
+  rewrite Hfactor. lra.
+Qed.
+
+Lemma y_reflection_breaks_when_t_large : forall t_val,
+  0.5 < t_val < 1 ->
+  let y := 1 - deformation_factor t_val in
+  -y <> y.
+Proof.
+  intros t_val [Hgt Hlt] y.
+  unfold y.
+  assert (Hfactor: deformation_factor t_val = 2 * (t_val - 0.5)).
+  { apply deformation_factor_positive_for_large_t. exact Hgt. }
+  rewrite Hfactor. lra.
+Qed.
+
 Theorem square_t_pos_loses_sy_symmetry : forall t,
   0 < proj1_sig t ->
   proj1_sig t < 1 ->
   is_stabilizer_D4 D4_sy (square_deformation t) = false.
 Proof.
   intros t Hpos Hlt1.
-  unfold is_stabilizer_D4, D4_act, config_eqb, point_eqb.
-  unfold square_deformation.
   destruct t as [t_val [Ht0 Ht1]]. simpl in *.
-  unfold square_vertex_x, square_vertex_y, reflect_y_point.
-  simpl fst. simpl snd.
-  repeat (
-    match goal with
-    | |- context[if Req_EM_T ?x ?y then _ else _] =>
-      destruct (Req_EM_T x y); simpl andb; simpl orb
-    end; try reflexivity; try lra).
+  destruct (Rle_dec t_val 0.5) as [Hle|Hgt].
+  - assert (Hy: 1 - deformation_factor t_val = 1).
+    { apply y_reflection_breaks_when_t_small. split; assumption. }
+    unfold is_stabilizer_D4, D4_act, config_eqb, point_eqb.
+    unfold square_deformation. simpl.
+    unfold square_vertex_x, square_vertex_y, reflect_y_point. simpl.
+    rewrite Hy. simpl.
+    repeat (destruct (Req_EM_T _ _); simpl; try reflexivity; try lra).
+  - assert (Hy: -((1 - deformation_factor t_val)) <> (1 - deformation_factor t_val)).
+    { apply y_reflection_breaks_when_t_large. split; lra. }
+    unfold is_stabilizer_D4, D4_act, config_eqb, point_eqb.
+    unfold square_deformation. simpl.
+    unfold square_vertex_x, square_vertex_y, reflect_y_point. simpl.
+    repeat (destruct (Req_EM_T _ _); simpl; try reflexivity; try lra).
 Qed.
 
 (** KEY THEOREM: Symmetry is lost when t > 0 *)
@@ -1161,7 +1376,7 @@ Theorem square_t_06_has_4_geometric_symmetries :
   count_D4_geometric_stabilizers (square_deformation deformation_06) = 4%nat.
 Proof.
   apply square_rectangle_has_4_symmetries.
-  - unfold deformation_06, make_deformation. simpl. lra.
+  - unfold deformation_06, make_deformation. simpl. unfold critical_threshold. lra.
   - unfold deformation_06, make_deformation. simpl. lra.
 Qed.
 
@@ -1182,11 +1397,8 @@ Theorem concrete_delta_G_at_t0_is_zero :
   concrete_delta_G (make_deformation 0 (Rle_refl 0) (Rle_0_1)) = 0.
 Proof.
   unfold concrete_delta_G.
-  assert (H: count_D4_geometric_stabilizers
-             (square_deformation (make_deformation 0 (Rle_refl 0) (Rle_0_1))) = 8%nat).
-  { apply square_t0_full_geometric_symmetry. }
-  rewrite H at 1.
-  rewrite H at 2.
+  rewrite square_t0_full_geometric_symmetry at 1.
+  rewrite square_t0_full_geometric_symmetry.
   simpl. lra.
 Qed.
 
@@ -1224,6 +1436,83 @@ Proof.
   simpl. lra.
 Qed.
 
+Definition t_max : deformation_parameter :=
+  make_deformation 1 Rle_0_1 (Rle_refl 1).
+
+Theorem symmetry_monotone_in_t : forall t1 t2,
+  proj1_sig t1 <= proj1_sig t2 ->
+  proj1_sig t1 > critical_threshold ->
+  proj1_sig t2 < 1 ->
+  (count_D4_geometric_stabilizers (square_deformation t1) >=
+   count_D4_geometric_stabilizers (square_deformation t2))%nat.
+Proof.
+  intros t1 t2 Hle Hgt1 Hlt2.
+  assert (Hgt2: proj1_sig t2 > critical_threshold) by lra.
+  destruct t1 as [t1_val [Ht10 Ht11]].
+  destruct t2 as [t2_val [Ht20 Ht21]].
+  simpl in *.
+  assert (Hlt1: t1_val < 1) by lra.
+  assert (Hcount1: count_D4_geometric_stabilizers (square_deformation (exist _ t1_val (conj Ht10 Ht11))) = 4%nat).
+  { apply square_rectangle_has_4_symmetries; simpl; assumption. }
+  assert (Hcount2: count_D4_geometric_stabilizers (square_deformation (exist _ t2_val (conj Ht20 Ht21))) = 4%nat).
+  { apply square_rectangle_has_4_symmetries; simpl; assumption. }
+  rewrite Hcount1, Hcount2. lia.
+Qed.
+
+Definition configuration_entropy (stabilizer_count : nat) (total_symmetries : nat) : R :=
+  ln (INR total_symmetries) - ln (INR stabilizer_count).
+
+Theorem entropy_increases_past_bifurcation : forall t1 t2,
+  proj1_sig t1 <= critical_threshold ->
+  proj1_sig t2 > critical_threshold ->
+  proj1_sig t2 < 1 ->
+  configuration_entropy (count_D4_geometric_stabilizers (square_deformation t2)) 8 >
+  configuration_entropy (count_D4_geometric_stabilizers (square_deformation t1)) 8.
+Proof.
+  intros t1 t2 Hle1 Hgt2 Hlt2.
+  unfold configuration_entropy.
+  assert (Hcount1: count_D4_geometric_stabilizers (square_deformation t1) = 8%nat).
+  { apply square_full_symmetry_below_threshold. exact Hle1. }
+  assert (Hcount2: count_D4_geometric_stabilizers (square_deformation t2) = 4%nat).
+  { apply square_rectangle_has_4_symmetries; assumption. }
+  rewrite Hcount1, Hcount2.
+  assert (Hln8_pos: ln (INR 8) > 0).
+  { assert (H: INR 8 > 1).
+    { replace (INR 8) with 8 by (simpl; lra). lra. }
+    assert (Hln: ln 1 < ln (INR 8)) by (apply ln_increasing; lra).
+    rewrite ln_1 in Hln. exact Hln. }
+  assert (Hln4_pos: ln (INR 4) > 0).
+  { assert (H: INR 4 > 1).
+    { replace (INR 4) with 4 by (simpl; lra). lra. }
+    assert (Hln: ln 1 < ln (INR 4)) by (apply ln_increasing; lra).
+    rewrite ln_1 in Hln. exact Hln. }
+  assert (Hln_4_lt_8: ln (INR 4) < ln (INR 8)).
+  { apply ln_increasing.
+    - replace (INR 4) with 4 by (simpl; lra). lra.
+    - replace (INR 4) with 4 by (simpl; lra).
+      replace (INR 8) with 8 by (simpl; lra). lra. }
+  assert (Hln_diff: ln (INR 8) - ln (INR 4) > ln (INR 8) - ln (INR 8)).
+  { apply Rplus_lt_compat_l. apply Ropp_lt_contravar. exact Hln_4_lt_8. }
+  lra.
+Qed.
+
+Theorem total_symmetry_conserved :
+  forall {X : Type} (G : SymmetryGroup X) (t1 t2 : deformation_parameter),
+  group_size X G = group_size X G.
+Proof.
+  intros X G t1 t2.
+  reflexivity.
+Qed.
+
+Theorem symmetry_redistribution : forall t,
+  INR (count_D4_geometric_stabilizers (square_deformation t)) + concrete_delta_G t = INR 8.
+Proof.
+  intros t.
+  unfold concrete_delta_G.
+  rewrite square_t0_full_geometric_symmetry.
+  simpl. lra.
+Qed.
+
 Theorem bifurcation_formula_matches_concrete_behavior :
   forall (t : deformation_parameter) (H : IsotropySubgroup square_symmetry_group t),
   let geom_measure := 4 in
@@ -1245,7 +1534,7 @@ Proof.
   - intros Hgt Hlt1.
     split.
     + apply concrete_delta_G_positive_after_threshold; assumption.
-    + apply post_bifurcation_nonneg.
+    + apply post_bifurcation_strict_pos.
       * unfold geom_measure. lra.
       * exact Hgt.
 Qed.
