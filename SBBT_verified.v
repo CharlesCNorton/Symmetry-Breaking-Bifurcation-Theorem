@@ -613,3 +613,134 @@ Proof.
   unfold deformation_075, make_deformation, critical_threshold.
   simpl. nra.
 Qed.
+
+(** 600-cell: ΔG(0.75) > 0 *)
+Lemma cell_600_breaking_at_t_075 :
+  forall (H : IsotropySubgroup cell_600_symmetry_group deformation_075),
+  delta_G_bifurcation cell_600_example cell_600_symmetry_group deformation_075 150 120%Z > 0.
+Proof.
+  intros H.
+  unfold delta_G_bifurcation.
+  destruct (Rle_dec (proj1_sig deformation_075) critical_threshold) as [Hle|Hgt].
+  - exfalso. apply Rgt_not_le with (r1 := proj1_sig deformation_075) (r2 := critical_threshold).
+    + apply t_075_past_threshold.
+    + exact Hle.
+  - apply Rmult_lt_0_compat.
+    + apply Rdiv_lt_0_compat.
+      * unfold A_d, cell_600_symmetry_group. simpl.
+        replace (INR 14400) with 14400 by (simpl; ring). lra.
+      * apply exp_pos.
+    + apply exp_pos.
+Qed.
+
+(** Helper: ln(600) > 0 *)
+Lemma ln_600_pos : ln (INR 600) > 0.
+Proof.
+  assert (Hinr600 : INR 600 > 1).
+  { replace (INR 600) with 600 by (simpl; ring). lra. }
+  assert (Hln_inc : ln 1 < ln (INR 600)) by (apply ln_increasing; lra).
+  rewrite ln_1 in Hln_inc. exact Hln_inc.
+Qed.
+
+(** Helper: B_d term for 600-cell is positive *)
+Lemma B_d_600_ln_600_pos :
+  (1 / 150 * ln (INR 600) * ln (INR 600) + (0.1 + 0.01 * ln (INR 600))) * ln (INR 600) > 0.
+Proof.
+  apply Rmult_lt_0_compat.
+  - apply Rplus_lt_0_compat.
+    + apply Rmult_lt_0_compat.
+      * apply Rmult_lt_0_compat.
+        -- nra.
+        -- apply ln_600_pos.
+      * apply ln_600_pos.
+    + assert (Hln : ln (INR 600) > 0) by apply ln_600_pos.
+      nra.
+  - apply ln_600_pos.
+Qed.
+
+(** Helper: C_d term for 600-cell is positive *)
+Lemma C_d_600_pos : 1 + 0.1 * (IZR 120 / safe_ln 600) > 0.
+Proof.
+  assert (Hln : safe_ln 600 > 0).
+  { unfold safe_ln. simpl. apply ln_600_pos. }
+  assert (H120 : IZR 120 > 0).
+  { vm_compute. lra. }
+  assert (Hfrac : IZR 120 / safe_ln 600 > 0).
+  { apply Rdiv_lt_0_compat; assumption. }
+  nra.
+Qed.
+
+(** Helper: bifurcation exponent for 600-cell is positive *)
+Lemma bifurcation_exp_600_pos :
+  bifurcation_exponent cell_600_example 150 120 > 0.
+Proof.
+  unfold bifurcation_exponent.
+  assert (HB : B_d cell_600_example 150 * safe_ln (complexity cell_600_example) > 0).
+  { unfold cell_600_example, B_d, safe_ln. simpl.
+    apply B_d_600_ln_600_pos. }
+  assert (HC : C_d cell_600_example 120 > 0).
+  { unfold cell_600_example, C_d. simpl.
+    assert (Hln : safe_ln 600 > 0).
+    { unfold safe_ln. simpl. apply ln_600_pos. }
+    assert (H120 : IZR 120 > 0) by (vm_compute; lra).
+    assert (Hfrac : IZR 120 / safe_ln 600 > 0).
+    { apply Rdiv_lt_0_compat; assumption. }
+    nra. }
+  lra.
+Qed.
+
+(** 600-cell monotonicity: ΔG(0.6) < ΔG(0.75) *)
+Lemma cell_600_monotonicity_06_to_075 :
+  forall (H06 : IsotropySubgroup cell_600_symmetry_group deformation_06)
+         (H075 : IsotropySubgroup cell_600_symmetry_group deformation_075),
+  delta_G_bifurcation cell_600_example cell_600_symmetry_group deformation_06 150 120%Z <
+  delta_G_bifurcation cell_600_example cell_600_symmetry_group deformation_075 150 120%Z.
+Proof.
+  intros H06 H075.
+  unfold delta_G_bifurcation.
+  destruct (Rle_dec (proj1_sig deformation_06) critical_threshold) as [Hle06|Hgt06];
+  destruct (Rle_dec (proj1_sig deformation_075) critical_threshold) as [Hle075|Hgt075].
+  - exfalso. apply Rgt_not_le with (r1 := proj1_sig deformation_06) (r2 := critical_threshold).
+    + apply t_06_past_threshold.
+    + exact Hle06.
+  - exfalso. apply Rgt_not_le with (r1 := proj1_sig deformation_06) (r2 := critical_threshold).
+    + apply t_06_past_threshold.
+    + exact Hle06.
+  - exfalso. apply Rgt_not_le with (r1 := proj1_sig deformation_075) (r2 := critical_threshold).
+    + apply t_075_past_threshold.
+    + exact Hle075.
+  - assert (Hbase06 : bifurcation_base deformation_06 > 0).
+    { apply bifurcation_base_positive. apply t_06_past_threshold. }
+    assert (Hbase075 : bifurcation_base deformation_075 > 0).
+    { apply bifurcation_base_positive. apply t_075_past_threshold. }
+    assert (Hbase_order : bifurcation_base deformation_06 < bifurcation_base deformation_075).
+    { unfold bifurcation_base, deformation_06, deformation_075, make_deformation.
+      simpl. unfold critical_threshold, epsilon. nra. }
+    assert (Hcoeff_pos : A_d cell_600_example cell_600_symmetry_group /
+                         Rpower (INR (complexity cell_600_example)) (k_d cell_600_example) > 0).
+    { apply Rdiv_lt_0_compat.
+      - unfold A_d, cell_600_symmetry_group. simpl.
+        replace (INR 14400) with 14400 by (simpl; ring). lra.
+      - apply exp_pos. }
+    assert (Hexp_pos : bifurcation_exponent cell_600_example 150 120 > 0).
+    { apply bifurcation_exp_600_pos. }
+    apply Rmult_lt_compat_l.
+    + exact Hcoeff_pos.
+    + assert (Hrp06 : Rpower (bifurcation_base deformation_06)
+                             (bifurcation_exponent cell_600_example 150 120) =
+                     exp (bifurcation_exponent cell_600_example 150 120 *
+                         ln (bifurcation_base deformation_06))).
+      { unfold Rpower. reflexivity. }
+      assert (Hrp075 : Rpower (bifurcation_base deformation_075)
+                             (bifurcation_exponent cell_600_example 150 120) =
+                     exp (bifurcation_exponent cell_600_example 150 120 *
+                         ln (bifurcation_base deformation_075))).
+      { unfold Rpower. reflexivity. }
+      rewrite Hrp06, Hrp075.
+      apply exp_increasing.
+      apply Rmult_lt_compat_l.
+      * exact Hexp_pos.
+      * apply ln_increasing.
+        -- exact Hbase06.
+        -- exact Hbase_order.
+Qed.
