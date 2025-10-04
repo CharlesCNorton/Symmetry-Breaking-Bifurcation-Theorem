@@ -397,16 +397,99 @@ Defined.
 
 Definition square_config : Type := (R * R) * (R * R) * (R * R) * (R * R).
 
+Definition square_vertex_x (i : nat) (t : R) : R :=
+  match i with
+  | 0 => 1
+  | 1 => -1
+  | 2 => -1
+  | 3 => 1
+  | _ => 0
+  end.
+
+Definition square_vertex_y (i : nat) (t : R) : R :=
+  match i with
+  | 0 => 1 - t
+  | 1 => 1 - t
+  | 2 => -(1 - t)
+  | 3 => -(1 - t)
+  | _ => 0
+  end.
+
 Definition square_deformation (t : deformation_parameter) : square_config :=
   let t_val := proj1_sig t in
-  let a := 1 in
-  let b := 1 - t_val in
-  ((a, b), (-a, b), (-a, -b), (a, -b)).
+  ((square_vertex_x 0 t_val, square_vertex_y 0 t_val),
+   (square_vertex_x 1 t_val, square_vertex_y 1 t_val),
+   (square_vertex_x 2 t_val, square_vertex_y 2 t_val),
+   (square_vertex_x 3 t_val, square_vertex_y 3 t_val)).
+
+Lemma square_deformation_continuous_x : forall i eps,
+  eps > 0 ->
+  exists delta, delta > 0 /\
+    forall t1 t2, (0 <= t1 <= 1) -> (0 <= t2 <= 1) ->
+      Rabs (t1 - t2) < delta ->
+      Rabs (square_vertex_x i t1 - square_vertex_x i t2) < eps.
+Proof.
+  intros i eps Heps.
+  exists 1. split.
+  - lra.
+  - intros t1 t2 H1 H2 Hdelta.
+    destruct i as [|[|[|[|]]]]; unfold square_vertex_x; simpl.
+    + assert (1 - 1 = 0) by lra. rewrite H. rewrite Rabs_R0. lra.
+    + assert (-1 - -1 = 0) by lra. rewrite H. rewrite Rabs_R0. lra.
+    + assert (-1 - -1 = 0) by lra. rewrite H. rewrite Rabs_R0. lra.
+    + assert (1 - 1 = 0) by lra. rewrite H. rewrite Rabs_R0. lra.
+    + assert (0 - 0 = 0) by lra. rewrite H. rewrite Rabs_R0. lra.
+Qed.
+
+Lemma square_deformation_continuous_y : forall i eps,
+  eps > 0 ->
+  exists delta, delta > 0 /\
+    forall t1 t2, (0 <= t1 <= 1) -> (0 <= t2 <= 1) ->
+      Rabs (t1 - t2) < delta ->
+      Rabs (square_vertex_y i t1 - square_vertex_y i t2) < eps.
+Proof.
+  intros i eps Heps.
+  exists eps. split.
+  - exact Heps.
+  - intros t1 t2 H1 H2 Hdelta.
+    destruct i as [|[|[|[|]]]]; unfold square_vertex_y; simpl.
+    + replace ((1 - t1) - (1 - t2)) with (t2 - t1) by lra.
+      rewrite Rabs_minus_sym. exact Hdelta.
+    + replace ((1 - t1) - (1 - t2)) with (t2 - t1) by lra.
+      rewrite Rabs_minus_sym. exact Hdelta.
+    + replace (- (1 - t1) - - (1 - t2)) with (- t2 + t1) by (unfold Rminus; ring_simplify; reflexivity).
+      replace (- t2 + t1) with (t1 - t2) by (unfold Rminus; ring).
+      exact Hdelta.
+    + replace (- (1 - t1) - - (1 - t2)) with (- t2 + t1) by (unfold Rminus; ring_simplify; reflexivity).
+      replace (- t2 + t1) with (t1 - t2) by (unfold Rminus; ring).
+      exact Hdelta.
+    + replace (0 - 0) with 0 by lra. rewrite Rabs_R0. lra.
+Qed.
 
 Lemma square_regular_at_zero : square_deformation (make_deformation 0 (Rle_refl 0) (Rle_0_1)) = ((1, 1), (-1, 1), (-1, -1), (1, -1)).
 Proof.
   unfold square_deformation, make_deformation. simpl.
+  unfold square_vertex_x, square_vertex_y. simpl.
   repeat f_equal; lra.
+Qed.
+
+Theorem square_deformation_is_continuous :
+  forall (i : nat) (eps : R),
+    eps > 0 -> (i < 4)%nat ->
+    exists delta, delta > 0 /\
+      forall t1 t2, (0 <= t1 <= 1) -> (0 <= t2 <= 1) ->
+        Rabs (t1 - t2) < delta ->
+        Rabs (square_vertex_x i t1 - square_vertex_x i t2) < eps /\
+        Rabs (square_vertex_y i t1 - square_vertex_y i t2) < eps.
+Proof.
+  intros i eps Heps Hi.
+  destruct (square_deformation_continuous_x i eps Heps) as [deltax [Hdx Hcx]].
+  destruct (square_deformation_continuous_y i eps Heps) as [deltay [Hdy Hcy]].
+  exists (Rmin deltax deltay). split.
+  - apply Rmin_Rgt_r. split; assumption.
+  - intros t1 t2 Ht1 Ht2 Hdelta. split.
+    + apply Hcx; auto. eapply Rlt_le_trans. exact Hdelta. apply Rmin_l.
+    + apply Hcy; auto. eapply Rlt_le_trans. exact Hdelta. apply Rmin_r.
 Qed.
 
 Inductive D4_element : Type :=
