@@ -493,40 +493,166 @@ Proof.
 Qed.
 
 Inductive D4_element : Type :=
-  | D4_id : D4_element.
+  | D4_r0 : D4_element
+  | D4_r90 : D4_element
+  | D4_r180 : D4_element
+  | D4_r270 : D4_element
+  | D4_sx : D4_element
+  | D4_sy : D4_element
+  | D4_sd1 : D4_element
+  | D4_sd2 : D4_element.
 
-Definition D4_op (g h : D4_element) : D4_element := D4_id.
+Definition D4_op (g h : D4_element) : D4_element :=
+  match g, h with
+  | D4_r0, x => x
+  | x, D4_r0 => x
+  | D4_r90, D4_r90 => D4_r180
+  | D4_r90, D4_r180 => D4_r270
+  | D4_r90, D4_r270 => D4_r0
+  | D4_r90, D4_sx => D4_sd2
+  | D4_r90, D4_sy => D4_sd1
+  | D4_r90, D4_sd1 => D4_sx
+  | D4_r90, D4_sd2 => D4_sy
+  | D4_r180, D4_r90 => D4_r270
+  | D4_r180, D4_r180 => D4_r0
+  | D4_r180, D4_r270 => D4_r90
+  | D4_r180, D4_sx => D4_sy
+  | D4_r180, D4_sy => D4_sx
+  | D4_r180, D4_sd1 => D4_sd2
+  | D4_r180, D4_sd2 => D4_sd1
+  | D4_r270, D4_r90 => D4_r0
+  | D4_r270, D4_r180 => D4_r90
+  | D4_r270, D4_r270 => D4_r180
+  | D4_r270, D4_sx => D4_sd1
+  | D4_r270, D4_sy => D4_sd2
+  | D4_r270, D4_sd1 => D4_sy
+  | D4_r270, D4_sd2 => D4_sx
+  | D4_sx, D4_r90 => D4_sd1
+  | D4_sx, D4_r180 => D4_sy
+  | D4_sx, D4_r270 => D4_sd2
+  | D4_sx, D4_sx => D4_r0
+  | D4_sx, D4_sy => D4_r180
+  | D4_sx, D4_sd1 => D4_r90
+  | D4_sx, D4_sd2 => D4_r270
+  | D4_sy, D4_r90 => D4_sd2
+  | D4_sy, D4_r180 => D4_sx
+  | D4_sy, D4_r270 => D4_sd1
+  | D4_sy, D4_sx => D4_r180
+  | D4_sy, D4_sy => D4_r0
+  | D4_sy, D4_sd1 => D4_r270
+  | D4_sy, D4_sd2 => D4_r90
+  | D4_sd1, D4_r90 => D4_sy
+  | D4_sd1, D4_r180 => D4_sd2
+  | D4_sd1, D4_r270 => D4_sx
+  | D4_sd1, D4_sx => D4_r270
+  | D4_sd1, D4_sy => D4_r90
+  | D4_sd1, D4_sd1 => D4_r0
+  | D4_sd1, D4_sd2 => D4_r180
+  | D4_sd2, D4_r90 => D4_sx
+  | D4_sd2, D4_r180 => D4_sd1
+  | D4_sd2, D4_r270 => D4_sy
+  | D4_sd2, D4_sx => D4_r90
+  | D4_sd2, D4_sy => D4_r270
+  | D4_sd2, D4_sd1 => D4_r180
+  | D4_sd2, D4_sd2 => D4_r0
+  end.
 
-Definition D4_inv (g : D4_element) : D4_element := D4_id.
+Definition D4_inv (g : D4_element) : D4_element :=
+  match g with
+  | D4_r0 => D4_r0
+  | D4_r90 => D4_r270
+  | D4_r180 => D4_r180
+  | D4_r270 => D4_r90
+  | D4_sx => D4_sx
+  | D4_sy => D4_sy
+  | D4_sd1 => D4_sd1
+  | D4_sd2 => D4_sd2
+  end.
 
-Lemma D4_left_inv : forall g, D4_op (D4_inv g) g = D4_id.
-Proof. intros. destruct g. reflexivity. Qed.
+Lemma D4_left_inv : forall g, D4_op (D4_inv g) g = D4_r0.
+Proof. intros. destruct g; reflexivity. Qed.
 
-Lemma D4_right_inv : forall g, D4_op g (D4_inv g) = D4_id.
-Proof. intros. destruct g. reflexivity. Qed.
+Lemma D4_right_inv : forall g, D4_op g (D4_inv g) = D4_r0.
+Proof. intros. destruct g; reflexivity. Qed.
 
 Lemma D4_assoc : forall g h k, D4_op g (D4_op h k) = D4_op (D4_op g h) k.
-Proof. intros. destruct g, h, k. reflexivity. Qed.
+Proof.
+  intros g h k.
+  destruct g; destruct h; destruct k; reflexivity.
+Qed.
 
-Lemma D4_left_id : forall g, D4_op D4_id g = g.
-Proof. intros. destruct g. reflexivity. Qed.
+Lemma D4_left_id : forall g, D4_op D4_r0 g = g.
+Proof. intros. destruct g; reflexivity. Qed.
 
-Lemma D4_right_id : forall g, D4_op g D4_id = g.
-Proof. intros. destruct g. reflexivity. Qed.
+Lemma D4_right_id : forall g, D4_op g D4_r0 = g.
+Proof. intros. destruct g; reflexivity. Qed.
 
-Definition D4_act (g : D4_element) (p : square_config) : square_config := p.
+Definition rotate_90_point (p : R * R) : R * R :=
+  let (x, y) := p in (-y, x).
 
-Lemma D4_act_id : forall p, D4_act D4_id p = p.
-Proof. intros. reflexivity. Qed.
+Definition rotate_180_point (p : R * R) : R * R :=
+  let (x, y) := p in (-x, -y).
+
+Definition rotate_270_point (p : R * R) : R * R :=
+  let (x, y) := p in (y, -x).
+
+Definition reflect_x_point (p : R * R) : R * R :=
+  let (x, y) := p in (-x, y).
+
+Definition reflect_y_point (p : R * R) : R * R :=
+  let (x, y) := p in (x, -y).
+
+Definition reflect_d1_point (p : R * R) : R * R :=
+  let (x, y) := p in (y, x).
+
+Definition reflect_d2_point (p : R * R) : R * R :=
+  let (x, y) := p in (-y, -x).
+
+Definition D4_act (g : D4_element) (c : square_config) : square_config :=
+  let p0 := fst (fst (fst c)) in
+  let p1 := snd (fst (fst c)) in
+  let p2 := snd (fst c) in
+  let p3 := snd c in
+  match g with
+  | D4_r0 => c
+  | D4_r90 => (((rotate_90_point p0, rotate_90_point p1), rotate_90_point p2), rotate_90_point p3)
+  | D4_r180 => (((rotate_180_point p0, rotate_180_point p1), rotate_180_point p2), rotate_180_point p3)
+  | D4_r270 => (((rotate_270_point p0, rotate_270_point p1), rotate_270_point p2), rotate_270_point p3)
+  | D4_sx => (((reflect_x_point p0, reflect_x_point p1), reflect_x_point p2), reflect_x_point p3)
+  | D4_sy => (((reflect_y_point p0, reflect_y_point p1), reflect_y_point p2), reflect_y_point p3)
+  | D4_sd1 => (((reflect_d1_point p0, reflect_d1_point p1), reflect_d1_point p2), reflect_d1_point p3)
+  | D4_sd2 => (((reflect_d2_point p0, reflect_d2_point p1), reflect_d2_point p2), reflect_d2_point p3)
+  end.
+
+Lemma D4_act_id : forall p, D4_act D4_r0 p = p.
+Proof. intros. unfold D4_act. reflexivity. Qed.
 
 Lemma D4_act_compose : forall g h p, D4_act (D4_op g h) p = D4_act g (D4_act h p).
-Proof. intros. destruct g, h. reflexivity. Qed.
+Proof.
+  intros g h p.
+  unfold D4_act.
+  set (p0 := fst (fst (fst p))).
+  set (p1 := snd (fst (fst p))).
+  set (p2 := snd (fst p)).
+  set (p3 := snd p).
+  destruct g; destruct h; unfold D4_op;
+    unfold rotate_90_point, rotate_180_point, rotate_270_point,
+    reflect_x_point, reflect_y_point, reflect_d1_point, reflect_d2_point;
+    subst p0 p1 p2 p3;
+    simpl fst; simpl snd;
+    destruct p as [[[p0 p1] p2] p3];
+    destruct p0 as [p0x p0y];
+    destruct p1 as [p1x p1y];
+    destruct p2 as [p2x p2y];
+    destruct p3 as [p3x p3y];
+    simpl; repeat f_equal; lra.
+Qed.
 
 Definition square_symmetry_group : SymmetryGroup square_config.
 Proof.
   refine {| group_carrier := D4_element;
             group_size := 8;
-            group_id := D4_id;
+            group_id := D4_r0;
             group_op := D4_op;
             group_inv := D4_inv |}.
   - lia.
@@ -539,12 +665,46 @@ Proof.
   - apply D4_act_compose.
 Defined.
 
-Definition count_D4_stabilizers (p : square_config) : nat := 1.
+Definition point_eqb (p1 p2 : R * R) : bool :=
+  let (x1, y1) := p1 in
+  let (x2, y2) := p2 in
+  if Req_EM_T x1 x2 then
+    if Req_EM_T y1 y2 then true else false
+  else false.
+
+Definition config_eqb (c1 c2 : square_config) : bool :=
+  let p0_1 := fst (fst (fst c1)) in
+  let p1_1 := snd (fst (fst c1)) in
+  let p2_1 := snd (fst c1) in
+  let p3_1 := snd c1 in
+  let p0_2 := fst (fst (fst c2)) in
+  let p1_2 := snd (fst (fst c2)) in
+  let p2_2 := snd (fst c2) in
+  let p3_2 := snd c2 in
+  andb (andb (point_eqb p0_1 p0_2) (point_eqb p1_1 p1_2))
+       (andb (point_eqb p2_1 p2_2) (point_eqb p3_1 p3_2)).
+
+Definition is_stabilizer_D4 (g : D4_element) (c : square_config) : bool :=
+  config_eqb (D4_act g c) c.
+
+Definition count_D4_stabilizers (p : square_config) : nat :=
+  (if is_stabilizer_D4 D4_r0 p then 1 else 0) +
+  (if is_stabilizer_D4 D4_r90 p then 1 else 0) +
+  (if is_stabilizer_D4 D4_r180 p then 1 else 0) +
+  (if is_stabilizer_D4 D4_r270 p then 1 else 0) +
+  (if is_stabilizer_D4 D4_sx p then 1 else 0) +
+  (if is_stabilizer_D4 D4_sy p then 1 else 0) +
+  (if is_stabilizer_D4 D4_sd1 p then 1 else 0) +
+  (if is_stabilizer_D4 D4_sd2 p then 1 else 0).
 
 Lemma square_stabilizer_size_at_t : forall (t : deformation_parameter),
   (count_D4_stabilizers (square_deformation t) <= 8)%nat.
 Proof.
-  intros t. unfold count_D4_stabilizers. lia.
+  intros t.
+  unfold count_D4_stabilizers.
+  repeat match goal with
+  | |- context[if ?b then _ else _] => destruct b
+  end; simpl; lia.
 Qed.
 
 Definition stabilizer_isotropy (t : deformation_parameter) : IsotropySubgroup square_symmetry_group t.
@@ -572,6 +732,63 @@ Proof.
   unfold delta_G, expected_isotropy_size.
   rewrite square_isotropy_equals_stabilizer_size.
   reflexivity.
+Qed.
+
+Lemma D4_r0_stabilizes : forall c, is_stabilizer_D4 D4_r0 c = true.
+Proof.
+  intros c.
+  unfold is_stabilizer_D4, D4_act.
+  unfold config_eqb, point_eqb.
+  destruct c as [[[p0 p1] p2] p3].
+  destruct p0 as [p0x p0y].
+  destruct p1 as [p1x p1y].
+  destruct p2 as [p2x p2y].
+  destruct p3 as [p3x p3y].
+  simpl.
+  destruct (Req_EM_T p0x p0x) as [|n]; try lra.
+  destruct (Req_EM_T p0y p0y) as [|n]; try lra.
+  destruct (Req_EM_T p1x p1x) as [|n]; try lra.
+  destruct (Req_EM_T p1y p1y) as [|n]; try lra.
+  destruct (Req_EM_T p2x p2x) as [|n]; try lra.
+  destruct (Req_EM_T p2y p2y) as [|n]; try lra.
+  destruct (Req_EM_T p3x p3x) as [|n]; try lra.
+  destruct (Req_EM_T p3y p3y) as [|n]; try lra; reflexivity.
+Qed.
+
+Theorem square_t0_at_least_identity :
+  (count_D4_stabilizers (square_deformation (make_deformation 0 (Rle_refl 0) (Rle_0_1))) >= 1)%nat.
+Proof.
+  unfold count_D4_stabilizers.
+  assert (Ht0: is_stabilizer_D4 D4_r0 (square_deformation (make_deformation 0 (Rle_refl 0) (Rle_0_1))) = true).
+  { apply D4_r0_stabilizes. }
+  rewrite Ht0.
+  lia.
+Qed.
+
+Theorem square_t_pos_loses_sy_symmetry : forall t,
+  0 < proj1_sig t ->
+  proj1_sig t < 1 ->
+  is_stabilizer_D4 D4_sy (square_deformation t) = false.
+Proof.
+  intros t Hpos Hlt1.
+  unfold is_stabilizer_D4, D4_act, config_eqb, point_eqb.
+  unfold square_deformation.
+  destruct t as [t_val [Ht0 Ht1]]. simpl in *.
+  unfold square_vertex_x, square_vertex_y, reflect_y_point.
+  simpl fst. simpl snd.
+  repeat (
+    match goal with
+    | |- context[if Req_EM_T ?x ?y then _ else _] =>
+      destruct (Req_EM_T x y); simpl andb; simpl orb
+    end; try reflexivity; try lra).
+Qed.
+
+(** KEY THEOREM: Symmetry is lost when t > 0 *)
+Theorem symmetry_lost_for_positive_t :
+  forall t, 0 < proj1_sig t -> proj1_sig t < 1 ->
+    is_stabilizer_D4 D4_sy (square_deformation t) = false.
+Proof.
+  apply square_t_pos_loses_sy_symmetry.
 Qed.
 
 (** Square bifurcation non-negative for t > t_c (geom_measure=4, χ=0) *)
